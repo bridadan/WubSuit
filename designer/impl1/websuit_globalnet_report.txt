@@ -1,0 +1,28 @@
+********************************************************************
+                            Global Net Report
+********************************************************************
+  
+Product: Designer
+Release: v11.0
+Version: 11.0.0.23
+Date: Mon Nov 04 21:31:30 2013
+Design Name: websuit  Family: SmartFusion  Die: A2F200M3F  Package: 484 FBGA
+
+
+Automatic Global Net Placement Result:
+Status: Global net placement completed successfully
+
+
+Global Nets Information:
+
+        |-----------------------------------------------------|
+        |Global Nets         |Loads                           |
+        |-----------------------------------------------------|
+        |Name                |Core      |IO        |RAM       |
+        |-----------------------------------------------------|
+
+Summary of Global Net Placement:
+
+        |------------------------------------------------------------------------|
+        |Global Net          |Assignment          |Violation                     |
+        |------------------------------------------------------------------------|

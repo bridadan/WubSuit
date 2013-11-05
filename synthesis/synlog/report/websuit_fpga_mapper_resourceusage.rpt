@@ -1,0 +1,32 @@
+Target Part: A2F200M3F_FBGA484_-1
+Report for cell websuit.verilog
+  Core Cell usage:
+              cell count     area count*area
+               GND     3      0.0        0.0
+           MSS_APB     1      0.0        0.0
+           MSS_CCC     1      0.0        0.0
+             RCOSC     1      0.0        0.0
+               VCC     3      0.0        0.0
+
+
+                   -----          ----------
+             TOTAL     9                 0.0
+
+
+  IO Cell usage:
+              cell count
+         BIBUF_MSS     2
+   BIBUF_OPEND_MSS     2
+         INBUF_MSS     4
+        OUTBUF_MSS     2
+       TRIBUFF_MSS     1
+                   -----
+             TOTAL    11
+
+
+Core Cells         : 0 of 4608 (0%)
+IO Cells           : 11
+
+  RAM/ROM Usage Summary
+Block Rams : 0 of 8 (0%)
+

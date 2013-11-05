@@ -1,0 +1,25 @@
+Synopsys Microsemi Technology Pre-mapping, Version mapact, Build 904R, Built Feb 15 2013 10:53:22
+Copyright (C) 1994-2012, Synopsys, Inc. This software the associated documentation are confidential and proprietary to Synopsys, Inc. Your use or disclosure of this software subject to the terms and conditions of a written license agreement between you, or your company, and Synopsys, Inc.
+Product Version G-2012.09M-SP1 
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
+
+@L: N:\EECS373\wubsuit\websuit\synthesis\websuit_scck.rpt 
+Printing clock  summary report in "N:\EECS373\wubsuit\websuit\synthesis\websuit_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
+
+Finished Pre Mapping Phase.@N: BN225 |Writing default property annotation file N:\EECS373\wubsuit\websuit\synthesis\websuit.sap.
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 103MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Nov 04 21:30:53 2013
+
+###########################################################]

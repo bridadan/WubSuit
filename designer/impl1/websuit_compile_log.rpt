@@ -8,10 +8,10 @@ Created a new design.
 'IDE_DESIGNERVIEW_COUNT' set to '1'
 'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
 'IDE_DESIGNERVIEW_REVNUM0' set to '1'
-'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS373\wubsuit\websuit\designer'
+'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS_373\WubWub\WubSuit\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
-'DESDIR' set to 'N:/EECS373/wubsuit/websuit/designer/impl1'
-'BA_DIR' set to 'N:/EECS373/wubsuit/websuit/designer/impl1'
+'DESDIR' set to 'N:/EECS_373/WubWub/WubSuit/designer/impl1'
+'BA_DIR' set to 'N:/EECS_373/WubWub/WubSuit/designer/impl1'
 'BA_NETLIST_ALSO' set to '1'
 'EDNINFLAVOR' set to 'GENERIC'
 'NETLIST_NAMING_STYLE' set to 'VERILOG'
@@ -24,10 +24,10 @@ Created a new design.
 
  Netlist Reading Time = 0.0 seconds
 Imported the files:
-   N:\EECS373\wubsuit\websuit\synthesis\websuit.edn
-   N:\EECS373\wubsuit\websuit\component\work\websuit\websuit.pdc
+   N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn
+   N:\EECS_373\WubWub\WubSuit\component\work\websuit\websuit.pdc
 
-The Import command succeeded ( 00:00:03 )
+The Import command succeeded ( 00:00:02 )
 Design saved to file websuit.adb.
 =====================================================================
 Parameters used to run compile:
@@ -36,8 +36,8 @@ Parameters used to run compile:
 Family      : SmartFusion
 Device      : A2F200M3F
 Package     : 484 FBGA
-Source      : N:\EECS373\wubsuit\websuit\synthesis\websuit.edn
-              N:\EECS373\wubsuit\websuit\component\work\websuit\websuit.pdc
+Source      : N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn
+              N:\EECS_373\WubWub\WubSuit\component\work\websuit\websuit.pdc
 Format      : EDIF
 Topcell     : websuit
 Speed grade : -1
@@ -469,12 +469,12 @@ I/O Technology:
 Net information report:
 =======================
 
-The Compile command succeeded ( 00:00:02 )
+The Compile command succeeded ( 00:00:03 )
 Wrote status report to file: websuit_compile_report.txt
 
 The Report command succeeded ( 00:00:00 )
-Design saved to file N:\EECS373\wubsuit\websuit\designer\impl1\websuit.adb.
+Design saved to file N:\EECS_373\WubWub\WubSuit\designer\impl1\websuit.adb.
 
-The Execute Script command succeeded ( 00:00:11 )
+The Execute Script command succeeded ( 00:00:17 )
 Design closed.
 

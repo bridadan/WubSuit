@@ -9,7 +9,7 @@ Opened an existing Libero design websuit.adb.
 'IDE_DESIGNERVIEW_COUNT' set to '1'
 'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
 'IDE_DESIGNERVIEW_REVNUM0' set to '1'
-'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS373\wubsuit\websuit\designer'
+'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS_373\WubWub\WubSuit\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 ***** Layout Variables *********************************************
 
@@ -33,25 +33,25 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Mon Nov 04 21:31:17 2013
+Timing-driven Placer Started: Thu Nov 07 11:17:46 2013
 
-Placer Finished: Mon Nov 04 21:31:19 2013
-Total Placer CPU Time:     00:00:02
+Placer Finished: Thu Nov 07 11:17:47 2013
+Total Placer CPU Time:     00:00:01
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: websuit                         Started: Mon Nov 04 21:31:21 2013
+Design: websuit                         Started: Thu Nov 07 11:17:50 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: websuit                         
-Finished: Mon Nov 04 21:31:26 2013
+Finished: Thu Nov 07 11:17:55 2013
 Total CPU Time:     00:00:04            Total Elapsed Time: 00:00:05
-Total Memory Usage: 144.1 Mbytes
+Total Memory Usage: 144.3 Mbytes
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -59,7 +59,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:14 )
+The Layout command succeeded ( 00:00:15 )
 Wrote status report to file: websuit_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -72,8 +72,8 @@ The Report command succeeded ( 00:00:00 )
 Wrote iobank report to file: websuit_iobank_report.txt
 
 The Report command succeeded ( 00:00:00 )
-Design saved to file N:\EECS373\wubsuit\websuit\designer\impl1\websuit.adb.
+Design saved to file N:\EECS_373\WubWub\WubSuit\designer\impl1\websuit.adb.
 
-The Execute Script command succeeded ( 00:00:17 )
+The Execute Script command succeeded ( 00:00:18 )
 Design closed.
 

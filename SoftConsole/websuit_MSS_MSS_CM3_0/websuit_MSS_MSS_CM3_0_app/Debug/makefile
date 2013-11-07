@@ -40,7 +40,7 @@ all: websuit_MSS_MSS_CM3_0_app secondary-outputs
 websuit_MSS_MSS_CM3_0_app: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU C Linker'
-	arm-none-eabi-gcc -mthumb -mcpu=cortex-m3 -L"N:\EECS373\wubsuit\websuit\SoftConsole\websuit_MSS_MSS_CM3_0\websuit_MSS_MSS_CM3_0_hw_platform\Debug" -T../../websuit_MSS_MSS_CM3_0_hw_platform/CMSIS/startup_gcc/debug-in-actel-smartfusion-esram.ld -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections -o"websuit_MSS_MSS_CM3_0_app" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mthumb -mcpu=cortex-m3 -L"N:\EECS_373\WubWub\WubSuit\SoftConsole\websuit_MSS_MSS_CM3_0\websuit_MSS_MSS_CM3_0_hw_platform\Debug" -T../../websuit_MSS_MSS_CM3_0_hw_platform/CMSIS/startup_gcc/debug-in-actel-smartfusion-esram.ld -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections -o"websuit_MSS_MSS_CM3_0_app" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

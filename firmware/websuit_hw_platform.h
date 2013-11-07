@@ -2,7 +2,7 @@
 #define websuit_HW_PLATFORM_H_
 /*****************************************************************************
 *
-*Created by Actel SmartDesign  Mon Nov 04 21:28:08 2013
+*Created by Actel SmartDesign  Thu Nov 07 10:43:37 2013
 *
 *Memory map specification for peripherals in websuit
 */

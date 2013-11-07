@@ -1,6 +1,7 @@
 KEY LIBERO "11.0"
 KEY CAPTURE "11.0.0.23"
 KEY DEFAULT_IMPORT_LOC ""
+KEY DEFAULT_OPEN_LOC ""
 KEY ProjectID "0"
 KEY HDLTechnology "VERILOG"
 KEY VendorTechnology_Family "SmartFusion"
@@ -8,6 +9,7 @@ KEY VendorTechnology_Die "IP4X3M1"
 KEY VendorTechnology_Package "fg484"
 KEY VendorTechnology_Speed "-1"
 KEY VendorTechnology_DieVoltage "1.5"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE ""
 KEY VendorTechnology_IO_DEFT_STD "LVTTL"
 KEY VendorTechnology_OPCONR "COM"
 KEY VendorTechnology_RESTRICTPROBEPINS "1"
@@ -17,8 +19,8 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "COM"
-KEY ProjectLocation "N:\EECS373\wubsuit\websuit"
-KEY ProjectDescription "WUBWUBWUB"
+KEY ProjectLocation "N:\EECS_373\WubWub\WubSuit"
+KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
 KEY ActiveRoot "websuit::work"
@@ -36,7 +38,7 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617857"
+TIME="1383843269"
 SIZE="945"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
@@ -54,141 +56,162 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_ACE\2.2.100\MSS_ACE.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617838"
+TIME="1383843212"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CCC\2.0.106\MSS_CCC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617838"
+TIME="1383843214"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_CM3\1.0.200\MSS_CM3.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617838"
+TIME="1383843214"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_COM\1.0.200\MSS_COM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617838"
+TIME="1383843214"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_DMA\1.0.101\MSS_DMA.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617838"
+TIME="1383843214"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_ENVM\2.3.102\MSS_ENVM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="253"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIC\1.0.101\MSS_FIC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_FIO\1.0.203\MSS_FIO.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_GPIO\1.0.101\MSS_GPIO.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="253"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_I2C\1.0.101\MSS_I2C.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_INTR\1.0.101\MSS_INTR.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="253"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RESET\1.0.101\MSS_RESET.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="254"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_RTC\1.0.100\MSS_RTC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_SPI\1.0.102\MSS_SPI.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="252"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_TIMER\1.0.100\MSS_TIMER.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="254"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UART\1.0.101\MSS_UART.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843220"
 SIZE="253"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\SmartFusionMSS\MSS_UFROM\1.0.100\MSS_UFROM.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843220"
 SIZE="254"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
+VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1383838899"
+SIZE="2712"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_IO\DESIGN_IO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1383838899"
+SIZE="413"
+ENDFILE
 VALUE "<project>\component\work\websuit\websuit.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617970"
-SIZE="5559"
+TIME="1383843323"
+SIZE="6838"
+ENDFILE
+VALUE "<project>\component\work\websuit\websuit.pdc,pdc"
+STATE="utd"
+TIME="1383839007"
+SIZE="2951"
+PARENT="<project>\component\work\websuit\websuit.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideDESIGNER"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\MSS_ACE_0\MSS_ACE_0.log,???"
 STATE="utd"
-TIME="1383617837"
+TIME="1383843212"
 SIZE="31587"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\MSS_CCC_0\websuit_MSS_tmp_MSS_CCC_0_MSS_CCC.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617838"
+TIME="1383843214"
 SIZE="489"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\MSS_CCC_0\websuit_MSS_tmp_MSS_CCC_0_MSS_CCC.v,hdl"
 STATE="utd"
-TIME="1383617838"
+TIME="1383843214"
 SIZE="2885"
 PARENT="<project>\component\work\websuit_MSS\MSS_CCC_0\websuit_MSS_tmp_MSS_CCC_0_MSS_CCC.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\MSS_ENVM_0\MSS_ENVM_0.efc,efc"
 STATE="utd"
-TIME="1383617843"
+TIME="1383843219"
 SIZE="15875"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\mss_tshell.v,hdl"
 STATE="utd"
-TIME="1383617844"
+TIME="1383843220"
 SIZE="12226"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 BEGIN_USE_CONSTRAINT
@@ -200,7 +223,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\mss_tshell_syn.sdc,sdc"
 STATE="utd"
-TIME="1383617844"
+TIME="1383843220"
 SIZE="194"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 BEGIN_USE_CONSTRAINT
@@ -212,27 +235,82 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1383617858"
+TIME="1383843269"
 SIZE="1918"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\websuit_MSS.cxf,actgen_cxf"
 STATE="utd"
-TIME="1383617858"
+TIME="1383843271"
 SIZE="15726"
 ENDFILE
 VALUE "<project>\component\work\websuit_MSS\websuit_MSS.v,hdl"
 STATE="utd"
-TIME="1383617858"
+TIME="1383843269"
 SIZE="22659"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\designer\impl1\websuit.adb,adb"
+STATE="ood"
+TIME="1383841056"
+SIZE="261632"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit.fdb,fdb"
+STATE="ood"
+TIME="1383841111"
+SIZE="42482"
+ENDFILE
 VALUE "<project>\designer\impl1\websuit.ide_des,ide_des"
 STATE="utd"
-TIME="1383617462"
-SIZE="185"
+TIME="1383840168"
+SIZE="1018"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit_compile_log.rpt,log"
+STATE="utd"
+TIME="1383841056"
+SIZE="30830"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit_fp\projectData\websuit.pdb,pdb"
+STATE="utd"
+TIME="1383841244"
+SIZE="51712"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit_fp\websuit.pdb,pdb"
+STATE="ood"
+TIME="1383841199"
+SIZE="51712"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit_fp\websuit.pro,pro"
+STATE="utd"
+TIME="1383841245"
+SIZE="1944"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit_placeroute_log.rpt,log"
+STATE="utd"
+TIME="1383841080"
+SIZE="2372"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit_prgdata_log.rpt,log"
+STATE="utd"
+TIME="1383841113"
+SIZE="708"
+ENDFILE
+VALUE "<project>\designer\impl1\websuit_verifytiming_log.rpt,log"
+STATE="utd"
+TIME="1383841090"
+SIZE="1118"
+ENDFILE
+VALUE "<project>\hdl\timerWrapper.v,hdl"
+STATE="utd"
+TIME="1383842730"
+SIZE="9188"
+ENDFILE
+VALUE "<project>\hdl\ultrasonic_pulser.v,hdl"
+STATE="utd"
+TIME="1383842672"
+SIZE="522"
 ENDFILE
 VALUE "<project>\simulation\CompileDssBfm.tcl,sim"
 STATE="utd"
@@ -240,17 +318,43 @@ TIME="1359495853"
 SIZE="41"
 PARENT="<project>\component\Actel\SmartFusionMSS\MSS\2.5.106\MSS.cxf"
 ENDFILE
+VALUE "<project>\simulation\subsystem.bfm,sim"
+STATE="utd"
+TIME="1383839012"
+SIZE="598"
+PARENT="<project>\component\work\websuit\websuit.cxf"
+ENDFILE
 VALUE "<project>\simulation\test.bfm,sim"
 STATE="utd"
-TIME="1383617839"
+TIME="1383843215"
 SIZE="5460"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
 ENDFILE
 VALUE "<project>\simulation\user.bfm,sim"
 STATE="utd"
-TIME="1383617839"
+TIME="1383838902"
 SIZE="670"
 PARENT="<project>\component\work\websuit_MSS\websuit_MSS.cxf"
+ENDFILE
+VALUE "<project>\synthesis\websuit.edn,syn_edn"
+STATE="ood"
+TIME="1383841029"
+SIZE="104398"
+ENDFILE
+VALUE "<project>\synthesis\websuit.so,so"
+STATE="utd"
+TIME="1383841029"
+SIZE="210"
+ENDFILE
+VALUE "<project>\synthesis\websuit_sdc.sdc,syn_sdc"
+STATE="ood"
+TIME="1383841029"
+SIZE="310"
+ENDFILE
+VALUE "<project>\synthesis\websuit_syn.prj,prj"
+STATE="utd"
+TIME="1383841032"
+SIZE="1857"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -337,10 +441,10 @@ ENDLIST
 LIST PhySynthesisOptions
 ENDLIST
 LIST Profiles
-NAME="SoftConsole"
+NAME="SoftConsole v3.3"
 FUNCTION="SoftwareIDE"
 TOOL="SoftConsole"
-LOCATION="eclipse.exe"
+LOCATION="C:\Actel\Libero_v9.1\SoftConsole\Eclipse\eclipse.exe"
 PARAM=""
 BATCH=0
 EndProfile
@@ -348,8 +452,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -391,7 +495,10 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 StartPage;StartPage
+Reports;Reports
 SmartDesign;websuit
+HDL;hdl\ultrasonic_pulser.v
+HDL;hdl\timerWrapper.v
 SmartDesign;websuit_MSS
 ACTIVEVIEW;websuit
 ENDLIST
@@ -399,6 +506,26 @@ LIST ModuleSubBlockList
 LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "BIBUF_OPEND_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "CoreAPB3::work","","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+SUBBLOCK "HAL::work","","FALSE","FALSE"
+SUBBLOCK "MSS_ACE_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_GPIO_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_I2C_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_IAP_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_NVM_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_PDMA_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_RTC_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_SPI_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_Timer_Driver::work","","FALSE","FALSE"
+SUBBLOCK "MSS_UART_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_IO::work","component\work\DESIGN_IO\DESIGN_IO.cxf","TRUE","FALSE"
+ENDLIST
+LIST "HAL::work","","FALSE","FALSE"
 ENDLIST
 LIST "INBUF_LVDS_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
@@ -408,13 +535,33 @@ LIST "INBUF_MCCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v"
 ENDLIST
 LIST "INBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
+LIST "MSS_ACE_Driver::work","","FALSE","FALSE"
+ENDLIST
 LIST "MSS_ALL::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "MSS_APB::work","component\work\websuit_MSS\mss_tshell.v","FALSE","FALSE"
 ENDLIST
 LIST "MSS_CCC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
+LIST "MSS_GPIO_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_I2C_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_IAP_Driver::work","","FALSE","FALSE"
+ENDLIST
 LIST "MSS_LPXTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_NVM_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_PDMA_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_RTC_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_SPI_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_Timer_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "MSS_UART_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "MSS_XTLOSC::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
@@ -422,9 +569,21 @@ LIST "MSSINT::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FA
 ENDLIST
 LIST "OUTBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
+LIST "SmartFusion_CMSIS_PAL::work","","FALSE","FALSE"
+ENDLIST
+LIST "timer::work","hdl\timerWrapper.v","FALSE","FALSE"
+ENDLIST
+LIST "timerWrapper::work","hdl\timerWrapper.v","FALSE","FALSE"
+SUBBLOCK "timer::work","hdl\timerWrapper.v","FALSE","FALSE"
+ENDLIST
 LIST "TRIBUFF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"
 ENDLIST
+LIST "ultrasonic_pulser::work","hdl\ultrasonic_pulser.v","FALSE","FALSE"
+ENDLIST
 LIST "websuit::work","component\work\websuit\websuit.cxf","TRUE","FALSE"
+SUBBLOCK "CoreAPB3::work","","FALSE","FALSE"
+SUBBLOCK "ultrasonic_pulser::work","hdl\ultrasonic_pulser.v","FALSE","FALSE"
+SUBBLOCK "timerWrapper::work","hdl\timerWrapper.v","FALSE","FALSE"
 SUBBLOCK "websuit_MSS::work","component\work\websuit_MSS\websuit_MSS.v","TRUE","FALSE"
 ENDLIST
 LIST "websuit_MSS::work","component\work\websuit_MSS\websuit_MSS.v","TRUE","FALSE"

@@ -1,17 +1,17 @@
 #--  Synopsys, Inc.
 #--  Version G-2012.09M-SP1 
-#--  Project file N:\EECS373\wubsuit\websuit\synthesis\scratchproject.prs
+#--  Project file N:\EECS_373\WubWub\WubSuit\synthesis\scratchproject.prs
 
 #project files
-add_file -verilog "N:/EECS373/wubsuit/websuit/component/work/websuit_MSS/mss_tshell.v"
-add_file -verilog "N:/EECS373/wubsuit/websuit/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
-add_file -verilog "N:/EECS373/wubsuit/websuit/component/work/websuit_MSS/MSS_CCC_0/websuit_MSS_tmp_MSS_CCC_0_MSS_CCC.v"
-add_file -verilog "N:/EECS373/wubsuit/websuit/component/work/websuit_MSS/websuit_MSS.v"
-add_file -verilog "N:/EECS373/wubsuit/websuit/component/work/websuit/websuit.v"
+add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit_MSS/mss_tshell.v"
+add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
+add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit_MSS/MSS_CCC_0/websuit_MSS_tmp_MSS_CCC_0_MSS_CCC.v"
+add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit_MSS/websuit_MSS.v"
+add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit/websuit.v"
 
 
 #implementation: "synthesis"
-impl -add N:\EECS373\wubsuit\websuit\synthesis -type fpga
+impl -add N:\EECS_373\WubWub\WubSuit\synthesis -type fpga
 
 #
 #implementation attributes
@@ -62,5 +62,5 @@ set_option -resource_sharing 1
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "N:/EECS373/wubsuit/websuit/synthesis/websuit.edn"
+project -result_file "N:/EECS_373/WubWub/WubSuit/synthesis/websuit.edn"
 impl -active "synthesis"

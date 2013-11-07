@@ -1,12 +1,12 @@
 <project name="websuit" version="1.1">
     <ProjectDirectory>
-        N:/EECS373/wubsuit/websuit/designer/impl1/websuit_fp
+        N:/EECS_373/WubWub/WubSuit/designer/impl1/websuit_fp
     </ProjectDirectory>
     <View>
         SingleSTAPLView
     </View>
     <LogFile>
-        N:/EECS373/wubsuit/websuit/designer/impl1/websuit_fp\websuit.log
+        N:/EECS_373/WubWub/WubSuit/designer/impl1/websuit_fp/websuit.log
     </LogFile>
     <SerializationOption>
         Skip
@@ -59,7 +59,7 @@
         </Hardware>
         <Algo type="PDB">
             <filename>
-                N:\EECS373\wubsuit\websuit\designer\impl1\websuit_fp\websuit.pdb
+                N:\EECS_373\WubWub\WubSuit\designer\impl1\websuit_fp\websuit.pdb
             </filename>
             <local>
                 projectData\websuit.pdb

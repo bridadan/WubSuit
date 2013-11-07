@@ -2,7 +2,7 @@
 <device>
   <name>websuit</name>
   <version>1.0</version>
-  <description>CMSIS description for websuit.  Created by Actel SmartDesign on Mon Nov 04 21:28:08 2013</description>
+  <description>CMSIS description for websuit.  Created by Actel SmartDesign on Thu Nov 07 10:43:53 2013</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>

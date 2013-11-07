@@ -4,8 +4,8 @@ Product Version G-2012.09M-SP1
 
 Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 92MB)
 
-@L: N:\EECS373\wubsuit\websuit\synthesis\websuit_scck.rpt 
-Printing clock  summary report in "N:\EECS373\wubsuit\websuit\synthesis\websuit_scck.rpt" file 
+@L: N:\EECS_373\WubWub\WubSuit\synthesis\websuit_scck.rpt 
+Printing clock  summary report in "N:\EECS_373\WubWub\WubSuit\synthesis\websuit_scck.rpt" file 
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled 
 
@@ -14,12 +14,12 @@ Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s
 
 Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 92MB peak: 93MB)
 
-Finished Pre Mapping Phase.@N: BN225 |Writing default property annotation file N:\EECS373\wubsuit\websuit\synthesis\websuit.sap.
+Finished Pre Mapping Phase.@N: BN225 |Writing default property annotation file N:\EECS_373\WubWub\WubSuit\synthesis\websuit.sap.
 Pre-mapping successful!
 
 At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 39MB peak: 103MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Mon Nov 04 21:30:53 2013
+# Thu Nov 07 11:17:06 2013
 
 ###########################################################]

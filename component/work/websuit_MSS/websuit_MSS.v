@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Mon Nov 04 21:24:12 2013
+// Created by SmartDesign Thu Nov 07 11:54:29 2013
 // Version: v11.0 11.0.0.23
 //////////////////////////////////////////////////////////////////////
 
@@ -8,11 +8,22 @@
 // websuit_MSS
 module websuit_MSS(
     // Inputs
+    FABINT,
+    MSSPRDATA,
+    MSSPREADY,
+    MSSPSLVERR,
     MSS_RESET_N,
     SPI_0_DI,
     UART_0_RXD,
     UART_1_RXD,
     // Outputs
+    FAB_CLK,
+    M2F_RESET_N,
+    MSSPADDR,
+    MSSPENABLE,
+    MSSPSEL,
+    MSSPWDATA,
+    MSSPWRITE,
     SPI_0_DO,
     UART_0_TXD,
     UART_1_TXD,
@@ -26,77 +37,104 @@ module websuit_MSS(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
-input  MSS_RESET_N;
-input  SPI_0_DI;
-input  UART_0_RXD;
-input  UART_1_RXD;
+input         FABINT;
+input  [31:0] MSSPRDATA;
+input         MSSPREADY;
+input         MSSPSLVERR;
+input         MSS_RESET_N;
+input         SPI_0_DI;
+input         UART_0_RXD;
+input         UART_1_RXD;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output SPI_0_DO;
-output UART_0_TXD;
-output UART_1_TXD;
+output        FAB_CLK;
+output        M2F_RESET_N;
+output [19:0] MSSPADDR;
+output        MSSPENABLE;
+output        MSSPSEL;
+output [31:0] MSSPWDATA;
+output        MSSPWRITE;
+output        SPI_0_DO;
+output        UART_0_TXD;
+output        UART_1_TXD;
 //--------------------------------------------------------------------
 // Inout
 //--------------------------------------------------------------------
-inout  I2C_0_SCL;
-inout  I2C_0_SDA;
-inout  SPI_0_CLK;
-inout  SPI_0_SS;
+inout         I2C_0_SCL;
+inout         I2C_0_SDA;
+inout         SPI_0_CLK;
+inout         SPI_0_SS;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire         I2C_0_SCL;
-wire         I2C_0_SDA;
-wire         MSS_ADLIB_INST_EMCCLK;
-wire         MSS_ADLIB_INST_FCLK;
-wire         MSS_ADLIB_INST_MACCLK;
-wire         MSS_ADLIB_INST_MACCLKCCC;
-wire         MSS_ADLIB_INST_PLLLOCK;
-wire         MSS_ADLIB_INST_SYNCCLKFDBK;
-wire         MSS_I2C_0_SCL_E;
-wire         MSS_I2C_0_SCL_Y;
-wire         MSS_I2C_0_SDA_E;
-wire         MSS_I2C_0_SDA_Y;
-wire         MSS_RESET_0_MSS_RESET_N_Y;
-wire         MSS_RESET_N;
-wire         MSS_SPI_0_CLK_D;
-wire         MSS_SPI_0_CLK_Y;
-wire         MSS_SPI_0_DI_Y;
-wire         MSS_SPI_0_DO_D;
-wire         MSS_SPI_0_DO_E;
-wire   [0:0] MSS_SPI_0_SS_D;
-wire         MSS_SPI_0_SS_E;
-wire         MSS_SPI_0_SS_Y;
-wire         MSS_UART_0_RXD_Y;
-wire         MSS_UART_0_TXD_D;
-wire         MSS_UART_1_RXD_Y;
-wire         MSS_UART_1_TXD_D;
-wire         SPI_0_CLK;
-wire         SPI_0_DI;
-wire         SPI_0_DO_net_0;
-wire         SPI_0_SS;
-wire         UART_0_RXD;
-wire         UART_0_TXD_net_0;
-wire         UART_1_RXD;
-wire         UART_1_TXD_net_0;
-wire         UART_0_TXD_net_1;
-wire         UART_1_TXD_net_1;
-wire         SPI_0_DO_net_1;
-wire   [7:0] SPI0SSO_net_0;
+wire          FABINT;
+wire          I2C_0_SCL;
+wire          I2C_0_SDA;
+wire          MSS_ADLIB_INST_EMCCLK;
+wire          MSS_ADLIB_INST_FCLK;
+wire          MSS_ADLIB_INST_MACCLK;
+wire          MSS_ADLIB_INST_MACCLKCCC;
+wire          MSS_ADLIB_INST_PLLLOCK;
+wire          MSS_ADLIB_INST_SYNCCLKFDBK;
+wire          MSS_I2C_0_SCL_E;
+wire          MSS_I2C_0_SCL_Y;
+wire          MSS_I2C_0_SDA_E;
+wire          MSS_I2C_0_SDA_Y;
+wire          MSS_RESET_0_MSS_RESET_N_Y;
+wire          MSS_RESET_N;
+wire          MSS_SPI_0_CLK_D;
+wire          MSS_SPI_0_CLK_Y;
+wire          MSS_SPI_0_DI_Y;
+wire          MSS_SPI_0_DO_D;
+wire          MSS_SPI_0_DO_E;
+wire   [0:0]  MSS_SPI_0_SS_D;
+wire          MSS_SPI_0_SS_E;
+wire          MSS_SPI_0_SS_Y;
+wire          MSS_UART_0_RXD_Y;
+wire          MSS_UART_0_TXD_D;
+wire          MSS_UART_1_RXD_Y;
+wire          MSS_UART_1_TXD_D;
+wire          net_71;
+wire   [19:0] net_72_PADDR;
+wire          net_72_PENABLE;
+wire   [31:0] MSSPRDATA;
+wire          MSSPREADY;
+wire          net_72_PSELx;
+wire          MSSPSLVERR;
+wire   [31:0] net_72_PWDATA;
+wire          net_72_PWRITE;
+wire          SPI_0_CLK;
+wire          SPI_0_DI;
+wire          SPI_0_DO_net_0;
+wire          SPI_0_SS;
+wire          UART_0_RXD;
+wire          UART_0_TXD_net_0;
+wire          UART_1_RXD;
+wire          UART_1_TXD_net_0;
+wire          MSS_ADLIB_INST_SYNCCLKFDBK_net_0;
+wire          net_71_net_0;
+wire          net_72_PSELx_net_0;
+wire          net_72_PENABLE_net_0;
+wire          net_72_PWRITE_net_0;
+wire   [19:0] net_72_PADDR_net_0;
+wire   [31:0] net_72_PWDATA_net_0;
+wire          UART_0_TXD_net_1;
+wire          UART_1_TXD_net_1;
+wire          SPI_0_DO_net_1;
+wire   [7:0]  SPI0SSO_net_0;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
-wire         GND_net;
-wire         VCC_net;
-wire   [1:0] DMAREADY_const_net_0;
-wire   [31:0]GPI_const_net_0;
-wire   [1:0] MACF2MRXD_const_net_0;
-wire   [1:0] MACRXD_const_net_0;
-wire   [15:0]EMCRDB_const_net_0;
-wire   [31:0]MSSPRDATA_const_net_0;
-wire   [31:0]FABPADDR_const_net_0;
-wire   [31:0]FABPWDATA_const_net_0;
+wire          GND_net;
+wire          VCC_net;
+wire   [1:0]  DMAREADY_const_net_0;
+wire   [31:0] GPI_const_net_0;
+wire   [1:0]  MACF2MRXD_const_net_0;
+wire   [1:0]  MACRXD_const_net_0;
+wire   [15:0] EMCRDB_const_net_0;
+wire   [31:0] FABPADDR_const_net_0;
+wire   [31:0] FABPWDATA_const_net_0;
 //--------------------------------------------------------------------
 // Constant assignments
 //--------------------------------------------------------------------
@@ -107,18 +145,31 @@ assign GPI_const_net_0       = 32'h00000000;
 assign MACF2MRXD_const_net_0 = 2'h0;
 assign MACRXD_const_net_0    = 2'h0;
 assign EMCRDB_const_net_0    = 16'h0000;
-assign MSSPRDATA_const_net_0 = 32'h00000000;
 assign FABPADDR_const_net_0  = 32'h00000000;
 assign FABPWDATA_const_net_0 = 32'h00000000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign UART_0_TXD_net_1 = UART_0_TXD_net_0;
-assign UART_0_TXD       = UART_0_TXD_net_1;
-assign UART_1_TXD_net_1 = UART_1_TXD_net_0;
-assign UART_1_TXD       = UART_1_TXD_net_1;
-assign SPI_0_DO_net_1   = SPI_0_DO_net_0;
-assign SPI_0_DO         = SPI_0_DO_net_1;
+assign MSS_ADLIB_INST_SYNCCLKFDBK_net_0 = MSS_ADLIB_INST_SYNCCLKFDBK;
+assign FAB_CLK                          = MSS_ADLIB_INST_SYNCCLKFDBK_net_0;
+assign net_71_net_0                     = net_71;
+assign M2F_RESET_N                      = net_71_net_0;
+assign net_72_PSELx_net_0               = net_72_PSELx;
+assign MSSPSEL                          = net_72_PSELx_net_0;
+assign net_72_PENABLE_net_0             = net_72_PENABLE;
+assign MSSPENABLE                       = net_72_PENABLE_net_0;
+assign net_72_PWRITE_net_0              = net_72_PWRITE;
+assign MSSPWRITE                        = net_72_PWRITE_net_0;
+assign net_72_PADDR_net_0               = net_72_PADDR;
+assign MSSPADDR[19:0]                   = net_72_PADDR_net_0;
+assign net_72_PWDATA_net_0              = net_72_PWDATA;
+assign MSSPWDATA[31:0]                  = net_72_PWDATA_net_0;
+assign UART_0_TXD_net_1                 = UART_0_TXD_net_0;
+assign UART_0_TXD                       = UART_0_TXD_net_1;
+assign UART_1_TXD_net_1                 = UART_1_TXD_net_0;
+assign UART_1_TXD                       = UART_1_TXD_net_1;
+assign SPI_0_DO_net_1                   = SPI_0_DO_net_0;
+assign SPI_0_DO                         = SPI_0_DO_net_1;
 //--------------------------------------------------------------------
 // Slices assignments
 //--------------------------------------------------------------------
@@ -134,9 +185,9 @@ MSS_APB #(
         .ACT_PKG    ( "fg484" ) )
 MSS_ADLIB_INST(
         // Inputs
-        .MSSPRDATA      ( MSSPRDATA_const_net_0 ), // tied to 32'h00000000 from definition
-        .MSSPREADY      ( VCC_net ), // tied to 1'b1 from definition
-        .MSSPSLVERR     ( GND_net ), // tied to 1'b0 from definition
+        .MSSPRDATA      ( MSSPRDATA ),
+        .MSSPREADY      ( MSSPREADY ),
+        .MSSPSLVERR     ( MSSPSLVERR ),
         .FABPADDR       ( FABPADDR_const_net_0 ), // tied to 32'h00000000 from definition
         .FABPWDATA      ( FABPWDATA_const_net_0 ), // tied to 32'h00000000 from definition
         .FABPWRITE      ( GND_net ), // tied to 1'b0 from definition
@@ -144,7 +195,7 @@ MSS_ADLIB_INST(
         .FABPENABLE     ( GND_net ), // tied to 1'b0 from definition
         .SYNCCLKFDBK    ( MSS_ADLIB_INST_SYNCCLKFDBK ),
         .CALIBIN        ( GND_net ), // tied to 1'b0 from definition
-        .FABINT         ( GND_net ), // tied to 1'b0 from definition
+        .FABINT         ( FABINT ),
         .F2MRESETn      ( VCC_net ), // tied to 1'b1 from definition
         .DMAREADY       ( DMAREADY_const_net_0 ), // tied to 2'h0 from definition
         .RXEV           ( GND_net ), // tied to 1'b0 from definition
@@ -256,18 +307,18 @@ MSS_ADLIB_INST(
         .GNDVAREF       ( GND_net ), // tied to 1'b0 from definition
         .PUn            ( GND_net ), // tied to 1'b0 from definition
         // Outputs
-        .MSSPADDR       (  ),
-        .MSSPWDATA      (  ),
-        .MSSPWRITE      (  ),
-        .MSSPSEL        (  ),
-        .MSSPENABLE     (  ),
+        .MSSPADDR       ( net_72_PADDR ),
+        .MSSPWDATA      ( net_72_PWDATA ),
+        .MSSPWRITE      ( net_72_PWRITE ),
+        .MSSPSEL        ( net_72_PSELx ),
+        .MSSPENABLE     ( net_72_PENABLE ),
         .FABPRDATA      (  ),
         .FABPREADY      (  ),
         .FABPSLVERR     (  ),
         .CALIBOUT       (  ),
         .MSSINT         (  ),
         .WDINT          (  ),
-        .M2FRESETn      (  ),
+        .M2FRESETn      ( net_71 ),
         .DEEPSLEEP      (  ),
         .SLEEP          (  ),
         .TXEV           (  ),

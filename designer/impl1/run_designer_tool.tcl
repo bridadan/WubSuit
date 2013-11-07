@@ -1,7 +1,7 @@
 # (OPEN DESIGN)
 
-open_design "N:/EECS373/wubsuit/websuit/designer/impl1/websuit.adb"
-export -format "FDB" {N:/EECS373/wubsuit/websuit/designer/impl1/websuit.fdb}
+open_design "N:/EECS_373/WubWub/WubSuit/designer/impl1/websuit.adb"
+export -format "FDB" {N:/EECS_373/WubWub/WubSuit/designer/impl1/websuit.fdb}
 
-save_design "N:/EECS373/wubsuit/websuit/designer/impl1/websuit.adb"
+save_design "N:/EECS_373/WubWub/WubSuit/designer/impl1/websuit.adb"
 

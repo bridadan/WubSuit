@@ -1,3 +1,3 @@
-project -load "N:/EECS373/wubsuit/websuit/synthesis/websuit_syn.prj"
+project -load "N:/EECS_373/WubWub/WubSuit/synthesis/websuit_syn.prj"
 project -run -clean
 project -save

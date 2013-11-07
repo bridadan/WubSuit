@@ -1,4 +1,4 @@
-KEY IDE_DES_TOOL "Designer"
+KEY IDE_DES_TOOL "Ide"
 KEY IDE_DES_FAMILY "SmartFusion"
 KEY IDE_DES_DIE "IP4X3M1"
 KEY IDE_DES_PACKAGE "fg484"
@@ -20,10 +20,9 @@ KEY IDE_DES_BLOCK_PUBLISH "FALSE"
 KEY IDE_DES_BA_EXPORTED "FALSE"
 KEY IDE_DES_INTERACTIVE "FALSE"
 KEY IDE_DES_ERROR_FOUND "FALSE"
-KEY IDE_DES_ADB_PATH "N:\EECS373\wubsuit\websuit\designer\impl1\websuit.adb"
+KEY IDE_DES_ADB_PATH "N:\EECS_373\WubWub\WubSuit\designer\impl1\websuit.adb"
 LIST SOURCE_FILES
-VALUE "N:\EECS373\wubsuit\websuit\synthesis\websuit.edn;edn"
-VALUE "N:\EECS373\wubsuit\websuit\component\work\websuit\websuit.pdc;pdc"
+VALUE "N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn;edn"
 ENDLIST
 LIST OPTIONAL_FILES
 ENDLIST

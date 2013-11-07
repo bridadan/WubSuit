@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Mon Nov 04 21:31:30 2013 ***************************************************************************
+                          Thu Nov 07 11:17:59 2013 ***************************************************************************
 
 Product: Designer
 Release: v11.0
 Version: 11.0.0.23
-File Name: N:\EECS373\wubsuit\websuit\designer\impl1\websuit.adb
+File Name: N:\EECS_373\WubWub\WubSuit\designer\impl1\websuit.adb
 Design Name: websuit  Design State: layout
-Last Saved: Mon Nov 04 21:31:11 2013
+Last Saved: Thu Nov 07 11:17:36 2013
 
 ***** Device Data **************************************************
 
@@ -22,9 +22,9 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Mon Nov 04 21:31:05 2013:
-        N:\EECS373\wubsuit\websuit\synthesis\websuit.edn
-        N:\EECS373\wubsuit\websuit\component\work\websuit\websuit.pdc
+Source File(s) Imported on Thu Nov 07 11:17:27 2013:
+        N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn
+        N:\EECS_373\WubWub\WubSuit\component\work\websuit\websuit.pdc
 
 
 ***** CAE Variables ************************************************
@@ -50,8 +50,8 @@ Parameters used to run compile:
 Family      : SmartFusion
 Device      : A2F200M3F
 Package     : 484 FBGA
-Source      : N:\EECS373\wubsuit\websuit\synthesis\websuit.edn
-              N:\EECS373\wubsuit\websuit\component\work\websuit\websuit.pdc
+Source      : N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn
+              N:\EECS_373\WubWub\WubSuit\component\work\websuit\websuit.pdc
 Format      : EDIF
 Topcell     : websuit
 Speed grade : -1
@@ -507,25 +507,25 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Mon Nov 04 21:31:17 2013
+Timing-driven Placer Started: Thu Nov 07 11:17:46 2013
 
-Placer Finished: Mon Nov 04 21:31:19 2013
-Total Placer CPU Time:     00:00:02
+Placer Finished: Thu Nov 07 11:17:47 2013
+Total Placer CPU Time:     00:00:01
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: websuit                         Started: Mon Nov 04 21:31:21 2013
+Design: websuit                         Started: Thu Nov 07 11:17:50 2013
 
  
 
 Timing-driven Router completed successfully.
 
 Design: websuit                         
-Finished: Mon Nov 04 21:31:26 2013
+Finished: Thu Nov 07 11:17:55 2013
 Total CPU Time:     00:00:04            Total Elapsed Time: 00:00:05
-Total Memory Usage: 144.1 Mbytes
+Total Memory Usage: 144.3 Mbytes
                         o - o - o - o - o - o
 
 

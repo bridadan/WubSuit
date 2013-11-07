@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Mon Nov 04 21:31:11 2013 ***************************************************************************
+                          Thu Nov 07 11:17:35 2013 ***************************************************************************
 
 Product: Designer
 Release: v11.0
 Version: 11.0.0.23
-File Name: N:\EECS373\wubsuit\websuit\designer\impl1\websuit.adb
+File Name: N:\EECS_373\WubWub\WubSuit\designer\impl1\websuit.adb
 Design Name: websuit  Design State: compile
-Last Saved: Mon Nov 04 21:31:08 2013
+Last Saved: Thu Nov 07 11:17:31 2013
 
 ***** Device Data **************************************************
 
@@ -22,9 +22,9 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Mon Nov 04 21:31:05 2013:
-        N:\EECS373\wubsuit\websuit\synthesis\websuit.edn
-        N:\EECS373\wubsuit\websuit\component\work\websuit\websuit.pdc
+Source File(s) Imported on Thu Nov 07 11:17:27 2013:
+        N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn
+        N:\EECS_373\WubWub\WubSuit\component\work\websuit\websuit.pdc
 
 
 ***** CAE Variables ************************************************
@@ -50,8 +50,8 @@ Parameters used to run compile:
 Family      : SmartFusion
 Device      : A2F200M3F
 Package     : 484 FBGA
-Source      : N:\EECS373\wubsuit\websuit\synthesis\websuit.edn
-              N:\EECS373\wubsuit\websuit\component\work\websuit\websuit.pdc
+Source      : N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn
+              N:\EECS_373\WubWub\WubSuit\component\work\websuit\websuit.pdc
 Format      : EDIF
 Topcell     : websuit
 Speed grade : -1

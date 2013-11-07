@@ -1,15 +1,15 @@
-C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  N:\EECS373\wubsuit\websuit\synthesis  -part A2F200M3F  -package FBGA484  -grade -1   -globalthreshold 50 -maxfan 24 -opcond COMWC     -report_path 0   -RWCheckOnRam 0     -summaryfile N:\EECS373\wubsuit\websuit\synthesis\synlog\report\websuit_fpga_mapper.xml -top_level_module  websuit  -flow mapping  -mp 1 -prjfile  N:\EECS373\wubsuit\websuit\synthesis\scratchproject.prs  -implementation synthesis -licensetype  synplifypro_actel  -oedif  N:\EECS373\wubsuit\websuit\synthesis\websuit.edn  -freq 100.000  N:\EECS373\wubsuit\websuit\synthesis\synwork\websuit_premap.srd  -sap  N:\EECS373\wubsuit\websuit\synthesis\websuit.sap  -otap  N:\EECS373\wubsuit\websuit\synthesis\websuit.tap  -omap  N:\EECS373\wubsuit\websuit\synthesis\websuit.map  -devicelib  C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v  -sap  N:\EECS373\wubsuit\websuit\synthesis\websuit.sap  -ologparam  N:\EECS373\wubsuit\websuit\synthesis\syntmp\websuit.plg  -osyn  N:\EECS373\wubsuit\websuit\synthesis\websuit.srm  -prjdir  N:\EECS373\wubsuit\websuit\synthesis\  -prjname  websuit_syn  -log  N:\EECS373\wubsuit\websuit\synthesis\synlog\websuit_fpga_mapper.srr 
+C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  N:\EECS_373\WubWub\WubSuit\synthesis  -part A2F200M3F  -package FBGA484  -grade -1   -globalthreshold 50 -maxfan 24 -opcond COMWC     -report_path 0   -RWCheckOnRam 0     -summaryfile N:\EECS_373\WubWub\WubSuit\synthesis\synlog\report\websuit_fpga_mapper.xml -top_level_module  websuit  -flow mapping  -mp 1 -prjfile  N:\EECS_373\WubWub\WubSuit\synthesis\scratchproject.prs  -implementation synthesis -licensetype  synplifypro_actel  -oedif  N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn  -freq 100.000  N:\EECS_373\WubWub\WubSuit\synthesis\synwork\websuit_premap.srd  -sap  N:\EECS_373\WubWub\WubSuit\synthesis\websuit.sap  -otap  N:\EECS_373\WubWub\WubSuit\synthesis\websuit.tap  -omap  N:\EECS_373\WubWub\WubSuit\synthesis\websuit.map  -devicelib  C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v  -sap  N:\EECS_373\WubWub\WubSuit\synthesis\websuit.sap  -ologparam  N:\EECS_373\WubWub\WubSuit\synthesis\syntmp\websuit.plg  -osyn  N:\EECS_373\WubWub\WubSuit\synthesis\websuit.srm  -prjdir  N:\EECS_373\WubWub\WubSuit\synthesis\  -prjname  websuit_syn  -log  N:\EECS_373\WubWub\WubSuit\synthesis\synlog\websuit_fpga_mapper.srr 
 rc:1 success:1
-N:\EECS373\wubsuit\websuit\synthesis\scratchproject.prs|o|1383618650|1922
-N:\EECS373\wubsuit\websuit\synthesis\websuit.edn|o|1383618656|104399
-N:\EECS373\wubsuit\websuit\synthesis\synwork\websuit_premap.srd|i|1383618653|13771
-N:\EECS373\wubsuit\websuit\synthesis\websuit.sap|o|1383618653|87
-N:\EECS373\wubsuit\websuit\synthesis\websuit.tap|o|0|0
-N:\EECS373\wubsuit\websuit\synthesis\websuit.map|o|1383618656|28
+N:\EECS_373\WubWub\WubSuit\synthesis\scratchproject.prs|o|1383839761|1922
+N:\EECS_373\WubWub\WubSuit\synthesis\websuit.edn|o|1383841029|104398
+N:\EECS_373\WubWub\WubSuit\synthesis\synwork\websuit_premap.srd|i|1383841026|13774
+N:\EECS_373\WubWub\WubSuit\synthesis\websuit.sap|o|1383841026|87
+N:\EECS_373\WubWub\WubSuit\synthesis\websuit.tap|o|0|0
+N:\EECS_373\WubWub\WubSuit\synthesis\websuit.map|o|1383841031|28
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v|i|1360942192|72817
-N:\EECS373\wubsuit\websuit\synthesis\websuit.sap|o|1383618653|87
-N:\EECS373\wubsuit\websuit\synthesis\syntmp\websuit.plg|o|1383618656|664
-N:\EECS373\wubsuit\websuit\synthesis\websuit.srm|o|1383618656|79455
-N:\EECS373\wubsuit\websuit\synthesis\synlog\websuit_fpga_mapper.srr|o|1383618656|12995
+N:\EECS_373\WubWub\WubSuit\synthesis\websuit.sap|o|1383841026|87
+N:\EECS_373\WubWub\WubSuit\synthesis\syntmp\websuit.plg|o|1383841031|664
+N:\EECS_373\WubWub\WubSuit\synthesis\websuit.srm|o|1383841029|79464
+N:\EECS_373\WubWub\WubSuit\synthesis\synlog\websuit_fpga_mapper.srr|o|1383841031|12995
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin64\m_proasic.exe|i|1360942034|13812224
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin\m_proasic.exe|i|1360942022|11409920

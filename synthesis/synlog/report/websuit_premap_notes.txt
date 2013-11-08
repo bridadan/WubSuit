@@ -1,3 +1,0 @@
-@N: MF248 |Running in 64-bit mode.
-@N: MF667 |Clock conversion disabled 
-@N: BN225 |Writing default property annotation file N:\EECS_373\WubWub\WubSuit\synthesis\websuit.sap.

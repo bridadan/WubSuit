@@ -1,0 +1,30 @@
+Actel Designer Software
+Version: 11.0.0.23
+Release: v11.0
+
+Info: The design websuit.adb was last modified by software version 11.0.0.23.
+Opened an existing Libero design websuit.adb.
+'BA_NAME' set to 'websuit_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS_373\WubWub\WubSuit\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+Wrote timing report to file: websuit_maxdelay_timing_report.txt
+
+The Report command succeeded ( 00:00:02 )
+Wrote timing report to file: websuit_mindelay_timing_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote timing_violations report to file: websuit_maxdelay_timingviolations_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote timing_violations report to file: websuit_mindelay_timingviolations_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Design saved to file N:\EECS_373\WubWub\WubSuit\designer\impl1\websuit.adb.
+
+The Execute Script command succeeded ( 00:00:05 )
+Design closed.
+

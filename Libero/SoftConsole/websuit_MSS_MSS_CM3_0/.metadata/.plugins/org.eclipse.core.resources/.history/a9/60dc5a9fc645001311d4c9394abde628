@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <inttypes.h>
+#include "midi.h"
+
+int main()
+{
+	printf("UART0 configured correctly!\n\r");
+
+	MIDI_init();
+	MIDI_test();
+
+	return(0);
+}

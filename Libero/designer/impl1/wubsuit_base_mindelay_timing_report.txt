@@ -1,0 +1,1179 @@
+Timing Report Min Delay Analysis
+
+SmartTime Version v11.0
+Microsemi Corporation - Actel Designer Software Release v11.0 (Version 11.0.0.23)
+Copyright (c) 1989-2013
+Date: Mon Nov 18 21:37:34 2013
+
+
+Design: wubsuit_base
+Family: SmartFusion
+Die: A2F200M3F
+Package: 484 FBGA
+Temperature: COM
+Voltage: COM
+Speed Grade: -1
+Design State: Post-Layout
+Data source: Silicon verified
+Min Operating Condition: BEST
+Max Operating Condition: WORST
+Using Enhanced Min Delay Analysis
+Scenario for Timing Analysis: Primary
+
+
+-----------------------------------------------------
+SUMMARY
+
+Clock Domain:               mss_aclk
+Period (ns):                N/A
+Frequency (MHz):            N/A
+Required Period (ns):       40.000
+Required Frequency (MHz):   25.000
+External Setup (ns):        N/A
+External Hold (ns):         N/A
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+Clock Domain:               mss_fabric_interface_clock
+Period (ns):                7.029
+Frequency (MHz):            142.268
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        N/A
+External Hold (ns):         N/A
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+Clock Domain:               mss_pclk1
+Period (ns):                N/A
+Frequency (MHz):            N/A
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        1.109
+External Hold (ns):         0.993
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+Clock Domain:               mss_ccc_gla1
+Period (ns):                7.892
+Frequency (MHz):            126.711
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        -1.698
+External Hold (ns):         2.666
+Min Clock-To-Out (ns):      6.206
+Max Clock-To-Out (ns):      10.744
+
+Clock Domain:               mss_ccc_gla0
+Period (ns):                10.000
+Frequency (MHz):            100.000
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        -4.499
+External Hold (ns):         3.696
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+Clock Domain:               wubsuit_base_MSS_0/MSS_CCC_0/I_RCOSC:CLKOUT
+Period (ns):                N/A
+Frequency (MHz):            N/A
+Required Period (ns):       10.000
+Required Frequency (MHz):   100.000
+External Setup (ns):        N/A
+External Hold (ns):         N/A
+Min Clock-To-Out (ns):      N/A
+Max Clock-To-Out (ns):      N/A
+
+                            Input to Output
+Min Delay (ns):             N/A
+Max Delay (ns):             N/A
+
+END SUMMARY
+-----------------------------------------------------
+
+Clock Domain mss_aclk
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+No Path
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain mss_fabric_interface_clock
+
+SET Register to Register
+
+Path 1
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1]
+  Delay (ns):                  3.737
+  Slack (ns):                  2.345
+  Arrival (ns):                6.293
+  Required (ns):               3.948
+  Hold (ns):                   1.392
+
+Path 2
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[0]
+  Delay (ns):                  3.733
+  Slack (ns):                  2.360
+  Arrival (ns):                6.289
+  Required (ns):               3.929
+  Hold (ns):                   1.373
+
+Path 3
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[2]
+  Delay (ns):                  3.793
+  Slack (ns):                  2.404
+  Arrival (ns):                6.349
+  Required (ns):               3.945
+  Hold (ns):                   1.389
+
+Path 4
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[7]
+  Delay (ns):                  3.810
+  Slack (ns):                  2.433
+  Arrival (ns):                6.366
+  Required (ns):               3.933
+  Hold (ns):                   1.377
+
+Path 5
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[5]
+  Delay (ns):                  3.815
+  Slack (ns):                  2.439
+  Arrival (ns):                6.371
+  Required (ns):               3.932
+  Hold (ns):                   1.376
+
+
+Expanded Path 1
+  From: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1]
+  data arrival time                              6.293
+  data required time                         -   3.948
+  slack                                          2.345
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_fabric_interface_clock
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB (r)
+               +     2.556          Clock generation
+  2.556
+               +     1.673          cell: ADLIB:MSS_APB_IP
+  4.229                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPADDR[9] (r)
+               +     0.060          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPADDR[9]INT_NET
+  4.289                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_33:PIN1INT (r)
+               +     0.041          cell: ADLIB:MSS_IF
+  4.330                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_33:PIN1 (r)
+               +     0.356          net: CoreAPB3_0_APBmslave0_PADDR[9]
+  4.686                        CoreAPB3_0/CAPB3O0OI[2]:B (r)
+               +     0.267          cell: ADLIB:NOR3B
+  4.953                        CoreAPB3_0/CAPB3O0OI[2]:Y (r)
+               +     0.231          net: CoreAPB3_0_APBmslave2_PSELx
+  5.184                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave2_PRDATA_m[1]:B (r)
+               +     0.221          cell: ADLIB:NOR2B
+  5.405                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave2_PRDATA_m[1]:Y (r)
+               +     0.166          net: CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave2_PRDATA_m[1]
+  5.571                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[1]:C (r)
+               +     0.274          cell: ADLIB:OR3
+  5.845                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[1]:Y (r)
+               +     0.133          net: wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[1]
+  5.978                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN5 (r)
+               +     0.102          cell: ADLIB:MSS_IF
+  6.080                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN5INT (r)
+               +     0.213          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPRDATA[1]INT_NET
+  6.293                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1] (r)
+                                    
+  6.293                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_fabric_interface_clock
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB (r)
+               +     2.556          Clock generation
+  2.556
+               +     1.392          Library hold time: ADLIB:MSS_APB_IP
+  3.948                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1]
+                                    
+  3.948                        data required time
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+No Path
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+SET mss_ccc_gla1 to mss_fabric_interface_clock
+
+Path 1
+  From:                        CoreUARTapb_0/CUARTI1OI[5]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[5]
+  Delay (ns):                  1.740
+  Slack (ns):                  1.689
+  Arrival (ns):                5.637
+  Required (ns):               3.948
+  Hold (ns):                   1.392
+
+Path 2
+  From:                        CoreUARTapb_2/CUARTI1OI[1]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1]
+  Delay (ns):                  2.006
+  Slack (ns):                  1.928
+  Arrival (ns):                5.876
+  Required (ns):               3.948
+  Hold (ns):                   1.392
+
+Path 3
+  From:                        CoreUARTapb_0/CUARTI1OI[1]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1]
+  Delay (ns):                  1.993
+  Slack (ns):                  1.942
+  Arrival (ns):                5.890
+  Required (ns):               3.948
+  Hold (ns):                   1.392
+
+Path 4
+  From:                        CoreUARTapb_0/CUARTI1OI[7]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[7]
+  Delay (ns):                  1.998
+  Slack (ns):                  1.946
+  Arrival (ns):                5.895
+  Required (ns):               3.949
+  Hold (ns):                   1.393
+
+Path 5
+  From:                        CoreUARTapb_2/CUARTI1OI[7]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[7]
+  Delay (ns):                  2.017
+  Slack (ns):                  1.965
+  Arrival (ns):                5.914
+  Required (ns):               3.949
+  Hold (ns):                   1.393
+
+
+Expanded Path 1
+  From: CoreUARTapb_0/CUARTI1OI[5]:CLK
+  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[5]
+  data arrival time                              5.637
+  data required time                         -   3.948
+  slack                                          1.689
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.339          net: FAB_CLK
+  3.897                        CoreUARTapb_0/CUARTI1OI[5]:CLK (r)
+               +     0.248          cell: ADLIB:DFN1E0C0
+  4.145                        CoreUARTapb_0/CUARTI1OI[5]:Q (r)
+               +     0.409          net: CoreAPB3_0_APBmslave0_PRDATA[5]
+  4.554                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[5]:A (r)
+               +     0.209          cell: ADLIB:NOR2B
+  4.763                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[5]:Y (r)
+               +     0.166          net: CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[5]
+  4.929                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[5]:B (r)
+               +     0.259          cell: ADLIB:OR3
+  5.188                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[5]:Y (r)
+               +     0.133          net: wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[5]
+  5.321                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_38:PIN4 (r)
+               +     0.102          cell: ADLIB:MSS_IF
+  5.423                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_38:PIN4INT (r)
+               +     0.214          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPRDATA[5]INT_NET
+  5.637                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[5] (r)
+                                    
+  5.637                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_fabric_interface_clock
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB (r)
+               +     2.556          Clock generation
+  2.556
+               +     1.392          Library hold time: ADLIB:MSS_APB_IP
+  3.948                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[5]
+                                    
+  3.948                        data required time
+
+
+END SET mss_ccc_gla1 to mss_fabric_interface_clock
+
+----------------------------------------------------
+
+Clock Domain mss_pclk1
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+Path 1
+  From:                        LPiezo
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[3]
+  Delay (ns):                  2.494
+  Slack (ns):
+  Arrival (ns):                2.494
+  Required (ns):
+  Hold (ns):                   0.931
+  External Hold (ns):          0.993
+
+Path 2
+  From:                        CapButton
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[2]
+  Delay (ns):                  2.731
+  Slack (ns):
+  Arrival (ns):                2.731
+  Required (ns):
+  Hold (ns):                   1.011
+  External Hold (ns):          0.836
+
+
+Expanded Path 1
+  From: LPiezo
+  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[3]
+  data arrival time                              2.494
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        LPiezo (f)
+               +     0.000          net: LPiezo
+  0.000                        LPiezo_pad/U0/U0:PAD (f)
+               +     0.276          cell: ADLIB:IOPAD_IN
+  0.276                        LPiezo_pad/U0/U0:Y (f)
+               +     0.000          net: LPiezo_pad/U0/NET1
+  0.276                        LPiezo_pad/U0/U1:YIN (f)
+               +     0.018          cell: ADLIB:IOIN_IB
+  0.294                        LPiezo_pad/U0/U1:Y (f)
+               +     0.806          net: LPiezo_c
+  1.100                        wubsuit_base_MSS_0/MSSINT_GPI_3:A (f)
+               +     0.229          cell: ADLIB:INV
+  1.329                        wubsuit_base_MSS_0/MSSINT_GPI_3:Y (r)
+               +     1.128          net: wubsuit_base_MSS_0/MSSINT_GPI_3_Y
+  2.457                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_23:PIN5 (r)
+               +     0.037          cell: ADLIB:MSS_IF
+  2.494                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_23:PIN5INT (r)
+               +     0.000          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/GPI[3]INT_NET
+  2.494                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[3] (r)
+                                    
+  2.494                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          mss_pclk1
+               +     0.000          Clock source
+  N/C                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:PCLK1 (r)
+               +     2.556          Clock generation
+  N/C
+               +     0.931          Library hold time: ADLIB:MSS_APB_IP
+  N/C                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[3]
+
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+SET mss_ccc_gla1 to mss_pclk1
+
+Path 1
+  From:                        CoreUARTapb_0/CUARTOOlI/RXRDY:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0]
+  Delay (ns):                  1.081
+  Slack (ns):                  1.375
+  Arrival (ns):                4.985
+  Required (ns):               3.610
+  Hold (ns):                   1.054
+
+Path 2
+  From:                        CoreUARTapb_1/CUARTOOlI/RXRDY:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[1]
+  Delay (ns):                  1.106
+  Slack (ns):                  1.434
+  Arrival (ns):                4.985
+  Required (ns):               3.551
+  Hold (ns):                   0.995
+
+
+Expanded Path 1
+  From: CoreUARTapb_0/CUARTOOlI/RXRDY:CLK
+  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0]
+  data arrival time                              4.985
+  data required time                         -   3.610
+  slack                                          1.375
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.346          net: FAB_CLK
+  3.904                        CoreUARTapb_0/CUARTOOlI/RXRDY:CLK (r)
+               +     0.248          cell: ADLIB:DFN1E1C0
+  4.152                        CoreUARTapb_0/CUARTOOlI/RXRDY:Q (r)
+               +     0.796          net: CoreUARTapb_0_RXRDY
+  4.948                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_20:PIN5 (r)
+               +     0.037          cell: ADLIB:MSS_IF
+  4.985                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_20:PIN5INT (r)
+               +     0.000          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/GPI[0]INT_NET
+  4.985                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0] (r)
+                                    
+  4.985                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_pclk1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:PCLK1 (r)
+               +     2.556          Clock generation
+  2.556
+               +     1.054          Library hold time: ADLIB:MSS_APB_IP
+  3.610                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0]
+                                    
+  3.610                        data required time
+
+
+END SET mss_ccc_gla1 to mss_pclk1
+
+----------------------------------------------------
+
+Clock Domain mss_ccc_gla1
+
+SET Register to Register
+
+Path 1
+  From:                        CoreUARTapb_0/CUARTOOlI/CUARTI0I[5]:CLK
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[5]:D
+  Delay (ns):                  0.397
+  Slack (ns):                  0.365
+  Arrival (ns):                4.294
+  Required (ns):               3.929
+  Hold (ns):                   0.000
+
+Path 2
+  From:                        CoreUARTapb_0/CUARTOOlI/CUARTI0I[6]:CLK
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[6]:D
+  Delay (ns):                  0.397
+  Slack (ns):                  0.372
+  Arrival (ns):                4.294
+  Required (ns):               3.922
+  Hold (ns):                   0.000
+
+Path 3
+  From:                        CoreUARTapb_0/CUARTOOlI/CUARTI0I[1]:CLK
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[1]:D
+  Delay (ns):                  0.397
+  Slack (ns):                  0.372
+  Arrival (ns):                4.301
+  Required (ns):               3.929
+  Hold (ns):                   0.000
+
+Path 4
+  From:                        CoreUARTapb_0/CUARTOOlI/CUARTI0I[0]:CLK
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[0]:D
+  Delay (ns):                  0.397
+  Slack (ns):                  0.372
+  Arrival (ns):                4.294
+  Required (ns):               3.922
+  Hold (ns):                   0.000
+
+Path 5
+  From:                        CoreUARTapb_0/CUARTOOlI/CUARTI0I[2]:CLK
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[2]:D
+  Delay (ns):                  0.402
+  Slack (ns):                  0.377
+  Arrival (ns):                4.306
+  Required (ns):               3.929
+  Hold (ns):                   0.000
+
+
+Expanded Path 1
+  From: CoreUARTapb_0/CUARTOOlI/CUARTI0I[5]:CLK
+  To: CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[5]:D
+  data arrival time                              4.294
+  data required time                         -   3.929
+  slack                                          0.365
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.339          net: FAB_CLK
+  3.897                        CoreUARTapb_0/CUARTOOlI/CUARTI0I[5]:CLK (r)
+               +     0.248          cell: ADLIB:DFN1E1C0
+  4.145                        CoreUARTapb_0/CUARTOOlI/CUARTI0I[5]:Q (r)
+               +     0.149          net: CoreUARTapb_0/CUARTOOlI/CUARTI0I[5]
+  4.294                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[5]:D (r)
+                                    
+  4.294                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.371          net: FAB_CLK
+  3.929                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[5]:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1E0C0
+  3.929                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[5]:D
+                                    
+  3.929                        data required time
+
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+Path 1
+  From:                        XBee_RX
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
+  Delay (ns):                  1.244
+  Slack (ns):
+  Arrival (ns):                1.244
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          2.666
+
+Path 2
+  From:                        MIDI_RX
+  To:                          CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
+  Delay (ns):                  1.675
+  Slack (ns):
+  Arrival (ns):                1.675
+  Required (ns):
+  Hold (ns):                   0.000
+  External Hold (ns):          2.223
+
+
+Expanded Path 1
+  From: XBee_RX
+  To: CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
+  data arrival time                              1.244
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        XBee_RX (f)
+               +     0.000          net: XBee_RX
+  0.000                        XBee_RX_pad/U0/U0:PAD (f)
+               +     0.276          cell: ADLIB:IOPAD_IN
+  0.276                        XBee_RX_pad/U0/U0:Y (f)
+               +     0.000          net: XBee_RX_pad/U0/NET1
+  0.276                        XBee_RX_pad/U0/U1:YIN (f)
+               +     0.018          cell: ADLIB:IOIN_IB
+  0.294                        XBee_RX_pad/U0/U1:Y (f)
+               +     0.950          net: XBee_RX_c
+  1.244                        CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D (f)
+                                    
+  1.244                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          mss_ccc_gla1
+               +     0.000          Clock source
+  N/C                          wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  N/C
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  N/C                          wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  N/C                          wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.352          net: FAB_CLK
+  N/C                          CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1E1C0
+  N/C                          CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
+
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+Path 1
+  From:                        CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTOl1:CLK
+  To:                          MIDI_TX
+  Delay (ns):                  2.356
+  Slack (ns):
+  Arrival (ns):                6.206
+  Required (ns):
+  Clock to Out (ns):           6.206
+
+Path 2
+  From:                        CoreUARTapb_2/CUARTOOlI/CUARTl10/CUARTOl1:CLK
+  To:                          LCD_TX
+  Delay (ns):                  2.370
+  Slack (ns):
+  Arrival (ns):                6.220
+  Required (ns):
+  Clock to Out (ns):           6.220
+
+Path 3
+  From:                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTOl1:CLK
+  To:                          XBee_TX
+  Delay (ns):                  2.632
+  Slack (ns):
+  Arrival (ns):                6.514
+  Required (ns):
+  Clock to Out (ns):           6.514
+
+
+Expanded Path 1
+  From: CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTOl1:CLK
+  To: MIDI_TX
+  data arrival time                              6.206
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.292          net: FAB_CLK
+  3.850                        CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTOl1:CLK (r)
+               +     0.248          cell: ADLIB:DFN1E0P0
+  4.098                        CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTOl1:Q (r)
+               +     0.767          net: MIDI_TX_c
+  4.865                        MIDI_TX_pad/U0/U1:D (r)
+               +     0.256          cell: ADLIB:IOTRI_OB_EB
+  5.121                        MIDI_TX_pad/U0/U1:DOUT (r)
+               +     0.000          net: MIDI_TX_pad/U0/NET1
+  5.121                        MIDI_TX_pad/U0/U0:D (r)
+               +     1.085          cell: ADLIB:IOPAD_TRI
+  6.206                        MIDI_TX_pad/U0/U0:PAD (r)
+               +     0.000          net: MIDI_TX
+  6.206                        MIDI_TX (r)
+                                    
+  6.206                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          mss_ccc_gla1
+               +     0.000          Clock source
+  N/C                          wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  N/C
+                                    
+  N/C                          MIDI_TX (r)
+
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+SET mss_fabric_interface_clock to mss_ccc_gla1
+
+Path 1
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          CoreUARTapb_2/CUARTI0OI[3]:D
+  Delay (ns):                  2.289
+  Slack (ns):                  0.923
+  Arrival (ns):                4.845
+  Required (ns):               3.922
+  Hold (ns):                   0.000
+
+Path 2
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          CoreUARTapb_2/CUARTI0OI[6]:D
+  Delay (ns):                  2.303
+  Slack (ns):                  0.930
+  Arrival (ns):                4.859
+  Required (ns):               3.929
+  Hold (ns):                   0.000
+
+Path 3
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          CoreUARTapb_2/CUARTI0OI[5]:D
+  Delay (ns):                  2.304
+  Slack (ns):                  0.931
+  Arrival (ns):                4.860
+  Required (ns):               3.929
+  Hold (ns):                   0.000
+
+Path 4
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          CoreUARTapb_0/CUARTI0OI[5]:D
+  Delay (ns):                  2.312
+  Slack (ns):                  0.939
+  Arrival (ns):                4.868
+  Required (ns):               3.929
+  Hold (ns):                   0.000
+
+Path 5
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To:                          CoreUARTapb_0/CUARTI0OI[4]:D
+  Delay (ns):                  2.366
+  Slack (ns):                  1.000
+  Arrival (ns):                4.922
+  Required (ns):               3.922
+  Hold (ns):                   0.000
+
+
+Expanded Path 1
+  From: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
+  To: CoreUARTapb_2/CUARTI0OI[3]:D
+  data arrival time                              4.845
+  data required time                         -   3.922
+  slack                                          0.923
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_fabric_interface_clock
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB (r)
+               +     2.556          Clock generation
+  2.556
+               +     1.631          cell: ADLIB:MSS_APB_IP
+  4.187                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPWDATA[3] (f)
+               +     0.078          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPWDATA[3]INT_NET
+  4.265                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN3INT (f)
+               +     0.041          cell: ADLIB:MSS_IF
+  4.306                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN3 (f)
+               +     0.539          net: CoreAPB3_0_APBmslave0_PWDATA[3]
+  4.845                        CoreUARTapb_2/CUARTI0OI[3]:D (f)
+                                    
+  4.845                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.364          net: FAB_CLK
+  3.922                        CoreUARTapb_2/CUARTI0OI[3]:CLK (r)
+               +     0.000          Library hold time: ADLIB:DFN1E1C0
+  3.922                        CoreUARTapb_2/CUARTI0OI[3]:D
+                                    
+  3.922                        data required time
+
+
+END SET mss_fabric_interface_clock to mss_ccc_gla1
+
+----------------------------------------------------
+
+SET mss_ccc_gla0 to mss_ccc_gla1
+
+Path 1
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To:                          CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOIIl:CLR
+  Delay (ns):                  3.735
+  Slack (ns):                  2.362
+  Arrival (ns):                6.291
+  Required (ns):               3.929
+  Hold (ns):
+
+Path 2
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To:                          CoreUARTapb_2/CUARTI1OI[5]:CLR
+  Delay (ns):                  3.735
+  Slack (ns):                  2.362
+  Arrival (ns):                6.291
+  Required (ns):               3.929
+  Hold (ns):
+
+Path 3
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To:                          CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTll1:CLR
+  Delay (ns):                  3.735
+  Slack (ns):                  2.362
+  Arrival (ns):                6.291
+  Required (ns):               3.929
+  Hold (ns):
+
+Path 4
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTl1ll[5]:CLR
+  Delay (ns):                  3.735
+  Slack (ns):                  2.362
+  Arrival (ns):                6.291
+  Required (ns):               3.929
+  Hold (ns):
+
+Path 5
+  From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To:                          CoreUARTapb_2/CUARTI0OI[6]:CLR
+  Delay (ns):                  3.735
+  Slack (ns):                  2.362
+  Arrival (ns):                6.291
+  Required (ns):               3.929
+  Hold (ns):
+
+
+Expanded Path 1
+  From: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+  To: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOIIl:CLR
+  data arrival time                              6.291
+  data required time                         -   3.929
+  slack                                          2.362
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        mss_ccc_gla0
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLAMSS (r)
+               +     2.248          Clock generation
+  2.248
+               +     0.308          net: wubsuit_base_MSS_0/GLA0
+  2.556                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK (r)
+               +     1.705          cell: ADLIB:MSS_APB_IP
+  4.261                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:M2FRESETn (r)
+               +     0.060          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/M2FRESETnINT_NET
+  4.321                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_46:PIN2INT (r)
+               +     0.044          cell: ADLIB:MSS_IF
+  4.365                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_46:PIN2 (r)
+               +     1.285          net: wubsuit_base_MSS_0/MSS_ADLIB_INST_M2FRESETn
+  5.650                        wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC:A (r)
+               +     0.329          cell: ADLIB:CLKSRC
+  5.979                        wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC:Y (r)
+               +     0.312          net: wubsuit_base_MSS_0_M2F_RESET_N
+  6.291                        CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOIIl:CLR (r)
+                                    
+  6.291                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  0.000                        mss_ccc_gla1
+               +     0.000          Clock source
+  0.000                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLA (r)
+               +     3.558          Clock generation
+  3.558
+               +     0.000          net: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/GLA_INT
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
+               +     0.000          cell: ADLIB:MSS_CCC_GL_IF
+  3.558                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
+               +     0.371          net: FAB_CLK
+  3.929                        CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOIIl:CLK (r)
+               +     0.000          Library removal time: ADLIB:DFN1E1C0
+  3.929                        CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOIIl:CLR
+                                    
+  3.929                        data required time
+
+
+END SET mss_ccc_gla0 to mss_ccc_gla1
+
+----------------------------------------------------
+
+Clock Domain mss_ccc_gla0
+
+Info: The maximum frequency of this clock domain is limited by the period of pin wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+Path 1
+  From:                        MSS_RESET_N
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSRESETn
+  Delay (ns):                  0.276
+  Slack (ns):
+  Arrival (ns):                0.276
+  Required (ns):
+  Hold (ns):                   1.354
+  External Hold (ns):          3.696
+
+
+Expanded Path 1
+  From: MSS_RESET_N
+  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSRESETn
+  data arrival time                              0.276
+  data required time                         -   N/C
+  slack                                          N/C
+  ________________________________________________________
+  Data arrival time calculation
+  0.000                        MSS_RESET_N (f)
+               +     0.000          net: MSS_RESET_N
+  0.000                        wubsuit_base_MSS_0/MSS_RESET_0_MSS_RESET_N:PAD (f)
+               +     0.276          cell: ADLIB:IOPAD_IN
+  0.276                        wubsuit_base_MSS_0/MSS_RESET_0_MSS_RESET_N:Y (f)
+               +     0.000          net: wubsuit_base_MSS_0/MSS_RESET_0_MSS_RESET_N_Y
+  0.276                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSRESETn (f)
+                                    
+  0.276                        data arrival time
+  ________________________________________________________
+  Data required time calculation
+  N/C                          mss_ccc_gla0
+               +     0.000          Clock source
+  N/C                          wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_MSSCCC:GLAMSS (r)
+               +     2.248          Clock generation
+  N/C
+               +     0.370          net: wubsuit_base_MSS_0/GLA0
+  N/C                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK (r)
+               +     1.354          Library hold time: ADLIB:MSS_APB_IP
+  N/C                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSRESETn
+
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Clock Domain wubsuit_base_MSS_0/MSS_CCC_0/I_RCOSC:CLKOUT
+
+SET Register to Register
+
+No Path
+
+END SET Register to Register
+
+----------------------------------------------------
+
+SET External Hold
+
+No Path
+
+END SET External Hold
+
+----------------------------------------------------
+
+SET Clock to Output
+
+No Path
+
+END SET Clock to Output
+
+----------------------------------------------------
+
+SET Register to Asynchronous
+
+No Path
+
+END SET Register to Asynchronous
+
+----------------------------------------------------
+
+SET External Removal
+
+No Path
+
+END SET External Removal
+
+----------------------------------------------------
+
+SET Asynchronous to Register
+
+No Path
+
+END SET Asynchronous to Register
+
+----------------------------------------------------
+
+Path set Pin to Pin
+
+SET Input to Output
+
+No Path
+
+END SET Input to Output
+
+----------------------------------------------------
+
+Path set User Sets
+

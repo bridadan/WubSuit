@@ -1,15 +1,37 @@
 #--  Synopsys, Inc.
 #--  Version G-2012.09M-SP1 
-#--  Project file N:\EECS_373\WubWub\WubSuit\synthesis\run_options.txt
-#--  Written on Thu Nov 07 11:17:00 2013
+#--  Project file N:\EECS373\wubsuit_base\synthesis\run_options.txt
+#--  Written on Mon Nov 18 21:32:01 2013
 
 
 #project files
-add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit_MSS/mss_tshell.v"
-add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
-add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit_MSS/MSS_CCC_0/websuit_MSS_tmp_MSS_CCC_0_MSS_CCC.v"
-add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit_MSS/websuit_MSS.v"
-add_file -verilog "N:/EECS_373/WubWub/WubSuit/component/work/websuit/websuit.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_0/rtl/vlog/core_obfuscated/Clock_gen.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_0/rtl/vlog/core_obfuscated/Tx_async.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_0/rtl/vlog/core_obfuscated/Rx_async.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_0/rtl/vlog/core_obfuscated/fifo_256x8_smartfusion.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_0/rtl/vlog/core_obfuscated/CoreUART.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_0/rtl/vlog/core_obfuscated/CoreUARTapb.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_1/rtl/vlog/core_obfuscated/Clock_gen.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_1/rtl/vlog/core_obfuscated/Tx_async.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_1/rtl/vlog/core_obfuscated/Rx_async.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_1/rtl/vlog/core_obfuscated/fifo_256x8_smartfusion.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_1/rtl/vlog/core_obfuscated/CoreUART.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_1/rtl/vlog/core_obfuscated/CoreUARTapb.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/Clock_gen.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/Tx_async.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/Rx_async.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/fifo_256x8_smartfusion.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/CoreUART.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/CoreUARTapb.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base_MSS/mss_tshell.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base_MSS/MSS_CCC_0/wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base_MSS/wubsuit_base_MSS.v"
+add_file -verilog -lib COREAPB3_LIB "N:/EECS373/wubsuit_base/component/Actel/DirectCore/CoreAPB3/4.0.100/rtl/vlog/core_obfuscated/coreapb3_muxptob3.v"
+add_file -verilog -lib COREAPB3_LIB "N:/EECS373/wubsuit_base/component/Actel/DirectCore/CoreAPB3/4.0.100/rtl/vlog/core_obfuscated/coreapb3_iaddr_reg.v"
+add_file -verilog -lib COREAPB3_LIB "N:/EECS373/wubsuit_base/component/Actel/DirectCore/CoreAPB3/4.0.100/rtl/vlog/core_obfuscated/coreapb3.v"
+add_file -verilog "N:/EECS373/wubsuit_base/component/work/wubsuit_base/wubsuit_base.v"
+add_file -constraint "N:/EECS373/wubsuit_base/component/work/wubsuit_base_MSS/mss_tshell_syn.sdc"
 
 
 #implementation: "synthesis"
@@ -29,7 +51,7 @@ set_option -part_companion ""
 
 #compilation/mapping options
 set_option -use_fsm_explorer 0
-set_option -top_module "websuit"
+set_option -top_module "wubsuit_base"
 
 # mapper_options
 set_option -frequency 100.000
@@ -64,5 +86,5 @@ set_option -resource_sharing 1
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "./websuit.edn"
+project -result_file "./wubsuit_base.edn"
 impl -active "synthesis"

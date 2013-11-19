@@ -1,0 +1,23 @@
+********************************************************************
+                            Global Usage Report
+********************************************************************
+  
+Product: Designer
+Release: v11.0
+Version: 11.0.0.23
+Date: Mon Nov 18 21:37:24 2013
+Design Name: wubsuit_base  Family: SmartFusion  Die: A2F200M3F  Package: 484 FBGA
+Design State: Post-Layout
+
+The following nets have been routed to a chip global resource:
+
+    Fanout            Name
+    ----------------------
+    337               Net   : FAB_CLK
+                      Driver: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1
+    336               Net   : wubsuit_base_MSS_0_M2F_RESET_N
+                      Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC/U_GL
+
+
+
+

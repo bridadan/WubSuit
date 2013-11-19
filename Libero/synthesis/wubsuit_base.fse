@@ -1,0 +1,78 @@
+
+fsm_encoding {625302536} onehot
+
+fsm_state_encoding {625302536} CUARTlIll {000001}
+
+fsm_state_encoding {625302536} CUARTOlll {000010}
+
+fsm_state_encoding {625302536} CUARTIlll {000100}
+
+fsm_state_encoding {625302536} CUARTllll {001000}
+
+fsm_state_encoding {625302536} CUARTO0ll {010000}
+
+fsm_state_encoding {625302536} CUARTI0ll {100000}
+
+fsm_registers {625302536} {CUARTO1ll[5]}  {CUARTO1ll[4]}  {CUARTO1ll[3]}  {CUARTO1ll[2]}  {CUARTO1ll[1]}  {CUARTO1ll[0]} 
+
+fsm_encoding {772307235} sequential
+
+fsm_state_encoding {772307235} 00 {00}
+
+fsm_state_encoding {772307235} 01 {01}
+
+fsm_state_encoding {772307235} 10 {10}
+
+fsm_registers {772307235} {CUARTOl0[1]}  {CUARTOl0[0]} 
+
+fsm_encoding {1225302534} onehot
+
+fsm_state_encoding {1225302534} CUARTlIll {000001}
+
+fsm_state_encoding {1225302534} CUARTOlll {000010}
+
+fsm_state_encoding {1225302534} CUARTIlll {000100}
+
+fsm_state_encoding {1225302534} CUARTllll {001000}
+
+fsm_state_encoding {1225302534} CUARTO0ll {010000}
+
+fsm_state_encoding {1225302534} CUARTI0ll {100000}
+
+fsm_registers {1225302534} {CUARTO1ll[5]}  {CUARTO1ll[4]}  {CUARTO1ll[3]}  {CUARTO1ll[2]}  {CUARTO1ll[1]}  {CUARTO1ll[0]} 
+
+fsm_encoding {1372307233} sequential
+
+fsm_state_encoding {1372307233} 00 {00}
+
+fsm_state_encoding {1372307233} 01 {01}
+
+fsm_state_encoding {1372307233} 10 {10}
+
+fsm_registers {1372307233} {CUARTOl0[1]}  {CUARTOl0[0]} 
+
+fsm_encoding {1825302532} onehot
+
+fsm_state_encoding {1825302532} CUARTlIll {000001}
+
+fsm_state_encoding {1825302532} CUARTOlll {000010}
+
+fsm_state_encoding {1825302532} CUARTIlll {000100}
+
+fsm_state_encoding {1825302532} CUARTllll {001000}
+
+fsm_state_encoding {1825302532} CUARTO0ll {010000}
+
+fsm_state_encoding {1825302532} CUARTI0ll {100000}
+
+fsm_registers {1825302532} {CUARTO1ll[5]}  {CUARTO1ll[4]}  {CUARTO1ll[3]}  {CUARTO1ll[2]}  {CUARTO1ll[1]}  {CUARTO1ll[0]} 
+
+fsm_encoding {1972307231} sequential
+
+fsm_state_encoding {1972307231} 00 {00}
+
+fsm_state_encoding {1972307231} 01 {01}
+
+fsm_state_encoding {1972307231} 10 {10}
+
+fsm_registers {1972307231} {CUARTOl0[1]}  {CUARTOl0[0]} 

@@ -2,15 +2,15 @@
 <!-- 
   Synopsys, Inc.
   Version G-2012.09M-SP1 
-  Project file N:\EECS_373\WubWub\WubSuit\synthesis\syntmp\run_option.xml
-  Written on Thu Nov 07 11:17:00 2013
+  Project file N:\EECS373\wubsuit_base\synthesis\syntmp\run_option.xml
+  Written on Mon Nov 18 21:32:01 2013
 
 
 --> 
 <project_attribute_list name="Project Settings"> 
-     <option name="project_name" display_name="Project Name">websuit_syn</option>
+     <option name="project_name" display_name="Project Name">wubsuit_base_syn</option>
      <option name="impl_name" display_name="Implementation Name">synthesis</option>
-     <option name="top_module" display_name="Top Module">websuit</option>
+     <option name="top_module" display_name="Top Module">wubsuit_base</option>
      <option name="retiming" display_name="Retiming">0</option>
      <option name="resource_sharing" display_name="Resource Sharing">1</option>
      <option name="maxfan" display_name="Fanout Guide">24</option>

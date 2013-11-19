@@ -1,0 +1,80 @@
+Actel Designer Software
+Version: 11.0.0.23
+Release: v11.0
+
+Info: The design wubsuit_base.adb was last modified by software version 11.0.0.23.
+Opened an existing Libero design wubsuit_base.adb.
+'BA_NAME' set to 'wubsuit_base_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS373\wubsuit_base\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+***** Layout Variables *********************************************
+
+Mode: TIMING_DRIVEN
+Power-driven Layout: OFF
+Incremental Placement: OFF
+Incremental Route: OFF
+
+
+Info: I/O Bank Assigner detected (1) out of (6) I/O Bank(s) with locked I/O technologies.
+
+Running I/O Bank Assigner.
+
+I/O Bank Assigner completed successfully.
+ 
+
+Planning global net placement...
+
+
+Global net placement completed successfully.
+
+                        o - o - o - o - o - o
+
+Timing-driven Placer Started: Mon Nov 18 21:36:48 2013
+
+Placer Finished: Mon Nov 18 21:37:02 2013
+Total Placer CPU Time:     00:00:14
+
+                        o - o - o - o - o - o
+
+
+Timing-driven Router 
+Design: wubsuit_base                    Started: Mon Nov 18 21:37:07 2013
+
+ 
+Iterative improvement...
+
+Timing-driven Router completed successfully.
+
+Design: wubsuit_base                    
+Finished: Mon Nov 18 21:37:20 2013
+Total CPU Time:     00:00:13            Total Elapsed Time: 00:00:13
+Total Memory Usage: 161.3 Mbytes
+                        o - o - o - o - o - o
+
+Loading the Timing data for the design.
+Finished loading the Timing data.
+TIMER: Max delay timing requirements have been met.
+TIMER: Min delay timing requirements have been met.
+
+The Layout command succeeded ( 00:00:39 )
+Wrote status report to file: wubsuit_base_place_and_route_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote globalnet report to file: wubsuit_base_globalnet_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote globalusage report to file: wubsuit_base_globalusage_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote iobank report to file: wubsuit_base_iobank_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Design saved to file N:\EECS373\wubsuit_base\designer\impl1\wubsuit_base.adb.
+
+The Execute Script command succeeded ( 00:00:43 )
+Design closed.
+

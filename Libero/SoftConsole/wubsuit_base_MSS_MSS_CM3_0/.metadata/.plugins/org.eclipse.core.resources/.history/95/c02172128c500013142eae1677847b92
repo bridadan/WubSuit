@@ -1,0 +1,19 @@
+#include <inttypes.h>
+#include <stdio.h>
+#include "midi.h"
+#include "drivers/mss_gpio/mss_gpio.h"
+
+#define BAUD_VALUE_115200    53 //Possibly a problem because not exactly 53 (53.2535)
+#define COREUARTAPB0_BASE_ADDR      0x40050000
+
+UART_instance_t XBee_uart;
+
+int main()
+{
+	UART_init(&g_uart, COREUARTAPB0_BASE_ADDR,
+		BAUD_VALUE_115200, (DATA_8_BITS | EVEN_PARITY));
+
+	while( 1 )
+	{
+	}
+}

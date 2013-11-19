@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>wubsuit_base</design>
+	<target_edif>N:\EECS373\wubsuit_base\synthesis\wubsuit_base.edn</target_edif>
+</SynplifyOutput>

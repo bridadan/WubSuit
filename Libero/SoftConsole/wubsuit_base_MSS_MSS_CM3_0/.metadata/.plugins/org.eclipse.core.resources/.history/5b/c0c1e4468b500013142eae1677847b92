@@ -1,0 +1,17 @@
+#include <inttypes.h>
+#include <stdio.h>
+#include "drivers/CoreUARTapb/core_uart_apb.h"
+
+#define BAUD_VALUE_57600    25
+#define COREUARTAPB0_BASE_ADDR      0xC3000000UL
+
+UART_instance_t XBee_uart;
+
+int main()
+{
+	UART_init(&g_uart, COREUARTAPB0_BASE_ADDR,
+	                  BAUD_VALUE_57600, (DATA_8_BITS | EVEN_PARITY));
+	while( 1 )
+	{
+	}
+}

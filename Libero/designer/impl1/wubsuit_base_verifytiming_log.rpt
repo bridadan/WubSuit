@@ -1,0 +1,30 @@
+Actel Designer Software
+Version: 11.0.0.23
+Release: v11.0
+
+Info: The design wubsuit_base.adb was last modified by software version 11.0.0.23.
+Opened an existing Libero design wubsuit_base.adb.
+'BA_NAME' set to 'wubsuit_base_ba'
+'IDE_DESIGNERVIEW_NAME' set to 'Impl1'
+'IDE_DESIGNERVIEW_COUNT' set to '1'
+'IDE_DESIGNERVIEW_REV0' set to 'Impl1'
+'IDE_DESIGNERVIEW_REVNUM0' set to '1'
+'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS373\wubsuit_base\designer'
+'IDE_DESIGNERVIEW_LASTREV' set to '1'
+Wrote timing report to file: wubsuit_base_maxdelay_timing_report.txt
+
+The Report command succeeded ( 00:00:04 )
+Wrote timing report to file: wubsuit_base_mindelay_timing_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Wrote timing_violations report to file: wubsuit_base_maxdelay_timingviolations_report.txt
+
+The Report command succeeded ( 00:00:01 )
+Wrote timing_violations report to file: wubsuit_base_mindelay_timingviolations_report.txt
+
+The Report command succeeded ( 00:00:00 )
+Design saved to file N:\EECS373\wubsuit_base\designer\impl1\wubsuit_base.adb.
+
+The Execute Script command succeeded ( 00:00:07 )
+Design closed.
+

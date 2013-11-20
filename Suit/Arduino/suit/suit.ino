@@ -99,6 +99,7 @@ void pulse(int pin){
  //pulses a pin for one cycle
  //assumes pin is declared as output
  digitalWrite(pin, HIGH);  
+ delay(10);
  digitalWrite(pin, LOW); 
 }
 

@@ -18,11 +18,13 @@ DIO3: BTN 1
 
 DIO4: BTN 2 
 
-DIO5: BTN 3 
+DIO5: Used
 
-DIO6: BTN 4 
+DIO6: BTN 3 
 
-DIO7:
+DIO7: Used
+
+DIO8: BTN 4
 
 Arduino
 =======

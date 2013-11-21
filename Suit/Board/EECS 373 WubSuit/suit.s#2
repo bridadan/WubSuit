@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7062,7 +7062,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="U1" gate="G$1" x="12.7" y="38.1"/>
 <instance part="XB1" gate="G$1" x="93.98" y="33.02" rot="R180"/>
 <instance part="R1" gate="G$1" x="-27.94" y="101.6" rot="R90"/>
-<instance part="MMA8452" gate="G$1" x="-35.56" y="-33.02"/>
+<instance part="MMA8452" gate="G$1" x="-43.18" y="-33.02"/>
 <instance part="C1" gate="G$1" x="-17.78" y="93.98" rot="R90"/>
 <instance part="S1" gate="S" x="-81.28" y="40.64"/>
 <instance part="GND1" gate="1" x="-12.7" y="0"/>
@@ -7203,11 +7203,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="129.54" y1="7.62" x2="109.22" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-33.02" y1="-25.4" x2="-30.48" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-25.4" y="-25.4" size="1.778" layer="95"/>
+<wire x1="-33.02" y1="-25.4" x2="-38.1" y2="-25.4" width="0.1524" layer="91"/>
+<label x="-33.02" y="-25.4" size="1.778" layer="95"/>
 <pinref part="MMA8452" gate="G$1" pin="6"/>
-<wire x1="-30.48" y1="-25.4" x2="-25.4" y2="-25.4" width="0.1524" layer="91"/>
-<junction x="-30.48" y="-25.4"/>
 </segment>
 <segment>
 <pinref part="PCF8574N" gate="G$1" pin="16"/>
@@ -7328,10 +7326,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <segment>
 <pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="-27.94" y1="22.86" x2="-33.02" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="22.86" x2="-35.56" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND@2"/>
 <pinref part="U1" gate="G$1" pin="GND@1"/>
-<wire x1="-33.02" y1="22.86" x2="-35.56" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="7.62" x2="-10.16" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="7.62" x2="-12.7" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="7.62" x2="-12.7" y2="2.54" width="0.1524" layer="91"/>
@@ -7340,6 +7337,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="-12.7" y1="22.86" x2="-12.7" y2="7.62" width="0.1524" layer="91"/>
 <junction x="-12.7" y="7.62"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+<junction x="-27.94" y="22.86"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -7403,11 +7401,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="167.64" y1="93.98" x2="167.64" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="-33.02" y1="-38.1" x2="-30.48" y2="-38.1" width="0.1524" layer="91"/>
-<label x="-25.4" y="-38.1" size="1.778" layer="95"/>
+<wire x1="-33.02" y1="-38.1" x2="-38.1" y2="-38.1" width="0.1524" layer="91"/>
+<label x="-33.02" y="-38.1" size="1.778" layer="95"/>
 <pinref part="MMA8452" gate="G$1" pin="1"/>
-<wire x1="-30.48" y1="-38.1" x2="-25.4" y2="-38.1" width="0.1524" layer="91"/>
-<junction x="-30.48" y="-38.1"/>
 </segment>
 <segment>
 <pinref part="PCF8574N" gate="G$1" pin="1"/>
@@ -7533,11 +7529,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="45.72" y="53.34" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-33.02" y1="-27.94" x2="-30.48" y2="-27.94" width="0.1524" layer="91"/>
-<label x="-25.4" y="-27.94" size="1.778" layer="95"/>
+<label x="-33.02" y="-27.94" size="1.778" layer="95"/>
 <pinref part="MMA8452" gate="G$1" pin="5"/>
-<wire x1="-30.48" y1="-27.94" x2="-25.4" y2="-27.94" width="0.1524" layer="91"/>
-<junction x="-30.48" y="-27.94"/>
+<wire x1="-38.1" y1="-27.94" x2="-33.02" y2="-27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="PCF8574N" gate="G$1" pin="15"/>
@@ -7552,15 +7546,13 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="SCL" class="0">
 <segment>
-<wire x1="35.56" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
 <label x="45.72" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="-33.02" y1="-30.48" x2="-30.48" y2="-30.48" width="0.1524" layer="91"/>
-<label x="-25.4" y="-30.48" size="1.778" layer="95"/>
+<wire x1="-33.02" y1="-30.48" x2="-38.1" y2="-30.48" width="0.1524" layer="91"/>
+<label x="-33.02" y="-30.48" size="1.778" layer="95"/>
 <pinref part="MMA8452" gate="G$1" pin="4"/>
-<wire x1="-30.48" y1="-30.48" x2="-25.4" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-30.48" y="-30.48"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>

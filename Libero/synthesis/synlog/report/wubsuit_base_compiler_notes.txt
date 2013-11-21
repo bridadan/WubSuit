@@ -1,55 +1,73 @@
 @N|Running in 64-bit mode
-@N: CG364 :"N:\EECS373\wubsuit_base\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v":13:0:13:5|Synthesizing module CAPB3l
-@N: CG364 :"N:\EECS373\wubsuit_base\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v":13:0:13:7|Synthesizing module CoreAPB3
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":30:0:30:35|Synthesizing module wubsuit_base_CoreUARTapb_0_Clock_gen
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_0_Tx_async
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v":794:0:794:8|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_0_Rx_async
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":654:0:654:7|Removing redundant assignment
-@N: CL177 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":1414:0:1414:5|Sharing sequential element CUARTl0l.
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_0_COREUART
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v":1209:0:1209:7|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v":14:0:14:37|Synthesizing module wubsuit_base_CoreUARTapb_0_CoreUARTapb
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v":700:0:700:8|Removing redundant assignment
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v":776:0:776:8|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Clock_gen.v":30:0:30:35|Synthesizing module wubsuit_base_CoreUARTapb_1_Clock_gen
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_1_Tx_async
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v":794:0:794:8|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_1_Rx_async
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":654:0:654:7|Removing redundant assignment
-@N: CL177 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":1414:0:1414:5|Sharing sequential element CUARTl0l.
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_1_COREUART
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v":1209:0:1209:7|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v":14:0:14:37|Synthesizing module wubsuit_base_CoreUARTapb_1_CoreUARTapb
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v":700:0:700:8|Removing redundant assignment
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v":776:0:776:8|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Clock_gen.v":30:0:30:35|Synthesizing module wubsuit_base_CoreUARTapb_2_Clock_gen
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_2_Tx_async
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v":794:0:794:8|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_2_Rx_async
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":654:0:654:7|Removing redundant assignment
-@N: CL177 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":1414:0:1414:5|Sharing sequential element CUARTl0l.
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_2_COREUART
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v":1209:0:1209:7|Removing redundant assignment
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":14:0:14:37|Synthesizing module wubsuit_base_CoreUARTapb_2_CoreUARTapb
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":700:0:700:8|Removing redundant assignment
-@N: CG179 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":776:0:776:8|Removing redundant assignment
-@N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":1289:7:1289:9|Synthesizing module INV
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base_MSS\mss_tshell.v":1:7:1:13|Synthesizing module MSS_APB
-@N: CG364 :"N:\EECS373\wubsuit_base\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
-@N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":2620:7:2620:11|Synthesizing module RCOSC
-@N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":1141:7:1141:9|Synthesizing module GND
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v":13:0:13:5|Synthesizing module CAPB3l
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v":13:0:13:7|Synthesizing module CoreAPB3
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":30:0:30:35|Synthesizing module wubsuit_base_CoreUARTapb_0_Clock_gen
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":297:0:297:6|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":378:0:378:6|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":483:0:483:6|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":562:0:562:6|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":667:0:667:6|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":759:0:759:6|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v":866:0:866:6|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_0_Tx_async
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v":794:0:794:8|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_0_Rx_async
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":654:0:654:7|Removing redundant assignment
+@N: CL177 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":1414:0:1414:5|Sharing sequential element CUARTl0l.
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_0_COREUART
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v":1209:0:1209:7|Removing redundant assignment
 @N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":1868:7:1868:9|Synthesizing module VCC
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:44|Synthesizing module wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC
-@N: CG364 :"N:\EECS373\wubsuit_base\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
-@N: CG364 :"N:\EECS373\wubsuit_base\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
-@N: CG364 :"N:\EECS373\wubsuit_base\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":145:7:145:12|Synthesizing module MSSINT
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v":9:7:9:22|Synthesizing module wubsuit_base_MSS
-@N: CG364 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\wubsuit_base.v":9:7:9:18|Synthesizing module wubsuit_base
-@N: CL201 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":723:0:723:5|Trying to extract state machine for register CUARTOl0
-@N: CL201 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v":253:0:253:5|Trying to extract state machine for register CUARTO1ll
-@N: CL201 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":723:0:723:5|Trying to extract state machine for register CUARTOl0
-@N: CL201 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v":253:0:253:5|Trying to extract state machine for register CUARTO1ll
-@N: CL201 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":723:0:723:5|Trying to extract state machine for register CUARTOl0
-@N: CL201 :"N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v":253:0:253:5|Trying to extract state machine for register CUARTO1ll
+@N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":1141:7:1141:9|Synthesizing module GND
+@N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":1289:7:1289:9|Synthesizing module INV
+@N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":1982:7:1982:14|Synthesizing module FIFO4K18
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v":189:0:189:40|Synthesizing module wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v":18:0:18:36|Synthesizing module wubsuit_base_CoreUARTapb_0_fifo_256x8
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v":14:0:14:37|Synthesizing module wubsuit_base_CoreUARTapb_0_CoreUARTapb
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v":700:0:700:8|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v":776:0:776:8|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v":842:0:842:8|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Clock_gen.v":30:0:30:35|Synthesizing module wubsuit_base_CoreUARTapb_1_Clock_gen
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_1_Tx_async
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v":794:0:794:8|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_1_Rx_async
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":654:0:654:7|Removing redundant assignment
+@N: CL177 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":1414:0:1414:5|Sharing sequential element CUARTl0l.
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_1_COREUART
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v":1209:0:1209:7|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v":189:0:189:40|Synthesizing module wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v":18:0:18:36|Synthesizing module wubsuit_base_CoreUARTapb_1_fifo_256x8
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v":14:0:14:37|Synthesizing module wubsuit_base_CoreUARTapb_1_CoreUARTapb
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v":700:0:700:8|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v":776:0:776:8|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Clock_gen.v":30:0:30:35|Synthesizing module wubsuit_base_CoreUARTapb_2_Clock_gen
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_2_Tx_async
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v":794:0:794:8|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_2_Rx_async
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":654:0:654:7|Removing redundant assignment
+@N: CL177 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":1414:0:1414:5|Sharing sequential element CUARTl0l.
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v":14:0:14:34|Synthesizing module wubsuit_base_CoreUARTapb_2_COREUART
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v":1209:0:1209:7|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v":189:0:189:40|Synthesizing module wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v":18:0:18:36|Synthesizing module wubsuit_base_CoreUARTapb_2_fifo_256x8
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":14:0:14:37|Synthesizing module wubsuit_base_CoreUARTapb_2_CoreUARTapb
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":700:0:700:8|Removing redundant assignment
+@N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":776:0:776:8|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell.v":1:7:1:13|Synthesizing module MSS_APB
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC
+@N: CG364 :"C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v":2620:7:2620:11|Synthesizing module RCOSC
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v":5:7:5:44|Synthesizing module wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":23:7:23:15|Synthesizing module INBUF_MSS
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":37:7:37:16|Synthesizing module OUTBUF_MSS
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":145:7:145:12|Synthesizing module MSSINT
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v":9:7:9:22|Synthesizing module wubsuit_base_MSS
+@N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.v":9:7:9:18|Synthesizing module wubsuit_base
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v":895:0:895:5|Trying to extract state machine for register CUARTOl0
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v":723:0:723:5|Trying to extract state machine for register CUARTOl0
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v":253:0:253:5|Trying to extract state machine for register CUARTO1ll
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v":895:0:895:5|Trying to extract state machine for register CUARTOl0
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v":723:0:723:5|Trying to extract state machine for register CUARTOl0
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v":253:0:253:5|Trying to extract state machine for register CUARTO1ll
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v":895:0:895:5|Trying to extract state machine for register CUARTOl0
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v":723:0:723:5|Trying to extract state machine for register CUARTOl0
+@N: CL201 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v":253:0:253:5|Trying to extract state machine for register CUARTO1ll
 

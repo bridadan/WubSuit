@@ -2,17 +2,17 @@ Actel Designer Software
 Version: 11.0.0.23
 Release: v11.0
 
-Info: The design N:/EECS373/wubsuit_base/designer/impl1/wubsuit_base.adb was last modified by
+Info: The design N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base.adb was last modified by
       software version 11.0.0.23.
-Opened an existing Libero design N:/EECS373/wubsuit_base/designer/impl1/wubsuit_base.adb.
+Opened an existing Libero design N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base.adb.
 
-The Export-map command succeeded ( 00:00:13 )
-CHECKSUM: A8C8
-Wrote to the file: N:\EECS373\wubsuit_base\designer\impl1\wubsuit_base.fdb
+The Export-map command succeeded ( 00:00:15 )
+CHECKSUM: 7B7A
+Wrote to the file: N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.fdb
 
-The Export command succeeded ( 00:00:16 )
-Design saved to file N:/EECS373/wubsuit_base/designer/impl1/wubsuit_base.adb.
+The Export command succeeded ( 00:00:20 )
+Design saved to file N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base.adb.
 
-The Execute Script command succeeded ( 00:00:20 )
+The Execute Script command succeeded ( 00:00:32 )
 Design closed.
 

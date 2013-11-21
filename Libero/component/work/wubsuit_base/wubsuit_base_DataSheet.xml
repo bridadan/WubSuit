@@ -11,54 +11,54 @@
     <hdl-type>Verilog</hdl-type>
     <project-description>
     </project-description>
-    <location>N:/EECS373/wubsuit_base/component/work/wubsuit_base</location>
-    <state>GENERATED ( Mon Nov 18 21:31:18 2013 )</state>
-    <swide-toolchain>SoftConsole workspace generated to N:\EECS373\wubsuit_base\SoftConsole</swide-toolchain>
+    <location>N:/EECS373/WubSuit/Libero/component/work/wubsuit_base</location>
+    <state>GENERATED ( Tue Nov 19 13:24:41 2013 )</state>
+    <swide-toolchain>SoftConsole workspace generated to N:\EECS373\WubSuit\Libero\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
   </site-map>
   <fileset>
     <name>HDL File(s)</name>
-    <file>N:\EECS373\wubsuit_base\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v</file>
-    <file>N:\EECS373\wubsuit_base\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_iaddr_reg.v</file>
-    <file>N:\EECS373\wubsuit_base\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v</file>
-    <file>N:\EECS373\wubsuit_base\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Clock_gen.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Clock_gen.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base\wubsuit_base.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base_MSS\mss_tshell.v</file>
-    <file>N:\EECS373\wubsuit_base\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_iaddr_reg.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Clock_gen.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Clock_gen.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell.v</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>N:\EECS373\wubsuit_base\component\work\N:/EECS373/wubsuit_base/component/work/wubsuit_base_MSS/MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
-    <port-name>XBee_TX</port-name>
+    <port-name>MIDI_TX</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>MSS_RESET_N</port-name>
-    <direction>IN</direction>
+    <port-name>FRAMING_ERR</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -69,13 +69,13 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>MIDI_RX</port-name>
-    <direction>IN</direction>
+    <port-name>UART_0_TXD</port-name>
+    <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>MIDI_TX</port-name>
+    <port-name>RXRDY</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -87,7 +87,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>XBee_RX</port-name>
+    <port-name>MSS_RESET_N</port-name>
     <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -99,8 +99,32 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>UART_0_TXD</port-name>
+    <port-name>XBee_RX</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>PARITY_ERR</port-name>
     <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>XBee_TX</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>OVERFLOW</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>MIDI_RX</port-name>
+    <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -387,23 +411,23 @@ There is one APB3 Master interface.
     <core-desc>CoreUARTapb is a serial communication controller with a flexible serial data interface that is intended primarily for embedded systems. The controller operates as an asynchronous (UART) with a control register interface and APB wrapper.</core-desc>
     <core-param>
       <param-name>Fractional Part of Baud Value:</param-name>
-      <param-value>+0.0</param-value>
+      <param-value>+0.25</param-value>
       <param-hdlname>BAUD_VAL_FRCTN</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>2</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
       <param-name>Enable Extra Precision:</param-name>
-      <param-value>false</param-value>
+      <param-value>true</param-value>
       <param-hdlname>BAUD_VAL_FRCTN_EN</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
       <param-name>Baud Value:</param-name>
-      <param-value>1</param-value>
+      <param-value>53</param-value>
       <param-hdlname>BAUD_VALUE</param-hdlname>
-      <param-hdlvalue>1</param-hdlvalue>
+      <param-hdlvalue>53</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
@@ -415,16 +439,16 @@ There is one APB3 Master interface.
     </core-param>
     <core-param>
       <param-name>Configuration:</param-name>
-      <param-value>Programmable</param-value>
+      <param-value>Fixed</param-value>
       <param-hdlname>FIXEDMODE</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
       <param-name>Character Size:</param-name>
-      <param-value>7 bits</param-value>
+      <param-value>8 bits</param-value>
       <param-hdlname>PRG_BIT8</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
@@ -436,9 +460,9 @@ There is one APB3 Master interface.
     </core-param>
     <core-param>
       <param-name>RX FIFO:</param-name>
-      <param-value>Disable RX FIFO</param-value>
+      <param-value>Enable RX FIFO</param-value>
       <param-hdlname>RX_FIFO</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
@@ -450,9 +474,9 @@ There is one APB3 Master interface.
     </core-param>
     <core-param>
       <param-name>TX FIFO:</param-name>
-      <param-value>Disable TX FIFO</param-value>
+      <param-value>Enable TX FIFO</param-value>
       <param-hdlname>TX_FIFO</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-name>CoreUARTapb_0</core-name>
@@ -516,9 +540,9 @@ There is one APB3 Master interface.
     </core-param>
     <core-param>
       <param-name>RX FIFO:</param-name>
-      <param-value>Disable RX FIFO</param-value>
+      <param-value>Enable RX FIFO</param-value>
       <param-hdlname>RX_FIFO</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
@@ -530,9 +554,9 @@ There is one APB3 Master interface.
     </core-param>
     <core-param>
       <param-name>TX FIFO:</param-name>
-      <param-value>Disable TX FIFO</param-value>
+      <param-value>Enable TX FIFO</param-value>
       <param-hdlname>TX_FIFO</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-name>CoreUARTapb_1</core-name>
@@ -596,9 +620,9 @@ There is one APB3 Master interface.
     </core-param>
     <core-param>
       <param-name>RX FIFO:</param-name>
-      <param-value>Disable RX FIFO</param-value>
+      <param-value>Enable RX FIFO</param-value>
       <param-hdlname>RX_FIFO</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-param>
@@ -610,9 +634,9 @@ There is one APB3 Master interface.
     </core-param>
     <core-param>
       <param-name>TX FIFO:</param-name>
-      <param-value>Disable TX FIFO</param-value>
+      <param-value>Enable TX FIFO</param-value>
       <param-hdlname>TX_FIFO</param-hdlname>
-      <param-hdlvalue>0</param-hdlvalue>
+      <param-hdlvalue>1</param-hdlvalue>
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-name>CoreUARTapb_2</core-name>
@@ -630,7 +654,7 @@ There is one APB3 Master interface.
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>
     <core-exttype>HierSpiritDesign</core-exttype>
-    <core-location>N:/EECS373/wubsuit_base/component/work/wubsuit_base_MSS</core-location>
+    <core-location>N:/EECS373/WubSuit/Libero/component/work/wubsuit_base_MSS</core-location>
     <core-name>wubsuit_base_MSS_0</core-name>
   </core>
   <firmware_core type="FirmWareModule">

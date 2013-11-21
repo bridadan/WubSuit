@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Mon Nov 18 21:37:24 2013 ***************************************************************************
+                          Tue Nov 19 13:31:24 2013 ***************************************************************************
 
 Product: Designer
 Release: v11.0
 Version: 11.0.0.23
-File Name: N:\EECS373\wubsuit_base\designer\impl1\wubsuit_base.adb
+File Name: N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb
 Design Name: wubsuit_base  Design State: layout
-Last Saved: Mon Nov 18 21:34:16 2013
+Last Saved: Tue Nov 19 13:29:41 2013
 
 ***** Device Data **************************************************
 
@@ -22,9 +22,9 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Mon Nov 18 21:32:19 2013:
-        N:\EECS373\wubsuit_base\synthesis\wubsuit_base.edn
-        N:\EECS373\wubsuit_base\component\work\wubsuit_base\wubsuit_base.pdc
+Source File(s) Imported on Tue Nov 19 13:27:05 2013:
+        N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn
+        N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.pdc
 
 
 ***** CAE Variables ************************************************
@@ -50,8 +50,8 @@ Parameters used to run compile:
 Family      : SmartFusion
 Device      : A2F200M3F
 Package     : 484 FBGA
-Source      : N:\EECS373\wubsuit_base\synthesis\wubsuit_base.edn
-              N:\EECS373\wubsuit_base\component\work\wubsuit_base\wubsuit_base.pdc
+Source      : N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn
+              N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.pdc
 Format      : EDIF
 Topcell     : wubsuit_base
 Speed grade : -1
@@ -393,6 +393,222 @@ Warning: CMP201: Net wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC_GLC drives no load.
 Warning: CMP201: Net wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC_LOCK drives no load.
 Warning: CMP201: Net wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC_YB drives no load.
 Warning: CMP201: Net wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC_YC drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/AEM\
+         PTY drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_FULL_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD8_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD9_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD10_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD11_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD12_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD13_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD14_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD15_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD16_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUA\
+         RTlIOl_RD17_3 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/AE\
+         MPTY drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_FULL_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD8_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD9_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD10_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD11_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD12_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD13_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD14_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD15_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD16_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_2/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CU\
+         ARTlIOl_RD17_4 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/AEM\
+         PTY drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_FULL_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD8_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD9_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD10_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD11_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD12_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD13_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD14_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD15_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD16_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUA\
+         RTlIOl_RD17_1 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/AE\
+         MPTY drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_FULL_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD8_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD9_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD10_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD11_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD12_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD13_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD14_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD15_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD16_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CU\
+         ARTlIOl_RD17_2 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/AEM\
+         PTY drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_FULL drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD8 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD9 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD10 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD11 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD12 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD13 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD14 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD15 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD16 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk2_CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUA\
+         RTlIOl_RD17 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/AE\
+         MPTY drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_FULL_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD8_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD9_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD10_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD11_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD12_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD13_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD14_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD15_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD16_0 drives no load.
+Warning: CMP201: Net
+         CoreUARTapb_0/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CU\
+         ARTlIOl_RD17_0 drives no load.
 
 Netlist Optimization Report
 ===========================
@@ -402,11 +618,11 @@ Optimized macros:
   - Buffers:                2
   - Inverters:              0
   - Tieoff:                 5
-  - Logic combining:        19
+  - Logic combining:        23
 
-    Total macros optimized  26
+    Total macros optimized  30
 
-There were 0 error(s) and 315 warning(s) in this design.
+There were 0 error(s) and 387 warning(s) in this design.
 =====================================================================
 
 Reading previous post-compile physical placement constraints.
@@ -426,8 +642,8 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   1011  Total:   4608   (21.94%)
-    Fabric IO (W/ clocks)      Used:      7  Total:     94   (7.45%)
+    Fabric                     Used:   1123  Total:   4608   (24.37%)
+    Fabric IO (W/ clocks)      Used:     11  Total:     94   (11.70%)
     Fabric Differential IO     Used:      0  Total:     47   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     32   (0.00%)
     Dedicated MSS IO           Used:      3  Total:     43   (6.98%)
@@ -436,7 +652,7 @@ Compile report:
     On-chip RC oscillator      Used:      1  Total:      1   (100.00%)
     Main Crystal oscillator    Used:      0  Total:      1   (0.00%)
     32 KHz Crystal oscillator  Used:      0  Total:      1   (0.00%)
-    RAM/FIFO                   Used:      0  Total:      8   (0.00%)
+    RAM/FIFO                   Used:      6  Total:      8   (75.00%)
     User JTAG                  Used:      0  Total:      1   (0.00%)
 
 Global Information:
@@ -455,15 +671,15 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 675          | 675
-    SEQ     | 336          | 336
+    COMB    | 693          | 693
+    SEQ     | 430          | 430
 
 I/O Function:
 
     Type                          | w/o register  | w/ register  | w/ DDR register
     ------------------------------|---------------|--------------|----------------
     Input I/O                     | 4             | 0            | 0
-    Output I/O                    | 3             | 0            | 0
+    Output I/O                    | 7             | 0            | 0
     Bidirectional I/O             | 0             | 0            | 0
     Differential Input I/O Pairs  | 0             | 0            | 0
     Differential Output I/O Pairs | 0             | 0            | 0
@@ -474,13 +690,13 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVTTL                           | 3.30v | N/A   | 4     | 3      | 0
+    LVTTL                           | 3.30v | N/A   | 4     | 7      | 0
 
 I/O Placement:
 
-    Locked  :   5 ( 71.43% )
+    Locked  :   8 ( 72.73% )
     Placed  :   0
-    UnPlaced:   2 ( 28.57% )
+    UnPlaced:   3 ( 27.27% )
 
 Warning: Only some I/Os are locked
 
@@ -490,60 +706,60 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    337     CLK_NET       Net   : FAB_CLK
+    443     CLK_NET       Net   : FAB_CLK
                           Driver: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    336     SET/RESET_NET Net   : wubsuit_base_MSS_0_M2F_RESET_N
+    388     SET/RESET_NET Net   : wubsuit_base_MSS_0_M2F_RESET_N
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC
                           Source: NETLIST
 
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    17      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTO00
+    23      INT_NET       Net   : CoreUARTapb_2.N_89
+                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
+    22      INT_NET       Net   : CoreUARTapb_2.N_90
+                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
+    19      INT_NET       Net   : PARITY_ERR_c
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
+                          Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
-    16      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTO00
+    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
-    15      INT_NET       Net   : CoreUARTapb_2.N_92
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTO1OI_5_0_a2_1[0]
-    15      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTIl_0
-                          Driver: CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0_0
-    14      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTIl
-                          Driver: CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0
-    13      INT_NET       Net   : CoreAPB3_0_APBmslave0_PWRITE
+    18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
+                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
+    16      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
+                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
+    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    13      INT_NET       Net   : CoreUARTapb_2.N_90_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/un1_CUARTI1I_0_a2_0_0
-    13      INT_NET       Net   : CoreUARTapb_2.N_87_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTO1OI_5_0_a2_0_0[0]
-    13      INT_NET       Net   : CoreUARTapb_2.N_89_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTO1OI_5_0_a2_0_1[0]
-    13      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0_0
+    14      INT_NET       Net   : CoreUARTapb_2.N_87_0
+                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    17      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTO00
+    23      INT_NET       Net   : CoreUARTapb_2.N_89
+                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
+    22      INT_NET       Net   : CoreUARTapb_2.N_90
+                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
+    19      INT_NET       Net   : PARITY_ERR_c
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
+                          Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
-    16      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTO00
+    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
-    15      INT_NET       Net   : CoreUARTapb_2.N_92
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTO1OI_5_0_a2_1[0]
-    15      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTIl_0
-                          Driver: CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0_0
-    14      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTIl
-                          Driver: CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0
-    13      INT_NET       Net   : CoreAPB3_0_APBmslave0_PWRITE
+    18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
+                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
+    16      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
+                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
+    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    13      INT_NET       Net   : CoreUARTapb_2.N_90_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/un1_CUARTI1I_0_a2_0_0
-    13      INT_NET       Net   : CoreUARTapb_2.N_87_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTO1OI_5_0_a2_0_0[0]
-    13      INT_NET       Net   : CoreUARTapb_2.N_89_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTO1OI_5_0_a2_0_1[0]
-    13      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl_0
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0_0
+    14      INT_NET       Net   : CoreUARTapb_2.N_87_0
+                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
 
 
 Layout Output:
@@ -569,16 +785,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Mon Nov 18 21:36:48 2013
+Timing-driven Placer Started: Tue Nov 19 13:30:33 2013
 
-Placer Finished: Mon Nov 18 21:37:02 2013
-Total Placer CPU Time:     00:00:14
+Placer Finished: Tue Nov 19 13:30:53 2013
+Total Placer CPU Time:     00:00:20
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: wubsuit_base                    Started: Mon Nov 18 21:37:07 2013
+Design: wubsuit_base                    Started: Tue Nov 19 13:31:02 2013
 
  
 Iterative improvement...
@@ -586,9 +802,9 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: wubsuit_base                    
-Finished: Mon Nov 18 21:37:20 2013
-Total CPU Time:     00:00:13            Total Elapsed Time: 00:00:13
-Total Memory Usage: 161.3 Mbytes
+Finished: Tue Nov 19 13:31:18 2013
+Total CPU Time:     00:00:16            Total Elapsed Time: 00:00:16
+Total Memory Usage: 166.8 Mbytes
                         o - o - o - o - o - o
 
 

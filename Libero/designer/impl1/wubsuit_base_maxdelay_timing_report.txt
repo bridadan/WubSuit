@@ -3,7 +3,7 @@ Timing Report Max Delay Analysis
 SmartTime Version v11.0
 Microsemi Corporation - Actel Designer Software Release v11.0 (Version 11.0.0.23)
 Copyright (c) 1989-2013
-Date: Mon Nov 18 21:37:34 2013
+Date: Tue Nov 19 13:31:43 2013
 
 
 Design: wubsuit_base
@@ -35,8 +35,8 @@ Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               mss_fabric_interface_clock
-Period (ns):                7.029
-Frequency (MHz):            142.268
+Period (ns):                7.432
+Frequency (MHz):            134.553
 Required Period (ns):       10.000
 Required Frequency (MHz):   100.000
 External Setup (ns):        N/A
@@ -49,20 +49,20 @@ Period (ns):                N/A
 Frequency (MHz):            N/A
 Required Period (ns):       10.000
 Required Frequency (MHz):   100.000
-External Setup (ns):        1.109
-External Hold (ns):         0.993
+External Setup (ns):        1.188
+External Hold (ns):         0.782
 Min Clock-To-Out (ns):      N/A
 Max Clock-To-Out (ns):      N/A
 
 Clock Domain:               mss_ccc_gla1
-Period (ns):                7.892
-Frequency (MHz):            126.711
+Period (ns):                9.272
+Frequency (MHz):            107.852
 Required Period (ns):       10.000
 Required Frequency (MHz):   100.000
-External Setup (ns):        -1.698
-External Hold (ns):         2.666
-Min Clock-To-Out (ns):      6.206
-Max Clock-To-Out (ns):      10.744
+External Setup (ns):        -1.765
+External Hold (ns):         2.834
+Min Clock-To-Out (ns):      6.059
+Max Clock-To-Out (ns):      11.712
 
 Clock Domain:               mss_ccc_gla0
 Period (ns):                10.000
@@ -147,61 +147,61 @@ SET Register to Register
 
 Path 1
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3]
-  Delay (ns):                  8.897
-  Slack (ns):                  2.971
-  Arrival (ns):                12.347
-  Required (ns):               15.318
-  Setup (ns):                  -1.868
-  Minimum Period (ns):         7.029
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6]
+  Delay (ns):                  9.311
+  Slack (ns):                  2.568
+  Arrival (ns):                12.761
+  Required (ns):               15.329
+  Setup (ns):                  -1.879
+  Minimum Period (ns):         7.432
 
 Path 2
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[2]
-  Delay (ns):                  8.845
-  Slack (ns):                  3.019
-  Arrival (ns):                12.295
-  Required (ns):               15.314
-  Setup (ns):                  -1.864
-  Minimum Period (ns):         6.981
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[0]
+  Delay (ns):                  8.951
+  Slack (ns):                  2.895
+  Arrival (ns):                12.401
+  Required (ns):               15.296
+  Setup (ns):                  -1.846
+  Minimum Period (ns):         7.105
 
 Path 3
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
   To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[4]
-  Delay (ns):                  8.439
-  Slack (ns):                  3.432
-  Arrival (ns):                11.889
-  Required (ns):               15.321
-  Setup (ns):                  -1.871
-  Minimum Period (ns):         6.568
+  Delay (ns):                  8.846
+  Slack (ns):                  3.007
+  Arrival (ns):                12.296
+  Required (ns):               15.303
+  Setup (ns):                  -1.853
+  Minimum Period (ns):         6.993
 
 Path 4
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6]
-  Delay (ns):                  8.363
-  Slack (ns):                  3.516
-  Arrival (ns):                11.813
-  Required (ns):               15.329
-  Setup (ns):                  -1.879
-  Minimum Period (ns):         6.484
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[7]
+  Delay (ns):                  8.800
+  Slack (ns):                  3.056
+  Arrival (ns):                12.250
+  Required (ns):               15.306
+  Setup (ns):                  -1.856
+  Minimum Period (ns):         6.944
 
 Path 5
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[0]
-  Delay (ns):                  8.308
-  Slack (ns):                  3.556
-  Arrival (ns):                11.758
-  Required (ns):               15.314
-  Setup (ns):                  -1.864
-  Minimum Period (ns):         6.444
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1]
+  Delay (ns):                  8.690
+  Slack (ns):                  3.163
+  Arrival (ns):                12.140
+  Required (ns):               15.303
+  Setup (ns):                  -1.853
+  Minimum Period (ns):         6.837
 
 
 Expanded Path 1
   From: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3]
-  data required time                             15.318
-  data arrival time                          -   12.347
-  slack                                          2.971
+  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6]
+  data required time                             15.329
+  data arrival time                          -   12.761
+  slack                                          2.568
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_fabric_interface_clock
@@ -219,26 +219,26 @@ Expanded Path 1
   7.088                        CoreAPB3_0/CAPB3O0OI_1[0]:C (r)
                +     0.486          cell: ADLIB:NOR3A
   7.574                        CoreAPB3_0/CAPB3O0OI_1[0]:Y (f)
-               +     0.349          net: CoreAPB3_0/CoreAPB3_0_APBmslave2_PSELx_1
-  7.923                        CoreAPB3_0/CAPB3O0OI[0]:C (f)
+               +     0.703          net: CoreAPB3_0/CoreAPB3_0_APBmslave2_PSELx_1
+  8.277                        CoreAPB3_0/CAPB3O0OI[0]:C (f)
                +     0.486          cell: ADLIB:AND3B
-  8.409                        CoreAPB3_0/CAPB3O0OI[0]:Y (f)
-               +     1.022          net: CoreAPB3_0_APBmslave0_PSELx
-  9.431                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[3]:B (f)
+  8.763                        CoreAPB3_0/CAPB3O0OI[0]:Y (f)
+               +     0.829          net: CoreAPB3_0_APBmslave0_PSELx
+  9.592                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[6]:B (f)
                +     0.476          cell: ADLIB:NOR2B
-  9.907                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[3]:Y (f)
-               +     0.255          net: CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[3]
-  10.162                       CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[3]:B (f)
+  10.068                       CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[6]:Y (f)
+               +     0.255          net: CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[6]
+  10.323                       CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[6]:B (f)
                +     0.473          cell: ADLIB:OR3
-  10.635                       CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[3]:Y (f)
-               +     1.212          net: wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[3]
-  11.847                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN6 (f)
+  10.796                       CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[6]:Y (f)
+               +     1.469          net: wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[6]
+  12.265                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_38:PIN6 (f)
                +     0.145          cell: ADLIB:MSS_IF
-  11.992                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN6INT (f)
-               +     0.355          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPRDATA[3]INT_NET
-  12.347                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3] (f)
+  12.410                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_38:PIN6INT (f)
+               +     0.351          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPRDATA[6]INT_NET
+  12.761                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6] (f)
                                     
-  12.347                       data arrival time
+  12.761                       data arrival time
   ________________________________________________________
   Data required time calculation
   10.000                       mss_fabric_interface_clock
@@ -246,10 +246,10 @@ Expanded Path 1
   10.000                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB (r)
                +     3.450          Clock generation
   13.450
-               -    -1.868          Library setup time: ADLIB:MSS_APB_IP
-  15.318                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3]
+               -    -1.879          Library setup time: ADLIB:MSS_APB_IP
+  15.329                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6]
                                     
-  15.318                       data required time
+  15.329                       data required time
 
 
 END SET Register to Register
@@ -299,57 +299,57 @@ END SET Asynchronous to Register
 SET mss_ccc_gla1 to mss_fabric_interface_clock
 
 Path 1
-  From:                        CoreUARTapb_0/CUARTI1OI[3]:CLK
-  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3]
-  Delay (ns):                  4.498
-  Slack (ns):                  5.599
-  Arrival (ns):                9.719
-  Required (ns):               15.318
-  Setup (ns):                  -1.868
-
-Path 2
-  From:                        CoreUARTapb_2/CUARTI1OI[3]:CLK
-  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3]
-  Delay (ns):                  4.452
-  Slack (ns):                  5.656
-  Arrival (ns):                9.662
-  Required (ns):               15.318
-  Setup (ns):                  -1.868
-
-Path 3
-  From:                        CoreUARTapb_2/CUARTI1OI[6]:CLK
+  From:                        CoreUARTapb_1/CUARTI1OI[6]:CLK
   To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6]
-  Delay (ns):                  4.371
-  Slack (ns):                  5.806
-  Arrival (ns):                9.523
+  Delay (ns):                  4.661
+  Slack (ns):                  5.510
+  Arrival (ns):                9.819
   Required (ns):               15.329
   Setup (ns):                  -1.879
+
+Path 2
+  From:                        CoreUARTapb_2/CUARTI1OI[2]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[2]
+  Delay (ns):                  4.239
+  Slack (ns):                  5.885
+  Arrival (ns):                9.429
+  Required (ns):               15.314
+  Setup (ns):                  -1.864
+
+Path 3
+  From:                        CoreUARTapb_1/CUARTI1OI[0]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[0]
+  Delay (ns):                  4.187
+  Slack (ns):                  5.944
+  Arrival (ns):                9.370
+  Required (ns):               15.314
+  Setup (ns):                  -1.864
 
 Path 4
   From:                        CoreUARTapb_2/CUARTI1OI[4]:CLK
   To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[4]
-  Delay (ns):                  4.349
-  Slack (ns):                  5.820
-  Arrival (ns):                9.501
+  Delay (ns):                  4.106
+  Slack (ns):                  6.043
+  Arrival (ns):                9.278
   Required (ns):               15.321
   Setup (ns):                  -1.871
 
 Path 5
-  From:                        CoreUARTapb_1/CUARTI1OI[1]:CLK
-  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[1]
-  Delay (ns):                  4.370
-  Slack (ns):                  5.823
-  Arrival (ns):                9.498
+  From:                        CoreUARTapb_1/CUARTI1OI[4]:CLK
+  To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[4]
+  Delay (ns):                  4.046
+  Slack (ns):                  6.111
+  Arrival (ns):                9.210
   Required (ns):               15.321
   Setup (ns):                  -1.871
 
 
 Expanded Path 1
-  From: CoreUARTapb_0/CUARTI1OI[3]:CLK
-  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3]
-  data required time                             15.318
-  data arrival time                          -   9.719
-  slack                                          5.599
+  From: CoreUARTapb_1/CUARTI1OI[6]:CLK
+  To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6]
+  data required time                             15.329
+  data arrival time                          -   9.819
+  slack                                          5.510
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_ccc_gla1
@@ -361,26 +361,26 @@ Expanded Path 1
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.591          net: FAB_CLK
-  5.221                        CoreUARTapb_0/CUARTI1OI[3]:CLK (r)
+               +     0.528          net: FAB_CLK
+  5.158                        CoreUARTapb_1/CUARTI1OI[6]:CLK (r)
                +     0.559          cell: ADLIB:DFN1E0C0
-  5.780                        CoreUARTapb_0/CUARTI1OI[3]:Q (f)
-               +     1.109          net: CoreAPB3_0_APBmslave0_PRDATA[3]
-  6.889                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[3]:A (f)
+  5.717                        CoreUARTapb_1/CUARTI1OI[6]:Q (f)
+               +     1.104          net: CoreAPB3_0_APBmslave1_PRDATA[6]
+  6.821                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave1_PRDATA_m[6]:A (f)
                +     0.390          cell: ADLIB:NOR2B
-  7.279                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[3]:Y (f)
-               +     0.255          net: CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave0_PRDATA_m[3]
-  7.534                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[3]:B (f)
-               +     0.473          cell: ADLIB:OR3
-  8.007                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[3]:Y (f)
-               +     1.212          net: wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[3]
-  9.219                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN6 (f)
+  7.211                        CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave1_PRDATA_m[6]:Y (f)
+               +     0.245          net: CoreAPB3_0/CAPB3lOII/CoreAPB3_0_APBmslave1_PRDATA_m[6]
+  7.456                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[6]:A (f)
+               +     0.398          cell: ADLIB:OR3
+  7.854                        CoreAPB3_0/CAPB3lOII/PRDATA_0_iv[6]:Y (f)
+               +     1.469          net: wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[6]
+  9.323                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_38:PIN6 (f)
                +     0.145          cell: ADLIB:MSS_IF
-  9.364                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_37:PIN6INT (f)
-               +     0.355          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPRDATA[3]INT_NET
-  9.719                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3] (f)
+  9.468                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_38:PIN6INT (f)
+               +     0.351          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPRDATA[6]INT_NET
+  9.819                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6] (f)
                                     
-  9.719                        data arrival time
+  9.819                        data arrival time
   ________________________________________________________
   Data required time calculation
   10.000                       mss_fabric_interface_clock
@@ -388,10 +388,10 @@ Expanded Path 1
   10.000                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB (r)
                +     3.450          Clock generation
   13.450
-               -    -1.868          Library setup time: ADLIB:MSS_APB_IP
-  15.318                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[3]
+               -    -1.879          Library setup time: ADLIB:MSS_APB_IP
+  15.329                       wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPRDATA[6]
                                     
-  15.318                       data required time
+  15.329                       data required time
 
 
 END SET mss_ccc_gla1 to mss_fabric_interface_clock
@@ -413,29 +413,29 @@ SET External Setup
 Path 1
   From:                        CapButton
   To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[2]
-  Delay (ns):                  4.716
+  Delay (ns):                  4.795
   Slack (ns):
-  Arrival (ns):                4.716
+  Arrival (ns):                4.795
   Required (ns):
   Setup (ns):                  -0.157
-  External Setup (ns):         1.109
+  External Setup (ns):         1.188
 
 Path 2
   From:                        LPiezo
   To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[3]
-  Delay (ns):                  4.308
+  Delay (ns):                  4.685
   Slack (ns):
-  Arrival (ns):                4.308
+  Arrival (ns):                4.685
   Required (ns):
   Setup (ns):                  -0.236
-  External Setup (ns):         0.622
+  External Setup (ns):         0.999
 
 
 Expanded Path 1
   From: CapButton
   To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[2]
   data required time                             N/C
-  data arrival time                          -   4.716
+  data arrival time                          -   4.795
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -448,18 +448,18 @@ Expanded Path 1
   0.529                        CapButton_pad/U0/U1:YIN (f)
                +     0.030          cell: ADLIB:IOIN_IB
   0.559                        CapButton_pad/U0/U1:Y (f)
-               +     0.989          net: CapButton_c
-  1.548                        wubsuit_base_MSS_0/MSSINT_GPI_2:A (f)
+               +     1.787          net: CapButton_c
+  2.346                        wubsuit_base_MSS_0/MSSINT_GPI_2:A (f)
                +     0.407          cell: ADLIB:INV
-  1.955                        wubsuit_base_MSS_0/MSSINT_GPI_2:Y (r)
-               +     2.695          net: wubsuit_base_MSS_0/MSSINT_GPI_2_Y
-  4.650                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_22:PIN5 (r)
+  2.753                        wubsuit_base_MSS_0/MSSINT_GPI_2:Y (r)
+               +     1.976          net: wubsuit_base_MSS_0/MSSINT_GPI_2_Y
+  4.729                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_22:PIN5 (r)
                +     0.066          cell: ADLIB:MSS_IF
-  4.716                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_22:PIN5INT (r)
+  4.795                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_22:PIN5INT (r)
                +     0.000          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/GPI[2]INT_NET
-  4.716                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[2] (r)
+  4.795                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[2] (r)
                                     
-  4.716                        data arrival time
+  4.795                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          mss_pclk1
@@ -512,18 +512,18 @@ SET mss_ccc_gla1 to mss_pclk1
 Path 1
   From:                        CoreUARTapb_0/CUARTOOlI/RXRDY:CLK
   To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0]
-  Delay (ns):                  1.862
-  Slack (ns):                  6.418
-  Arrival (ns):                7.083
+  Delay (ns):                  2.147
+  Slack (ns):                  6.203
+  Arrival (ns):                7.298
   Required (ns):               13.501
   Setup (ns):                  -0.051
 
 Path 2
   From:                        CoreUARTapb_1/CUARTOOlI/RXRDY:CLK
   To:                          wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[1]
-  Delay (ns):                  1.904
-  Slack (ns):                  6.423
-  Arrival (ns):                7.084
+  Delay (ns):                  1.682
+  Slack (ns):                  6.678
+  Arrival (ns):                6.829
   Required (ns):               13.507
   Setup (ns):                  -0.057
 
@@ -532,8 +532,8 @@ Expanded Path 1
   From: CoreUARTapb_0/CUARTOOlI/RXRDY:CLK
   To: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0]
   data required time                             13.501
-  data arrival time                          -   7.083
-  slack                                          6.418
+  data arrival time                          -   7.298
+  slack                                          6.203
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_ccc_gla1
@@ -545,18 +545,18 @@ Expanded Path 1
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.591          net: FAB_CLK
-  5.221                        CoreUARTapb_0/CUARTOOlI/RXRDY:CLK (r)
+               +     0.521          net: FAB_CLK
+  5.151                        CoreUARTapb_0/CUARTOOlI/RXRDY:CLK (r)
                +     0.440          cell: ADLIB:DFN1E1C0
-  5.661                        CoreUARTapb_0/CUARTOOlI/RXRDY:Q (r)
-               +     1.356          net: CoreUARTapb_0_RXRDY
-  7.017                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_20:PIN5 (r)
+  5.591                        CoreUARTapb_0/CUARTOOlI/RXRDY:Q (r)
+               +     1.641          net: CoreUARTapb_0_RXRDY
+  7.232                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_20:PIN5 (r)
                +     0.066          cell: ADLIB:MSS_IF
-  7.083                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_20:PIN5INT (r)
+  7.298                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_20:PIN5INT (r)
                +     0.000          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/GPI[0]INT_NET
-  7.083                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0] (r)
+  7.298                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GPI[0] (r)
                                     
-  7.083                        data arrival time
+  7.298                        data arrival time
   ________________________________________________________
   Data required time calculation
   10.000                       mss_pclk1
@@ -579,62 +579,62 @@ Clock Domain mss_ccc_gla1
 SET Register to Register
 
 Path 1
-  From:                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[0]:CLK
-  To:                          CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:D
-  Delay (ns):                  7.489
-  Slack (ns):                  2.108
-  Arrival (ns):                12.653
-  Required (ns):               14.761
-  Setup (ns):                  0.409
-  Minimum Period (ns):         7.892
+  From:                        CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl:WCLK
+  To:                          CoreUARTapb_1/CUARTOOlI/CUARTI00:E
+  Delay (ns):                  8.675
+  Slack (ns):                  0.728
+  Arrival (ns):                14.084
+  Required (ns):               14.812
+  Setup (ns):                  0.330
+  Minimum Period (ns):         9.272
 
 Path 2
-  From:                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[2]:CLK
-  To:                          CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:D
-  Delay (ns):                  7.342
-  Slack (ns):                  2.255
-  Arrival (ns):                12.506
-  Required (ns):               14.761
-  Setup (ns):                  0.409
-  Minimum Period (ns):         7.745
+  From:                        CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:WCLK
+  To:                          CoreUARTapb_2/CUARTOOlI/CUARTI00:E
+  Delay (ns):                  8.457
+  Slack (ns):                  0.979
+  Arrival (ns):                13.806
+  Required (ns):               14.785
+  Setup (ns):                  0.330
+  Minimum Period (ns):         9.021
 
 Path 3
-  From:                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:CLK
-  To:                          CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[1]:D
-  Delay (ns):                  7.297
-  Slack (ns):                  2.257
-  Arrival (ns):                12.467
-  Required (ns):               14.724
-  Setup (ns):                  0.435
-  Minimum Period (ns):         7.743
+  From:                        CoreUARTapb_0/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUARTlIOl:WCLK
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTI00:E
+  Delay (ns):                  8.237
+  Slack (ns):                  1.161
+  Arrival (ns):                13.624
+  Required (ns):               14.785
+  Setup (ns):                  0.330
+  Minimum Period (ns):         8.839
 
 Path 4
-  From:                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[11]:CLK
-  To:                          CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[1]:D
-  Delay (ns):                  7.272
-  Slack (ns):                  2.282
-  Arrival (ns):                12.442
-  Required (ns):               14.724
-  Setup (ns):                  0.435
-  Minimum Period (ns):         7.718
+  From:                        CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl:RCLK
+  To:                          CoreUARTapb_1/CUARTOOlI/CUARTI00:E
+  Delay (ns):                  8.088
+  Slack (ns):                  1.193
+  Arrival (ns):                13.488
+  Required (ns):               14.681
+  Setup (ns):                  0.461
+  Minimum Period (ns):         8.807
 
 Path 5
-  From:                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[1]:CLK
-  To:                          CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:D
-  Delay (ns):                  7.270
-  Slack (ns):                  2.332
-  Arrival (ns):                12.429
-  Required (ns):               14.761
-  Setup (ns):                  0.409
-  Minimum Period (ns):         7.668
+  From:                        CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:WCLK
+  To:                          CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:WEN
+  Delay (ns):                  7.768
+  Slack (ns):                  1.270
+  Arrival (ns):                13.117
+  Required (ns):               14.387
+  Setup (ns):                  0.962
+  Minimum Period (ns):         8.730
 
 
 Expanded Path 1
-  From: CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[0]:CLK
-  To: CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:D
-  data required time                             14.761
-  data arrival time                          -   12.653
-  slack                                          2.108
+  From: CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl:WCLK
+  To: CoreUARTapb_1/CUARTOOlI/CUARTI00:E
+  data required time                             14.812
+  data arrival time                          -   14.084
+  slack                                          0.728
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_ccc_gla1
@@ -646,38 +646,22 @@ Expanded Path 1
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.534          net: FAB_CLK
-  5.164                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[0]:CLK (r)
-               +     0.559          cell: ADLIB:DFN1C0
-  5.723                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[0]:Q (f)
-               +     0.683          net: CoreUARTapb_2/CUARTOOlI/CUARTI10/CUARTO0[0]
-  6.406                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNIE8HK[2]:A (f)
-               +     0.370          cell: ADLIB:OR3
-  6.776                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNIE8HK[2]:Y (f)
-               +     0.793          net: CoreUARTapb_2/CUARTOOlI/CUARTI10/N_58
-  7.569                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNI5Q291[3]:B (f)
-               +     0.493          cell: ADLIB:OR2
-  8.062                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNI5Q291[3]:Y (f)
-               +     0.906          net: CoreUARTapb_2/CUARTOOlI/CUARTI10/N_61
-  8.968                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNI70G42[9]:C (f)
-               +     0.504          cell: ADLIB:OR3
-  9.472                        CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNI70G42[9]:Y (f)
-               +     1.183          net: CoreUARTapb_2/CUARTOOlI/CUARTI10/N_66
-  10.655                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNI8N5A2[11]:B (f)
-               +     0.370          cell: ADLIB:NOR2A
-  11.025                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNI8N5A2[11]:Y (r)
-               +     0.237          net: CoreUARTapb_2/CUARTOOlI/CUARTI10/CUARTO08
-  11.262                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNO_1[12]:A (r)
-               +     0.308          cell: ADLIB:NOR2B
-  11.570                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNO_1[12]:Y (r)
-               +     0.247          net: CoreUARTapb_2/CUARTOOlI/CUARTI10/N_103
-  11.817                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNO[12]:C (r)
+               +     0.779          net: FAB_CLK
+  5.409                        CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl:WCLK (r)
+               +     6.070          cell: ADLIB:FIFO4K18
+  11.479                       CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl:AFULL (r)
+               +     0.990          net: CoreUARTapb_1/CUARTOOlI/genblk3_CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlll
+  12.469                       CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl_RNIMRIB:A (r)
+               +     0.448          cell: ADLIB:NOR2A
+  12.917                       CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl_RNIMRIB:Y (r)
+               +     0.322          net: CoreUARTapb_1/CUARTOOlI/CUARTI005
+  13.239                       CoreUARTapb_1/CUARTOOlI/CUARTI00_RNO:C (r)
                +     0.581          cell: ADLIB:AO1
-  12.398                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0_RNO[12]:Y (r)
-               +     0.255          net: CoreUARTapb_2/CUARTOOlI/CUARTI10/CUARTO0_RNO_1[12]
-  12.653                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:D (r)
+  13.820                       CoreUARTapb_1/CUARTOOlI/CUARTI00_RNO:Y (r)
+               +     0.264          net: CoreUARTapb_1/CUARTOOlI/un1_CUARTl00
+  14.084                       CoreUARTapb_1/CUARTOOlI/CUARTI00:E (r)
                                     
-  12.653                       data arrival time
+  14.084                       data arrival time
   ________________________________________________________
   Data required time calculation
   10.000                       mss_ccc_gla1
@@ -689,12 +673,12 @@ Expanded Path 1
   14.630                       wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   14.630                       wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.540          net: FAB_CLK
-  15.170                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:CLK (r)
-               -     0.409          Library setup time: ADLIB:DFN1C0
-  14.761                       CoreUARTapb_2/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[12]:D
+               +     0.512          net: FAB_CLK
+  15.142                       CoreUARTapb_1/CUARTOOlI/CUARTI00:CLK (r)
+               -     0.330          Library setup time: ADLIB:DFN1E1C0
+  14.812                       CoreUARTapb_1/CUARTOOlI/CUARTI00:E
                                     
-  14.761                       data required time
+  14.812                       data required time
 
 
 END SET Register to Register
@@ -706,29 +690,29 @@ SET External Setup
 Path 1
   From:                        MIDI_RX
   To:                          CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
-  Delay (ns):                  3.032
+  Delay (ns):                  3.017
   Slack (ns):
-  Arrival (ns):                3.032
+  Arrival (ns):                3.017
   Required (ns):
   Setup (ns):                  0.382
-  External Setup (ns):         -1.698
+  External Setup (ns):         -1.765
 
 Path 2
   From:                        XBee_RX
   To:                          CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
-  Delay (ns):                  2.323
+  Delay (ns):                  2.101
   Slack (ns):
-  Arrival (ns):                2.323
+  Arrival (ns):                2.101
   Required (ns):
   Setup (ns):                  0.382
-  External Setup (ns):         -2.423
+  External Setup (ns):         -2.668
 
 
 Expanded Path 1
   From: MIDI_RX
   To: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
   data required time                             N/C
-  data arrival time                          -   3.032
+  data arrival time                          -   3.017
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -741,10 +725,10 @@ Expanded Path 1
   0.779                        MIDI_RX_pad/U0/U1:YIN (r)
                +     0.033          cell: ADLIB:IOIN_IB
   0.812                        MIDI_RX_pad/U0/U1:Y (r)
-               +     2.220          net: MIDI_RX_c
-  3.032                        CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D (r)
+               +     2.205          net: MIDI_RX_c
+  3.017                        CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D (r)
                                     
-  3.032                        data arrival time
+  3.017                        data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          mss_ccc_gla1
@@ -756,7 +740,7 @@ Expanded Path 1
   N/C                          wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   N/C                          wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.482          net: FAB_CLK
+               +     0.534          net: FAB_CLK
   N/C                          CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:CLK (r)
                -     0.382          Library setup time: ADLIB:DFN1E1C0
   N/C                          CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTlOIl[2]:D
@@ -769,38 +753,56 @@ END SET External Setup
 SET Clock to Output
 
 Path 1
-  From:                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTOl1:CLK
-  To:                          XBee_TX
-  Delay (ns):                  5.560
-  Slack (ns):
-  Arrival (ns):                10.744
-  Required (ns):
-  Clock to Out (ns):           10.744
-
-Path 2
-  From:                        CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTOl1:CLK
-  To:                          MIDI_TX
-  Delay (ns):                  5.101
-  Slack (ns):
-  Arrival (ns):                10.231
-  Required (ns):
-  Clock to Out (ns):           10.231
-
-Path 3
   From:                        CoreUARTapb_2/CUARTOOlI/CUARTl10/CUARTOl1:CLK
   To:                          LCD_TX
-  Delay (ns):                  5.088
+  Delay (ns):                  6.570
   Slack (ns):
-  Arrival (ns):                10.216
+  Arrival (ns):                11.712
   Required (ns):
-  Clock to Out (ns):           10.216
+  Clock to Out (ns):           11.712
+
+Path 2
+  From:                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTOl1:CLK
+  To:                          XBee_TX
+  Delay (ns):                  6.102
+  Slack (ns):
+  Arrival (ns):                11.241
+  Required (ns):
+  Clock to Out (ns):           11.241
+
+Path 3
+  From:                        CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTOl1:CLK
+  To:                          MIDI_TX
+  Delay (ns):                  5.583
+  Slack (ns):
+  Arrival (ns):                10.767
+  Required (ns):
+  Clock to Out (ns):           10.767
+
+Path 4
+  From:                        CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTll1:CLK
+  To:                          FRAMING_ERR
+  Delay (ns):                  5.485
+  Slack (ns):
+  Arrival (ns):                10.626
+  Required (ns):
+  Clock to Out (ns):           10.626
+
+Path 5
+  From:                        CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01:CLK
+  To:                          PARITY_ERR
+  Delay (ns):                  5.383
+  Slack (ns):
+  Arrival (ns):                10.562
+  Required (ns):
+  Clock to Out (ns):           10.562
 
 
 Expanded Path 1
-  From: CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTOl1:CLK
-  To: XBee_TX
+  From: CoreUARTapb_2/CUARTOOlI/CUARTl10/CUARTOl1:CLK
+  To: LCD_TX
   data required time                             N/C
-  data arrival time                          -   10.744
+  data arrival time                          -   11.712
   slack                                          N/C
   ________________________________________________________
   Data arrival time calculation
@@ -813,22 +815,22 @@ Expanded Path 1
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   4.630                        wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.554          net: FAB_CLK
-  5.184                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTOl1:CLK (r)
+               +     0.512          net: FAB_CLK
+  5.142                        CoreUARTapb_2/CUARTOOlI/CUARTl10/CUARTOl1:CLK (r)
                +     0.559          cell: ADLIB:DFN1E0P0
-  5.743                        CoreUARTapb_0/CUARTOOlI/CUARTl10/CUARTOl1:Q (f)
-               +     1.850          net: XBee_TX_c
-  7.593                        XBee_TX_pad/U0/U1:D (f)
+  5.701                        CoreUARTapb_2/CUARTOOlI/CUARTl10/CUARTOl1:Q (f)
+               +     2.860          net: LCD_TX_c
+  8.561                        LCD_TX_pad/U0/U1:D (f)
                +     0.442          cell: ADLIB:IOTRI_OB_EB
-  8.035                        XBee_TX_pad/U0/U1:DOUT (f)
-               +     0.000          net: XBee_TX_pad/U0/NET1
-  8.035                        XBee_TX_pad/U0/U0:D (f)
+  9.003                        LCD_TX_pad/U0/U1:DOUT (f)
+               +     0.000          net: LCD_TX_pad/U0/NET1
+  9.003                        LCD_TX_pad/U0/U0:D (f)
                +     2.709          cell: ADLIB:IOPAD_TRI
-  10.744                       XBee_TX_pad/U0/U0:PAD (f)
-               +     0.000          net: XBee_TX
-  10.744                       XBee_TX (f)
+  11.712                       LCD_TX_pad/U0/U0:PAD (f)
+               +     0.000          net: LCD_TX
+  11.712                       LCD_TX (f)
                                     
-  10.744                       data arrival time
+  11.712                       data arrival time
   ________________________________________________________
   Data required time calculation
   N/C                          mss_ccc_gla1
@@ -837,7 +839,7 @@ Expanded Path 1
                +     4.630          Clock generation
   N/C
                                     
-  N/C                          XBee_TX (f)
+  N/C                          LCD_TX (f)
 
 
 END SET Clock to Output
@@ -872,56 +874,56 @@ SET mss_fabric_interface_clock to mss_ccc_gla1
 
 Path 1
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll:E
-  Delay (ns):                  9.526
-  Slack (ns):                  1.708
-  Arrival (ns):                12.976
-  Required (ns):               14.684
+  To:                          CoreUARTapb_2/CUARTOOlI/CUARTI00:E
+  Delay (ns):                  9.516
+  Slack (ns):                  1.688
+  Arrival (ns):                12.966
+  Required (ns):               14.654
   Setup (ns):                  0.461
 
 Path 2
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll:D
-  Delay (ns):                  9.389
-  Slack (ns):                  1.871
-  Arrival (ns):                12.839
-  Required (ns):               14.710
-  Setup (ns):                  0.435
+  To:                          CoreUARTapb_0/CUARTOOlI/CUARTI00:E
+  Delay (ns):                  9.503
+  Slack (ns):                  1.701
+  Arrival (ns):                12.953
+  Required (ns):               14.654
+  Setup (ns):                  0.461
 
 Path 3
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTIOIl:E
-  Delay (ns):                  9.159
-  Slack (ns):                  2.105
-  Arrival (ns):                12.609
-  Required (ns):               14.714
-  Setup (ns):                  0.461
+  To:                          CoreUARTapb_1/CUARTOOlI/CUARTlIl:D
+  Delay (ns):                  9.336
+  Slack (ns):                  1.947
+  Arrival (ns):                12.786
+  Required (ns):               14.733
+  Setup (ns):                  0.435
 
 Path 4
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          CoreUARTapb_2/CUARTOOlI/CUARTl10/CUARTI1ll:E
-  Delay (ns):                  9.153
-  Slack (ns):                  2.111
-  Arrival (ns):                12.603
-  Required (ns):               14.714
-  Setup (ns):                  0.461
+  To:                          CoreUARTapb_1/CUARTOOlI/CUARTI0I[0]:E
+  Delay (ns):                  9.197
+  Slack (ns):                  2.182
+  Arrival (ns):                12.647
+  Required (ns):               14.829
+  Setup (ns):                  0.330
 
 Path 5
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To:                          CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTl01:D
-  Delay (ns):                  9.148
-  Slack (ns):                  2.241
-  Arrival (ns):                12.598
-  Required (ns):               14.839
-  Setup (ns):                  0.382
+  To:                          CoreUARTapb_1/CUARTOOlI/CUARTI0I[3]:E
+  Delay (ns):                  9.197
+  Slack (ns):                  2.191
+  Arrival (ns):                12.647
+  Required (ns):               14.838
+  Setup (ns):                  0.330
 
 
 Expanded Path 1
   From: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB
-  To: CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll:E
-  data required time                             14.684
-  data arrival time                          -   12.976
-  slack                                          1.708
+  To: CoreUARTapb_2/CUARTOOlI/CUARTI00:E
+  data required time                             14.654
+  data arrival time                          -   12.966
+  slack                                          1.688
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_fabric_interface_clock
@@ -929,36 +931,32 @@ Expanded Path 1
   0.000                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:GLB (r)
                +     3.450          Clock generation
   3.450
-               +     2.484          cell: ADLIB:MSS_APB_IP
-  5.934                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPSEL (r)
-               +     0.103          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPSELINT_NET
-  6.037                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_42:PIN1INT (r)
-               +     0.074          cell: ADLIB:MSS_IF
-  6.111                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_42:PIN1 (r)
-               +     0.922          net: wubsuit_base_MSS_0_MSS_MASTER_APB_PSELx
-  7.033                        CoreAPB3_0/CAPB3O0OI_1[0]:A (r)
-               +     0.504          cell: ADLIB:NOR3A
-  7.537                        CoreAPB3_0/CAPB3O0OI_1[0]:Y (r)
-               +     0.411          net: CoreAPB3_0/CoreAPB3_0_APBmslave2_PSELx_1
-  7.948                        CoreAPB3_0/CAPB3O0OI[1]:A (r)
-               +     0.505          cell: ADLIB:NOR3B
-  8.453                        CoreAPB3_0/CAPB3O0OI[1]:Y (r)
-               +     1.477          net: CoreAPB3_0_APBmslave1_PSELx
-  9.930                        CoreUARTapb_1/CUARTOOlI/un1_CUARTI1I_0_a2_0:B (r)
-               +     0.392          cell: ADLIB:NOR2B
-  10.322                       CoreUARTapb_1/CUARTOOlI/un1_CUARTI1I_0_a2_0:Y (r)
-               +     0.819          net: CoreUARTapb_1/CUARTOOlI/N_93
-  11.141                       CoreUARTapb_1/CUARTOOlI/CUARTO10.CUARTI0I5_0_a5:B (r)
-               +     0.543          cell: ADLIB:NOR3C
-  11.684                       CoreUARTapb_1/CUARTOOlI/CUARTO10.CUARTI0I5_0_a5:Y (r)
-               +     0.665          net: CoreUARTapb_1/CUARTOOlI/CUARTI0I5
-  12.349                       CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll_RNO_0:B (r)
-               +     0.390          cell: ADLIB:OR2A
-  12.739                       CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll_RNO_0:Y (r)
-               +     0.237          net: CoreUARTapb_1/CUARTOOlI/CUARTl10/N_11
-  12.976                       CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll:E (r)
+               +     3.082          cell: ADLIB:MSS_APB_IP
+  6.532                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:MSSPADDR[2] (f)
+               +     0.131          net: wubsuit_base_MSS_0/MSS_ADLIB_INST/MSSPADDR[2]INT_NET
+  6.663                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_30:PIN3INT (f)
+               +     0.072          cell: ADLIB:MSS_IF
+  6.735                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_30:PIN3 (f)
+               +     0.296          net: CoreAPB3_0_APBmslave0_PADDR[2]
+  7.031                        CoreUARTapb_0/CUARTI1II.CUARTI0OI4_0_a2:A (f)
+               +     0.476          cell: ADLIB:NOR2A
+  7.507                        CoreUARTapb_0/CUARTI1II.CUARTI0OI4_0_a2:Y (f)
+               +     0.882          net: CoreUARTapb_0/N_144
+  8.389                        CoreUARTapb_0/CUARTO1OI_5_0_a2[3]:A (f)
+               +     0.479          cell: ADLIB:NOR2A
+  8.868                        CoreUARTapb_0/CUARTO1OI_5_0_a2[3]:Y (f)
+               +     1.338          net: CoreUARTapb_2_N_90
+  10.206                       CoreUARTapb_0/un1_CUARTOIII_0_a3:A (f)
+               +     0.517          cell: ADLIB:NOR3B
+  10.723                       CoreUARTapb_0/un1_CUARTOIII_0_a3:Y (f)
+               +     1.656          net: CoreUARTapb_0_CUARTOOlI_OEN_i_1
+  12.379                       CoreUARTapb_2/CUARTOOlI/CUARTI00_RNO:A (f)
+               +     0.352          cell: ADLIB:AO1
+  12.731                       CoreUARTapb_2/CUARTOOlI/CUARTI00_RNO:Y (f)
+               +     0.235          net: CoreUARTapb_2/CUARTOOlI/un1_CUARTl00
+  12.966                       CoreUARTapb_2/CUARTOOlI/CUARTI00:E (f)
                                     
-  12.976                       data arrival time
+  12.966                       data arrival time
   ________________________________________________________
   Data required time calculation
   10.000                       mss_ccc_gla1
@@ -970,12 +968,12 @@ Expanded Path 1
   14.630                       wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   14.630                       wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.515          net: FAB_CLK
-  15.145                       CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll:CLK (r)
-               -     0.461          Library setup time: ADLIB:DFN1E1P0
-  14.684                       CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTI1ll:E
+               +     0.485          net: FAB_CLK
+  15.115                       CoreUARTapb_2/CUARTOOlI/CUARTI00:CLK (r)
+               -     0.461          Library setup time: ADLIB:DFN1E1C0
+  14.654                       CoreUARTapb_2/CUARTOOlI/CUARTI00:E
                                     
-  14.684                       data required time
+  14.654                       data required time
 
 
 END SET mss_fabric_interface_clock to mss_ccc_gla1
@@ -986,56 +984,56 @@ SET mss_ccc_gla0 to mss_ccc_gla1
 
 Path 1
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[6]:CLR
-  Delay (ns):                  6.469
-  Slack (ns):                  4.973
-  Arrival (ns):                9.919
-  Required (ns):               14.892
+  To:                          CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:RESET
+  Delay (ns):                  6.686
+  Slack (ns):                  3.722
+  Arrival (ns):                10.136
+  Required (ns):               13.858
   Setup (ns):
 
 Path 2
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          CoreUARTapb_1/CUARTOOlI/CUARTl10/CUARTO1ll[4]:CLR
-  Delay (ns):                  6.456
-  Slack (ns):                  4.976
-  Arrival (ns):                9.906
-  Required (ns):               14.882
+  To:                          CoreUARTapb_0/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUARTlIOl:RESET
+  Delay (ns):                  6.702
+  Slack (ns):                  3.744
+  Arrival (ns):                10.152
+  Required (ns):               13.896
   Setup (ns):
 
 Path 3
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl0Ol[1]:PRE
-  Delay (ns):                  6.490
-  Slack (ns):                  4.977
-  Arrival (ns):                9.940
-  Required (ns):               14.917
+  To:                          CoreUARTapb_2/CUARTOOlI/genblk2.CUARTO11/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:RESET
+  Delay (ns):                  6.707
+  Slack (ns):                  3.752
+  Arrival (ns):                10.157
+  Required (ns):               13.909
   Setup (ns):
 
 Path 4
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl0Ol[0]:CLR
-  Delay (ns):                  6.490
-  Slack (ns):                  4.977
-  Arrival (ns):                9.940
-  Required (ns):               14.917
+  To:                          CoreUARTapb_1/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_1_fifo_256x8_pa3/CUARTlIOl:RESET
+  Delay (ns):                  6.695
+  Slack (ns):                  3.772
+  Arrival (ns):                10.145
+  Required (ns):               13.917
   Setup (ns):
 
 Path 5
   From:                        wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To:                          CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0_0:CLR
-  Delay (ns):                  6.490
-  Slack (ns):                  4.977
-  Arrival (ns):                9.940
-  Required (ns):               14.917
+  To:                          CoreUARTapb_0/CUARTOOlI/genblk2.CUARTO11/wubsuit_base_CoreUARTapb_0_fifo_256x8_pa3/CUARTlIOl:RESET
+  Delay (ns):                  6.744
+  Slack (ns):                  3.779
+  Arrival (ns):                10.194
+  Required (ns):               13.973
   Setup (ns):
 
 
 Expanded Path 1
   From: wubsuit_base_MSS_0/MSS_ADLIB_INST/U_CORE:FCLK
-  To: CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[6]:CLR
-  data required time                             14.892
-  data arrival time                          -   9.919
-  slack                                          4.973
+  To: CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:RESET
+  data required time                             13.858
+  data arrival time                          -   10.136
+  slack                                          3.722
   ________________________________________________________
   Data arrival time calculation
   0.000                        mss_ccc_gla0
@@ -1055,10 +1053,10 @@ Expanded Path 1
   8.845                        wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC:A (r)
                +     0.583          cell: ADLIB:CLKSRC
   9.428                        wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC:Y (r)
-               +     0.491          net: wubsuit_base_MSS_0_M2F_RESET_N
-  9.919                        CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[6]:CLR (r)
+               +     0.708          net: wubsuit_base_MSS_0_M2F_RESET_N
+  10.136                       CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:RESET (r)
                                     
-  9.919                        data arrival time
+  10.136                       data arrival time
   ________________________________________________________
   Data required time calculation
   10.000                       mss_ccc_gla1
@@ -1070,12 +1068,12 @@ Expanded Path 1
   14.630                       wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5INT (r)
                +     0.000          cell: ADLIB:MSS_CCC_GL_IF
   14.630                       wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC/U_TILE1:PIN5 (r)
-               +     0.487          net: FAB_CLK
-  15.117                       CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[6]:CLK (r)
-               -     0.225          Library recovery time: ADLIB:DFN1C0
-  14.892                       CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTO0[6]:CLR
+               +     0.711          net: FAB_CLK
+  15.341                       CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:RCLK (r)
+               -     1.483          Library recovery time: ADLIB:FIFO4K18
+  13.858                       CoreUARTapb_2/CUARTOOlI/genblk3.CUARTlOOI/wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3/CUARTlIOl:RESET
                                     
-  14.892                       data required time
+  13.858                       data required time
 
 
 END SET mss_ccc_gla0 to mss_ccc_gla1

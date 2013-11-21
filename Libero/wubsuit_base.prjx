@@ -19,7 +19,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "COM"
-KEY ProjectLocation "N:\EECS373\wubsuit_base"
+KEY ProjectLocation "N:\EECS373\WubSuit\Libero"
 KEY ProjectDescription ""
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
@@ -43,13 +43,13 @@ ENDLIST
 LIST FileManager
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.0.100\CoreAPB3.cxf,actgen_cxf"
 STATE="utd"
-TIME="1384828258"
+TIME="1384885440"
 SIZE="2783"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.0.100\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1384828258"
+TIME="1384885440"
 SIZE="1256"
 PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.0.100\CoreAPB3.cxf"
 IS_READONLY="TRUE"
@@ -138,7 +138,7 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\CoreUARTapb.cxf,actgen_cxf"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="1810"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 ENDFILE
@@ -356,71 +356,71 @@ SIZE="413"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1384828259"
-SIZE="601"
+TIME="1384885442"
+SIZE="602"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 IS_INCLUDED="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\mti\scripts\bfmtovec_compile.do,do"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="1011"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\mti\scripts\wave_vlog_amba.do,do"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="2034"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v,hdl"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="6131"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUART.v,hdl"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="9069"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\CoreUARTapb.v,hdl"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="6593"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v,hdl"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="4484"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Rx_async.v,hdl"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="9467"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Tx_async.v,hdl"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="5228"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\test\user\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="8951"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf"
 MODULE_UNDER_TEST="testbench"
@@ -429,13 +429,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\wubsuit_base_CoreUARTapb_0_CoreUARTapb.cxf,actgen_cxf"
 STATE="utd"
-TIME="1384828259"
+TIME="1384885442"
 SIZE="4104"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="601"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
@@ -443,63 +443,63 @@ IS_INCLUDED="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\mti\scripts\bfmtovec_compile.do,do"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="1011"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\mti\scripts\wave_vlog_amba.do,do"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="2034"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Clock_gen.v,hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="6131"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUART.v,hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="9069"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v,hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="6593"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v,hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="4484"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Rx_async.v,hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="9467"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\Tx_async.v,hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="5228"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\test\user\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="8951"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf"
 MODULE_UNDER_TEST="testbench"
@@ -508,13 +508,13 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\wubsuit_base_CoreUARTapb_1_CoreUARTapb.cxf,actgen_cxf"
 STATE="utd"
-TIME="1384828260"
+TIME="1384885444"
 SIZE="4104"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\coreparameters.v,tb_hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="601"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
@@ -522,63 +522,63 @@ IS_INCLUDED="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\mti\scripts\bfmtovec_compile.do,do"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="1011"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\mti\scripts\wave_vlog_amba.do,do"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="2034"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Clock_gen.v,hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="6131"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v,hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="9069"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v,hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="6593"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v,hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="4484"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Rx_async.v,hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="9467"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\Tx_async.v,hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="5228"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\test\user\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="8951"
 PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf"
 MODULE_UNDER_TEST="testbench"
@@ -587,26 +587,26 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUARTapb_2_CoreUARTapb.cxf,actgen_cxf"
 STATE="utd"
-TIME="1384828261"
+TIME="1384885446"
 SIZE="4104"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\testbench.v,tb_hdl"
 STATE="utd"
-TIME="1384828262"
-SIZE="1655"
+TIME="1384885449"
+SIZE="1733"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\wubsuit_base.cxf,actgen_cxf"
 STATE="utd"
-TIME="1384828286"
-SIZE="5656"
+TIME="1384885495"
+SIZE="6282"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\wubsuit_base.pdc,pdc"
 STATE="utd"
-TIME="1384828257"
-SIZE="833"
+TIME="1384885438"
+SIZE="1300"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 BEGIN_USE_CONSTRAINT
 TOOL_CONSTRAINT_TYPE="ideDESIGNER"
@@ -616,8 +616,8 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\wubsuit_base\wubsuit_base.v,hdl"
 STATE="utd"
-TIME="1384828262"
-SIZE="21011"
+TIME="1384885449"
+SIZE="21759"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 IS_READONLY="TRUE"
 ENDFILE
@@ -686,53 +686,53 @@ IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base.adb,adb"
 STATE="utd"
-TIME="1384805340"
-SIZE="477696"
+TIME="1384885943"
+SIZE="1391616"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base.fdb,fdb"
 STATE="utd"
-TIME="1384828676"
-SIZE="70670"
+TIME="1384885940"
+SIZE="78435"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base.ide_des,ide_des"
 STATE="utd"
-TIME="1384805340"
-SIZE="1033"
+TIME="1384885945"
+SIZE="1039"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_compile_log.rpt,log"
 STATE="utd"
-TIME="1384828346"
-SIZE="35460"
+TIME="1384885639"
+SIZE="46726"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\projectData\wubsuit_base.pdb,pdb"
 STATE="utd"
-TIME="1384829195"
-SIZE="80384"
+TIME="1385065342"
+SIZE="88064"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\wubsuit_base.pdb,pdb"
 STATE="utd"
-TIME="1384806142"
-SIZE="64512"
+TIME="1385044491"
+SIZE="88064"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\wubsuit_base.pro,pro"
 STATE="utd"
-TIME="1384806192"
-SIZE="1970"
+TIME="1385044547"
+SIZE="1976"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_placeroute_log.rpt,log"
 STATE="utd"
-TIME="1384828646"
-SIZE="2433"
+TIME="1384885890"
+SIZE="2437"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_prgdata_log.rpt,log"
 STATE="utd"
-TIME="1384828679"
-SIZE="620"
+TIME="1384885945"
+SIZE="628"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_verifytiming_log.rpt,log"
 STATE="utd"
-TIME="1384828657"
-SIZE="1152"
+TIME="1384885909"
+SIZE="1156"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
@@ -770,7 +770,7 @@ PARENT="<project>\component\work\wubsuit_base\CoreUARTapb_2\wubsuit_base_CoreUAR
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1384828262"
+TIME="1384885449"
 SIZE="700"
 PARENT="<project>\component\work\wubsuit_base\wubsuit_base.cxf"
 ENDFILE
@@ -788,23 +788,23 @@ PARENT="<project>\component\work\wubsuit_base_MSS\wubsuit_base_MSS.cxf"
 ENDFILE
 VALUE "<project>\synthesis\wubsuit_base.edn,syn_edn"
 STATE="utd"
-TIME="1384805119"
-SIZE="327381"
+TIME="1384885615"
+SIZE="845147"
 ENDFILE
 VALUE "<project>\synthesis\wubsuit_base.so,so"
 STATE="utd"
-TIME="1384805119"
-SIZE="217"
+TIME="1384885615"
+SIZE="219"
 ENDFILE
 VALUE "<project>\synthesis\wubsuit_base_sdc.sdc,syn_sdc"
 STATE="utd"
-TIME="1384805119"
+TIME="1384885614"
 SIZE="550"
 ENDFILE
 VALUE "<project>\synthesis\wubsuit_base_syn.prj,prj"
 STATE="utd"
-TIME="1384805122"
-SIZE="3192"
+TIME="1384885617"
+SIZE="4760"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -872,6 +872,17 @@ VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\test\user\testbench.v,tb_hdl"
 ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST "wubsuit_base_CoreUARTapb_1_CoreUARTapb::work"
 FILE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\core_obfuscated\CoreUARTapb.v,hdl"
@@ -907,6 +918,17 @@ VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_1\rtl\vlog\test\user\testbench.v,tb_hdl"
 ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST "wubsuit_base_CoreUARTapb_2_CoreUARTapb::work"
 FILE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v,hdl"
@@ -941,6 +963,17 @@ VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\
 VALUE "<project>\component\Actel\DirectCore\CoreUARTapb\5.2.2\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\coreparameters.v,tb_hdl"
 VALUE "<project>\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 LIST "wubsuit_base_MSS::work"
@@ -990,6 +1023,17 @@ VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\amba_bfm\b
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
 VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 ENDLIST
@@ -1173,7 +1217,7 @@ ENDLIST
 LIST PhySynthesisOptions
 ENDLIST
 LIST Profiles
-NAME="SoftConsolev3.3"
+NAME="SoftConsole  v3.3"
 FUNCTION="SoftwareIDE"
 TOOL="SoftConsole"
 LOCATION="C:\Actel\Libero_v9.1\SoftConsole\Eclipse\eclipse.exe"
@@ -1184,8 +1228,8 @@ NAME="Synplify Pro AE"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro AE"
 LOCATION="C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 EndProfile
 NAME="ModelSim AE"
 FUNCTION="Simulation"
@@ -1217,7 +1261,51 @@ Used_File_List
 ENDUsed_File_List
 ENDLIST
 ENDLIST
+LIST "wubsuit_base_CoreUARTapb_0_CoreUARTapb::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "wubsuit_base_CoreUARTapb_1_CoreUARTapb::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "wubsuit_base_CoreUARTapb_2_CoreUARTapb::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 LIST "wubsuit_base_MSS::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "CoreAPB3::COREAPB3_LIB"
 LIST Impl1
 ideSTIMULUS=StateSuccess
 LIST FlowOptions

@@ -20,10 +20,10 @@ KEY IDE_DES_BLOCK_PUBLISH "FALSE"
 KEY IDE_DES_BA_EXPORTED "FALSE"
 KEY IDE_DES_INTERACTIVE "FALSE"
 KEY IDE_DES_ERROR_FOUND "FALSE"
-KEY IDE_DES_ADB_PATH "N:\EECS373\wubsuit_base\designer\impl1\wubsuit_base.adb"
+KEY IDE_DES_ADB_PATH "N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb"
 LIST SOURCE_FILES
-VALUE "N:\EECS373\wubsuit_base\synthesis\wubsuit_base.edn;edn"
-VALUE "N:\EECS373\wubsuit_base\component\work\wubsuit_base\wubsuit_base.pdc;pdc"
+VALUE "N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn;edn"
+VALUE "N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.pdc;pdc"
 ENDLIST
 LIST OPTIONAL_FILES
 ENDLIST

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Actel SmartDesign Mon Nov 18 21:31:00 2013
+// Created by Actel SmartDesign Tue Nov 19 13:24:04 2013
 // Parameters for CoreUARTapb
 //--------------------------------------------------------------------
 
@@ -12,8 +12,8 @@ parameter FIXEDMODE = 0;
 parameter HDL_license = "O";
 parameter PRG_BIT8 = 0;
 parameter PRG_PARITY = 0;
-parameter RX_FIFO = 0;
+parameter RX_FIFO = 1;
 parameter RX_LEGACY_MODE = 0;
 parameter testbench = "User";
-parameter TX_FIFO = 0;
+parameter TX_FIFO = 1;
 parameter USE_SOFT_FIFO = 0;

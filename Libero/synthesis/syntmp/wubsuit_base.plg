@@ -1,54 +1,66 @@
-@P:  Worst Slack : 0.455
-@P:  FAB_CLK - Estimated Frequency : 104.8 MHz
+@P:  Worst Slack : 0.885
+@P:  FAB_CLK - Estimated Frequency : 109.7 MHz
 @P:  FAB_CLK - Requested Frequency : 100.0 MHz
-@P:  FAB_CLK - Estimated Period : 9.545
+@P:  FAB_CLK - Estimated Period : 9.115
 @P:  FAB_CLK - Requested Period : 10.000
-@P:  FAB_CLK - Slack : 0.455
+@P:  FAB_CLK - Slack : 0.885
 @P:  FCLK - Estimated Frequency : NA
 @P:  FCLK - Requested Frequency : 100.0 MHz
 @P:  FCLK - Estimated Period : NA
 @P:  FCLK - Requested Period : 10.000
 @P:  FCLK - Slack : NA
-@P:  System - Estimated Frequency : 191.8 MHz
+@P:  System - Estimated Frequency : 182.1 MHz
 @P:  System - Requested Frequency : 100.0 MHz
-@P:  System - Estimated Period : 5.213
+@P:  System - Estimated Period : 5.493
 @P:  System - Requested Period : 10.000
-@P:  System - Slack : 4.787
+@P:  System - Slack : 4.507
 @P:  Worst Slack(min analysis) : 0.192
-@P:  FAB_CLK - Estimated Frequency(min analysis) : 104.8 MHz
+@P:  FAB_CLK - Estimated Frequency(min analysis) : 109.7 MHz
 @P:  FAB_CLK - Requested Frequency(min analysis) : 100.0 MHz
-@P:  FAB_CLK - Estimated Period(min analysis) : 9.545
+@P:  FAB_CLK - Estimated Period(min analysis) : 9.115
 @P:  FAB_CLK - Requested Period(min analysis) : 10.000
-@P:  FAB_CLK - Slack(min analysis) : 0.455
+@P:  FAB_CLK - Slack(min analysis) : 0.885
 @P:  FCLK - Estimated Frequency(min analysis) : NA
 @P:  FCLK - Requested Frequency(min analysis) : 100.0 MHz
 @P:  FCLK - Estimated Period(min analysis) : NA
 @P:  FCLK - Requested Period(min analysis) : 10.000
 @P:  FCLK - Slack(min analysis) : NA
-@P:  System - Estimated Frequency(min analysis) : 191.8 MHz
+@P:  System - Estimated Frequency(min analysis) : 182.1 MHz
 @P:  System - Requested Frequency(min analysis) : 100.0 MHz
-@P:  System - Estimated Period(min analysis) : 5.213
+@P:  System - Estimated Period(min analysis) : 5.493
 @P:  System - Requested Period(min analysis) : 10.000
-@P:  System - Slack(min analysis) : 4.787
-@P:  Total Area : 1028.0
+@P:  System - Slack(min analysis) : 4.507
+@P:  Total Area : 1144.0
 @P:  Total Area : 0.0
 @P:  Total Area : 0.0
-@P:  Total Area : 326.0
-@P:  Total Area : 302.0
-@P:  Total Area : 132.0
-@P:  Total Area : 64.0
-@P:  Total Area : 76.0
-@P:  Total Area : 325.0
-@P:  Total Area : 301.0
-@P:  Total Area : 131.0
+@P:  Total Area : 377.0
+@P:  Total Area : 314.0
+@P:  Total Area : 20.0
+@P:  Total Area : 12.0
+@P:  Total Area : 9.0
+@P:  Total Area : 1.0
+@P:  Total Area : 104.0
+@P:  Total Area : 66.0
+@P:  Total Area : 74.0
+@P:  Total Area : 378.0
+@P:  Total Area : 313.0
+@P:  Total Area : 20.0
+@P:  Total Area : 12.0
+@P:  Total Area : 9.0
+@P:  Total Area : 1.0
+@P:  Total Area : 103.0
 @P:  Total Area : 65.0
-@P:  Total Area : 72.0
-@P:  Total Area : 336.0
-@P:  Total Area : 312.0
-@P:  Total Area : 128.0
-@P:  Total Area : 64.0
 @P:  Total Area : 75.0
+@P:  Total Area : 348.0
+@P:  Total Area : 273.0
+@P:  Total Area : 12.0
+@P:  Total Area : 4.0
+@P:  Total Area : 9.0
+@P:  Total Area : 1.0
+@P:  Total Area : 85.0
+@P:  Total Area : 51.0
+@P:  Total Area : 82.0
 @P:  Total Area : 39.0
 @P:  Total Area : 32.0
-@P:  Total Area : 1028.0
+@P:  Total Area : 1144.0
 @P:  CPU Time : 0h:00m:02s

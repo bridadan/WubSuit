@@ -4,7 +4,7 @@
 
 int main()
 {
-	Suit_init();
+	Suit_init(&suitState);
 
 	while (1) {
 		printf("Waiting for an interrupt...\n\r");

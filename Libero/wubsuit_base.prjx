@@ -706,17 +706,17 @@ SIZE="46726"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\projectData\wubsuit_base.pdb,pdb"
 STATE="utd"
-TIME="1385337124"
+TIME="1385407643"
 SIZE="88064"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\wubsuit_base.pdb,pdb"
 STATE="utd"
-TIME="1385250403"
+TIME="1385337080"
 SIZE="88064"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\wubsuit_base.pro,pro"
 STATE="utd"
-TIME="1385250449"
+TIME="1385337126"
 SIZE="1976"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_placeroute_log.rpt,log"
@@ -1332,7 +1332,7 @@ StartPage;StartPage
 SmartDesign;wubsuit_base
 SmartDesign;wubsuit_base_MSS
 Reports;Reports
-ACTIVEVIEW;wubsuit_base
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
 LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"

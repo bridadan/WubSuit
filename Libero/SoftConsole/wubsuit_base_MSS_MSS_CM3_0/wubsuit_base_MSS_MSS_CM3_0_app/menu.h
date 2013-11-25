@@ -13,6 +13,7 @@ typedef struct _Menu {
 	uint8_t value;
 	void (*command)(uint8_t);
 	uint8_t submenusCount;
+	struct _Menu* previousMenu;
 	struct _Menu* submenus[MAX_SUBMENUS];
 } Menu;
 

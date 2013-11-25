@@ -27,11 +27,11 @@ __attribute__ ((interrupt)) void GPIO0_IRQHandler( void )
 	while((MSS_GPIO_get_inputs() & 0x01) == 1) {
 		//printf("Receiving data from MIDI\n\r");
 		rx_size = UART_get_rx(&XBee_uart, rx_data, MAX_RX_DATA_SIZE);
-		err_status = UART_get_rx_status(&XBee_uart);
+		/*err_status = UART_get_rx_status(&XBee_uart);
 		if (err_status != 0) {
 			//printf("MIDI UART error with code %u\n\r", err_status);
 			return;
-		}
+		}*/
 		if (rx_size >= 1) {
 			for (i = 0; i < rx_size; i++) {
 				if (xbeeState.valid == 1) {
@@ -91,11 +91,11 @@ __attribute__ ((interrupt)) void GPIO1_IRQHandler( void )
 	while(((MSS_GPIO_get_inputs() >> 1) & 0x01) == 1) {
 		//printf("Receiving data from MIDI\n\r");
 		rx_size = UART_get_rx(&MIDI_uart, rx_data, MAX_RX_DATA_SIZE);
-		err_status = UART_get_rx_status(&MIDI_uart);
+		/*err_status = UART_get_rx_status(&MIDI_uart);
 		if (err_status != 0) {
 			//printf("MIDI UART error with code %u\n\r", err_status);
 			return;
-		}
+		}*/
 		if (rx_size >= 1) {
 			for (i = 0; i < rx_size; i++) {
 				if (midiState.valid == 1) {
@@ -250,7 +250,7 @@ void Suit_init() {
 	Menu_init(&settings, &suitState);
 	printf("After menu init\n\r");
 
-	Suit_setMode(CONFIG);
+	Suit_setMode(PERFORMANCE);
 }
 
 /*void Menu_LPiezoOptionCmd() {
@@ -292,9 +292,9 @@ uint8_t Suit_MIDIToLightChannel(uint8_t note) {
 }
 
 void Suit_newSensorValues() {
-	//printf("Accel: (%u, %u, %u)\n\r", suitState.accelX, suitState.accelY, suitState.accelZ);
-	//printf("Flex: %u\n\r", suitState.flexValue);
-	//printf("Hand Height: %u\n\r", suitState.handHeight);
+	printf("Accel: (%u, %u, %u)\n\r", suitState.accelX, suitState.accelY, suitState.accelZ);
+	printf("Flex: %u\n\r", suitState.flexValue);
+	printf("Hand Height: %u\n\r", suitState.handHeight);
 
 	if (suitState.state == PERFORMANCE) {
 		uint8_t pitchBendOut = Suit_mapValue(suitState.accelX, settings.accelMin, settings.accelMax, settings.pitchBendMin, settings.pitchBendMax);

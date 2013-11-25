@@ -40,8 +40,11 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	currentMenu = &(menus[0]);
 	selectedMenu = 0;
 
+	// Top Level Menu
+
 	menus[0].name = "Main Menu";
 	menus[0].submenusCount = 2;
+	menus[0].previousMenu = 0;
 
 	menus[0].submenus[0] = &(menus[1]); // Note Output
 	menus[0].submenus[1] = &(menus[2]); // MIDI Mappings
@@ -51,10 +54,12 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[1].name = "Note Output";
 	menus[1].submenusCount = 1;
 	menus[1].submenus[0] = &(menus[3]); // Key Signature
+	menus[1].previousMenu = &(menus[0]);
 
 	menus[2].name = "MIDI Mappings";
 	menus[2].submenusCount = 1;
 	menus[2].submenus[0] = &(menus[7]); // Left Foot
+	menus[2].previousMenu = &(menus[0]);
 
 	// Note Output
 
@@ -63,33 +68,37 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[3].submenus[0] = &(menus[4]);
 	menus[3].submenus[1] = &(menus[5]);
 	menus[3].submenus[2] = &(menus[6]);
+	menus[3].previousMenu = &(menus[1]);
 
 	menus[4].name = KeySignatureNames[0];
 	menus[4].submenusCount = 0;
 	menus[4].value = CHROMATIC;
 	menus[4].command = Menu_setKeySignature;
+	menus[4].previousMenu = &(menus[1]);
 
 	menus[5].name = KeySignatureNames[1];
-	menus[4].value = CMAJOR;
+	menus[5].value = CMAJOR;
 	menus[5].submenusCount = 0;
-	menus[4].command = Menu_setKeySignature;
+	menus[5].command = Menu_setKeySignature;
+	menus[5].previousMenu = &(menus[1]);
 
 	menus[6].name = KeySignatureNames[2];
-	menus[4].value = CMINOR;
+	menus[6].value = CMINOR;
 	menus[6].submenusCount = 0;
-	menus[4].command = Menu_setKeySignature;
+	menus[6].command = Menu_setKeySignature;
+	menus[6].previousMenu = &(menus[1]);
 
 	// MIDI Mappings
 
 	menus[7].name = "Left Foot";
 	menus[7].submenusCount = 1;
+	menus[7].previousMenu = &(menus[0]);
 
 
 	menus[8].name = NoteNames[settings->LPiezoMapping];
 	menus[8].submenusCount = 0;
+	menus[8].previousMenu = &(menus[7]);
 	//menus[4].command = Menu_LPiezoOptionCmd;
-
-	menus[3].submenus[0] = &(menus[4]);
 }
 
 void Menu_displayCurrentMenu() {
@@ -128,6 +137,7 @@ void Menu_select() {
 	Menu *menu = currentMenu->submenus[selectedMenu];
 	if (menu->submenusCount == 0) {
 		menu->command(menu->value);
+		Menu_setMenu(menu->previousMenu);
 	} else {
 		Menu_setMenu(menu);
 	}

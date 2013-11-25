@@ -6287,3 +6287,12 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -data N:/EECS373/WubSuit/
 
 !ENTRY org.eclipse.core.resources 2 10035 2013-11-24 22:48:15.065
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-11-25 14:55:21.130 -----------------------------------------------
+eclipse.buildId=M20101209-1200
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-11-25 14:55:22.621
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

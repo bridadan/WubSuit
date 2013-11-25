@@ -1,0 +1,32 @@
+#ifndef MENU_H_
+#define MENU_H_
+
+#define MENU_COUNT 5
+#define MAX_SUBMENUS 10
+#define MAX_NAME 20
+
+#include "lcd.h"
+
+typedef struct _Menu {
+	char* name;
+	uint8_t value;
+	void (*command)(uint8_t value);
+	uint8_t submenusCount;
+	struct _Menu* submenus[MAX_SUBMENUS];
+} Menu;
+
+typedef struct _MenuState {
+	Menu* currentMenu;
+	uint8_t selectedMenu;
+	Menu menus[MENU_COUNT];
+} MenuState;
+
+void Menu_setKeySignature(uint8_t value);
+void Menu_init(Settings *settingsStruct);
+void Menu_displayMenu(Menu* menu);
+void Menu_setMenu(Menu* menu);
+void Menu_moveDown();
+void Menu_moveUp();
+void Menu_select(Menu* menu, uint8_t selectedMenu);
+
+#endif /* MENU_H_ */

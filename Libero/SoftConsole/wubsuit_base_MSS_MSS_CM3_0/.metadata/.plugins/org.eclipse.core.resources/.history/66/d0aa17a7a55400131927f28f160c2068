@@ -1,0 +1,64 @@
+#ifndef SUIT_H_
+#define SUIT_H_
+
+#include "drivers/CoreUARTapb/core_uart_apb.h"
+#include "constants.h"
+#include "menu.h"
+
+// NOTE: Baud values based on 100MHz clock
+#define BAUD_VALUE_115200    		53 //Possibly a problem because not exactly 53 (53.2535)
+#define BAUD_VALUE_31250    		199
+
+#define COREUARTAPB0_BASE_ADDR      0x40050000
+#define COREUARTAPB1_BASE_ADDR      0x40050100
+#define COREUARTAPB2_BASE_ADDR      0x40050200
+#define MAX_RX_DATA_SIZE    		512
+#define LIGHT_CHANNELS				6
+
+UART_instance_t XBee_uart, MIDI_uart;
+
+unsigned int updates_count = 0;
+
+struct MenuState menuState;
+
+struct SuitState {
+	State state;
+	uint8_t accelX, accelY, accelZ;
+	uint8_t flexValue;
+	uint8_t handHeight;
+	uint8_t activeLights;
+	uint8_t waitingForMIDI;
+} suitState;
+
+struct Settings {
+	// 0 - Head, 1 - Left Arm, 2 - Right Arm, 3 - Left Leg, 4 - Right Leg, 5 - Chest
+	Note suitLightMappings[LIGHT_CHANNELS];
+	uint8_t handHeightMapping;
+	uint8_t handHeightMin, handHeightMax;
+	Note LPiezoMapping, RPiezoMapping;
+	Note minNote, maxNote;
+	Note* valueToMapTo;
+	KeySignature keySignature;
+	uint8_t suitLightsMIDIChannel;
+	uint8_t outputMIDIChannel;
+} settings;
+
+void Suit_init();
+void Suit_toggleModes();
+
+// Input
+
+void Suit_capButtonPressed();
+void Suit_capButtonReleased();
+void Suit_LPiezoPressed();
+void Suit_RPiezoPressed();
+void Suit_newSensorValues();
+void Suit_handleMIDIMessage(uint8_t *message, uint16_t length);
+
+// Utility
+
+uint8_t Suit_MIDIToLightChannel(uint8_t note);
+void Suit_turnOnLightChannel(uint8_t channel);
+void Suit_turnOffLightChannel(uint8_t channel);
+
+#endif /* SUIT_H_ */

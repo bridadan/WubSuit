@@ -1,0 +1,29 @@
+#include <inttypes.h>
+#include <stdio.h>
+#include "menu.h"
+
+void Menu_init() {
+	menuState.menus[0].id = 0;
+	menuState.menus[0].name = "Main Menu";
+	menuState.menus[0].optionsCount = 4;
+
+	menuState.menus[1].id = 1;
+	menuState.menus[1].name = "Note Output";
+	menuState.menus[1].optionsCount = 3;
+
+	menuState.menus[2].id = 2;
+	menuState.menus[2].name = "MIDI Mappings";
+	menuState.menus[2].optionsCount = 3;
+
+	menuState.menus[3].id = 3;
+	menuState.menus[3].name = "Suit Lights";
+	menuState.menus[3].optionsCount = 6;
+
+	menuState.menus[4].id = 4;
+	menuState.menus[4].name = "Calibrate";
+	menuState.menus[4].optionsCount = 2;
+
+	/*menuState.menus[0].options = {
+		{ menuState.menus[0].name, Menu_changeMenu}
+	};*/
+}

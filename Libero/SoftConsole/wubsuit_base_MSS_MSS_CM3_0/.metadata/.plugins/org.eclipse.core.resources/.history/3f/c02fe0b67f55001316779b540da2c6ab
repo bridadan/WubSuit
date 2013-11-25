@@ -1,0 +1,120 @@
+#include "menu.h"
+#include "lcd.h"
+#include "suit.h"
+
+char* NoteNames[MAX_NOTES] = {
+	"C0", "C#0", "D0", "D#0", "E0", "F0", "F#0", "G0", "G#0", "A0", "A#0", "B0",
+	"C1", "C#1", "D1", "D#1", "E1", "F1", "F#1", "G1", "G#1", "A1", "A#1", "B1",
+	"C2", "C#2", "D2", "D#2", "E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2",
+	"C3", "C#3", "D3", "D#3", "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3",
+	"C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4",
+	"C5", "C#5", "D5", "D#5", "E5", "F5", "F#5", "G5", "G#5", "A5", "A#5", "B5",
+	"C6", "C#6", "D6", "D#6", "E6", "F6", "F#6", "G6", "G#6", "A6", "A#6", "B6",
+	"C7", "C#7", "D7", "D#7", "E7", "F7", "F#7", "G7", "G#7", "A7", "A#7", "B7",
+	"C8", "C#8", "D8", "D#8", "E8", "F8", "F#8", "G8", "G#8", "A8", "A#8", "B8",
+	"C9", "C#9", "D9", "D#9", "E9", "F9", "F#9", "G9", "G#9", "A9", "A#9", "B9",
+	"C10", "C#10", "D10", "D#10", "E10", "F10", "F#10", "G10"
+};
+
+char* KeySignatureNames[MAX_KEYSIGNATURES] = {
+	"Chromatic", "C Major", "C Minor"
+};
+
+void Menu_setKeySignature(uint8_t value) {
+	settings.keySignature = ((KeySignature) (value));
+}
+
+void Menu_init(Settings *settingsStruct) {
+	menuState.currentMenu = 0;
+	menuState.selectedMenu = 0;
+
+	menuState.menus[0].name = "Main Menu";
+	menuState.menus[0].submenusCount = 2;
+
+	menuState.menus[0].submenus[0] = &(menuState.menus[1]); // Note Output
+	menuState.menus[0].submenus[1] = &(menuState.menus[2]); // MIDI Mappings
+
+	// Main Menus
+
+	menuState.menus[1].name = "Note Output";
+	menuState.menus[1].submenusCount = 1;
+	menuState.menus[1].submenus[0] = &(menuState.menus[3]); // Key Signature
+
+	menuState.menus[2].name = "MIDI Mappings";
+	menuState.menus[2].submenusCount = 1;
+	menuState.menus[2].submenus[0] = &(menuState.menus[7]); // Left Foot
+
+	// Note Output
+
+	menuState.menus[3].name = "Key Signature";
+	menuState.menus[3].submenusCount = 3;
+	menuState.menus[3].submenus[0] = &(menuState.menus[4]);
+	menuState.menus[3].submenus[1] = &(menuState.menus[5]);
+	menuState.menus[3].submenus[2] = &(menuState.menus[6]);
+
+	menuState.menus[4].name = KeySignatureNames[0];
+	menuState.menus[4].submenusCount = 0;
+	menuState.menus[4].value = CHROMATIC;
+	menuState.menus[4].command = Menu_setKeySignature;
+
+	menuState.menus[5].name = KeySignatureNames[1];
+	menuState.menus[4].value = CMAJOR;
+	menuState.menus[5].submenusCount = 0;
+	menuState.menus[4].command = Menu_setKeySignature;
+
+	menuState.menus[6].name = KeySignatureNames[2];
+	menuState.menus[4].value = CMINOR;
+	menuState.menus[6].submenusCount = 0;
+	menuState.menus[4].command = Menu_setKeySignature;
+
+	// MIDI Mappings
+
+	menuState.menus[7].name = "Left Foot";
+	menuState.menus[7].submenusCount = 1;
+
+
+	menuState.menus[8].name = NoteNames[settings.LPiezoMapping];
+	menuState.menus[8].submenusCount = 0;
+	//menuState.menus[4].command = Menu_LPiezoOptionCmd;
+
+	menuState.menus[3].submenus[0] = &(menuState.menus[4]);
+}
+
+void Menu_displayMenu(Menu* menu) {
+	volatile uint8_t i;
+
+	LCD_setSelectorPosition(0);
+	LCD_drawString(menu->name, 10, 0);
+
+	for (i = 0; i < menu->submenusCount; i++) {
+		LCD_drawString((menu->submenus[i])->name, 10, (LCD_LINE_HEIGHT * (i + 1)));
+	}
+}
+
+void Menu_setMenu(Menu* menu) {
+	menuState.currentMenu = menu;
+	menuState.selectedMenu = 0;
+	Menu_displayMenu(menuState.currentMenu);
+}
+
+void Menu_moveDown() {
+	if (menuState.selectedMenu < menuState.currentMenu->submenusCount - 1) {
+		menuState.selectedMenu++;
+		LCD_setSelectorPosition(menuState.selectedMenu);
+	}
+}
+
+void Menu_moveUp() {
+	if (menuState.selectedMenu > 0) {
+		menuState.selectedMenu--;
+		LCD_setSelectorPosition(menuState.selectedMenu);
+	}
+}
+
+void Menu_select(Menu* menu, uint8_t selectedMenu) {
+	if (menu->submenus[selectedMenu]->submenusCount == 0) {
+		menu->submenus[selectedMenu]->command(menu->submenus[selectedMenu]->value);
+	} else {
+		Menu_setMenu(menu->submenus[selectedMenu]);
+	}
+}

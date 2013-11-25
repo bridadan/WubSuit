@@ -706,17 +706,17 @@ SIZE="46726"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\projectData\wubsuit_base.pdb,pdb"
 STATE="utd"
-TIME="1385065342"
+TIME="1385337124"
 SIZE="88064"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\wubsuit_base.pdb,pdb"
 STATE="utd"
-TIME="1385044491"
+TIME="1385250403"
 SIZE="88064"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\wubsuit_base.pro,pro"
 STATE="utd"
-TIME="1385044547"
+TIME="1385250449"
 SIZE="1976"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_placeroute_log.rpt,log"
@@ -1217,7 +1217,7 @@ ENDLIST
 LIST PhySynthesisOptions
 ENDLIST
 LIST Profiles
-NAME="SoftConsole  v3.3"
+NAME="SoftConsolev3.3"
 FUNCTION="SoftwareIDE"
 TOOL="SoftConsole"
 LOCATION="C:\Actel\Libero_v9.1\SoftConsole\Eclipse\eclipse.exe"
@@ -1332,7 +1332,7 @@ StartPage;StartPage
 SmartDesign;wubsuit_base
 SmartDesign;wubsuit_base_MSS
 Reports;Reports
-ACTIVEVIEW;Reports
+ACTIVEVIEW;wubsuit_base
 ENDLIST
 LIST ModuleSubBlockList
 LIST "BIBUF_MSS::work","component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v","FALSE","FALSE"

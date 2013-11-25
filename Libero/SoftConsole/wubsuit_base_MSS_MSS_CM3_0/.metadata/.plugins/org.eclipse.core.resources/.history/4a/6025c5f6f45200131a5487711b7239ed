@@ -1,0 +1,12 @@
+#ifndef MIDI_PARSER_H_
+#define MIDI_PARSER_H_
+
+struct MIDIParser {
+	uint8_t channel;
+} midiParser;
+
+void MIDIParser_init();
+
+void MIDIParser_parse(uint8_t message[], uint8_t length);
+
+#endif /* MIDI_PARSER_H_ */

@@ -12,7 +12,6 @@ typedef struct _Menu {
 	char* name;
 	uint8_t submenusCount;
 	InputType inputType;
-	KeySignature keySigValue;
 	Note* noteValue;
 	uint8_t* intValue;
 	void (*command)(uint8_t);

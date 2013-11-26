@@ -262,20 +262,11 @@ void Suit_init() {
 void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 	uint8_t channel;
 	if (message[0] == 0x90) {
-		if (suitState->state == PERFORMANCE) {
-			channel = Suit_MIDIToLightChannel(message[1]);
-			Suit_turnOnLightChannel(channel);
-		} else {
-			if (suitState->waitingForInput == 1 && suitState->inputType == MIDI) {
-				activeNote = (Note)message[1];
-				suitState->waitingForInput = 0;
-			}
-		}
+		channel = Suit_MIDIToLightChannel(message[1]);
+		Suit_turnOnLightChannel(channel);
 	} else if (message[0] == 0x80) {
-		if (suitState->state == PERFORMANCE) {
-			channel = Suit_MIDIToLightChannel(message[1]);
-			Suit_turnOffLightChannel(channel);
-		}
+		channel = Suit_MIDIToLightChannel(message[1]);
+		Suit_turnOffLightChannel(channel);
 	}
 }
 
@@ -308,10 +299,6 @@ void Suit_newSensorValues() {
 	if (suitState.state == PERFORMANCE) {
 		uint8_t pitchBendOut = Suit_mapValue(suitState.accelX, settings.accelMin, settings.accelMax, settings.pitchBendMin, settings.pitchBendMax);
 		MIDI_pitchWheelChange(pitchBendOut, settings.outputMIDIChannel);
-	} else {
-		if (suitState->waitingForInput == 1 && suitState->inputType == SENSOR) {
-			suitState->waitingForInput = 0;
-		}
 	}
 }
 

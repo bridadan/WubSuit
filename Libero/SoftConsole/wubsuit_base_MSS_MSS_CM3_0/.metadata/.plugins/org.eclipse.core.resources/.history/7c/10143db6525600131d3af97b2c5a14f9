@@ -69,29 +69,9 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	// Note Output
 
 	menus[3].name = "Key Signature";
-	menus[3].submenusCount = 3;
-	menus[3].submenus[0] = &(menus[22]); // Chromatic
-	menus[3].submenus[1] = &(menus[23]); // C Major
-	menus[3].submenus[2] = &(menus[24]); // C Minor
+	menus[3].submenusCount = 0;
+	menus[3].inputType = ARRAY;
 	menus[3].previousMenu = &(menus[1]);
-
-	menus[22].name = "Chromatic";
-	menus[22].submenusCount = 0;
-	menus[22].inputType = VALUE;
-	menus[22].keySigValue = CHROMATIC;
-	menus[22].previousMenu = &(menus[1]);
-
-	menus[23].name = "C Major";
-	menus[23].submenusCount = 0;
-	menus[23].inputType = VALUE;
-	menus[22].keySigValue = CMAJOR;
-	menus[23].previousMenu = &(menus[1]);
-
-	menus[24].name = "C Minor";
-	menus[24].submenusCount = 0;
-	menus[24].inputType = VALUE;
-	menus[22].keySigValue = CMINOR;
-	menus[24].previousMenu = &(menus[1]);
 
 	menus[9].name = "Min Note";
 	menus[9].submenusCount = 0;
@@ -204,7 +184,7 @@ void Menu_displayCurrentMenu() {
 	for (i = 0; i < currentMenu->submenusCount; i++) {
 		menu = currentMenu->submenus[i];
 		LCD_drawString(menu->name, LCD_MENU_OPTION_X, (LCD_LINE_HEIGHT * (i + 1)));
-		if (menu->submenusCount == 0 && menu->inputType != VALUE) {
+		if (menu->submenusCount == 0) {
 			LCD_drawString(menu->valueString(menu), LCD_MENU_VALUE_X, (LCD_LINE_HEIGHT * (i + 1)));
 		}
 	}
@@ -233,12 +213,7 @@ void Menu_moveUp() {
 void Menu_select() {
 	Menu *menu = currentMenu->submenus[selectedMenu];
 	if (menu->submenusCount == 0) {
-		if (menu->inputType == VALUE) {
-			settings->keySignature = menu->keySigValue;
-		} else {
-			Menu_waitForInput(menu);
-		}
-
+		Menu_waitForInput(menu);
 		Menu_setMenu(menu->previousMenu);
 	} else {
 		Menu_setMenu(menu);

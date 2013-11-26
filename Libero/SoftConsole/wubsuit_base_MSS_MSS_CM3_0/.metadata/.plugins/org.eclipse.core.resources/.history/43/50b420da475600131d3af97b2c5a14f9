@@ -70,54 +70,46 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 
 	menus[3].name = "Key Signature";
 	menus[3].submenusCount = 3;
-	menus[3].submenus[0] = &(menus[22]); // Chromatic
-	menus[3].submenus[1] = &(menus[23]); // C Major
-	menus[3].submenus[2] = &(menus[24]); // C Minor
+	menus[3].submenus[0] = &(menus[4]);
+	menus[3].submenus[1] = &(menus[5]);
+	menus[3].submenus[2] = &(menus[6]);
 	menus[3].previousMenu = &(menus[1]);
 
-	menus[22].name = "Chromatic";
-	menus[22].submenusCount = 0;
-	menus[22].inputType = VALUE;
-	menus[22].keySigValue = CHROMATIC;
-	menus[22].previousMenu = &(menus[1]);
+	menus[4].name = KeySignatureNames[0];
+	menus[4].submenusCount = 0;
+	menus[4].value = CHROMATIC;
+	menus[4].command = Menu_setKeySignature;
+	menus[4].previousMenu = &(menus[1]);
 
-	menus[23].name = "C Major";
-	menus[23].submenusCount = 0;
-	menus[23].inputType = VALUE;
-	menus[22].keySigValue = CMAJOR;
-	menus[23].previousMenu = &(menus[1]);
+	menus[5].name = KeySignatureNames[1];
+	menus[5].value = CMAJOR;
+	menus[5].submenusCount = 0;
+	menus[5].command = Menu_setKeySignature;
+	menus[5].previousMenu = &(menus[1]);
 
-	menus[24].name = "C Minor";
-	menus[24].submenusCount = 0;
-	menus[24].inputType = VALUE;
-	menus[22].keySigValue = CMINOR;
-	menus[24].previousMenu = &(menus[1]);
+	menus[6].name = KeySignatureNames[2];
+	menus[6].value = CMINOR;
+	menus[6].submenusCount = 0;
+	menus[6].command = Menu_setKeySignature;
+	menus[6].previousMenu = &(menus[1]);
 
 	menus[9].name = "Min Note";
 	menus[9].submenusCount = 0;
-	menus[9].inputType = MIDI;
 	menus[9].previousMenu = &(menus[1]);
-	menus[9].valueString = Menu_getNoteString;
 
 	menus[10].name = "Max Note";
 	menus[10].submenusCount = 0;
-	menus[10].inputType = MIDI;
 	menus[10].previousMenu = &(menus[1]);
-	menus[10].valueString = Menu_getNoteString;
 
 	// MIDI Mappings
 
 	menus[7].name = "Left Foot";
 	menus[7].submenusCount = 0;
-	menus[7].inputType = MIDI;
 	menus[7].previousMenu = &(menus[2]);
-	menus[7].valueString = Menu_getNoteString;
 
 	menus[8].name = "Right Foot";
 	menus[8].submenusCount = 0;
-	menus[8].inputType = MIDI;
 	menus[8].previousMenu = &(menus[2]);
-	menus[8].valueString = Menu_getNoteString;
 
 	// Calibrate
 
@@ -129,12 +121,10 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 
 	menus[12].name = "Hand Height Min";
 	menus[12].submenusCount = 0;
-	menus[12].inputType = SENSOR;
 	menus[12].previousMenu = &(menus[11]);
 
 	menus[13].name = "Hand Height Max";
 	menus[13].submenusCount = 0;
-	menus[13].inputType = SENSOR;
 	menus[13].previousMenu = &(menus[11]);
 
 	// Suit Lights
@@ -152,61 +142,43 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 
 	menus[15].name = "Right Arm";
 	menus[15].submenusCount = 0;
-	menus[15].inputType = MIDI;
 	menus[15].previousMenu = &(menus[14]);
-	menus[15].valueString = Menu_getNoteString;
 
 	menus[16].name = "Left Arm";
 	menus[16].submenusCount = 0;
-	menus[16].inputType = MIDI;
 	menus[16].previousMenu = &(menus[14]);
-	menus[16].valueString = Menu_getNoteString;
 
 	menus[17].name = "Right Body";
 	menus[17].submenusCount = 0;
-	menus[17].inputType = MIDI;
 	menus[17].previousMenu = &(menus[14]);
-	menus[17].valueString = Menu_getNoteString;
 
 	menus[18].name = "Left Body";
 	menus[18].submenusCount = 0;
-	menus[18].inputType = MIDI;
 	menus[18].previousMenu = &(menus[14]);
-	menus[18].valueString = Menu_getNoteString;
 
 	menus[19].name = "Right Leg";
 	menus[19].submenusCount = 0;
-	menus[19].inputType = MIDI;
 	menus[19].previousMenu = &(menus[14]);
-	menus[19].valueString = Menu_getNoteString;
 
 	menus[20].name = "Left Leg";
 	menus[20].submenusCount = 0;
-	menus[20].inputType = MIDI;
 	menus[20].previousMenu = &(menus[14]);
-	menus[20].valueString = Menu_getNoteString;
 
 	menus[21].name = "Chest";
 	menus[21].submenusCount = 0;
-	menus[21].inputType = MIDI;
 	menus[21].previousMenu = &(menus[14]);
-	menus[21].valueString = Menu_getNoteString;
+
 }
 
 void Menu_displayCurrentMenu() {
 	volatile uint8_t i;
-	volatile Menu *menu;
 
 	LCD_clearScreen();
 	LCD_setSelectorPosition(selectedMenu);
 	LCD_drawString(currentMenu->name, 10, 0);
 
 	for (i = 0; i < currentMenu->submenusCount; i++) {
-		menu = currentMenu->submenus[i];
-		LCD_drawString(menu->name, LCD_MENU_OPTION_X, (LCD_LINE_HEIGHT * (i + 1)));
-		if (menu->submenusCount == 0 && menu->inputType != VALUE) {
-			LCD_drawString(menu->valueString(menu), LCD_MENU_VALUE_X, (LCD_LINE_HEIGHT * (i + 1)));
-		}
+		LCD_drawString((currentMenu->submenus[i])->name, 10, (LCD_LINE_HEIGHT * (i + 1)));
 	}
 }
 
@@ -233,37 +205,9 @@ void Menu_moveUp() {
 void Menu_select() {
 	Menu *menu = currentMenu->submenus[selectedMenu];
 	if (menu->submenusCount == 0) {
-		if (menu->inputType == VALUE) {
-			settings->keySignature = menu->keySigValue;
-		} else {
-			Menu_waitForInput(menu);
-		}
-
+		menu->command(menu->value);
 		Menu_setMenu(menu->previousMenu);
 	} else {
 		Menu_setMenu(menu);
 	}
-}
-
-char* Menu_getNoteString(Menu* menu) {
-	return NoteNames[*(menu->noteValue)];
-}
-
-void Menu_waitForInput(Menu* menu) {
-	suitState->waitingForInput = 1;
-	suitState->inputType = menu->inputType;
-
-	while(suitState->waitingForInput == 1) {
-		// waiting until done waiting for input
-	}
-
-	if (menu->inputType == MIDI) {
-		*(menu->noteValue) = suitState->activeNote;
-	} else if (menu->inputType == SENSOR) {
-		*(menu->intValue) = suitState->handHeight;
-	} else if (menu->inputType == ARRAY) {
-
-	}
-
-	// Update menu value option?
 }

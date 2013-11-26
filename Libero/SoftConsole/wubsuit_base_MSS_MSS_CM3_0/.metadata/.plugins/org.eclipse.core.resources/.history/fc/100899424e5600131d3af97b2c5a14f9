@@ -12,17 +12,14 @@ typedef struct _Menu {
 	char* name;
 	uint8_t submenusCount;
 	InputType inputType;
-	KeySignature keySigValue;
 	Note* noteValue;
 	uint8_t* intValue;
 	void (*command)(uint8_t);
-	char* (*valueString)(Menu*);
+	char* (*valueString)(uint8_t);
 	struct _Menu* previousMenu;
 	struct _Menu* submenus[MAX_SUBMENUS];
 } Menu;
 
-char* Menu_getNoteString(Menu* menu);
-char* Menu_getIntegerString(Menu* menu);
 void Menu_setKeySignature(uint8_t value);
 void Menu_init(Settings *setS, SuitState *suitS);
 void Menu_displayCurrentMenu();

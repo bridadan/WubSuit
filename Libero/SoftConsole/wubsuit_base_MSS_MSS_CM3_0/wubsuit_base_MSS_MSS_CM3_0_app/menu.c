@@ -7,8 +7,8 @@
 Menu* currentMenu;
 uint8_t selectedMenu;
 Menu menus[MENU_COUNT];
-Settings *settings;
-SuitState *suitState;
+Settings *settingsPtr;
+SuitState *suitStatePtr;
 
 char* NoteNames[MAX_NOTES] = {
 	"C0", "C#0", "D0", "D#0", "E0", "F0", "F#0", "G0", "G#0", "A0", "A#0", "B0",
@@ -29,13 +29,19 @@ char* KeySignatureNames[MAX_KEYSIGNATURES] = {
 };
 
 void Menu_setKeySignature(uint8_t value) {
-	settings->keySignature = ((KeySignature) (value));
-	printf("Key signature is now %s\n\r", KeySignatureNames[settings->keySignature]);
+	settingsPtr->keySignature = ((KeySignature) (value));
+	printf("Key signature is now %s\n\r", KeySignatureNames[settingsPtr->keySignature]);
 }
 
 void Menu_init(Settings *setS, SuitState *suitS) {
-	settings = setS;
-	suitState = suitS;
+	printf("%u\n\r", &(setS->suitLightMappings[1]));
+	printf("%u\n\r", setS->suitLightMappings[1]);
+	settingsPtr = setS;
+	suitStatePtr = suitS;
+
+
+	printf("%u\n\r", &(settingsPtr->suitLightMappings[1]));
+	printf("%u\n\r", settingsPtr->suitLightMappings[1]);
 
 	currentMenu = &(menus[0]);
 	selectedMenu = 0;
@@ -96,12 +102,14 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[9].name = "Min Note";
 	menus[9].submenusCount = 0;
 	menus[9].inputType = MIDI;
+	menus[9].noteValue = &(settingsPtr->minNote);
 	menus[9].previousMenu = &(menus[1]);
 	menus[9].valueString = Menu_getNoteString;
 
 	menus[10].name = "Max Note";
 	menus[10].submenusCount = 0;
 	menus[10].inputType = MIDI;
+	menus[10].noteValue = &(settingsPtr->maxNote);
 	menus[10].previousMenu = &(menus[1]);
 	menus[10].valueString = Menu_getNoteString;
 
@@ -110,12 +118,14 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[7].name = "Left Foot";
 	menus[7].submenusCount = 0;
 	menus[7].inputType = MIDI;
+	menus[7].noteValue = &(settingsPtr->LPiezoMapping);
 	menus[7].previousMenu = &(menus[2]);
 	menus[7].valueString = Menu_getNoteString;
 
 	menus[8].name = "Right Foot";
 	menus[8].submenusCount = 0;
 	menus[8].inputType = MIDI;
+	menus[8].noteValue = &(settingsPtr->RPiezoMapping);
 	menus[8].previousMenu = &(menus[2]);
 	menus[8].valueString = Menu_getNoteString;
 
@@ -130,11 +140,13 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[12].name = "Hand Height Min";
 	menus[12].submenusCount = 0;
 	menus[12].inputType = SENSOR;
+	menus[12].intValue = &(settingsPtr->handHeightMin);
 	menus[12].previousMenu = &(menus[11]);
 
 	menus[13].name = "Hand Height Max";
 	menus[13].submenusCount = 0;
 	menus[13].inputType = SENSOR;
+	menus[13].intValue = &(settingsPtr->handHeightMax);
 	menus[13].previousMenu = &(menus[11]);
 
 	// Suit Lights
@@ -153,42 +165,49 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[15].name = "Right Arm";
 	menus[15].submenusCount = 0;
 	menus[15].inputType = MIDI;
+	menus[15].noteValue = &(settingsPtr->suitLightMappings[0]);
 	menus[15].previousMenu = &(menus[14]);
 	menus[15].valueString = Menu_getNoteString;
 
 	menus[16].name = "Left Arm";
 	menus[16].submenusCount = 0;
 	menus[16].inputType = MIDI;
+	menus[16].noteValue = &(settingsPtr->suitLightMappings[1]);
 	menus[16].previousMenu = &(menus[14]);
 	menus[16].valueString = Menu_getNoteString;
 
 	menus[17].name = "Right Body";
 	menus[17].submenusCount = 0;
 	menus[17].inputType = MIDI;
+	menus[17].noteValue = &(settingsPtr->suitLightMappings[2]);
 	menus[17].previousMenu = &(menus[14]);
 	menus[17].valueString = Menu_getNoteString;
 
 	menus[18].name = "Left Body";
 	menus[18].submenusCount = 0;
 	menus[18].inputType = MIDI;
+	menus[18].noteValue = &(settingsPtr->suitLightMappings[3]);
 	menus[18].previousMenu = &(menus[14]);
 	menus[18].valueString = Menu_getNoteString;
 
 	menus[19].name = "Right Leg";
 	menus[19].submenusCount = 0;
 	menus[19].inputType = MIDI;
+	menus[19].noteValue = &(settingsPtr->suitLightMappings[4]);
 	menus[19].previousMenu = &(menus[14]);
 	menus[19].valueString = Menu_getNoteString;
 
 	menus[20].name = "Left Leg";
 	menus[20].submenusCount = 0;
 	menus[20].inputType = MIDI;
+	menus[20].noteValue = &(settingsPtr->suitLightMappings[5]);
 	menus[20].previousMenu = &(menus[14]);
 	menus[20].valueString = Menu_getNoteString;
 
 	menus[21].name = "Chest";
 	menus[21].submenusCount = 0;
 	menus[21].inputType = MIDI;
+	menus[21].noteValue = &(settingsPtr->suitLightMappings[6]);
 	menus[21].previousMenu = &(menus[14]);
 	menus[21].valueString = Menu_getNoteString;
 }
@@ -234,7 +253,7 @@ void Menu_select() {
 	Menu *menu = currentMenu->submenus[selectedMenu];
 	if (menu->submenusCount == 0) {
 		if (menu->inputType == VALUE) {
-			settings->keySignature = menu->keySigValue;
+			settingsPtr->keySignature = menu->keySigValue;
 		} else {
 			Menu_waitForInput(menu);
 		}
@@ -250,17 +269,19 @@ char* Menu_getNoteString(Menu* menu) {
 }
 
 void Menu_waitForInput(Menu* menu) {
-	suitState->waitingForInput = 1;
-	suitState->inputType = menu->inputType;
+	suitStatePtr->waitingForInput = 1;
+	suitStatePtr->inputType = menu->inputType;
 
-	while(suitState->waitingForInput == 1) {
+
+	// Remove this, keep track value to map to
+	while(suitStatePtr->waitingForInput == 1) {
 		// waiting until done waiting for input
 	}
 
 	if (menu->inputType == MIDI) {
-		*(menu->noteValue) = suitState->activeNote;
+		*(menu->noteValue) = suitStatePtr->activeNote;
 	} else if (menu->inputType == SENSOR) {
-		*(menu->intValue) = suitState->handHeight;
+		*(menu->intValue) = suitStatePtr->handHeight;
 	} else if (menu->inputType == ARRAY) {
 
 	}

@@ -706,7 +706,7 @@ SIZE="46726"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\projectData\wubsuit_base.pdb,pdb"
 STATE="utd"
-TIME="1385407643"
+TIME="1385496645"
 SIZE="88064"
 ENDFILE
 VALUE "<project>\designer\impl1\wubsuit_base_fp\wubsuit_base.pdb,pdb"
@@ -1217,7 +1217,7 @@ ENDLIST
 LIST PhySynthesisOptions
 ENDLIST
 LIST Profiles
-NAME="SoftConsolev3.3"
+NAME="SoftConsoleV3.3"
 FUNCTION="SoftwareIDE"
 TOOL="SoftConsole"
 LOCATION="C:\Actel\Libero_v9.1\SoftConsole\Eclipse\eclipse.exe"

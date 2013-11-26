@@ -7,7 +7,8 @@ PDB file 'N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base_fp\wubsuit_base.
 loaded successfully.
 DESIGN : wubsuit_base;  CHECKSUM : 7B7A;  PDB_VERSION : 1.8
 Driver : 3.0.0 build 1
-programmer '56800' : FlashPro3
+programmer '58998' : FlashPro3
+Warning: The programmer with id '56800' in the project file cannot be detected and connected.
 Opened 'N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base_fp/wubsuit_base.pro'
 The 'open_project' command succeeded.
 The 'set_programming_file' command succeeded.
@@ -22,22 +23,22 @@ loaded successfully.
 DESIGN : wubsuit_base;  CHECKSUM : 7B7A;  PDB_VERSION : 1.8
 The 'update_programming_file' command succeeded.
 The 'set_programming_action' command succeeded.
-programmer '56800' : Scan Chain...
-Warning: programmer '56800' : Vpump has been selected on programmer AND an externally provided
+programmer '58998' : Scan Chain...
+Warning: programmer '58998' : Vpump has been selected on programmer AND an externally provided
          Vpump has also been detected. Using externally provided Vpump voltage source.
-programmer '56800' : Scan Chain PASSED.
-programmer '56800' : Executing action PROGRAM
-programmer '56800' : EXPORT FSN[48] = 01064d20944c
-programmer '56800' : Erase ...
-programmer '56800' : Completed erase
-programmer '56800' : EXPORT CHECKSUM: [16] = 7b7a
-programmer '56800' : Programming FPGA Array
-programmer '56800' : Verifying FPGA Array
-programmer '56800' :         Verifying FPGA Array -- pass
-programmer '56800' : Program System Init and Boot Clients...
-programmer '56800' : Verify System Init and Boot Clients...
-programmer '56800' : Finished: Mon Nov 25 14:27:20 2013 (Elapsed time 00:00:38)
-programmer '56800' : Executing action PROGRAM PASSED.
+programmer '58998' : Scan Chain PASSED.
+programmer '58998' : Executing action PROGRAM
+programmer '58998' : EXPORT FSN[48] = 01098a18b060
+programmer '58998' : Erase ...
+programmer '58998' : Completed erase
+programmer '58998' : EXPORT CHECKSUM: [16] = 7b7a
+programmer '58998' : Programming FPGA Array
+programmer '58998' : Verifying FPGA Array
+programmer '58998' :         Verifying FPGA Array -- pass
+programmer '58998' : Program System Init and Boot Clients...
+programmer '58998' : Verify System Init and Boot Clients...
+programmer '58998' : Finished: Tue Nov 26 15:10:42 2013 (Elapsed time 00:00:38)
+programmer '58998' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o
 

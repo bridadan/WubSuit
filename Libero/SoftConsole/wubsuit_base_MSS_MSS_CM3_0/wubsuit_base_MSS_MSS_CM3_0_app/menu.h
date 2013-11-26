@@ -16,7 +16,7 @@ typedef struct _Menu {
 	Note* noteValue;
 	uint8_t* intValue;
 	void (*command)(uint8_t);
-	char* (*valueString)(Menu*);
+	char* (*valueString)(struct _Menu*);
 	struct _Menu* previousMenu;
 	struct _Menu* submenus[MAX_SUBMENUS];
 } Menu;

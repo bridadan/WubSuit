@@ -3,28 +3,30 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="274" key="DIALOG_Y_ORIGIN"/>
-		<item value="380" key="DIALOG_HEIGHT"/>
 		<item value="1308" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="wrap"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="11" key="selection"/>
+		<item value="suitStatePtr" key="selection"/>
 		<list key="findhistory">
-			<item value="11"/>
-			<item value="overflow"/>
-			<item value="err"/>
-			<item value="error"/>
-			<item value="printf"/>
-			<item value="updates"/>
-			<item value="message han"/>
-			<item value="suitstate"/>
+			<item value="suitState"/>
+			<item value="settings"/>
+			<item value="settt"/>
+			<item value="prin"/>
+			<item value="gs9"/>
+			<item value="notenames"/>
+			<item value="suitligh"/>
+			<item value="waitingForInput"/>
 		</list>
 		<list key="replacehistory">
+			<item value="suitStatePtr"/>
+			<item value="settingsPtr"/>
 		</list>
 	</section>
 </section>

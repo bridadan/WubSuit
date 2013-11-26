@@ -43,27 +43,22 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	// Top Level Menu
 
 	menus[0].name = "Main Menu";
-	menus[0].submenusCount = 4;
+	menus[0].submenusCount = 2;
 	menus[0].previousMenu = 0;
 
 	menus[0].submenus[0] = &(menus[1]); // Note Output
 	menus[0].submenus[1] = &(menus[2]); // MIDI Mappings
-	menus[0].submenus[2] = &(menus[11]); // Calibrate
-	menus[0].submenus[3] = &(menus[14]); // Suit Lights
 
 	// Main Menus
 
 	menus[1].name = "Note Output";
-	menus[1].submenusCount = 3;
+	menus[1].submenusCount = 1;
 	menus[1].submenus[0] = &(menus[3]); // Key Signature
-	menus[1].submenus[1] = &(menus[9]); // Min Note
-	menus[1].submenus[2] = &(menus[10]); // Max Note
 	menus[1].previousMenu = &(menus[0]);
 
 	menus[2].name = "MIDI Mappings";
-	menus[2].submenusCount = 2;
+	menus[2].submenusCount = 1;
 	menus[2].submenus[0] = &(menus[7]); // Left Foot
-	menus[2].submenus[1] = &(menus[8]); // Right Foot
 	menus[2].previousMenu = &(menus[0]);
 
 	// Note Output
@@ -93,81 +88,17 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[6].command = Menu_setKeySignature;
 	menus[6].previousMenu = &(menus[1]);
 
-	menus[9].name = "Min Note";
-	menus[9].submenusCount = 0;
-	menus[9].previousMenu = &(menus[1]);
-
-	menus[10].name = "Max Note";
-	menus[10].submenusCount = 0;
-	menus[10].previousMenu = &(menus[1]);
-
 	// MIDI Mappings
 
 	menus[7].name = "Left Foot";
-	menus[7].submenusCount = 0;
-	menus[7].previousMenu = &(menus[2]);
+	menus[7].submenusCount = 1;
+	menus[7].previousMenu = &(menus[0]);
 
-	menus[8].name = "Right Foot";
+
+	menus[8].name = NoteNames[settings->LPiezoMapping];
 	menus[8].submenusCount = 0;
-	menus[8].previousMenu = &(menus[2]);
-
-	// Calibrate
-
-	menus[11].name = "Calibrate";
-	menus[11].submenusCount = 2;
-	menus[11].submenus[0] = &(menus[11]);
-	menus[11].submenus[1] = &(menus[12]);
-	menus[11].previousMenu = &(menus[0]);
-
-	menus[12].name = "Hand Height Min";
-	menus[12].submenusCount = 0;
-	menus[12].previousMenu = &(menus[11]);
-
-	menus[13].name = "Hand Height Max";
-	menus[13].submenusCount = 0;
-	menus[13].previousMenu = &(menus[11]);
-
-	// Suit Lights
-
-	menus[14].name = "Suit Lights";
-	menus[14].submenusCount = 7;
-	menus[14].submenus[0] = &(menus[15]);
-	menus[14].submenus[1] = &(menus[16]);
-	menus[14].submenus[2] = &(menus[17]);
-	menus[14].submenus[3] = &(menus[18]);
-	menus[14].submenus[4] = &(menus[19]);
-	menus[14].submenus[5] = &(menus[20]);
-	menus[14].submenus[6] = &(menus[21]);
-	menus[14].previousMenu = &(menus[0]);
-
-	menus[15].name = "Right Arm";
-	menus[15].submenusCount = 0;
-	menus[15].previousMenu = &(menus[14]);
-
-	menus[16].name = "Left Arm";
-	menus[16].submenusCount = 0;
-	menus[16].previousMenu = &(menus[14]);
-
-	menus[17].name = "Right Body";
-	menus[17].submenusCount = 0;
-	menus[17].previousMenu = &(menus[14]);
-
-	menus[18].name = "Left Body";
-	menus[18].submenusCount = 0;
-	menus[18].previousMenu = &(menus[14]);
-
-	menus[19].name = "Right Leg";
-	menus[19].submenusCount = 0;
-	menus[19].previousMenu = &(menus[14]);
-
-	menus[20].name = "Left Leg";
-	menus[20].submenusCount = 0;
-	menus[20].previousMenu = &(menus[14]);
-
-	menus[21].name = "Chest";
-	menus[21].submenusCount = 0;
-	menus[21].previousMenu = &(menus[14]);
-
+	menus[8].previousMenu = &(menus[7]);
+	//menus[4].command = Menu_LPiezoOptionCmd;
 }
 
 void Menu_displayCurrentMenu() {

@@ -6296,3 +6296,21 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -data N:/EECS373/WubSuit/
 
 !ENTRY org.eclipse.core.resources 2 10035 2013-11-25 14:55:22.621
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-11-25 21:07:24.152 -----------------------------------------------
+eclipse.buildId=M20101209-1200
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2013-11-25 21:07:34.408
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.
+!SESSION 2013-11-25 21:07:24.152 -----------------------------------------------
+eclipse.buildId=M20101209-1200
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0
+
+!ENTRY org.eclipse.equinox.p2.directorywatcher 4 0 2013-11-25 21:07:34.407
+!MESSAGE The installable unit org.eclipse.ui.win32.translated_host_properties is missing the filename property.

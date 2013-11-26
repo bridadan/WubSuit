@@ -19,7 +19,7 @@ __attribute__ ((interrupt)) void GPIO0_IRQHandler( void )
 {
 	uint8_t rx_data[MAX_RX_DATA_SIZE];
 	uint8_t rx_size = 0;
-	//uint8_t err_status;
+	uint8_t err_status;
 	volatile int i;
 
 	//printf("XBee RX Interrupt Fired\n\r");
@@ -82,7 +82,7 @@ __attribute__ ((interrupt)) void GPIO1_IRQHandler( void )
 {
 	uint8_t rx_data[MAX_RX_DATA_SIZE];
 	uint8_t rx_size = 0;
-	//uint8_t err_status;
+	uint8_t err_status;
 	volatile int i;
 
 	//printf("MIDI RX Interrupt Fired\n\r");

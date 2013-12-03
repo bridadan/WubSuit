@@ -12,7 +12,7 @@
 #define COREUARTAPB1_BASE_ADDR      0x40050100
 #define COREUARTAPB2_BASE_ADDR      0x40050200
 #define MAX_RX_DATA_SIZE    		512
-#define LIGHT_CHANNELS				6
+#define LIGHT_CHANNELS				7
 #define XBEE_PACKET_LENGTH			6
 #define MIDI_PACKET_LENGTH			3
 
@@ -34,19 +34,22 @@ typedef struct _SuitState {
 	uint8_t flexValue;
 	uint8_t handHeight;
 	uint8_t activeLights;
-	uint8_t waitingForMIDI;
+	uint8_t waitingForInput;
+	InputType inputType;
 	uint8_t noteActive;
 	Note activeNote;
 } SuitState;
 
 typedef struct _Settings {
-	// 0 - Head, 1 - Left Arm, 2 - Right Arm, 3 - Left Leg, 4 - Right Leg, 5 - Chest
+	// 0 - Right Arm, 1 - Left Arm, 2 - Right Body, 3 - Left Body
+	// 4 - Right Leg, 5 - Left Leg, 6 - Chest
 	Note suitLightMappings[LIGHT_CHANNELS];
 	uint8_t handHeightMapping;
 	uint8_t handHeightMin, handHeightMax;
 	Note LPiezoMapping, RPiezoMapping;
 	Note minNote, maxNote;
-	Note* valueToMapTo;
+	Note* noteToMapTo;
+	uint8_t* valueToMapTo;
 	KeySignature keySignature;
 	uint8_t suitLightsMIDIChannel;
 	uint8_t outputMIDIChannel;
@@ -65,6 +68,7 @@ void Suit_LPiezoPressed();
 void Suit_RPiezoPressed();
 void Suit_newSensorValues();
 void Suit_handleMIDIMessage(uint8_t *message, uint16_t length);
+void Suit_CButton0Pressed();
 
 // Utility
 
@@ -72,5 +76,6 @@ uint8_t Suit_MIDIToLightChannel(uint8_t note);
 void Suit_turnOnLightChannel(uint8_t channel);
 void Suit_turnOffLightChannel(uint8_t channel);
 uint8_t Suit_mapValue(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min, uint8_t out_max);
+void Suit_displayStatus();
 
 #endif /* SUIT_H_ */

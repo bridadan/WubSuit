@@ -2,7 +2,7 @@
 <device>
   <name>wubsuit_base</name>
   <version>1.0</version>
-  <description>CMSIS description for wubsuit_base.  Created by Actel SmartDesign on Tue Nov 19 13:24:20 2013</description>
+  <description>CMSIS description for wubsuit_base.  Created by Actel SmartDesign on Mon Dec 02 22:03:07 2013</description>
   <addressUnitBits>8</addressUnitBits>
   <width>32</width>
   <peripherals>

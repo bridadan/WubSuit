@@ -1,12 +1,12 @@
 #Build: Synplify Pro G-2012.09M-SP1 , Build 013R, Feb 15 2013
 #install: C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1
 #OS: Windows 7 6.1
-#Hostname: EECS373-04
+#Hostname: EECS373-10
 
 #Implementation: synthesis
 
 $ Start of Compile
-#Tue Nov 19 13:26:38 2013
+#Mon Dec 02 22:07:47 2013
 
 Synopsys Verilog Compiler, version comp201209rcp1, Build 245R, built Feb 20 2013
 @N|Running in 64-bit mode
@@ -531,8 +531,8 @@ State machine has 7 reachable states with original encodings of:
 @W: CL159 :"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v":672:0:672:9|Input PSLVERRS14 is unused
 @W: CL159 :"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v":674:0:674:9|Input PSLVERRS15 is unused
 @END
-Process took 0h:00m:04s realtime, 0h:00m:01s cputime
-# Tue Nov 19 13:26:43 2013
+Process took 0h:00m:06s realtime, 0h:00m:01s cputime
+# Mon Dec 02 22:07:54 2013
 
 ###########################################################]
 Premap Report
@@ -549,19 +549,19 @@ Printing clock  summary report in "N:\EECS373\WubSuit\Libero\synthesis\wubsuit_b
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled 
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 95MB peak: 95MB)
+Design Input Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 95MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 95MB peak: 95MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 95MB peak: 95MB)
 
 @W: BN522 |Property syn_clock_priority is not supported for this target technology
 Finished Pre Mapping Phase.@N: BN225 |Writing default property annotation file N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 42MB peak: 106MB)
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:00s; Memory used current: 42MB peak: 106MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Tue Nov 19 13:26:47 2013
+Process took 0h:00m:04s realtime, 0h:00m:01s cputime
+# Mon Dec 02 22:08:00 2013
 
 ###########################################################]
 Map & Optimize Report
@@ -677,7 +677,7 @@ original code -> new code
    01 -> 01
    10 -> 10
 
-Finished factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 106MB peak: 106MB)
+Finished factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 106MB)
 
 @W: BN132 :"n:\eecs373\wubsuit\libero\component\work\wubsuit_base\coreuartapb_0\rtl\vlog\core_obfuscated\coreuart.v":851:0:851:5|Removing sequential instance CoreUARTapb_0.CUARTOOlI.CUARTOO0,  because it is equivalent to instance CoreUARTapb_0.CUARTOOlI.CUARTO1l
 @W: BN132 :"n:\eecs373\wubsuit\libero\component\work\wubsuit_base\coreuartapb_0\rtl\vlog\core_obfuscated\coreuart.v":851:0:851:5|Removing sequential instance CoreUARTapb_0.CUARTOOlI.CUARTIO0,  because it is equivalent to instance CoreUARTapb_0.CUARTOOlI.CUARTI1l
@@ -686,11 +686,11 @@ Finished factoring (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; M
 @W: BN132 :"n:\eecs373\wubsuit\libero\component\work\wubsuit_base\coreuartapb_1\rtl\vlog\core_obfuscated\coreuart.v":851:0:851:5|Removing sequential instance CoreUARTapb_1.CUARTOOlI.CUARTOO0,  because it is equivalent to instance CoreUARTapb_1.CUARTOOlI.CUARTO1l
 @W: BN132 :"n:\eecs373\wubsuit\libero\component\work\wubsuit_base\coreuartapb_1\rtl\vlog\core_obfuscated\coreuart.v":851:0:851:5|Removing sequential instance CoreUARTapb_1.CUARTOOlI.CUARTIO0,  because it is equivalent to instance CoreUARTapb_1.CUARTOOlI.CUARTI1l
 
-Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 105MB peak: 106MB)
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:00s; Memory used current: 105MB peak: 106MB)
 
 @W: MO160 :"n:\eecs373\wubsuit\libero\component\work\wubsuit_base\coreuartapb_0\rtl\vlog\core_obfuscated\rx_async.v":1235:0:1235:5|Register bit CoreUARTapb_0.CUARTOOlI.CUARTIl1.CUARTl01 is always 0, optimizing ...
 
-Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 108MB)
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:00s; Memory used current: 107MB peak: 108MB)
 
 
 Starting Early Timing Optimization (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 108MB)
@@ -710,29 +710,33 @@ High Fanout Net Report
 
 Driver Instance / Pin Name                                       Fanout, notes                   
 -------------------------------------------------------------------------------------------------
+wubsuit_base_MSS_0.MSS_ADLIB_INST / MSSPADDR[2]                  30                              
+wubsuit_base_MSS_0.MSS_ADLIB_INST / MSSPADDR[3]                  35                              
 wubsuit_base_MSS_0.MSS_ADLIB_INST / M2FRESETn                    386 : 380 asynchronous set/reset
-CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1.genblk2.CUARTI0 / Q     26                              
+CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1.genblk2.CUARTI0 / Q     25                              
 CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1.genblk2.CUARTI0 / Q     25                              
-CoreUARTapb_0.CUARTO1OI_5_0_a2[0] / Y                            27                              
+CoreUARTapb_0.CUARTO1OI_5_0_a2[0] / Y                            26                              
 =================================================================================================
 
-@N: FP130 |Promoting Net wubsuit_base_MSS_0_M2F_RESET_N on CLKINT  I_104 
+@N: FP130 |Promoting Net wubsuit_base_MSS_0_M2F_RESET_N on CLKINT  I_102 
 
-Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 108MB)
+Finished technology mapping (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 114MB)
 
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 108MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 114MB)
 
-Replicating Combinational Instance CoreUARTapb_0.CUARTO1OI_5_0_a2[0], fanout 27 segments 2
+Replicating Combinational Instance CoreUARTapb_0.CUARTO1OI_5_0_a2[0], fanout 26 segments 2
 Replicating Sequential Instance CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1.genblk2.CUARTI0, fanout 25 segments 2
-Replicating Sequential Instance CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1.genblk2.CUARTI0, fanout 26 segments 2
+Replicating Sequential Instance CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1.genblk2.CUARTI0, fanout 25 segments 2
+Buffering CoreAPB3_0_APBmslave0_PADDR[3], fanout 36 segments 2
+Buffering CoreAPB3_0_APBmslave0_PADDR[2], fanout 31 segments 2
 
-Added 0 Buffers
+Added 2 Buffers
 Added 3 Cells via replication
 	Added 2 Sequential Cells via replication
 	Added 1 Combinational Cells via replication
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 107MB peak: 108MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:01s; Memory used current: 113MB peak: 114MB)
 
 
 
@@ -758,12 +762,12 @@ Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sampl
 
 Writing Analyst data base N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:02s; Memory used current: 107MB peak: 108MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:01s; Memory used current: 112MB peak: 114MB)
 
 Writing EDIF Netlist and constraint files
 G-2012.09M-SP1 
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:06s; CPU Time elapsed 0h:00m:02s; Memory used current: 107MB peak: 108MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:02s; Memory used current: 112MB peak: 114MB)
 
 @W: MT246 :"n:\eecs373\wubsuit\libero\component\work\wubsuit_base_mss\wubsuit_base_mss.v":521:7:521:18|Blackbox MSSINT is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
 Found clock FAB_CLK with period 10.00ns 
@@ -771,7 +775,7 @@ Found clock FCLK with period 10.00ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Nov 19 13:26:55 2013
+# Timing Report written on Mon Dec 02 22:08:09 2013
 #
 
 
@@ -794,14 +798,14 @@ Performance Summary
 *******************
 
 
-Worst slack in design: 0.885
+Worst slack in design: 0.572
 
                    Requested     Estimated     Requested     Estimated               Clock        Clock          
 Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group          
 -----------------------------------------------------------------------------------------------------------------
-FAB_CLK            100.0 MHz     109.7 MHz     10.000        9.115         0.885     declared     clk_group_0    
+FAB_CLK            100.0 MHz     109.2 MHz     10.000        9.160         0.840     declared     clk_group_0    
 FCLK               100.0 MHz     NA            10.000        NA            NA        declared     clk_group_0    
-System             100.0 MHz     182.1 MHz     10.000        5.493         4.507     system       system_clkgroup
+System             100.0 MHz     180.8 MHz     10.000        5.531         4.469     system       system_clkgroup
 =================================================================================================================
 
 
@@ -815,10 +819,10 @@ Clocks             |    rise  to  rise   |    fall  to  fall   |    rise  to  fa
 ---------------------------------------------------------------------------------------------------------
 Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
 ---------------------------------------------------------------------------------------------------------
-System    System   |  10.000      4.507  |  No paths    -      |  No paths    -      |  No paths    -    
-System    FAB_CLK  |  10.000      1.663  |  No paths    -      |  No paths    -      |  No paths    -    
+System    System   |  10.000      4.469  |  No paths    -      |  No paths    -      |  No paths    -    
+System    FAB_CLK  |  10.000      0.572  |  No paths    -      |  No paths    -      |  No paths    -    
 FAB_CLK   System   |  10.000      7.476  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK   FAB_CLK  |  10.000      0.885  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK   FAB_CLK  |  10.000      0.840  |  No paths    -      |  No paths    -      |  No paths    -    
 =========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -845,37 +849,37 @@ Starting Points with Worst Slack
 Instance                                                           Reference     Type         Pin     Net              Time        Slack
                                                                    Clock                                                                
 ----------------------------------------------------------------------------------------------------------------------------------------
+CoreUARTapb_1.CUARTI0OI[0]                                         FAB_CLK       DFN1E1C0     Q       CUARTI0OI[0]     0.627       0.840
 CoreUARTapb_0.CUARTOOlI.CUARTI10.genblk1\.CUARTI0                  FAB_CLK       DFN1C0       Q       CUARTIl          0.494       0.885
-CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[6]      FAB_CLK       DFN1C0       Q       CUARTO0[6]       0.627       0.949
-CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[7]      FAB_CLK       DFN1C0       Q       CUARTO0[7]       0.627       1.068
-CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[8]      FAB_CLK       DFN1C0       Q       CUARTO0[8]       0.627       1.389
-CoreUARTapb_2.CUARTI0OI[0]                                         FAB_CLK       DFN1E1C0     Q       CUARTI0OI[0]     0.627       1.458
-CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[10]     FAB_CLK       DFN1C0       Q       CUARTO0[10]      0.627       1.493
-CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[7]      FAB_CLK       DFN1C0       Q       CUARTO0[7]       0.627       1.539
-CoreUARTapb_2.CUARTI0OI[1]                                         FAB_CLK       DFN1E1C0     Q       CUARTI0OI[1]     0.627       1.634
-CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[6]      FAB_CLK       DFN1C0       Q       CUARTO0[6]       0.627       1.658
-CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[1]      FAB_CLK       DFN1C0       Q       CUARTO0[1]       0.627       1.726
+CoreUARTapb_1.CUARTI0OI[1]                                         FAB_CLK       DFN1E1C0     Q       CUARTI0OI[1]     0.627       1.054
+CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[1]      FAB_CLK       DFN1C0       Q       CUARTO0[1]       0.627       1.348
+CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[3]      FAB_CLK       DFN1C0       Q       CUARTO0[3]       0.627       1.406
+CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[0]      FAB_CLK       DFN1C0       Q       CUARTO0[0]       0.627       1.459
+CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[10]     FAB_CLK       DFN1C0       Q       CUARTO0[10]      0.627       1.493
+CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[4]      FAB_CLK       DFN1C0       Q       CUARTO0[4]       0.627       1.524
+CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[6]      FAB_CLK       DFN1C0       Q       CUARTO0[6]       0.627       1.539
+CoreUARTapb_0.CUARTOOlI.CUARTIl1.CUARTOl0[1]                       FAB_CLK       DFN1E1C0     Q       CUARTOl0[1]      0.627       1.577
 ========================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                                                  Starting                                              Required          
-Instance                                                          Reference     Type       Pin     Net                  Time         Slack
-                                                                  Clock                                                                   
-------------------------------------------------------------------------------------------------------------------------------------------
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll[5]                     FAB_CLK       DFN1C0     D       CUARTO1ll_ns[5]      9.542        0.885
-CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[1]     FAB_CLK       DFN1C0     D       CUARTO0_RNO_0[1]     9.512        0.949
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll[3]                     FAB_CLK       DFN1C0     D       CUARTO1ll_RNO[3]     9.512        0.999
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTOO0l[3]                     FAB_CLK       DFN1C0     D       N_18                 9.512        1.345
-CoreUARTapb_2.CUARTOOlI.CUARTIl1.CUARTllI                         FAB_CLK       DFN1P0     D       CUARTl0l_9_i         9.512        1.458
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTOO0l[2]                     FAB_CLK       DFN1C0     D       N_16                 9.542        1.511
-CoreUARTapb_2.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[0]     FAB_CLK       DFN1C0     D       CUARTO0_RNO_0[0]     9.512        1.539
-CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[0]     FAB_CLK       DFN1C0     D       CUARTO0_RNO[0]       9.512        1.539
-CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[1]     FAB_CLK       DFN1C0     D       CUARTO0_RNO[1]       9.512        1.539
-CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[2]     FAB_CLK       DFN1C0     D       CUARTO0_RNO[2]       9.512        1.539
-==========================================================================================================================================
+                                                                   Starting                                                Required          
+Instance                                                           Reference     Type         Pin     Net                  Time         Slack
+                                                                   Clock                                                                     
+---------------------------------------------------------------------------------------------------------------------------------------------
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTllI                          FAB_CLK       DFN1P0       D       CUARTl0l_9_i         9.542        0.840
+CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll[5]                      FAB_CLK       DFN1C0       D       CUARTO1ll_ns[5]      9.542        0.885
+CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll[3]                      FAB_CLK       DFN1C0       D       CUARTO1ll_RNO[3]     9.512        0.999
+CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTOO0l[3]                      FAB_CLK       DFN1C0       D       N_18                 9.512        1.345
+CoreUARTapb_1.CUARTOOlI.CUARTI10.genblk1\.genblk2\.CUARTO0[12]     FAB_CLK       DFN1C0       D       CUARTO0_RNO[12]      9.542        1.348
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOl[0]                       FAB_CLK       DFN1E1C0     E       CUARTl0l_9           9.482        1.486
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOl[1]                       FAB_CLK       DFN1E1C0     E       CUARTl0l_9           9.482        1.486
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOl[2]                       FAB_CLK       DFN1E1C0     E       CUARTl0l_9           9.482        1.486
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOl[3]                       FAB_CLK       DFN1E1C0     E       CUARTl0l_9           9.482        1.486
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOl[4]                       FAB_CLK       DFN1E1C0     E       CUARTl0l_9           9.482        1.486
+=============================================================================================================================================
 
 
 
@@ -889,39 +893,39 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         9.542
 
-    - Propagation time:                      8.656
+    - Propagation time:                      8.702
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     0.885
+    = Slack (non-critical) :                 0.840
 
     Number of logic level(s):                5
-    Starting point:                          CoreUARTapb_0.CUARTOOlI.CUARTI10.genblk1\.CUARTI0 / Q
-    Ending point:                            CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll[5] / D
+    Starting point:                          CoreUARTapb_1.CUARTI0OI[0] / Q
+    Ending point:                            CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTllI / D
     The start point is clocked by            FAB_CLK [rising] on pin CLK
     The end   point is clocked by            FAB_CLK [rising] on pin CLK
 
-Instance / Net                                                       Pin      Pin               Arrival     No. of    
-Name                                                      Type       Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------------------------------------------
-CoreUARTapb_0.CUARTOOlI.CUARTI10.genblk1\.CUARTI0         DFN1C0     Q        Out     0.494     0.494       -         
-CUARTIl                                                   Net        -        -       1.926     -           18        
-CoreUARTapb_0.CUARTOOlI.CUARTI10.CUARTl0_RNITKE9          OR2B       B        In      -         2.420       -         
-CoreUARTapb_0.CUARTOOlI.CUARTI10.CUARTl0_RNITKE9          OR2B       Y        Out     0.439     2.859       -         
-CUARTll_i_0                                               Net        -        -       1.395     -           8         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTOO0l_RNID97C[0]     OR2A       B        In      -         4.253       -         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTOO0l_RNID97C[0]     OR2A       Y        Out     0.550     4.804       -         
-N_41                                                      Net        -        -       0.686     -           3         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTOO0l_RNIGLOH[1]     OR3B       C        In      -         5.490       -         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTOO0l_RNIGLOH[1]     OR3B       Y        Out     0.639     6.129       -         
-N_43                                                      Net        -        -       1.007     -           4         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll_RNO_0[5]       NOR3A      B        In      -         7.136       -         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll_RNO_0[5]       NOR3A      Y        Out     0.415     7.551       -         
-N_66                                                      Net        -        -       0.274     -           1         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll_RNO[5]         AO1        C        In      -         7.825       -         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll_RNO[5]         AO1        Y        Out     0.558     8.383       -         
-CUARTO1ll_ns[5]                                           Net        -        -       0.274     -           1         
-CoreUARTapb_0.CUARTOOlI.CUARTl10.CUARTO1ll[5]             DFN1C0     D        In      -         8.656       -         
-======================================================================================================================
-Total path delay (propagation time + setup) of 9.115 is 3.553(39.0%) logic and 5.561(61.0%) route.
+Instance / Net                                                                    Pin      Pin               Arrival     No. of    
+Name                                                                 Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------------------------------
+CoreUARTapb_1.CUARTI0OI[0]                                           DFN1E1C0     Q        Out     0.627     0.627       -         
+CUARTI0OI[0]                                                         Net          -        -       1.395     -           8         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTIOll\.CUARTI1Ol_11_i_o4[7]     OR2          B        In      -         2.022       -         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTIOll\.CUARTI1Ol_11_i_o4[7]     OR2          Y        Out     0.550     2.572       -         
+N_66                                                                 Net          -        -       1.089     -           5         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOIl_RNI3H561[3]               XOR2         B        In      -         3.660       -         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOIl_RNI3H561[3]               XOR2         Y        Out     0.797     4.457       -         
+N_82_i                                                               Net          -        -       0.274     -           1         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOIl_RNI6GGI3[1]               OR3B         C        In      -         4.731       -         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOOIl_RNI6GGI3[1]               OR3B         Y        Out     0.580     5.311       -         
+CUARTOl019_NE_1                                                      Net          -        -       0.686     -           3         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOl0_RNIBLCI5[0]                NOR3A        C        In      -         5.997       -         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTOl0_RNIBLCI5[0]                NOR3A        Y        Out     0.546     6.543       -         
+CUARTl0l_9                                                           Net          -        -       1.454     -           10        
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTllI_RNO                        INV          A        In      -         7.997       -         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTllI_RNO                        INV          Y        Out     0.432     8.428       -         
+CUARTl0l_9_i                                                         Net          -        -       0.274     -           1         
+CoreUARTapb_1.CUARTOOlI.CUARTIl1.CUARTllI                            DFN1P0       D        In      -         8.702       -         
+===================================================================================================================================
+Total path delay (propagation time + setup) of 9.160 is 3.990(43.6%) logic and 5.171(56.4%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -940,37 +944,37 @@ Starting Points with Worst Slack
 Instance                              Reference     Type        Pin              Net                                         Time        Slack
                                       Clock                                                                                                   
 ----------------------------------------------------------------------------------------------------------------------------------------------
-wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[2]      CoreAPB3_0_APBmslave0_PADDR[2]              0.000       1.663
+wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[2]      CoreAPB3_0_APBmslave0_PADDR[2]              0.000       0.572
+wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[3]      CoreAPB3_0_APBmslave0_PADDR[3]              0.000       0.619
 wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[4]      CoreAPB3_0_APBmslave0_PADDR[4]              0.000       1.832
 wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[10]     CoreAPB3_0_APBmslave0_PADDR[10]             0.000       2.549
 wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPSEL          wubsuit_base_MSS_0_MSS_MASTER_APB_PSELx     0.000       2.549
-wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[3]      CoreAPB3_0_APBmslave0_PADDR[3]              0.000       2.562
 wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[8]      CoreAPB3_0_APBmslave0_PADDR[8]              0.000       2.753
 wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[11]     CoreAPB3_0_APBmslave0_PADDR[11]             0.000       2.789
 wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPADDR[9]      CoreAPB3_0_APBmslave0_PADDR[9]              0.000       2.882
-wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPWRITE        CoreAPB3_0_APBmslave0_PWRITE                0.000       2.968
-wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPENABLE       CoreAPB3_0_APBmslave0_PENABLE               0.000       3.466
+wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPWRITE        CoreAPB3_0_APBmslave0_PWRITE                0.000       3.172
+wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     MSSPENABLE       CoreAPB3_0_APBmslave0_PENABLE               0.000       3.670
 ==============================================================================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-                                     Starting                                                 Required          
-Instance                             Reference     Type         Pin     Net                   Time         Slack
-                                     Clock                                                                      
-----------------------------------------------------------------------------------------------------------------
-CoreUARTapb_1.CUARTOOlI.CUARTII0     System        DFN1E0P0     E       CUARTII0_1_sqmuxa     9.630        1.663
-CoreUARTapb_2.CUARTOOlI.CUARTII0     System        DFN1E0P0     E       CUARTII0_1_sqmuxa     9.630        1.663
-CoreUARTapb_0.CUARTOOlI.CUARTII0     System        DFN1E0P0     E       CUARTII0_1_sqmuxa     9.630        1.663
-CoreUARTapb_0.CUARTOOlI.CUARTI00     System        DFN1E1C0     E       un1_CUARTl00          9.482        1.915
-CoreUARTapb_1.CUARTOOlI.CUARTI00     System        DFN1E1C0     E       un1_CUARTl00          9.482        1.915
-CoreUARTapb_2.CUARTOOlI.CUARTI00     System        DFN1E1C0     E       un1_CUARTl00          9.482        1.915
-CoreUARTapb_0.CUARTO0OI[0]           System        DFN1E1C0     E       CUARTO0OI4            9.482        2.549
-CoreUARTapb_0.CUARTO0OI[1]           System        DFN1E1C0     E       CUARTO0OI4            9.482        2.549
-CoreUARTapb_0.CUARTO0OI[2]           System        DFN1E1C0     E       CUARTO0OI4            9.482        2.549
-CoreUARTapb_0.CUARTO0OI[3]           System        DFN1E1C0     E       CUARTO0OI4            9.482        2.549
-================================================================================================================
+                               Starting                                            Required          
+Instance                       Reference     Type         Pin     Net              Time         Slack
+                               Clock                                                                 
+-----------------------------------------------------------------------------------------------------
+CoreUARTapb_1.CUARTI1OI[0]     System        DFN1E0C0     D       CUARTO1OI[0]     9.512        0.572
+CoreUARTapb_2.CUARTI1OI[0]     System        DFN1E0C0     D       CUARTO1OI[0]     9.512        0.572
+CoreUARTapb_2.CUARTI1OI[1]     System        DFN1E0C0     D       CUARTO1OI[1]     9.512        0.572
+CoreUARTapb_1.CUARTI1OI[1]     System        DFN1E0C0     D       CUARTO1OI[1]     9.512        0.764
+CoreUARTapb_0.CUARTO0OI[0]     System        DFN1E1C0     E       CUARTO0OI4       9.482        0.990
+CoreUARTapb_0.CUARTO0OI[1]     System        DFN1E1C0     E       CUARTO0OI4       9.482        0.990
+CoreUARTapb_0.CUARTO0OI[2]     System        DFN1E1C0     E       CUARTO0OI4       9.482        0.990
+CoreUARTapb_0.CUARTO0OI[3]     System        DFN1E1C0     E       CUARTO0OI4       9.482        0.990
+CoreUARTapb_0.CUARTO0OI[4]     System        DFN1E1C0     E       CUARTO0OI4       9.482        0.990
+CoreUARTapb_0.CUARTO0OI[5]     System        DFN1E1C0     E       CUARTO0OI4       9.482        0.990
+=====================================================================================================
 
 
 
@@ -980,41 +984,44 @@ Worst Path Information
 
 Path information for path number 1: 
       Requested Period:                      10.000
-    - Setup time:                            0.370
+    - Setup time:                            0.488
     + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         9.630
+    = Required time:                         9.512
 
-    - Propagation time:                      7.967
+    - Propagation time:                      8.940
     - Clock delay at starting point:         0.000 (ideal)
     - Estimated clock delay at start point:  -0.000
-    = Slack (non-critical) :                 1.663
+    = Slack (critical) :                     0.572
 
-    Number of logic level(s):                4
+    Number of logic level(s):                5
     Starting point:                          wubsuit_base_MSS_0.MSS_ADLIB_INST / MSSPADDR[2]
-    Ending point:                            CoreUARTapb_2.CUARTOOlI.CUARTII0 / E
+    Ending point:                            CoreUARTapb_2.CUARTI1OI[0] / D
     The start point is clocked by            System [rising]
     The end   point is clocked by            FAB_CLK [rising] on pin CLK
 
-Instance / Net                                            Pin             Pin               Arrival     No. of    
-Name                                         Type         Name            Dir     Delay     Time        Fan Out(s)
-------------------------------------------------------------------------------------------------------------------
-wubsuit_base_MSS_0.MSS_ADLIB_INST            MSS_APB      MSSPADDR[2]     Out     0.000     0.000       -         
-CoreAPB3_0_APBmslave0_PADDR[2]               Net          -               -       1.696     -           12        
-CoreUARTapb_0.CUARTI1II\.CUARTI0OI4_0_a2     NOR2A        A               In      -         1.696       -         
-CoreUARTapb_0.CUARTI1II\.CUARTI0OI4_0_a2     NOR2A        Y               Out     0.534     2.230       -         
-N_144                                        Net          -               -       0.328     -           2         
-CoreUARTapb_0.CUARTO1OI_5_0_a2[3]            NOR2A        A               In      -         2.559       -         
-CoreUARTapb_0.CUARTO1OI_5_0_a2[3]            NOR2A        Y               Out     0.534     3.092       -         
-N_90                                         Net          -               -       2.050     -           22        
-CoreUARTapb_0.un1_CUARTOIII_0_a3             NOR3B        A               In      -         5.142       -         
-CoreUARTapb_0.un1_CUARTOIII_0_a3             NOR3B        Y               Out     0.546     5.688       -         
-OEN_i_1                                      Net          -               -       1.211     -           6         
-CoreUARTapb_2.CUARTOOlI.CUARTII0_RNO         AOI1B        A               In      -         6.899       -         
-CoreUARTapb_2.CUARTOOlI.CUARTII0_RNO         AOI1B        Y               Out     0.794     7.694       -         
-CUARTII0_1_sqmuxa                            Net          -               -       0.274     -           1         
-CoreUARTapb_2.CUARTOOlI.CUARTII0             DFN1E0P0     E               In      -         7.967       -         
-==================================================================================================================
-Total path delay (propagation time + setup) of 8.337 is 2.777(33.3%) logic and 5.559(66.7%) route.
+Instance / Net                                               Pin             Pin               Arrival     No. of    
+Name                                            Type         Name            Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------
+wubsuit_base_MSS_0.MSS_ADLIB_INST               MSS_APB      MSSPADDR[2]     Out     0.000     0.000       -         
+CoreAPB3_0_APBmslave0_PADDR[2]                  Net          -               -       1.849     -           16        
+wubsuit_base_MSS_0.MSS_ADLIB_INST_RNI70E4_0     BUFF         A               In      -         1.849       -         
+wubsuit_base_MSS_0.MSS_ADLIB_INST_RNI70E4_0     BUFF         Y               Out     0.424     2.273       -         
+CoreAPB3_0_APBmslave0_PADDR_0[2]                Net          -               -       1.849     -           16        
+CoreUARTapb_0.CUARTO1OI_5_0_a2_0[0]             NOR3A        C               In      -         4.122       -         
+CoreUARTapb_0.CUARTO1OI_5_0_a2_0[0]             NOR3A        Y               Out     0.546     4.668       -         
+N_92                                            Net          -               -       1.772     -           14        
+CoreUARTapb_2.CUARTI1OI_RNO_2[0]                NOR2B        B               In      -         6.439       -         
+CoreUARTapb_2.CUARTI1OI_RNO_2[0]                NOR2B        Y               Out     0.534     6.973       -         
+N_26                                            Net          -               -       0.274     -           1         
+CoreUARTapb_2.CUARTI1OI_RNO_0[0]                OR3          B               In      -         7.247       -         
+CoreUARTapb_2.CUARTI1OI_RNO_0[0]                OR3          Y               Out     0.608     7.855       -         
+CUARTO1OI_5_0_1[0]                              Net          -               -       0.274     -           1         
+CoreUARTapb_2.CUARTI1OI_RNO[0]                  AO1          C               In      -         8.128       -         
+CoreUARTapb_2.CUARTI1OI_RNO[0]                  AO1          Y               Out     0.538     8.666       -         
+CUARTO1OI[0]                                    Net          -               -       0.274     -           1         
+CoreUARTapb_2.CUARTI1OI[0]                      DFN1E0C0     D               In      -         8.940       -         
+=====================================================================================================================
+Total path delay (propagation time + setup) of 9.428 is 3.138(33.3%) logic and 6.290(66.7%) route.
 Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
 
 
@@ -1026,24 +1033,23 @@ Target Part: A2F200M3F_FBGA484_-1
 Report for cell wubsuit_base.verilog
   Core Cell usage:
               cell count     area count*area
-              AND2     1      1.0        1.0
-               AO1    57      1.0       57.0
+               AO1    56      1.0       56.0
               AO1A     8      1.0        8.0
               AO1D     4      1.0        4.0
-              AOI1    17      1.0       17.0
+              AOI1    18      1.0       18.0
              AOI1B     4      1.0        4.0
-              AOI5     2      1.0        2.0
-               AX1     2      1.0        2.0
-              AX1A     7      1.0        7.0
+              AOI5     1      1.0        1.0
+               AX1     3      1.0        3.0
+              AX1A     8      1.0        8.0
               AX1B     1      1.0        1.0
-              AX1C     1      1.0        1.0
               AX1D     8      1.0        8.0
               AXO1     2      1.0        2.0
              AXOI3     2      1.0        2.0
              AXOI7     2      1.0        2.0
+              BUFF     2      1.0        2.0
             CLKINT     1      0.0        0.0
                GND    32      0.0        0.0
-               INV    20      1.0       20.0
+               INV    18      1.0       18.0
               MAJ3     2      1.0        2.0
               MIN3     1      1.0        1.0
             MSSINT     9      0.0        0.0
@@ -1052,32 +1058,30 @@ Report for cell wubsuit_base.verilog
                MX2    36      1.0       36.0
               MX2A     3      1.0        3.0
               MX2C     8      1.0        8.0
-              NOR2    36      1.0       36.0
-             NOR2A    73      1.0       73.0
-             NOR2B    99      1.0       99.0
-              NOR3    12      1.0       12.0
-             NOR3A    24      1.0       24.0
-             NOR3B    25      1.0       25.0
-             NOR3C    15      1.0       15.0
-               OA1    13      1.0       13.0
-              OA1A     7      1.0        7.0
+              NOR2    35      1.0       35.0
+             NOR2A    77      1.0       77.0
+             NOR2B    80      1.0       80.0
+              NOR3    11      1.0       11.0
+             NOR3A    25      1.0       25.0
+             NOR3B    26      1.0       26.0
+             NOR3C    31      1.0       31.0
+               OA1     6      1.0        6.0
+              OA1A     9      1.0        9.0
               OA1B     5      1.0        5.0
-              OA1C    13      1.0       13.0
-               OR2    43      1.0       43.0
-              OR2A    18      1.0       18.0
-              OR2B    14      1.0       14.0
+              OA1C    11      1.0       11.0
+               OR2    42      1.0       42.0
+              OR2A    19      1.0       19.0
+              OR2B    16      1.0       16.0
                OR3    49      1.0       49.0
               OR3A     4      1.0        4.0
-              OR3B     5      1.0        5.0
-              OR3C     1      1.0        1.0
+              OR3B     3      1.0        3.0
              RCOSC     1      0.0        0.0
                VCC    32      0.0        0.0
                XA1     3      1.0        3.0
               XA1B     6      1.0        6.0
-              XA1C    23      1.0       23.0
-             XNOR2    16      1.0       16.0
-             XNOR3     1      1.0        1.0
-              XOR2    20      1.0       20.0
+              XA1C    26      1.0       26.0
+             XNOR2    17      1.0       17.0
+              XOR2    21      1.0       21.0
               XOR3     1      1.0        1.0
 
 
@@ -1090,20 +1094,20 @@ Report for cell wubsuit_base.verilog
             DFN1P0    15      1.0       15.0
           FIFO4K18     6      0.0        0.0
                    -----          ----------
-             TOTAL  1227              1144.0
+             TOTAL  1223              1140.0
 
 
   IO Cell usage:
               cell count
-             INBUF     4
+             INBUF     8
          INBUF_MSS     2
-            OUTBUF     7
+            OUTBUF     3
         OUTBUF_MSS     1
                    -----
              TOTAL    14
 
 
-Core Cells         : 1144 of 4608 (25%)
+Core Cells         : 1140 of 4608 (25%)
 IO Cells           : 14
 
   RAM/ROM Usage Summary
@@ -1111,9 +1115,9 @@ Block Rams : 6 of 8 (75%)
 
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:07s; CPU Time elapsed 0h:00m:02s; Memory used current: 42MB peak: 108MB)
+At Mapper Exit (Real Time elapsed 0h:00m:08s; CPU Time elapsed 0h:00m:02s; Memory used current: 42MB peak: 114MB)
 
-Process took 0h:00m:07s realtime, 0h:00m:02s cputime
-# Tue Nov 19 13:26:56 2013
+Process took 0h:00m:08s realtime, 0h:00m:02s cputime
+# Mon Dec 02 22:08:09 2013
 
 ###########################################################]

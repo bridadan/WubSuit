@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version G-2012.09M-SP1 
 #--  Project file N:\EECS373\WubSuit\Libero\synthesis\run_options.txt
-#--  Written on Tue Nov 19 13:26:38 2013
+#--  Written on Mon Dec 02 22:07:47 2013
 
 
 #project files

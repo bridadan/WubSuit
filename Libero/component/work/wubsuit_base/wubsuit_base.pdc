@@ -3,7 +3,7 @@
 
 # Version: v11.0 11.0.0.23
 # Family: SmartFusion , Die: A2F200M3F , Package: 484 FBGA
-# Date generated: Tue Nov 19 13:23:58 2013 
+# Date generated: Mon Dec 02 22:02:41 2013 
 
 
 # 
@@ -74,3 +74,6 @@ set_io UART_0_TXD      \
 # Old IO constraints, commented out for reference
 #
 
+# set_io MSS_RESET_N -iostd LVTTL -RES_PULL None -SCHMITT_TRIGGER Off -DIRECTION INPUT 
+# set_io UART_0_RXD -iostd LVTTL -RES_PULL None -SCHMITT_TRIGGER Off -DIRECTION INPUT 
+# set_io UART_0_TXD -iostd LVTTL -OUT_LOAD 35 -RES_PULL None -SKEW Off -SLEW High -DIRECTION OUTPUT 

@@ -12,12 +12,12 @@ Opened an existing Libero design wubsuit_base.adb.
 'IDE_DESIGNERVIEW_ROOTDIR' set to 'N:\EECS373\WubSuit\Libero\designer'
 'IDE_DESIGNERVIEW_LASTREV' set to '1'
 
- Netlist Reading Time = 0.0 seconds
+ Netlist Reading Time = 1.0 seconds
 Imported the files:
    N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn
    N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.pdc
 
-The Import command succeeded ( 00:00:06 )
+The Import command succeeded ( 00:00:05 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -590,12 +590,12 @@ Netlist Optimization Report
 
 Optimized macros:
   - Dangling net drivers:   0
-  - Buffers:                2
+  - Buffers:                8
   - Inverters:              0
-  - Tieoff:                 5
-  - Logic combining:        23
+  - Tieoff:                 1
+  - Logic combining:        17
 
-    Total macros optimized  30
+    Total macros optimized  26
 
 There were 0 error(s) and 387 warning(s) in this design.
 =====================================================================
@@ -653,8 +653,8 @@ I/O Function:
 
     Type                          | w/o register  | w/ register  | w/ DDR register
     ------------------------------|---------------|--------------|----------------
-    Input I/O                     | 4             | 0            | 0
-    Output I/O                    | 7             | 0            | 0
+    Input I/O                     | 8             | 0            | 0
+    Output I/O                    | 3             | 0            | 0
     Bidirectional I/O             | 0             | 0            | 0
     Differential Input I/O Pairs  | 0             | 0            | 0
     Differential Output I/O Pairs | 0             | 0            | 0
@@ -665,13 +665,13 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVTTL                           | 3.30v | N/A   | 4     | 7      | 0
+    LVTTL                           | 3.30v | N/A   | 8     | 3      | 0
 
 I/O Placement:
 
-    Locked  :   8 ( 72.73% )
+    Locked  :   7 ( 63.64% )
     Placed  :   0
-    UnPlaced:   3 ( 27.27% )
+    UnPlaced:   4 ( 36.36% )
 
 Warning: Only some I/Os are locked
 
@@ -691,57 +691,57 @@ The following nets have been assigned to a chip global resource:
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    23      INT_NET       Net   : CoreUARTapb_2.N_89
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
     22      INT_NET       Net   : CoreUARTapb_2.N_90
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
-    19      INT_NET       Net   : PARITY_ERR_c
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
+    19      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
+                          Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
+    18      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR_0[3]
+                          Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4_1
     18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
-    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
+    18      INT_NET       Net   : CoreUARTapb_1/PARITY_ERR
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
                           Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
-    16      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
-    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
+    17      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
+    16      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[2]
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    14      INT_NET       Net   : CoreUARTapb_2.N_87_0
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
+    16      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR_0[2]
+                          Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4_0
 
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    23      INT_NET       Net   : CoreUARTapb_2.N_89
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
+    36      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
+                          Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
+    31      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[2]
+                          Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
     22      INT_NET       Net   : CoreUARTapb_2.N_90
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
-    19      INT_NET       Net   : PARITY_ERR_c
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
-    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
+    18      INT_NET       Net   : CoreUARTapb_1/PARITY_ERR
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
                           Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
-    16      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
-                          Driver: CoreUARTapb_0/CUARTOOlI/CUARTIl1/CUARTOl0[1]
-    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
-                          Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    14      INT_NET       Net   : CoreUARTapb_2.N_87_0
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
+    17      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
+    14      INT_NET       Net   : CoreAPB3_0_APBmslave1_PSELx
+                          Driver: CoreAPB3_0/CAPB3O0OI[1]
+    14      INT_NET       Net   : CoreAPB3_0_APBmslave2_PSELx
+                          Driver: CoreAPB3_0/CAPB3O0OI[2]
 
-The Compile command succeeded ( 00:00:03 )
+The Compile command succeeded ( 00:00:04 )
 Wrote status report to file: wubsuit_base_compile_report.txt
 
 The Report command succeeded ( 00:00:00 )
 Design saved to file N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb.
 
-The Execute Script command succeeded ( 00:00:16 )
+The Execute Script command succeeded ( 00:00:17 )
 Design closed.
 

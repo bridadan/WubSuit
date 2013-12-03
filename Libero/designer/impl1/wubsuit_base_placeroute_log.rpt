@@ -33,16 +33,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Tue Nov 19 13:30:33 2013
+Timing-driven Placer Started: Mon Dec 02 22:12:52 2013
 
-Placer Finished: Tue Nov 19 13:30:53 2013
-Total Placer CPU Time:     00:00:20
+Placer Finished: Mon Dec 02 22:13:10 2013
+Total Placer CPU Time:     00:00:18
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: wubsuit_base                    Started: Tue Nov 19 13:31:02 2013
+Design: wubsuit_base                    Started: Mon Dec 02 22:13:21 2013
 
  
 Iterative improvement...
@@ -50,9 +50,9 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: wubsuit_base                    
-Finished: Tue Nov 19 13:31:18 2013
-Total CPU Time:     00:00:16            Total Elapsed Time: 00:00:16
-Total Memory Usage: 166.8 Mbytes
+Finished: Mon Dec 02 22:13:39 2013
+Total CPU Time:     00:00:18            Total Elapsed Time: 00:00:18
+Total Memory Usage: 166.4 Mbytes
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
@@ -60,7 +60,7 @@ Finished loading the Timing data.
 TIMER: Max delay timing requirements have been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:00:56 )
+The Layout command succeeded ( 00:01:00 )
 Wrote status report to file: wubsuit_base_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -69,12 +69,12 @@ Wrote globalnet report to file: wubsuit_base_globalnet_report.txt
 The Report command succeeded ( 00:00:00 )
 Wrote globalusage report to file: wubsuit_base_globalusage_report.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Wrote iobank report to file: wubsuit_base_iobank_report.txt
 
-The Report command succeeded ( 00:00:01 )
+The Report command succeeded ( 00:00:00 )
 Design saved to file N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb.
 
-The Execute Script command succeeded ( 00:01:05 )
+The Execute Script command succeeded ( 00:01:09 )
 Design closed.
 

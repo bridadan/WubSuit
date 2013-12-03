@@ -162,6 +162,24 @@ __attribute__ ((interrupt)) void GPIO3_IRQHandler( void )
     NVIC_ClearPendingIRQ(GPIO3_IRQn);
 }
 
+// RPiezo Interrupt
+__attribute__ ((interrupt)) void GPIO4_IRQHandler( void )
+{
+	Suit_RPiezoPressed();
+
+    MSS_GPIO_clear_irq(MSS_GPIO_4);
+    NVIC_ClearPendingIRQ(GPIO4_IRQn);
+}
+
+// CButton0 Interrupt
+__attribute__ ((interrupt)) void GPIO5_IRQHandler( void )
+{
+	Suit_CButton0Pressed();
+
+    MSS_GPIO_clear_irq(MSS_GPIO_5);
+    NVIC_ClearPendingIRQ(GPIO5_IRQn);
+}
+
 void Suit_init() {
 	printf("\n\r\nr\r/\\/\\/\\/ WubSuit \\/\\/\\/\\\n\r");
 	printf("Brian Daniels\n\r");
@@ -169,7 +187,7 @@ void Suit_init() {
 	printf("Brian Margosian\n\r");
 	printf("Nick Tountasakis\n\r\n\r");
 
-	suitState.waitingForMIDI = 0;
+	suitState.waitingForInput = 0;
 	suitState.noteActive = 0;
 
 	xbeeState.valid = 0;
@@ -191,6 +209,7 @@ void Suit_init() {
 	settings.suitLightMappings[3] = DS0;
 	settings.suitLightMappings[4] = E0;
 	settings.suitLightMappings[5] = F0;
+	settings.suitLightMappings[6] = FS0;
 
 	suitState.handHeight = 0;
 	settings.handHeightMapping = 0;
@@ -207,7 +226,7 @@ void Suit_init() {
 	settings.outputMIDIChannel = 0;
 
 	settings.accelMin = 0;
-	settings.accelMax = 255;
+	settings.accelMax = 0xFE;
 	settings.pitchBendMin = 0;
 	settings.pitchBendMax = 127;
 
@@ -246,11 +265,20 @@ void Suit_init() {
 	MSS_GPIO_config(MSS_GPIO_3, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
 	MSS_GPIO_enable_irq(MSS_GPIO_3);
 	NVIC_EnableIRQ(GPIO3_IRQn);
-	printf("Before menu init\n\r");
-	Menu_init(&settings, &suitState);
-	printf("After menu init\n\r");
 
-	Suit_setMode(PERFORMANCE);
+	// Setup RPiezo interrupt
+	MSS_GPIO_config(MSS_GPIO_4, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
+	MSS_GPIO_enable_irq(MSS_GPIO_4);
+	NVIC_EnableIRQ(GPIO4_IRQn);
+
+	// Setup CButton0 interrupt
+	MSS_GPIO_config(MSS_GPIO_5, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
+	MSS_GPIO_enable_irq(MSS_GPIO_5);
+	NVIC_EnableIRQ(GPIO5_IRQn);
+
+	Menu_init(&settings, &suitState);
+
+	Suit_setMode(CONFIG);
 }
 
 /*void Menu_LPiezoOptionCmd() {
@@ -262,11 +290,27 @@ void Suit_init() {
 void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 	uint8_t channel;
 	if (message[0] == 0x90) {
-		channel = Suit_MIDIToLightChannel(message[1]);
-		Suit_turnOnLightChannel(channel);
+		if (suitState.state == PERFORMANCE) {
+			channel = Suit_MIDIToLightChannel(message[1]);
+			if (channel < LIGHT_CHANNELS) {
+				Suit_turnOnLightChannel(channel);
+				Suit_displayStatus();
+			}
+		} else {
+			if (suitState.waitingForInput == 1 && suitState.inputType == MIDI) {
+				*(settings.noteToMapTo) = (Note)message[1];
+				suitState.waitingForInput = 0;
+				Menu_goToParentMenu();
+			}
+		}
 	} else if (message[0] == 0x80) {
-		channel = Suit_MIDIToLightChannel(message[1]);
-		Suit_turnOffLightChannel(channel);
+		if (suitState.state == PERFORMANCE) {
+			channel = Suit_MIDIToLightChannel(message[1]);
+			if (channel < LIGHT_CHANNELS) {
+				Suit_turnOffLightChannel(channel);
+				Suit_displayStatus();
+			}
+		}
 	}
 }
 
@@ -288,7 +332,7 @@ uint8_t Suit_MIDIToLightChannel(uint8_t note) {
 		}
 	}
 	//printf("Invalid MIDI Light Channel note mapping %#x\n\r", note);
-	return 0;
+	return 255;
 }
 
 void Suit_newSensorValues() {
@@ -299,6 +343,7 @@ void Suit_newSensorValues() {
 	if (suitState.state == PERFORMANCE) {
 		uint8_t pitchBendOut = Suit_mapValue(suitState.accelX, settings.accelMin, settings.accelMax, settings.pitchBendMin, settings.pitchBendMax);
 		MIDI_pitchWheelChange(pitchBendOut, settings.outputMIDIChannel);
+		Suit_displayStatus();
 	}
 }
 
@@ -311,8 +356,17 @@ void Suit_capButtonPressed() {
 		suitState.activeNote = noteOut;
 		suitState.noteActive = 1;
 		MIDI_noteOn(noteOut, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
+		Suit_displayStatus();
 	} else {
-		Menu_select();
+		if (suitState.waitingForInput == 1) {
+			if (suitState.inputType == SENSOR) {
+				*(settings.valueToMapTo) = suitState.handHeight;
+				suitState.waitingForInput = 0;
+				Menu_goToParentMenu();
+			}
+		} else {
+			Menu_select();
+		}
 	}
 }
 
@@ -321,6 +375,24 @@ void Suit_capButtonReleased() {
 		if (suitState.noteActive == 1) {
 			suitState.noteActive = 0;
 			MIDI_noteOff(suitState.activeNote, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
+			Suit_displayStatus();
+		}
+	}
+}
+
+void Suit_CButton0Pressed() {
+	if (suitState.state == PERFORMANCE) {
+		if (suitState.noteActive == 1) {
+			suitState.noteActive = 0;
+			MIDI_noteOff(suitState.activeNote, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
+		}
+		Suit_setMode(CONFIG);
+	} else {
+		suitState.waitingForInput = 0;
+		if (Menu_isAtRootMenu() == 1) {
+			Suit_setMode(PERFORMANCE);
+		} else {
+			Menu_goToParentMenu();
 		}
 	}
 }
@@ -330,13 +402,21 @@ void Suit_LPiezoPressed() {
 		MIDI_noteOff(settings.LPiezoMapping, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
 		MIDI_noteOn(settings.LPiezoMapping, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
 	} else {
-		Menu_moveDown();
+		if (suitState.waitingForInput == 0) {
+			Menu_moveUp();
+		}
 	}
 }
 
 void Suit_RPiezoPressed() {
-	MIDI_noteOff(settings.RPiezoMapping, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
-	MIDI_noteOn(settings.RPiezoMapping, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
+	if (suitState.state == PERFORMANCE) {
+		MIDI_noteOff(settings.RPiezoMapping, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
+		MIDI_noteOn(settings.RPiezoMapping, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
+	} else {
+		if (suitState.waitingForInput == 0) {
+			Menu_moveDown();
+		}
+	}
 }
 
 // Taken from Arduino
@@ -347,8 +427,30 @@ uint8_t Suit_mapValue(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min
 void Suit_setMode(State state) {
 	suitState.state = state;
 	if (state == PERFORMANCE) {
-		//LCD_showSensorValues();
+		Suit_displayStatus();
 	} else {
 		Menu_displayCurrentMenu();
 	}
+}
+
+void Suit_displayStatus() {
+	LCD_clearScreen();
+	LCD_drawString("Accel X:", 0, 0);
+	LCD_drawString(IntNames[suitState.accelX], LCD_VALUE_X, 0);
+	LCD_drawString("Accel Y:", 0, LCD_LINE_HEIGHT);
+	LCD_drawString(IntNames[suitState.accelY], LCD_VALUE_X, LCD_LINE_HEIGHT);
+	LCD_drawString("Accel Z:", 0, LCD_LINE_HEIGHT * 2);
+	LCD_drawString(IntNames[suitState.accelZ], LCD_VALUE_X, LCD_LINE_HEIGHT * 2);
+	LCD_drawString("Flex Value:", 0, LCD_LINE_HEIGHT * 3);
+	LCD_drawString(IntNames[suitState.flexValue], LCD_VALUE_X, LCD_LINE_HEIGHT * 3);
+	LCD_drawString("Hand Height:", 0, LCD_LINE_HEIGHT * 4);
+	LCD_drawString(IntNames[suitState.handHeight], LCD_VALUE_X, LCD_LINE_HEIGHT * 4);
+	LCD_drawString("Active Note:", 0, LCD_LINE_HEIGHT * 5);
+	if (suitState.noteActive == 1) {
+		LCD_drawString(NoteNames[suitState.activeNote], LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
+	} else {
+		LCD_drawString("None", LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
+	}
+	LCD_drawString("Active Lights:", 0, LCD_LINE_HEIGHT * 6);
+	LCD_drawString(IntNames[suitState.activeLights], LCD_VALUE_X, LCD_LINE_HEIGHT * 6);
 }

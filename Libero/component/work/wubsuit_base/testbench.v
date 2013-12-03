@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Tue Nov 19 13:24:09 2013
+// Created by Actel SmartDesign Mon Dec 02 22:02:54 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -48,18 +48,18 @@ wubsuit_base wubsuit_base_0 (
     .MSS_RESET_N(NSYSRESET),
     .XBee_RX({1{1'b0}}),
     .MIDI_RX({1{1'b0}}),
-    .CapButton({1{1'b0}}),
+    .RPiezo({1{1'b0}}),
     .LPiezo({1{1'b0}}),
+    .CapButton({1{1'b0}}),
+    .CButton0({1{1'b0}}),
+    .CButton1({1{1'b0}}),
+    .F2M_GPI_7({1{1'b0}}),
 
     // Outputs
     .UART_0_TXD( ),
     .XBee_TX( ),
-    .MIDI_TX( ),
     .LCD_TX( ),
-    .RXRDY( ),
-    .PARITY_ERR( ),
-    .OVERFLOW( ),
-    .FRAMING_ERR( )
+    .MIDI_TX( )
 
     // Inouts
 

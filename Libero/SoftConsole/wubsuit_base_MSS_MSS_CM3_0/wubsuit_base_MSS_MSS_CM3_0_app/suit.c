@@ -268,8 +268,9 @@ void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 			Suit_turnOnLightChannel(channel);
 		} else {
 			if (suitState.waitingForInput == 1 && suitState.inputType == MIDI) {
-				suitState.activeNote = (Note)message[1];
+				*(settings.noteToMapTo) = (Note)message[1];
 				suitState.waitingForInput = 0;
+				Menu_displayCurrentMenu();
 			}
 		}
 	} else if (message[0] == 0x80) {
@@ -311,7 +312,9 @@ void Suit_newSensorValues() {
 		MIDI_pitchWheelChange(pitchBendOut, settings.outputMIDIChannel);
 	} else {
 		if (suitState.waitingForInput == 1 && suitState.inputType == SENSOR) {
+			*(settings.valueToMapTo) = suitState.handHeight;
 			suitState.waitingForInput = 0;
+			Menu_displayCurrentMenu();
 		}
 	}
 }

@@ -272,19 +272,9 @@ void Menu_waitForInput(Menu* menu) {
 	suitStatePtr->waitingForInput = 1;
 	suitStatePtr->inputType = menu->inputType;
 
-
-	// Remove this, keep track value to map to
-	while(suitStatePtr->waitingForInput == 1) {
-		// waiting until done waiting for input
-	}
-
 	if (menu->inputType == MIDI) {
-		*(menu->noteValue) = suitStatePtr->activeNote;
+		settingsPtr.noteToMapTo = menu->noteValue;
 	} else if (menu->inputType == SENSOR) {
-		*(menu->intValue) = suitStatePtr->handHeight;
-	} else if (menu->inputType == ARRAY) {
-
+		settingsPtr.valueToMapTo = menu->intValue;
 	}
-
-	// Update menu value option?
 }

@@ -48,7 +48,8 @@ typedef struct _Settings {
 	uint8_t handHeightMin, handHeightMax;
 	Note LPiezoMapping, RPiezoMapping;
 	Note minNote, maxNote;
-	Note* valueToMapTo;
+	Note* noteToMapTo;
+	uint8_t* valueToMapTo;
 	KeySignature keySignature;
 	uint8_t suitLightsMIDIChannel;
 	uint8_t outputMIDIChannel;

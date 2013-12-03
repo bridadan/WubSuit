@@ -19,7 +19,7 @@ c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1
 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
                               N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/startup_a2fxxxm3.o (__libc_init_array)
 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-printf.o)
-                              ./lcd.o (printf)
+                              ./menu.o (printf)
 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
                               c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-printf.o) (_vfprintf_r)
 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
@@ -115,6 +115,8 @@ selectedMenu        0x1               ./menu.o
 errno               0x4               c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
 settings            0x20              ./suit.o
 menus               0x6a4             ./menu.o
+LCD_uart            0x8               ./suit.o
+lcd_instance        0x4               ./lcd.o
 currentMenu         0x4               ./menu.o
 g_mss_uart1         0x28              N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
 suitStatePtr        0x4               ./menu.o
@@ -135,6 +137,17 @@ Discarded input sections
  .text          0x00000000        0x0 ./lcd.o
  .data          0x00000000        0x0 ./lcd.o
  .bss           0x00000000        0x0 ./lcd.o
+ .rodata        0x00000000      0x628 ./lcd.o
+ .data.NoteNames
+                0x00000000      0x200 ./lcd.o
+ .data.IntNames
+                0x00000000      0x400 ./lcd.o
+ .data.KeySignatureNames
+                0x00000000        0xc ./lcd.o
+ .bss.LCD_selectorPosition
+                0x00000000        0x1 ./lcd.o
+ .text.LCD_eraseBlock
+                0x00000000       0x58 ./lcd.o
  .text          0x00000000        0x0 ./main.o
  .data          0x00000000        0x0 ./main.o
  .bss           0x00000000        0x0 ./main.o
@@ -383,7 +396,7 @@ END GROUP
                 0x20010000                PROVIDE (_estack, __main_stack_start)
                 0x00000000                PROVIDE (__mirrored_nvm, 0x0)
 
-.text           0x20000000     0xa448
+.text           0x20000000     0xa728
  CREATE_OBJECT_SYMBOLS
                 0x20000000                __text_load = LOADADDR (.text)
                 0x20000000                __text_start = .
@@ -538,379 +551,382 @@ END GROUP
                 0x20000438                ACE_PPE_Flag31_IRQHandler
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x20000470       0x30 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- .text.LCD_setSelectorPosition
-                0x200004a0       0x3c ./lcd.o
-                0x200004a0                LCD_setSelectorPosition
+ .text.LCD_init
+                0x200004a0       0x48 ./lcd.o
+                0x200004a0                LCD_init
  .text.LCD_drawString
-                0x200004dc       0x2c ./lcd.o
-                0x200004dc                LCD_drawString
+                0x200004e8       0xb4 ./lcd.o
+                0x200004e8                LCD_drawString
  .text.LCD_clearScreen
-                0x20000508       0x14 ./lcd.o
-                0x20000508                LCD_clearScreen
- .text.main     0x2000051c        0xc ./main.o
-                0x2000051c                main
+                0x2000059c       0x34 ./lcd.o
+                0x2000059c                LCD_clearScreen
+ .text.main     0x200005d0        0xc ./main.o
+                0x200005d0                main
  .text.Menu_init
-                0x20000528      0xa08 ./menu.o
-                0x20000528                Menu_init
+                0x200005dc      0x9b0 ./menu.o
+                0x200005dc                Menu_init
  .text.Menu_displayCurrentMenu
-                0x20000f30       0xdc ./menu.o
-                0x20000f30                Menu_displayCurrentMenu
+                0x20000f8c      0x10c ./menu.o
+                0x20000f8c                Menu_displayCurrentMenu
  .text.Menu_setMenu
-                0x2000100c       0x3c ./menu.o
-                0x2000100c                Menu_setMenu
+                0x20001098       0x3c ./menu.o
+                0x20001098                Menu_setMenu
  .text.Menu_moveDown
-                0x20001048       0x50 ./menu.o
-                0x20001048                Menu_moveDown
+                0x200010d4       0xa0 ./menu.o
+                0x200010d4                Menu_moveDown
  .text.Menu_moveUp
-                0x20001098       0x40 ./menu.o
-                0x20001098                Menu_moveUp
+                0x20001174       0x90 ./menu.o
+                0x20001174                Menu_moveUp
  .text.Menu_select
-                0x200010d8       0x78 ./menu.o
-                0x200010d8                Menu_select
+                0x20001204       0x78 ./menu.o
+                0x20001204                Menu_select
  .text.Menu_getNoteString
-                0x20001150       0x28 ./menu.o
-                0x20001150                Menu_getNoteString
+                0x2000127c       0x28 ./menu.o
+                0x2000127c                Menu_getNoteString
  .text.Menu_getIntString
-                0x20001178       0x28 ./menu.o
-                0x20001178                Menu_getIntString
+                0x200012a4       0x28 ./menu.o
+                0x200012a4                Menu_getIntString
  .text.Menu_waitForInput
-                0x200011a0       0x6c ./menu.o
-                0x200011a0                Menu_waitForInput
+                0x200012cc       0x6c ./menu.o
+                0x200012cc                Menu_waitForInput
  .text.Menu_isAtRootMenu
-                0x2000120c       0x28 ./menu.o
-                0x2000120c                Menu_isAtRootMenu
+                0x20001338       0x28 ./menu.o
+                0x20001338                Menu_isAtRootMenu
  .text.Menu_goToParentMenu
-                0x20001234       0x18 ./menu.o
-                0x20001234                Menu_goToParentMenu
+                0x20001360       0x18 ./menu.o
+                0x20001360                Menu_goToParentMenu
  .text.Menu_showInputWaitingScreen
-                0x2000124c       0x48 ./menu.o
-                0x2000124c                Menu_showInputWaitingScreen
+                0x20001378       0x48 ./menu.o
+                0x20001378                Menu_showInputWaitingScreen
  .text.MIDI_init
-                0x20001294       0x20 ./midi.o
-                0x20001294                MIDI_init
+                0x200013c0       0x20 ./midi.o
+                0x200013c0                MIDI_init
  .text.MIDI_sendMessage
-                0x200012b4       0x28 ./midi.o
-                0x200012b4                MIDI_sendMessage
+                0x200013e0       0x28 ./midi.o
+                0x200013e0                MIDI_sendMessage
  .text.MIDI_noteOn
-                0x200012dc       0x4c ./midi.o
-                0x200012dc                MIDI_noteOn
+                0x20001408       0x4c ./midi.o
+                0x20001408                MIDI_noteOn
  .text.MIDI_noteOff
-                0x20001328       0x48 ./midi.o
-                0x20001328                MIDI_noteOff
+                0x20001454       0x48 ./midi.o
+                0x20001454                MIDI_noteOff
  .text.MIDI_pitchWheelChange
-                0x20001370       0x50 ./midi.o
-                0x20001370                MIDI_pitchWheelChange
+                0x2000149c       0x50 ./midi.o
+                0x2000149c                MIDI_pitchWheelChange
  .text.NVIC_EnableIRQ
-                0x200013c0       0x38 ./suit.o
+                0x200014ec       0x38 ./suit.o
  .text.NVIC_ClearPendingIRQ
-                0x200013f8       0x3c ./suit.o
+                0x20001524       0x3c ./suit.o
  .text.MSS_GPIO_get_inputs
-                0x20001434       0x18 ./suit.o
+                0x20001560       0x18 ./suit.o
  .text.GPIO0_IRQHandler
-                0x2000144c      0x1c0 ./suit.o
-                0x2000144c                GPIO0_IRQHandler
+                0x20001578      0x1c0 ./suit.o
+                0x20001578                GPIO0_IRQHandler
  .text.GPIO1_IRQHandler
-                0x2000160c      0x1b0 ./suit.o
-                0x2000160c                GPIO1_IRQHandler
+                0x20001738      0x1dc ./suit.o
+                0x20001738                GPIO1_IRQHandler
  .text.GPIO2_IRQHandler
-                0x200017bc       0x50 ./suit.o
-                0x200017bc                GPIO2_IRQHandler
+                0x20001914       0x50 ./suit.o
+                0x20001914                GPIO2_IRQHandler
  .text.GPIO3_IRQHandler
-                0x2000180c       0x2c ./suit.o
-                0x2000180c                GPIO3_IRQHandler
+                0x20001964       0x2c ./suit.o
+                0x20001964                GPIO3_IRQHandler
  .text.GPIO4_IRQHandler
-                0x20001838       0x2c ./suit.o
-                0x20001838                GPIO4_IRQHandler
+                0x20001990       0x2c ./suit.o
+                0x20001990                GPIO4_IRQHandler
  .text.GPIO5_IRQHandler
-                0x20001864       0x2c ./suit.o
-                0x20001864                GPIO5_IRQHandler
+                0x200019bc       0x2c ./suit.o
+                0x200019bc                GPIO5_IRQHandler
  .text.Suit_init
-                0x20001890      0x350 ./suit.o
-                0x20001890                Suit_init
+                0x200019e8      0x378 ./suit.o
+                0x200019e8                Suit_init
  .text.Suit_handleMIDIMessage
-                0x20001be0       0xdc ./suit.o
-                0x20001be0                Suit_handleMIDIMessage
+                0x20001d60       0xdc ./suit.o
+                0x20001d60                Suit_handleMIDIMessage
  .text.Suit_turnOnLightChannel
-                0x20001cbc       0x40 ./suit.o
-                0x20001cbc                Suit_turnOnLightChannel
+                0x20001e3c       0x40 ./suit.o
+                0x20001e3c                Suit_turnOnLightChannel
  .text.Suit_turnOffLightChannel
-                0x20001cfc       0x44 ./suit.o
-                0x20001cfc                Suit_turnOffLightChannel
+                0x20001e7c       0x44 ./suit.o
+                0x20001e7c                Suit_turnOffLightChannel
  .text.Suit_MIDIToLightChannel
-                0x20001d40       0x48 ./suit.o
-                0x20001d40                Suit_MIDIToLightChannel
+                0x20001ec0       0x48 ./suit.o
+                0x20001ec0                Suit_MIDIToLightChannel
  .text.Suit_newSensorValues
-                0x20001d88       0xd4 ./suit.o
-                0x20001d88                Suit_newSensorValues
+                0x20001f08       0xd4 ./suit.o
+                0x20001f08                Suit_newSensorValues
  .text.Suit_capButtonPressed
-                0x20001e5c      0x110 ./suit.o
-                0x20001e5c                Suit_capButtonPressed
+                0x20001fdc      0x110 ./suit.o
+                0x20001fdc                Suit_capButtonPressed
  .text.Suit_capButtonReleased
-                0x20001f6c       0x54 ./suit.o
-                0x20001f6c                Suit_capButtonReleased
+                0x200020ec       0x54 ./suit.o
+                0x200020ec                Suit_capButtonReleased
  .text.Suit_CButton0Pressed
-                0x20001fc0       0x80 ./suit.o
-                0x20001fc0                Suit_CButton0Pressed
+                0x20002140       0x80 ./suit.o
+                0x20002140                Suit_CButton0Pressed
  .text.Suit_LPiezoPressed
-                0x20002040       0x68 ./suit.o
-                0x20002040                Suit_LPiezoPressed
+                0x200021c0       0x68 ./suit.o
+                0x200021c0                Suit_LPiezoPressed
  .text.Suit_RPiezoPressed
-                0x200020a8       0x68 ./suit.o
-                0x200020a8                Suit_RPiezoPressed
+                0x20002228       0x68 ./suit.o
+                0x20002228                Suit_RPiezoPressed
  .text.Suit_mapValue
-                0x20002110       0x44 ./suit.o
-                0x20002110                Suit_mapValue
+                0x20002290       0x44 ./suit.o
+                0x20002290                Suit_mapValue
  .text.Suit_setMode
-                0x20002154       0x30 ./suit.o
-                0x20002154                Suit_setMode
+                0x200022d4       0x30 ./suit.o
+                0x200022d4                Suit_setMode
  .text.Suit_displayStatus
-                0x20002184      0x1c4 ./suit.o
-                0x20002184                Suit_displayStatus
- .text._close   0x20002348        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x20002348                _close
- .text._exit    0x20002350        0x4 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x20002350                _exit
- .text._fstat   0x20002354        0xc N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x20002354                _fstat
- .text._isatty  0x20002360        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x20002360                _isatty
- .text._lseek   0x20002368        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x20002368                _lseek
- .text._read    0x20002370        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x20002370                _read
+                0x20002304      0x1c4 ./suit.o
+                0x20002304                Suit_displayStatus
+ .text.Suit_updateStatus
+                0x200024c8      0x1a8 ./suit.o
+                0x200024c8                Suit_updateStatus
+ .text._close   0x20002670        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x20002670                _close
+ .text._exit    0x20002678        0x4 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x20002678                _exit
+ .text._fstat   0x2000267c        0xc N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x2000267c                _fstat
+ .text._isatty  0x20002688        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x20002688                _isatty
+ .text._lseek   0x20002690        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x20002690                _lseek
+ .text._read    0x20002698        0x8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x20002698                _read
  .text._write_r
-                0x20002378       0x48 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x20002378                _write_r
- .text._sbrk    0x200023c0       0x64 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
-                0x200023c0                _sbrk
+                0x200026a0       0x48 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x200026a0                _write_r
+ .text._sbrk    0x200026e8       0x64 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x200026e8                _sbrk
  .text.MSS_UART_polled_tx
-                0x20002424       0xac N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20002424                MSS_UART_polled_tx
+                0x2000274c       0xac N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x2000274c                MSS_UART_polled_tx
  .text.MSS_UART_isr
-                0x200024d0       0x70 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x200027f8       0x70 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .text.default_tx_handler
-                0x20002540       0xa8 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20002868       0xa8 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .text.UART0_IRQHandler
-                0x200025e8       0x30 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x200025e8                UART0_IRQHandler
+                0x20002910       0x30 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20002910                UART0_IRQHandler
  .text.UART1_IRQHandler
-                0x20002618       0x30 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20002618                UART1_IRQHandler
+                0x20002940       0x30 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20002940                UART1_IRQHandler
  .text.MSS_UART_init
-                0x20002648      0x150 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x20002648                MSS_UART_init
+                0x20002970      0x150 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x20002970                MSS_UART_init
  .text.MSS_GPIO_init
-                0x20002798       0x60 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x20002798                MSS_GPIO_init
+                0x20002ac0       0x60 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20002ac0                MSS_GPIO_init
  .text.MSS_GPIO_config
-                0x200027f8       0x18 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x200027f8                MSS_GPIO_config
+                0x20002b20       0x18 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20002b20                MSS_GPIO_config
  .text.MSS_GPIO_enable_irq
-                0x20002810       0x48 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x20002810                MSS_GPIO_enable_irq
+                0x20002b38       0x48 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20002b38                MSS_GPIO_enable_irq
  .text.MSS_GPIO_clear_irq
-                0x20002858       0x48 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
-                0x20002858                MSS_GPIO_clear_irq
+                0x20002b80       0x48 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x20002b80                MSS_GPIO_clear_irq
  .text.UART_get_rx
-                0x200028a0      0x118 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
-                0x200028a0                UART_get_rx
+                0x20002bc8      0x118 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+                0x20002bc8                UART_get_rx
  .text.UART_send
-                0x200029b8       0xe4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
-                0x200029b8                UART_send
+                0x20002ce0       0xe4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+                0x20002ce0                UART_send
  .text.UART_init
-                0x20002a9c      0x1cc N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
-                0x20002a9c                UART_init
+                0x20002dc4      0x1cc N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+                0x20002dc4                UART_init
  .text.SystemInit
-                0x20002c68        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20002c68                SystemInit
+                0x20002f90        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20002f90                SystemInit
  .text.SystemCoreClockUpdate
-                0x20002c6c      0x130 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x20002c6c                SystemCoreClockUpdate
+                0x20002f94      0x130 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x20002f94                SystemCoreClockUpdate
  .text.HAL_assert_fail
-                0x20002d9c       0x18 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
-                0x20002d9c                HAL_assert_fail
- .text          0x20002db4       0x90 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hw_reg_access.o)
-                0x20002db4                HW_set_32bit_reg
-                0x20002db8                HW_get_32bit_reg
-                0x20002dbc                HW_set_32bit_reg_field
-                0x20002dd8                HW_get_32bit_reg_field
-                0x20002de4                HW_set_16bit_reg
-                0x20002de8                HW_get_16bit_reg
-                0x20002dec                HW_set_16bit_reg_field
-                0x20002e08                HW_get_16bit_reg_field
-                0x20002e14                HW_set_8bit_reg
-                0x20002e18                HW_get_8bit_reg
-                0x20002e1c                HW_set_8bit_reg_field
-                0x20002e38                HW_get_8bit_reg_field
- .text          0x20002e44       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
-                0x20002e44                __libc_init_array
- .text          0x20002e94       0x64 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-printf.o)
-                0x20002e94                printf
-                0x20002ecc                _printf_r
- .text          0x20002ef8     0x1940 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
-                0x20002f14                _vfprintf_r
-                0x2000481c                vfprintf
- .text          0x20004838      0x104 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
-                0x20004838                __swsetup_r
- *fill*         0x2000493c        0x4 00
- .text          0x20004940      0xfb8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-dtoa.o)
-                0x20004a60                _dtoa_r
- .text          0x200058f8      0x178 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
-                0x200058f8                _fflush_r
-                0x20005a48                fflush
- .text          0x20005a70      0x1c8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
-                0x20005a70                __sfp_lock_acquire
-                0x20005a74                __sfp_lock_release
-                0x20005a78                __sinit_lock_acquire
-                0x20005a7c                __sinit_lock_release
-                0x20005a88                __fp_unlock_all
-                0x20005aa0                __fp_lock_all
-                0x20005ab8                _cleanup_r
-                0x20005ac4                _cleanup
-                0x20005b20                __sfmoreglue
-                0x20005b50                __sfp
-                0x20005bd8                __sinit
- .text          0x20005c38      0x268 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
-                0x20005c38                _malloc_trim_r
-                0x20005ce0                _free_r
- .text          0x20005ea0      0x334 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
-                0x20005ea0                __sfvwrite_r
- .text          0x200061d4       0xa0 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
-                0x200061d4                _fwalk_reent
-                0x20006228                _fwalk
- .text          0x20006274       0x74 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
-                0x20006274                __locale_charset
-                0x20006280                _localeconv_r
-                0x20006288                localeconv
-                0x20006290                _setlocale_r
-                0x200062d8                setlocale
- .text          0x200062e8       0xdc c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
-                0x200062e8                __smakebuf_r
- .text          0x200063c4       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
-                0x200063c4                free
-                0x200063d4                malloc
- .text          0x200063e4      0x5a4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
-                0x200063e4                _malloc_r
- .text          0x20006988       0x74 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
-                0x20006988                memchr
- .text          0x200069fc      0x190 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
-                0x200069fc                memcpy
- .text          0x20006b8c       0xb8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
-                0x20006b8c                memmove
- .text          0x20006c44       0xd4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
-                0x20006c44                memset
- .text          0x20006d18        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
-                0x20006d18                __malloc_lock
-                0x20006d1c                __malloc_unlock
- .text          0x20006d20      0x958 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mprec.o)
-                0x20006d20                __hi0bits
-                0x20006d60                __lo0bits
-                0x20006dc4                __mcmp
-                0x20006e04                __ulp
-                0x20006e50                __b2d
-                0x20006ef8                __ratio
-                0x20006f58                _mprec_log10
-                0x20006f90                __copybits
-                0x20006fe0                __any_on
-                0x20007038                _Bfree
-                0x20007070                _Balloc
-                0x200070dc                __d2b
-                0x200071ac                __mdiff
-                0x200072a4                __lshift
-                0x20007360                __multiply
-                0x20007494                __i2b
-                0x200074a8                __multadd
-                0x20007530                __pow5mult
-                0x200075dc                __s2b
- .text          0x20007678      0x3b4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
-                0x20007678                _realloc_r
- .text          0x20007a2c       0x24 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
-                0x20007a2c                __isinfd
- .text          0x20007a50       0x1c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
-                0x20007a50                __isnand
- .text          0x20007a6c       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
-                0x20007a6c                _sbrk_r
- .text          0x20007a94       0x90 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
-                0x20007a94                __sclose
-                0x20007a9c                __sseek
-                0x20007ac4                __swrite
-                0x20007b00                __sread
- .text          0x20007b24      0x1dc c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcmp.o)
-                0x20007b24                strcmp
- .text          0x20007d00       0x60 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
-                0x20007d00                strlen
- .text          0x20007d60       0x5c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-callocr.o)
-                0x20007d60                _calloc_r
- .text          0x20007dbc       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
-                0x20007dbc                _close_r
- .text          0x20007de4       0xcc c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
-                0x20007de4                _fclose_r
-                0x20007ea0                fclose
- .text          0x20007eb0       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
-                0x20007eb0                _fstat_r
- .text          0x20007edc       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
-                0x20007edc                _isatty_r
- .text          0x20007f04       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
-                0x20007f04                _lseek_r
- .text          0x20007f30       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
-                0x20007f30                _read_r
- *fill*         0x20007f5c        0x4 00
- .text          0x20007f60      0x278 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
-                0x20007f60                __aeabi_uidiv
-                0x20007f60                __udivsi3
-                0x200081bc                __aeabi_uidivmod
- .text          0x200081d8        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_dvmd_tls.o)
-                0x200081d8                __aeabi_idiv0
-                0x200081d8                __aeabi_ldiv0
- .text          0x200081dc      0x370 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
-                0x200081dc                __aeabi_drsub
-                0x200081e4                __aeabi_dsub
-                0x200081e4                __subdf3
-                0x200081e8                __aeabi_dadd
-                0x200081e8                __adddf3
-                0x20008460                __floatunsidf
-                0x20008460                __aeabi_ui2d
-                0x20008480                __floatsidf
-                0x20008480                __aeabi_i2d
-                0x200084a4                __aeabi_f2d
-                0x200084a4                __extendsfdf2
-                0x200084e0                __floatundidf
-                0x200084e0                __aeabi_ul2d
-                0x200084f0                __floatdidf
-                0x200084f0                __aeabi_l2d
- .text          0x2000854c      0x424 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivdf3.o)
-                0x2000854c                __aeabi_dmul
-                0x2000854c                __muldf3
-                0x200087a0                __divdf3
-                0x200087a0                __aeabi_ddiv
- .text          0x20008970      0x110 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
-                0x20008970                __gtdf2
-                0x20008970                __gedf2
-                0x20008978                __ltdf2
-                0x20008978                __ledf2
-                0x20008980                __nedf2
-                0x20008980                __eqdf2
-                0x20008980                __cmpdf2
-                0x200089fc                __aeabi_cdrcmple
-                0x20008a0c                __aeabi_cdcmpeq
-                0x20008a0c                __aeabi_cdcmple
-                0x20008a1c                __aeabi_dcmpeq
-                0x20008a30                __aeabi_dcmplt
-                0x20008a44                __aeabi_dcmple
-                0x20008a58                __aeabi_dcmpge
-                0x20008a6c                __aeabi_dcmpgt
- .text          0x20008a80       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixdfsi.o)
-                0x20008a80                __aeabi_d2iz
-                0x20008a80                __fixdfsi
- .text          0x20008ad0       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_aeabi_uldivmod.o)
-                0x20008ad0                __aeabi_uldivmod
- .text          0x20008afc       0x58 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
-                0x20008afc                __gnu_uldivmod_helper
-                0x20008b28                __gnu_ldivmod_helper
- .text          0x20008b54      0x364 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
-                0x20008b54                __divdi3
- .text          0x20008eb8      0x300 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
-                0x20008eb8                __udivdi3
+                0x200030c4       0x18 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+                0x200030c4                HAL_assert_fail
+ .text          0x200030dc       0x90 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hw_reg_access.o)
+                0x200030dc                HW_set_32bit_reg
+                0x200030e0                HW_get_32bit_reg
+                0x200030e4                HW_set_32bit_reg_field
+                0x20003100                HW_get_32bit_reg_field
+                0x2000310c                HW_set_16bit_reg
+                0x20003110                HW_get_16bit_reg
+                0x20003114                HW_set_16bit_reg_field
+                0x20003130                HW_get_16bit_reg_field
+                0x2000313c                HW_set_8bit_reg
+                0x20003140                HW_get_8bit_reg
+                0x20003144                HW_set_8bit_reg_field
+                0x20003160                HW_get_8bit_reg_field
+ .text          0x2000316c       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+                0x2000316c                __libc_init_array
+ .text          0x200031bc       0x64 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-printf.o)
+                0x200031bc                printf
+                0x200031f4                _printf_r
+ .text          0x20003220     0x1940 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
+                0x2000323c                _vfprintf_r
+                0x20004b44                vfprintf
+ .text          0x20004b60      0x104 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
+                0x20004b60                __swsetup_r
+ *fill*         0x20004c64        0x4 00
+ .text          0x20004c68      0xfb8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-dtoa.o)
+                0x20004d88                _dtoa_r
+ .text          0x20005c20      0x178 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
+                0x20005c20                _fflush_r
+                0x20005d70                fflush
+ .text          0x20005d98      0x1c8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
+                0x20005d98                __sfp_lock_acquire
+                0x20005d9c                __sfp_lock_release
+                0x20005da0                __sinit_lock_acquire
+                0x20005da4                __sinit_lock_release
+                0x20005db0                __fp_unlock_all
+                0x20005dc8                __fp_lock_all
+                0x20005de0                _cleanup_r
+                0x20005dec                _cleanup
+                0x20005e48                __sfmoreglue
+                0x20005e78                __sfp
+                0x20005f00                __sinit
+ .text          0x20005f60      0x268 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
+                0x20005f60                _malloc_trim_r
+                0x20006008                _free_r
+ .text          0x200061c8      0x334 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
+                0x200061c8                __sfvwrite_r
+ .text          0x200064fc       0xa0 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
+                0x200064fc                _fwalk_reent
+                0x20006550                _fwalk
+ .text          0x2000659c       0x74 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
+                0x2000659c                __locale_charset
+                0x200065a8                _localeconv_r
+                0x200065b0                localeconv
+                0x200065b8                _setlocale_r
+                0x20006600                setlocale
+ .text          0x20006610       0xdc c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
+                0x20006610                __smakebuf_r
+ .text          0x200066ec       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
+                0x200066ec                free
+                0x200066fc                malloc
+ .text          0x2000670c      0x5a4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
+                0x2000670c                _malloc_r
+ .text          0x20006cb0       0x74 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+                0x20006cb0                memchr
+ .text          0x20006d24      0x190 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+                0x20006d24                memcpy
+ .text          0x20006eb4       0xb8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
+                0x20006eb4                memmove
+ .text          0x20006f6c       0xd4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+                0x20006f6c                memset
+ .text          0x20007040        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
+                0x20007040                __malloc_lock
+                0x20007044                __malloc_unlock
+ .text          0x20007048      0x958 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mprec.o)
+                0x20007048                __hi0bits
+                0x20007088                __lo0bits
+                0x200070ec                __mcmp
+                0x2000712c                __ulp
+                0x20007178                __b2d
+                0x20007220                __ratio
+                0x20007280                _mprec_log10
+                0x200072b8                __copybits
+                0x20007308                __any_on
+                0x20007360                _Bfree
+                0x20007398                _Balloc
+                0x20007404                __d2b
+                0x200074d4                __mdiff
+                0x200075cc                __lshift
+                0x20007688                __multiply
+                0x200077bc                __i2b
+                0x200077d0                __multadd
+                0x20007858                __pow5mult
+                0x20007904                __s2b
+ .text          0x200079a0      0x3b4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
+                0x200079a0                _realloc_r
+ .text          0x20007d54       0x24 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+                0x20007d54                __isinfd
+ .text          0x20007d78       0x1c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+                0x20007d78                __isnand
+ .text          0x20007d94       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
+                0x20007d94                _sbrk_r
+ .text          0x20007dbc       0x90 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
+                0x20007dbc                __sclose
+                0x20007dc4                __sseek
+                0x20007dec                __swrite
+                0x20007e28                __sread
+ .text          0x20007e4c      0x1dc c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcmp.o)
+                0x20007e4c                strcmp
+ .text          0x20008028       0x60 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+                0x20008028                strlen
+ .text          0x20008088       0x5c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-callocr.o)
+                0x20008088                _calloc_r
+ .text          0x200080e4       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
+                0x200080e4                _close_r
+ .text          0x2000810c       0xcc c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
+                0x2000810c                _fclose_r
+                0x200081c8                fclose
+ .text          0x200081d8       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
+                0x200081d8                _fstat_r
+ .text          0x20008204       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
+                0x20008204                _isatty_r
+ .text          0x2000822c       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
+                0x2000822c                _lseek_r
+ .text          0x20008258       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
+                0x20008258                _read_r
+ *fill*         0x20008284        0x4 00
+ .text          0x20008288      0x278 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
+                0x20008288                __aeabi_uidiv
+                0x20008288                __udivsi3
+                0x200084e4                __aeabi_uidivmod
+ .text          0x20008500        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_dvmd_tls.o)
+                0x20008500                __aeabi_idiv0
+                0x20008500                __aeabi_ldiv0
+ .text          0x20008504      0x370 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_addsubdf3.o)
+                0x20008504                __aeabi_drsub
+                0x2000850c                __aeabi_dsub
+                0x2000850c                __subdf3
+                0x20008510                __aeabi_dadd
+                0x20008510                __adddf3
+                0x20008788                __floatunsidf
+                0x20008788                __aeabi_ui2d
+                0x200087a8                __floatsidf
+                0x200087a8                __aeabi_i2d
+                0x200087cc                __aeabi_f2d
+                0x200087cc                __extendsfdf2
+                0x20008808                __floatundidf
+                0x20008808                __aeabi_ul2d
+                0x20008818                __floatdidf
+                0x20008818                __aeabi_l2d
+ .text          0x20008874      0x424 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_muldivdf3.o)
+                0x20008874                __aeabi_dmul
+                0x20008874                __muldf3
+                0x20008ac8                __divdf3
+                0x20008ac8                __aeabi_ddiv
+ .text          0x20008c98      0x110 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_cmpdf2.o)
+                0x20008c98                __gtdf2
+                0x20008c98                __gedf2
+                0x20008ca0                __ltdf2
+                0x20008ca0                __ledf2
+                0x20008ca8                __nedf2
+                0x20008ca8                __eqdf2
+                0x20008ca8                __cmpdf2
+                0x20008d24                __aeabi_cdrcmple
+                0x20008d34                __aeabi_cdcmpeq
+                0x20008d34                __aeabi_cdcmple
+                0x20008d44                __aeabi_dcmpeq
+                0x20008d58                __aeabi_dcmplt
+                0x20008d6c                __aeabi_dcmple
+                0x20008d80                __aeabi_dcmpge
+                0x20008d94                __aeabi_dcmpgt
+ .text          0x20008da8       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_arm_fixdfsi.o)
+                0x20008da8                __aeabi_d2iz
+                0x20008da8                __fixdfsi
+ .text          0x20008df8       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_aeabi_uldivmod.o)
+                0x20008df8                __aeabi_uldivmod
+ .text          0x20008e24       0x58 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
+                0x20008e24                __gnu_uldivmod_helper
+                0x20008e50                __gnu_ldivmod_helper
+ .text          0x20008e7c      0x364 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
+                0x20008e7c                __divdi3
+ .text          0x200091e0      0x300 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
+                0x200091e0                __udivdi3
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -919,7 +935,7 @@ END GROUP
  .glue_7        0x00000000        0x0 linker stubs
  *(.vfp11_veneer)
  .vfp11_veneer  0x00000000        0x0 linker stubs
-                0x200091b8                . = ALIGN (0x4)
+                0x200094e0                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
@@ -929,191 +945,189 @@ END GROUP
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x200091b8       0x50 ./lcd.o
- .rodata        0x20009208      0x774 ./menu.o
- .rodata        0x2000997c      0x750 ./suit.o
+ .rodata        0x200094e0      0x774 ./menu.o
+ .rodata        0x20009c54      0x758 ./suit.o
  .rodata.str1.4
-                0x2000a0cc       0x1a N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x2000a3ac       0x1a N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
                                  0x1c (size before relaxing)
- *fill*         0x2000a0e6        0x2 00
+ *fill*         0x2000a3c6        0x2 00
  .rodata.g_gpio_irqn_lut
-                0x2000a0e8       0x40 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x2000a3c8       0x40 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .rodata.g_config_reg_lut
-                0x2000a128       0x80 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x2000a408       0x80 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .rodata.str1.4
-                0x2000a1a8       0x27 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+                0x2000a488       0x27 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
                                  0x28 (size before relaxing)
- *fill*         0x2000a1cf        0x1 00
+ *fill*         0x2000a4af        0x1 00
  .rodata.C.16.2565
-                0x2000a1d0       0x10 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .rodata        0x2000a1e0        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
-                0x2000a1e0                _global_impure_ptr
+                0x2000a4b0       0x10 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .rodata        0x2000a4c0        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x2000a4c0                _global_impure_ptr
  .rodata.str1.4
-                0x2000a1e4        0x2 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x2000a4c4        0x2 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
                                   0x4 (size before relaxing)
- *fill*         0x2000a1e6        0x2 00
- .rodata        0x2000a1e8       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
+ *fill*         0x2000a4c6        0x2 00
+ .rodata        0x2000a4c8       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
  .rodata.str1.4
-                0x2000a208       0x42 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
+                0x2000a4e8       0x42 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
                                  0x44 (size before relaxing)
- *fill*         0x2000a24a        0x2 00
+ *fill*         0x2000a52a        0x2 00
  .rodata.str1.4
-                0x2000a24c       0x10 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-dtoa.o)
+                0x2000a52c       0x10 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-dtoa.o)
                                  0x14 (size before relaxing)
- .rodata        0x2000a25c       0x60 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
-                0x2000a25c                __sf_fake_stdin
-                0x2000a27c                __sf_fake_stdout
-                0x2000a29c                __sf_fake_stderr
- .rodata        0x2000a2bc       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
+ .rodata        0x2000a53c       0x60 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
+                0x2000a53c                __sf_fake_stdin
+                0x2000a55c                __sf_fake_stdout
+                0x2000a57c                __sf_fake_stderr
+ .rodata        0x2000a59c       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
  .rodata.str1.4
-                0x2000a2f0       0x10 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
+                0x2000a5d0       0x10 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
                                  0x18 (size before relaxing)
- .rodata        0x2000a300      0x128 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mprec.o)
-                0x2000a300                __mprec_tens
-                0x2000a3d8                __mprec_bigtens
-                0x2000a400                __mprec_tinytens
+ .rodata        0x2000a5e0      0x128 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mprec.o)
+                0x2000a5e0                __mprec_tens
+                0x2000a6b8                __mprec_bigtens
+                0x2000a6e0                __mprec_tinytens
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
  *(.eh_frame_hdr)
  *(.eh_frame)
  *(.init)
- .init          0x2000a428        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
-                0x2000a428                _init
- .init          0x2000a42c        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+ .init          0x2000a708        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x2000a708                _init
+ .init          0x2000a70c        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
  *(.fini)
- .fini          0x2000a434        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
-                0x2000a434                _fini
- .fini          0x2000a438        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
-                0x2000a440                PROVIDE (__preinit_array_start, .)
+ .fini          0x2000a714        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crti.o
+                0x2000a714                _fini
+ .fini          0x2000a718        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtn.o
+                0x2000a720                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x2000a440                PROVIDE (__preinit_array_end, .)
-                0x2000a440                PROVIDE (__init_array_start, .)
+                0x2000a720                PROVIDE (__preinit_array_end, .)
+                0x2000a720                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x2000a440        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
-                0x2000a444                PROVIDE (__init_array_end, .)
-                0x2000a444                PROVIDE (__fini_array_start, .)
+ .init_array    0x2000a720        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+                0x2000a724                PROVIDE (__init_array_end, .)
+                0x2000a724                PROVIDE (__fini_array_start, .)
  *(.fini_array)
- .fini_array    0x2000a444        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .fini_array    0x2000a724        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
  *(SORT(.fini_array.*))
-                0x2000a448                PROVIDE (__fini_array_end, .)
-                0x2000a448                __exidx_start = .
+                0x2000a728                PROVIDE (__fini_array_end, .)
+                0x2000a728                __exidx_start = .
 
-.v4_bx          0x2000a448        0x0
+.v4_bx          0x2000a728        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.ARM.exidx      0x2000a448        0x8
+.ARM.exidx      0x2000a728        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x2000a448        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
- .ARM.exidx     0x2000a450        0x0 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x2000a728        0x8 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
+ .ARM.exidx     0x2000a730        0x0 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
-                0x2000a450                __exidx_end = .
-                0x2000a450                _etext = .
-                0x2000a450                PROVIDE (__text_end, .)
+                0x2000a730                __exidx_end = .
+                0x2000a730                _etext = .
+                0x2000a730                PROVIDE (__text_end, .)
 
-.data           0x2000a450     0x1120
-                0x2000a450                __data_load = LOADADDR (.data)
-                0x2000a450                _sidata = LOADADDR (.data)
-                0x2000a450                __data_start = .
-                0x2000a450                _sdata = .
+.data           0x2000a730     0x1120
+                0x2000a730                __data_load = LOADADDR (.data)
+                0x2000a730                _sidata = LOADADDR (.data)
+                0x2000a730                __data_start = .
+                0x2000a730                _sdata = .
  *(.jcr)
- .jcr           0x2000a450        0x0 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- .jcr           0x2000a450        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
+ .jcr           0x2000a730        0x0 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ .jcr           0x2000a730        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtend.o
  *(.got.plt)
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
  .data.NoteNames
-                0x2000a454      0x200 ./menu.o
+                0x2000a734      0x200 ./menu.o
  .data.IntNames
-                0x2000a654      0x400 ./menu.o
+                0x2000a934      0x400 ./menu.o
  .data.NoteNames
-                0x2000aa54      0x200 ./suit.o
+                0x2000ad34      0x200 ./suit.o
  .data.IntNames
-                0x2000ac54      0x400 ./suit.o
+                0x2000af34      0x400 ./suit.o
  .data.g_FrequencyACE
-                0x2000b054        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x2000b054                g_FrequencyACE
+                0x2000b334        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x2000b334                g_FrequencyACE
  .data.g_FrequencyFPGA
-                0x2000b058        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x2000b058                g_FrequencyFPGA
+                0x2000b338        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x2000b338                g_FrequencyFPGA
  .data.g_FrequencyPCLK0
-                0x2000b05c        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x2000b05c                g_FrequencyPCLK0
+                0x2000b33c        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x2000b33c                g_FrequencyPCLK0
  .data.g_FrequencyPCLK1
-                0x2000b060        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x2000b060                g_FrequencyPCLK1
+                0x2000b340        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x2000b340                g_FrequencyPCLK1
  .data.SystemCoreClock
-                0x2000b064        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x2000b064                SystemCoreClock
+                0x2000b344        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x2000b344                SystemCoreClock
  .data.SystemFrequency
-                0x2000b068        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
-                0x2000b068                SystemFrequency
- .data          0x2000b06c       0xf4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
-                0x2000b06c                _impure_ptr
- .data          0x2000b160      0x410 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
-                0x2000b160                __malloc_av_
-                0x2000b568                __malloc_sbrk_base
-                0x2000b56c                __malloc_trim_threshold
-                0x2000b570                . = ALIGN (0x4)
-                0x2000b570                _edata = .
+                0x2000b348        0x4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x2000b348                SystemFrequency
+ .data          0x2000b34c       0xf4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-impure.o)
+                0x2000b34c                _impure_ptr
+ .data          0x2000b440      0x410 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
+                0x2000b440                __malloc_av_
+                0x2000b848                __malloc_sbrk_base
+                0x2000b84c                __malloc_trim_threshold
+                0x2000b850                . = ALIGN (0x4)
+                0x2000b850                _edata = .
 
-.bss            0x2000b570      0x7a0
-                0x2000b570                __bss_start__ = .
-                0x2000b570                _sbss = .
+.bss            0x2000b850      0x7a8
+                0x2000b850                __bss_start__ = .
+                0x2000b850                _sbss = .
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x2000b570        0x1 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
- .bss.LCD_selectorPosition
-                0x2000b571        0x1 ./lcd.o
-                0x2000b571                LCD_selectorPosition
- *fill*         0x2000b572        0x2 00
+ .bss           0x2000b850        0x1 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2/crtbegin.o
+ *fill*         0x2000b851        0x3 00
  .bss.g_stdio_uart_init_done
-                0x2000b574        0x4 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x2000b854        0x4 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
  .bss.heap_end.3583
-                0x2000b578        0x4 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .bss           0x2000b57c       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
-                0x2000b57c                __malloc_top_pad
-                0x2000b580                __malloc_current_mallinfo
-                0x2000b5a8                __malloc_max_sbrked_mem
-                0x2000b5ac                __malloc_max_total_mem
+                0x2000b858        0x4 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .bss           0x2000b85c       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
+                0x2000b85c                __malloc_top_pad
+                0x2000b860                __malloc_current_mallinfo
+                0x2000b888                __malloc_max_sbrked_mem
+                0x2000b88c                __malloc_max_total_mem
  *(COMMON)
- COMMON         0x2000b5b0      0x6b4 ./menu.o
-                0x2000b5b0                selectedMenu
-                0x2000b5b4                menus
-                0x2000bc58                currentMenu
-                0x2000bc5c                suitStatePtr
-                0x2000bc60                settingsPtr
- COMMON         0x2000bc64        0x4 ./midi.o
-                0x2000bc64                uartInstance
- COMMON         0x2000bc68       0x50 ./suit.o
-                0x2000bc68                midiState
-                0x2000bc70                settings
-                0x2000bc90                XBee_uart
-                0x2000bc98                suitState
-                0x2000bca4                xbeeState
-                0x2000bcb0                MIDI_uart
- COMMON         0x2000bcb8       0x50 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
-                0x2000bcb8                g_mss_uart1
-                0x2000bce0                g_mss_uart0
- COMMON         0x2000bd08        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
-                0x2000bd08                errno
-                0x2000bd10                . = ALIGN (0x8)
- *fill*         0x2000bd0c        0x4 00
-                0x2000bd10                __bss_end__ = .
-                0x2000bd10                _end = .
-                0x2000bd10                __end = _end
-                0x2000bd10                _ebss = .
-                0x2000bd10                PROVIDE (end, .)
+ COMMON         0x2000b890        0x4 ./lcd.o
+                0x2000b890                lcd_instance
+ COMMON         0x2000b894      0x6b4 ./menu.o
+                0x2000b894                selectedMenu
+                0x2000b898                menus
+                0x2000bf3c                currentMenu
+                0x2000bf40                suitStatePtr
+                0x2000bf44                settingsPtr
+ COMMON         0x2000bf48        0x4 ./midi.o
+                0x2000bf48                uartInstance
+ COMMON         0x2000bf4c       0x58 ./suit.o
+                0x2000bf4c                midiState
+                0x2000bf54                settings
+                0x2000bf74                LCD_uart
+                0x2000bf7c                XBee_uart
+                0x2000bf84                suitState
+                0x2000bf90                xbeeState
+                0x2000bf9c                MIDI_uart
+ COMMON         0x2000bfa4       0x50 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x2000bfa4                g_mss_uart1
+                0x2000bfcc                g_mss_uart0
+ COMMON         0x2000bff4        0x4 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
+                0x2000bff4                errno
+                0x2000bff8                . = ALIGN (0x8)
+                0x2000bff8                __bss_end__ = .
+                0x2000bff8                _end = .
+                0x2000bff8                __end = _end
+                0x2000bff8                _ebss = .
+                0x2000bff8                PROVIDE (end, .)
 
-.stack          0x2000bd10     0x3000
-                0x2000bd10                . = ALIGN (0x4)
-                0x2000cd10                . = (. + PROCESS_STACK_SIZE)
- *fill*         0x2000bd10     0x1000 00
-                0x2000cd10                . = ALIGN (0x4)
-                0x2000ed10                . = (. + MAIN_STACK_SIZE)
- *fill*         0x2000cd10     0x2000 00
-                0x2000ed10                . = ALIGN (0x4)
+.stack          0x2000bff8     0x3000
+                0x2000bff8                . = ALIGN (0x4)
+                0x2000cff8                . = (. + PROCESS_STACK_SIZE)
+ *fill*         0x2000bff8     0x1000 00
+                0x2000cff8                . = ALIGN (0x4)
+                0x2000eff8                . = (. + MAIN_STACK_SIZE)
+ *fill*         0x2000cff8     0x2000 00
+                0x2000eff8                . = ALIGN (0x4)
 
 .stab
  *(.stab)
@@ -1146,216 +1160,216 @@ END GROUP
  .comment       0x00000183       0x2b N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .comment       0x000001ae       0x2b N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
-.debug_aranges  0x00000000      0x438
+.debug_aranges  0x00000000      0x448
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x30 ./lcd.o
+                0x00000000       0x38 ./lcd.o
  .debug_aranges
-                0x00000030       0x20 ./main.o
+                0x00000038       0x20 ./main.o
  .debug_aranges
-                0x00000050       0x80 ./menu.o
+                0x00000058       0x80 ./menu.o
  .debug_aranges
-                0x000000d0       0x50 ./midi.o
+                0x000000d8       0x50 ./midi.o
  .debug_aranges
-                0x00000120       0xd0 ./suit.o
+                0x00000128       0xd8 ./suit.o
  .debug_aranges
-                0x000001f0       0xa8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x00000200       0xa8 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
  .debug_aranges
-                0x00000298       0xc0 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x000002a8       0xc0 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .debug_aranges
-                0x00000358       0x50 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x00000368       0x50 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .debug_aranges
-                0x000003a8       0x48 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+                0x000003b8       0x48 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
  .debug_aranges
-                0x000003f0       0x28 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x00000400       0x28 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .debug_aranges
-                0x00000418       0x20 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+                0x00000428       0x20 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
 .debug_pubnames
-                0x00000000      0x9f4
+                0x00000000      0xa2c
  *(.debug_pubnames)
  .debug_pubnames
-                0x00000000       0x6e ./lcd.o
+                0x00000000       0x83 ./lcd.o
  .debug_pubnames
-                0x0000006e       0x1b ./main.o
+                0x00000083       0x1b ./main.o
  .debug_pubnames
-                0x00000089      0x175 ./menu.o
+                0x0000009e      0x175 ./menu.o
  .debug_pubnames
-                0x000001fe       0xaf ./midi.o
+                0x00000213       0xaf ./midi.o
  .debug_pubnames
-                0x000002ad      0x230 ./suit.o
+                0x000002c2      0x253 ./suit.o
  .debug_pubnames
-                0x000004dd       0xeb N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x00000515       0xeb N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
  .debug_pubnames
-                0x000005c8      0x21c N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x00000600      0x21c N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .debug_pubnames
-                0x000007e4       0xb1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x0000081c       0xb1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .debug_pubnames
-                0x00000895       0x85 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+                0x000008cd       0x85 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
  .debug_pubnames
-                0x0000091a       0xb4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x00000952       0xb4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .debug_pubnames
-                0x000009ce       0x26 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+                0x00000a06       0x26 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
-.debug_info     0x00000000     0x6782
+.debug_info     0x00000000     0x697c
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x11d ./lcd.o
- .debug_info    0x0000011d       0xff ./main.o
- .debug_info    0x0000021c      0x990 ./menu.o
- .debug_info    0x00000bac      0x2ed ./midi.o
- .debug_info    0x00000e99     0x13be ./suit.o
- .debug_info    0x00002257     0x10eb N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_info    0x00003342     0x1740 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_info    0x00004a82     0x1124 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_info    0x00005ba6      0x53c N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
- .debug_info    0x000060e2      0x575 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_info    0x00006657      0x12b N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+ .debug_info    0x00000000      0x2dc ./lcd.o
+ .debug_info    0x000002dc       0xff ./main.o
+ .debug_info    0x000003db      0x990 ./menu.o
+ .debug_info    0x00000d6b      0x2ed ./midi.o
+ .debug_info    0x00001058     0x13f9 ./suit.o
+ .debug_info    0x00002451     0x10eb N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_info    0x0000353c     0x1740 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_info    0x00004c7c     0x1124 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_info    0x00005da0      0x53c N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+ .debug_info    0x000062dc      0x575 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_info    0x00006851      0x12b N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
-.debug_abbrev   0x00000000     0x1063
+.debug_abbrev   0x00000000     0x10a9
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xa6 ./lcd.o
- .debug_abbrev  0x000000a6       0x76 ./main.o
- .debug_abbrev  0x0000011c      0x1a2 ./menu.o
- .debug_abbrev  0x000002be       0xc1 ./midi.o
- .debug_abbrev  0x0000037f      0x24f ./suit.o
- .debug_abbrev  0x000005ce      0x251 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_abbrev  0x0000081f      0x306 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_abbrev  0x00000b25      0x1f1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_abbrev  0x00000d16      0x14d N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
- .debug_abbrev  0x00000e63      0x154 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_abbrev  0x00000fb7       0xac N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+ .debug_abbrev  0x00000000       0xec ./lcd.o
+ .debug_abbrev  0x000000ec       0x76 ./main.o
+ .debug_abbrev  0x00000162      0x1a2 ./menu.o
+ .debug_abbrev  0x00000304       0xc1 ./midi.o
+ .debug_abbrev  0x000003c5      0x24f ./suit.o
+ .debug_abbrev  0x00000614      0x251 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_abbrev  0x00000865      0x306 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_abbrev  0x00000b6b      0x1f1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_abbrev  0x00000d5c      0x14d N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+ .debug_abbrev  0x00000ea9      0x154 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_abbrev  0x00000ffd       0xac N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
-.debug_line     0x00000000     0x2a89
+.debug_line     0x00000000     0x2d9f
  *(.debug_line)
- .debug_line    0x00000000      0x2f5 ./lcd.o
- .debug_line    0x000002f5      0x2f2 ./main.o
- .debug_line    0x000005e7      0x497 ./menu.o
- .debug_line    0x00000a7e      0x253 ./midi.o
- .debug_line    0x00000cd1      0x89b ./suit.o
- .debug_line    0x0000156c      0x503 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_line    0x00001a6f      0x5d5 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_line    0x00002044      0x315 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_line    0x00002359      0x2cf N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
- .debug_line    0x00002628      0x26d N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_line    0x00002895      0x1f4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+ .debug_line    0x00000000      0x459 ./lcd.o
+ .debug_line    0x00000459      0x306 ./main.o
+ .debug_line    0x0000075f      0x5b2 ./menu.o
+ .debug_line    0x00000d11      0x258 ./midi.o
+ .debug_line    0x00000f69      0x8c9 ./suit.o
+ .debug_line    0x00001832      0x517 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_line    0x00001d49      0x5e9 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_line    0x00002332      0x324 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_line    0x00002656      0x2d4 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+ .debug_line    0x0000292a      0x27c N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_line    0x00002ba6      0x1f9 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
-.debug_frame    0x00000000     0x171c
+.debug_frame    0x00000000     0x175c
  *(.debug_frame)
- .debug_frame   0x00000000       0x6c ./lcd.o
- .debug_frame   0x0000006c       0x2c ./main.o
- .debug_frame   0x00000098      0x194 ./menu.o
- .debug_frame   0x0000022c       0xec ./midi.o
- .debug_frame   0x00000318      0x2d4 ./suit.o
- .debug_frame   0x000005ec      0x174 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_frame   0x00000760      0x1f0 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_frame   0x00000950       0x88 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_frame   0x000009d8       0xdc N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
- .debug_frame   0x00000ab4       0x3c N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_frame   0x00000af0       0x24 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
- .debug_frame   0x00000b14       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
- .debug_frame   0x00000b34       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
- .debug_frame   0x00000b60       0x5c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-printf.o)
- .debug_frame   0x00000bbc       0x70 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
- .debug_frame   0x00000c2c       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
- .debug_frame   0x00000c58       0x64 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-dtoa.o)
- .debug_frame   0x00000cbc       0x40 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
- .debug_frame   0x00000cfc      0x11c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
- .debug_frame   0x00000e18       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
- .debug_frame   0x00000e68       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
- .debug_frame   0x00000ea4       0x54 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
- .debug_frame   0x00000ef8       0x6c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
- .debug_frame   0x00000f64       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
- .debug_frame   0x00000f98       0x30 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
- .debug_frame   0x00000fc8       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
- .debug_frame   0x00001004       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
- .debug_frame   0x0000102c       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
- .debug_frame   0x00001060       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
- .debug_frame   0x0000108c       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
- .debug_frame   0x000010b4       0x30 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
- .debug_frame   0x000010e4      0x240 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mprec.o)
- .debug_frame   0x00001324       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
- .debug_frame   0x00001360       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
- .debug_frame   0x00001380       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
- .debug_frame   0x000013a0       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
- .debug_frame   0x000013cc       0x70 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
- .debug_frame   0x0000143c       0x30 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcmp.o)
- .debug_frame   0x0000146c       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
- .debug_frame   0x0000148c       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-callocr.o)
- .debug_frame   0x000014b8       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
- .debug_frame   0x000014e4       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
- .debug_frame   0x00001520       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
- .debug_frame   0x0000154c       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
- .debug_frame   0x00001578       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
- .debug_frame   0x000015a4       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
- .debug_frame   0x000015d0       0x64 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
- .debug_frame   0x00001634       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
- .debug_frame   0x00001654       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
- .debug_frame   0x000016a4       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
- .debug_frame   0x000016e0       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
+ .debug_frame   0x00000000       0x90 ./lcd.o
+ .debug_frame   0x00000090       0x2c ./main.o
+ .debug_frame   0x000000bc      0x190 ./menu.o
+ .debug_frame   0x0000024c       0xec ./midi.o
+ .debug_frame   0x00000338      0x2f4 ./suit.o
+ .debug_frame   0x0000062c      0x174 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_frame   0x000007a0      0x1f0 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_frame   0x00000990       0x88 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_frame   0x00000a18       0xdc N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+ .debug_frame   0x00000af4       0x3c N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_frame   0x00000b30       0x24 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+ .debug_frame   0x00000b54       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-errno.o)
+ .debug_frame   0x00000b74       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-init.o)
+ .debug_frame   0x00000ba0       0x5c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-printf.o)
+ .debug_frame   0x00000bfc       0x70 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-vfprintf.o)
+ .debug_frame   0x00000c6c       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-wsetup.o)
+ .debug_frame   0x00000c98       0x64 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-dtoa.o)
+ .debug_frame   0x00000cfc       0x40 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fflush.o)
+ .debug_frame   0x00000d3c      0x11c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-findfp.o)
+ .debug_frame   0x00000e58       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-freer.o)
+ .debug_frame   0x00000ea8       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fvwrite.o)
+ .debug_frame   0x00000ee4       0x54 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fwalk.o)
+ .debug_frame   0x00000f38       0x6c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-locale.o)
+ .debug_frame   0x00000fa4       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-makebuf.o)
+ .debug_frame   0x00000fd8       0x30 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-malloc.o)
+ .debug_frame   0x00001008       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mallocr.o)
+ .debug_frame   0x00001044       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memchr.o)
+ .debug_frame   0x0000106c       0x34 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memcpy.o)
+ .debug_frame   0x000010a0       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memmove.o)
+ .debug_frame   0x000010cc       0x28 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-memset.o)
+ .debug_frame   0x000010f4       0x30 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mlock.o)
+ .debug_frame   0x00001124      0x240 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-mprec.o)
+ .debug_frame   0x00001364       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reallocr.o)
+ .debug_frame   0x000013a0       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isinfd.o)
+ .debug_frame   0x000013c0       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-s_isnand.o)
+ .debug_frame   0x000013e0       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000140c       0x70 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-stdio.o)
+ .debug_frame   0x0000147c       0x30 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strcmp.o)
+ .debug_frame   0x000014ac       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-strlen.o)
+ .debug_frame   0x000014cc       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-callocr.o)
+ .debug_frame   0x000014f8       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-closer.o)
+ .debug_frame   0x00001524       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fclose.o)
+ .debug_frame   0x00001560       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-fstatr.o)
+ .debug_frame   0x0000158c       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-isattyr.o)
+ .debug_frame   0x000015b8       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-lseekr.o)
+ .debug_frame   0x000015e4       0x2c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-readr.o)
+ .debug_frame   0x00001610       0x64 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/../../../../arm-none-eabi/lib/thumb2\libc.a(lib_a-reent.o)
+ .debug_frame   0x00001674       0x20 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001694       0x50 c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(bpabi.o)
+ .debug_frame   0x000016e4       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_divdi3.o)
+ .debug_frame   0x00001720       0x3c c:/actel/libero_v9.1/softconsole/sourcery-g++/bin/../lib/gcc/arm-none-eabi/4.4.1/thumb2\libgcc.a(_udivdi3.o)
 
-.debug_str      0x00000000     0x23e8
+.debug_str      0x00000000     0x2427
  *(.debug_str)
- .debug_str     0x00000000      0x128 ./lcd.o
-                                0x161 (size before relaxing)
- .debug_str     0x00000128       0x2f ./main.o
+ .debug_str     0x00000000      0x196 ./lcd.o
+                                0x1dd (size before relaxing)
+ .debug_str     0x00000196        0xa ./main.o
                                 0x12f (size before relaxing)
- .debug_str     0x00000157      0x349 ./menu.o
+ .debug_str     0x000001a0      0x341 ./menu.o
                                 0x4b8 (size before relaxing)
- .debug_str     0x000004a0       0xf8 ./midi.o
+ .debug_str     0x000004e1       0xd6 ./midi.o
                                 0x20f (size before relaxing)
- .debug_str     0x00000598     0x1053 ./suit.o
-                               0x13d6 (size before relaxing)
- .debug_str     0x000015eb      0x501 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_str     0x000005b7     0x1073 ./suit.o
+                               0x13fd (size before relaxing)
+ .debug_str     0x0000162a      0x501 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
                                0x10ae (size before relaxing)
- .debug_str     0x00001aec      0x5d5 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_str     0x00001b2b      0x5d5 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
                                0x14bf (size before relaxing)
- .debug_str     0x000020c1      0x14f N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_str     0x00002100      0x14f N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
                                0x1297 (size before relaxing)
- .debug_str     0x00002210       0x88 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+ .debug_str     0x0000224f       0x88 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
                                 0x286 (size before relaxing)
- .debug_str     0x00002298       0xf7 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_str     0x000022d7       0xf7 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
                                 0x462 (size before relaxing)
- .debug_str     0x0000238f       0x59 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+ .debug_str     0x000023ce       0x59 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
                                 0x17d (size before relaxing)
 
-.debug_loc      0x00000000     0x1ad7
+.debug_loc      0x00000000     0x1b51
  *(.debug_loc)
- .debug_loc     0x00000000       0x99 ./lcd.o
- .debug_loc     0x00000099       0x2b ./main.o
- .debug_loc     0x000000c4      0x29b ./menu.o
- .debug_loc     0x0000035f      0x181 ./midi.o
- .debug_loc     0x000004e0      0x489 ./suit.o
- .debug_loc     0x00000969      0x30d N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_loc     0x00000c76      0x894 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_loc     0x0000150a       0xf1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_loc     0x000015fb      0x3c1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
- .debug_loc     0x000019bc       0xb3 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_loc     0x00001a6f       0x68 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+ .debug_loc     0x00000000       0xdc ./lcd.o
+ .debug_loc     0x000000dc       0x2b ./main.o
+ .debug_loc     0x00000107      0x29b ./menu.o
+ .debug_loc     0x000003a2      0x181 ./midi.o
+ .debug_loc     0x00000523      0x4c0 ./suit.o
+ .debug_loc     0x000009e3      0x30d N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_loc     0x00000cf0      0x894 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_loc     0x00001584       0xf1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_loc     0x00001675      0x3c1 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+ .debug_loc     0x00001a36       0xb3 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_loc     0x00001ae9       0x68 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
-.debug_macinfo  0x00000000    0x39af8
+.debug_macinfo  0x00000000    0x39f32
  *(.debug_macinfo)
  .debug_macinfo
-                0x00000000     0x4ef6 ./lcd.o
+                0x00000000     0x51e5 ./lcd.o
  .debug_macinfo
-                0x00004ef6     0x5049 ./main.o
+                0x000051e5     0x5049 ./main.o
  .debug_macinfo
-                0x00009f3f     0x50eb ./menu.o
+                0x0000a22e     0x5224 ./menu.o
  .debug_macinfo
-                0x0000f02a     0x1a9c ./midi.o
+                0x0000f452     0x1a9c ./midi.o
  .debug_macinfo
-                0x00010ac6     0x9a0e ./suit.o
+                0x00010eee     0x9a20 ./suit.o
  .debug_macinfo
-                0x0001a4d4     0x9964 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+                0x0001a90e     0x9964 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
  .debug_macinfo
-                0x00023e38     0x63e3 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+                0x00024272     0x63e3 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
  .debug_macinfo
-                0x0002a21b     0x5cfa N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+                0x0002a655     0x5cfa N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
  .debug_macinfo
-                0x0002ff15     0x2450 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+                0x0003034f     0x2450 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
  .debug_macinfo
-                0x00032365     0x5a98 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+                0x0003279f     0x5a98 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
  .debug_macinfo
-                0x00037dfd     0x1cfb N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+                0x00038237     0x1cfb N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -1509,15 +1523,15 @@ END GROUP
  *(.isr_vector)
 OUTPUT(wubsuit_base_MSS_MSS_CM3_0_app elf32-littlearm)
 
-.debug_ranges   0x00000000      0x410
- .debug_ranges  0x00000000       0x28 ./lcd.o
- .debug_ranges  0x00000028       0x18 ./main.o
- .debug_ranges  0x00000040       0x78 ./menu.o
- .debug_ranges  0x000000b8       0x48 ./midi.o
- .debug_ranges  0x00000100       0xc8 ./suit.o
- .debug_ranges  0x000001c8       0xa0 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
- .debug_ranges  0x00000268       0xd0 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
- .debug_ranges  0x00000338       0x60 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
- .debug_ranges  0x00000398       0x40 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
- .debug_ranges  0x000003d8       0x20 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
- .debug_ranges  0x000003f8       0x18 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)
+.debug_ranges   0x00000000      0x420
+ .debug_ranges  0x00000000       0x30 ./lcd.o
+ .debug_ranges  0x00000030       0x18 ./main.o
+ .debug_ranges  0x00000048       0x78 ./menu.o
+ .debug_ranges  0x000000c0       0x48 ./midi.o
+ .debug_ranges  0x00000108       0xd0 ./suit.o
+ .debug_ranges  0x000001d8       0xa0 N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_hw_platform/Debug/CMSIS/startup_gcc/newlib_stubs.o
+ .debug_ranges  0x00000278       0xd0 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_uart.o)
+ .debug_ranges  0x00000348       0x60 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(mss_gpio.o)
+ .debug_ranges  0x000003a8       0x40 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(core_uart_apb.o)
+ .debug_ranges  0x000003e8       0x20 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(system_a2fxxxm3.o)
+ .debug_ranges  0x00000408       0x18 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug\libwubsuit_base_MSS_MSS_CM3_0_hw_platform.a(hal_assert.o)

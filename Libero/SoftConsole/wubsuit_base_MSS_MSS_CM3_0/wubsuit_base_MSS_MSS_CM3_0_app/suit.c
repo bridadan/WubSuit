@@ -7,7 +7,7 @@
 #include "midi.h"
 #include "lcd.h"
 
-UART_instance_t XBee_uart, MIDI_uart;
+UART_instance_t XBee_uart, MIDI_uart, LCD_uart;
 
 XBeeState xbeeState;
 MIDIState midiState;
@@ -98,6 +98,10 @@ __attribute__ ((interrupt)) void GPIO1_IRQHandler( void )
 		}*/
 		if (rx_size >= 1) {
 			for (i = 0; i < rx_size; i++) {
+				if (midiState.packetPointer >= MIDI_PACKET_LENGTH) {
+					midiState.valid = 0;
+					midiState.packetPointer = 0;
+				}
 				if (midiState.valid == 1) {
 					// New packet is found
 					if (((rx_data[i] >> 7) & 0x1) == 1 && (rx_data[i] & 0xF) == settings.suitLightsMIDIChannel) {
@@ -246,6 +250,10 @@ void Suit_init() {
 	UART_init(&MIDI_uart, COREUARTAPB1_BASE_ADDR, BAUD_VALUE_31250, (DATA_8_BITS | NO_PARITY));
 	MIDI_init(&MIDI_uart);
 
+	// Initialize LCD UART
+	UART_init(&LCD_uart, COREUARTAPB2_BASE_ADDR, BAUD_VALUE_115200, (DATA_8_BITS | NO_PARITY));
+	LCD_init(&LCD_uart);
+
 	// Setup XBee RX interrupt
 	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
 	MSS_GPIO_enable_irq(MSS_GPIO_0);
@@ -294,7 +302,7 @@ void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 			channel = Suit_MIDIToLightChannel(message[1]);
 			if (channel < LIGHT_CHANNELS) {
 				Suit_turnOnLightChannel(channel);
-				Suit_displayStatus();
+				Suit_updateStatus();
 			}
 		} else {
 			if (suitState.waitingForInput == 1 && suitState.inputType == MIDI) {
@@ -308,7 +316,7 @@ void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 			channel = Suit_MIDIToLightChannel(message[1]);
 			if (channel < LIGHT_CHANNELS) {
 				Suit_turnOffLightChannel(channel);
-				Suit_displayStatus();
+				Suit_updateStatus();
 			}
 		}
 	}
@@ -343,7 +351,7 @@ void Suit_newSensorValues() {
 	if (suitState.state == PERFORMANCE) {
 		uint8_t pitchBendOut = Suit_mapValue(suitState.accelX, settings.accelMin, settings.accelMax, settings.pitchBendMin, settings.pitchBendMax);
 		MIDI_pitchWheelChange(pitchBendOut, settings.outputMIDIChannel);
-		Suit_displayStatus();
+		Suit_updateStatus();
 	}
 }
 
@@ -356,7 +364,7 @@ void Suit_capButtonPressed() {
 		suitState.activeNote = noteOut;
 		suitState.noteActive = 1;
 		MIDI_noteOn(noteOut, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
-		Suit_displayStatus();
+		Suit_updateStatus();
 	} else {
 		if (suitState.waitingForInput == 1) {
 			if (suitState.inputType == SENSOR) {
@@ -375,7 +383,7 @@ void Suit_capButtonReleased() {
 		if (suitState.noteActive == 1) {
 			suitState.noteActive = 0;
 			MIDI_noteOff(suitState.activeNote, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
-			Suit_displayStatus();
+			Suit_updateStatus();
 		}
 	}
 }
@@ -452,5 +460,27 @@ void Suit_displayStatus() {
 		LCD_drawString("None", LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
 	}
 	LCD_drawString("Active Lights:", 0, LCD_LINE_HEIGHT * 6);
+	LCD_drawString(IntNames[suitState.activeLights], LCD_VALUE_X, LCD_LINE_HEIGHT * 6);
+}
+
+void Suit_updateStatus() {
+	char* clearString = "     ";
+	LCD_drawString(clearString, LCD_VALUE_X, 0);
+	LCD_drawString(IntNames[suitState.accelX], LCD_VALUE_X, 0);
+	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT);
+	LCD_drawString(IntNames[suitState.accelY], LCD_VALUE_X, LCD_LINE_HEIGHT);
+	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT * 2);
+	LCD_drawString(IntNames[suitState.accelZ], LCD_VALUE_X, LCD_LINE_HEIGHT * 2);
+	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT * 3);
+	LCD_drawString(IntNames[suitState.flexValue], LCD_VALUE_X, LCD_LINE_HEIGHT * 3);
+	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT * 4);
+	LCD_drawString(IntNames[suitState.handHeight], LCD_VALUE_X, LCD_LINE_HEIGHT * 4);
+	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
+	if (suitState.noteActive == 1) {
+		LCD_drawString(NoteNames[suitState.activeNote], LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
+	} else {
+		LCD_drawString("None", LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
+	}
+	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT * 6);
 	LCD_drawString(IntNames[suitState.activeLights], LCD_VALUE_X, LCD_LINE_HEIGHT * 6);
 }

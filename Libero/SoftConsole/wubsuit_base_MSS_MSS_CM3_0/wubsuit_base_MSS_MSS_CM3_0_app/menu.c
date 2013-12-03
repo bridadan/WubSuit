@@ -16,14 +16,8 @@ void Menu_setKeySignature(uint8_t value) {
 }
 
 void Menu_init(Settings *setS, SuitState *suitS) {
-	printf("%u\n\r", &(setS->suitLightMappings[1]));
-	printf("%u\n\r", setS->suitLightMappings[1]);
 	settingsPtr = setS;
 	suitStatePtr = suitS;
-
-
-	printf("%u\n\r", &(settingsPtr->suitLightMappings[1]));
-	printf("%u\n\r", settingsPtr->suitLightMappings[1]);
 
 	currentMenu = &(menus[0]);
 	selectedMenu = 0;
@@ -201,7 +195,7 @@ void Menu_displayCurrentMenu() {
 	volatile Menu *menu;
 
 	LCD_clearScreen();
-	LCD_setSelectorPosition(selectedMenu);
+	LCD_drawString(">", 0, LCD_LINE_HEIGHT * (selectedMenu+ 1));
 	LCD_drawString(currentMenu->name, 10, 0);
 
 	for (i = 0; i < currentMenu->submenusCount; i++) {
@@ -213,6 +207,7 @@ void Menu_displayCurrentMenu() {
 	}
 }
 
+
 void Menu_setMenu(Menu* menu) {
 	currentMenu = menu;
 	selectedMenu = 0;
@@ -221,15 +216,17 @@ void Menu_setMenu(Menu* menu) {
 
 void Menu_moveDown() {
 	if (selectedMenu < currentMenu->submenusCount - 1) {
+		LCD_drawString(" ", 0, LCD_LINE_HEIGHT * (selectedMenu + 1));
 		selectedMenu++;
-		LCD_setSelectorPosition(selectedMenu);
+		LCD_drawString(">", 0, LCD_LINE_HEIGHT * (selectedMenu + 1));
 	}
 }
 
 void Menu_moveUp() {
 	if (selectedMenu > 0) {
+		LCD_drawString(" ", 0, LCD_LINE_HEIGHT * (selectedMenu + 1));
 		selectedMenu--;
-		LCD_setSelectorPosition(selectedMenu);
+		LCD_drawString(">", 0, LCD_LINE_HEIGHT * (selectedMenu + 1));
 	}
 }
 

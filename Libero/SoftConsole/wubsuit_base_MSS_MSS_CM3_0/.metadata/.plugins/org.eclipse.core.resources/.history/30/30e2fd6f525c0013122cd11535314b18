@@ -1,0 +1,57 @@
+#include <inttypes.h>
+#include <stdio.h>
+#include "lcd.h"
+#include "suit.h"
+
+uint8_t LCD_selectorPosition = 0;
+UART_instance_t *lcd_instance;
+
+void LCD_init(UART_instance_t *inst) {
+	lcd_instance = inst;
+	volatile uint8_t command[3];
+	command[0] = 0x7C;
+	command[1] = 0x07;
+	command[2] = 0x06;
+	UART_send(lcd_instance,(const uint8_t*)&command,sizeof(command));
+
+}
+
+void LCD_drawString(char* str, uint8_t x, uint8_t y) {
+	//printf("%s --- (%u, %u)\n\r", str, x, y);
+	volatile uint8_t coordx[]={0x7C, 0x18,x};
+	volatile uint8_t coordy[]={0x7C, 0x19,LCD_TOP_Y - y};
+
+	volatile char *begin = str;
+	volatile int length = 0;
+	while(*begin != '\0')
+	{
+		length++;
+		begin++;
+	}
+	UART_send(lcd_instance,(const uint8_t*)&coordx,sizeof(coordx));
+	UART_send(lcd_instance,(const uint8_t*)&coordy,sizeof(coordy));
+	UART_send(lcd_instance,(const uint8_t*)str,length+1);
+
+}
+
+void LCD_clearScreen() {
+	//printf("\n\r*** Screen Cleared ***\n\r");
+	uint8_t command[2];
+	command[0] = 0x7C;
+	command[1] = 0x00;
+	UART_send(lcd_instance,(const uint8_t*)&command,sizeof(command));
+}
+
+void LCD_eraseBlock(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2)
+{
+	//y1 = 127 - y1;
+	//y2 = 127 - y2;
+	//volatile uint8_t command[] = {0x7C,0x05,x1,LCD_TOP_Y - y1,x2,LCD_TOP_Y - y2};
+	volatile uint8_t coordx[]={0x7C, 0x18, 0};
+	volatile uint8_t coordy[]={0x7C, 0x19, 0};
+	UART_send(lcd_instance,(const uint8_t*)&coordx,sizeof(coordx));
+	UART_send(lcd_instance,(const uint8_t*)&coordy,sizeof(coordy));
+
+	volatile uint8_t command[6] = {0x7C,0x05, 50, 0, 100, 127};
+	UART_send(lcd_instance,(const uint8_t*)&command,6);
+}

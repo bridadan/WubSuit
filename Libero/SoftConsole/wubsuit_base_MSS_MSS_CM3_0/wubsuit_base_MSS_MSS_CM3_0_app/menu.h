@@ -4,7 +4,7 @@
 #include <inttypes.h>
 #include "suit.h"
 
-#define MENU_COUNT 100
+#define MENU_COUNT 25
 #define MAX_SUBMENUS 10
 #define MAX_NAME 20
 
@@ -22,10 +22,12 @@ typedef struct _Menu {
 } Menu;
 
 char* Menu_getNoteString(Menu* menu);
-char* Menu_getIntegerString(Menu* menu);
+char* Menu_getIntString(Menu* menu);
 void Menu_setKeySignature(uint8_t value);
 void Menu_init(Settings *setS, SuitState *suitS);
 void Menu_displayCurrentMenu();
+uint8_t Menu_isAtRootMenu();
+void Menu_goToParentMenu();
 void Menu_setMenu(Menu* menu);
 void Menu_moveDown();
 void Menu_moveUp();

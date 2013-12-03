@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Tue Nov 19 13:24:08 2013
+// Created by SmartDesign Mon Dec 02 22:02:53 2013
 // Version: v11.0 11.0.0.23
 //////////////////////////////////////////////////////////////////////
 
@@ -8,19 +8,19 @@
 // wubsuit_base
 module wubsuit_base(
     // Inputs
+    CButton0,
+    CButton1,
     CapButton,
+    F2M_GPI_7,
     LPiezo,
     MIDI_RX,
     MSS_RESET_N,
+    RPiezo,
     UART_0_RXD,
     XBee_RX,
     // Outputs
-    FRAMING_ERR,
     LCD_TX,
     MIDI_TX,
-    OVERFLOW,
-    PARITY_ERR,
-    RXRDY,
     UART_0_TXD,
     XBee_TX
 );
@@ -28,28 +28,30 @@ module wubsuit_base(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+input  CButton0;
+input  CButton1;
 input  CapButton;
+input  F2M_GPI_7;
 input  LPiezo;
 input  MIDI_RX;
 input  MSS_RESET_N;
+input  RPiezo;
 input  UART_0_RXD;
 input  XBee_RX;
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
-output FRAMING_ERR;
 output LCD_TX;
 output MIDI_TX;
-output OVERFLOW;
-output PARITY_ERR;
-output RXRDY;
 output UART_0_TXD;
 output XBee_TX;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
-wire          CapButton_net_0;
 wire          CapButton;
+wire          CButton0;
+wire          CButton1;
+wire          F2M_GPI_7;
 wire          CoreAPB3_0_APBmslave0_PENABLE;
 wire          CoreAPB3_0_APBmslave0_PREADY;
 wire          CoreAPB3_0_APBmslave0_PSELx;
@@ -62,16 +64,16 @@ wire          CoreAPB3_0_APBmslave2_PREADY;
 wire          CoreAPB3_0_APBmslave2_PSELx;
 wire          CoreAPB3_0_APBmslave2_PSLVERR;
 wire          CoreUARTapb_0_RXRDY;
-wire          FRAMING_ERR_net_0;
+wire          FRAMING_ERR;
 wire          LCD_TX_net_0;
-wire          LPiezo_net_0;
 wire          LPiezo;
 wire          MIDI_RX;
 wire          MIDI_TX_net_0;
 wire          MSS_RESET_N;
-wire          OVERFLOW_net_0;
-wire          PARITY_ERR_net_0;
-wire          RXRDY_net_0;
+wire          OVERFLOW;
+wire          PARITY_ERR;
+wire          RPiezo;
+wire          RXRDY;
 wire          UART_0_RXD;
 wire          UART_0_TXD_net_0;
 wire          wubsuit_base_MSS_0_FAB_CLK;
@@ -87,12 +89,8 @@ wire          XBee_RX;
 wire          XBee_TX_net_0;
 wire          UART_0_TXD_net_1;
 wire          XBee_TX_net_1;
-wire          MIDI_TX_net_1;
 wire          LCD_TX_net_1;
-wire          RXRDY_net_1;
-wire          PARITY_ERR_net_1;
-wire          OVERFLOW_net_1;
-wire          FRAMING_ERR_net_1;
+wire          MIDI_TX_net_1;
 //--------------------------------------------------------------------
 // TiedOff Nets
 //--------------------------------------------------------------------
@@ -117,10 +115,10 @@ wire   [31:0] PRDATAS16_const_net_0;
 // Bus Interface Nets Declarations - Unequal Pin Widths
 //--------------------------------------------------------------------
 wire   [31:0] CoreAPB3_0_APBmslave0_PADDR;
-wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_1_4to0;
-wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_1;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_0_4to0;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_0;
+wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_1_4to0;
+wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_1;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_2_4to0;
 wire   [4:0]  CoreAPB3_0_APBmslave0_PADDR_2;
 wire   [31:8] CoreAPB3_0_APBmslave0_PRDATA_0_31to8;
@@ -128,10 +126,10 @@ wire   [7:0]  CoreAPB3_0_APBmslave0_PRDATA_0_7to0;
 wire   [31:0] CoreAPB3_0_APBmslave0_PRDATA_0;
 wire   [7:0]  CoreAPB3_0_APBmslave0_PRDATA;
 wire   [31:0] CoreAPB3_0_APBmslave0_PWDATA;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_1_7to0;
-wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_1;
 wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_0_7to0;
 wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_1_7to0;
+wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_1;
 wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_2_7to0;
 wire   [7:0]  CoreAPB3_0_APBmslave0_PWDATA_2;
 wire   [31:8] CoreAPB3_0_APBmslave1_PRDATA_0_31to8;
@@ -169,29 +167,21 @@ assign PRDATAS16_const_net_0 = 32'h00000000;
 //--------------------------------------------------------------------
 // Top level output port assignments
 //--------------------------------------------------------------------
-assign UART_0_TXD_net_1  = UART_0_TXD_net_0;
-assign UART_0_TXD        = UART_0_TXD_net_1;
-assign XBee_TX_net_1     = XBee_TX_net_0;
-assign XBee_TX           = XBee_TX_net_1;
-assign MIDI_TX_net_1     = MIDI_TX_net_0;
-assign MIDI_TX           = MIDI_TX_net_1;
-assign LCD_TX_net_1      = LCD_TX_net_0;
-assign LCD_TX            = LCD_TX_net_1;
-assign RXRDY_net_1       = RXRDY_net_0;
-assign RXRDY             = RXRDY_net_1;
-assign PARITY_ERR_net_1  = PARITY_ERR_net_0;
-assign PARITY_ERR        = PARITY_ERR_net_1;
-assign OVERFLOW_net_1    = OVERFLOW_net_0;
-assign OVERFLOW          = OVERFLOW_net_1;
-assign FRAMING_ERR_net_1 = FRAMING_ERR_net_0;
-assign FRAMING_ERR       = FRAMING_ERR_net_1;
+assign UART_0_TXD_net_1 = UART_0_TXD_net_0;
+assign UART_0_TXD       = UART_0_TXD_net_1;
+assign XBee_TX_net_1    = XBee_TX_net_0;
+assign XBee_TX          = XBee_TX_net_1;
+assign LCD_TX_net_1     = LCD_TX_net_0;
+assign LCD_TX           = LCD_TX_net_1;
+assign MIDI_TX_net_1    = MIDI_TX_net_0;
+assign MIDI_TX          = MIDI_TX_net_1;
 //--------------------------------------------------------------------
 // Bus Interface Nets Assignments - Unequal Pin Widths
 //--------------------------------------------------------------------
-assign CoreAPB3_0_APBmslave0_PADDR_1_4to0 = CoreAPB3_0_APBmslave0_PADDR[4:0];
-assign CoreAPB3_0_APBmslave0_PADDR_1 = { CoreAPB3_0_APBmslave0_PADDR_1_4to0 };
 assign CoreAPB3_0_APBmslave0_PADDR_0_4to0 = CoreAPB3_0_APBmslave0_PADDR[4:0];
 assign CoreAPB3_0_APBmslave0_PADDR_0 = { CoreAPB3_0_APBmslave0_PADDR_0_4to0 };
+assign CoreAPB3_0_APBmslave0_PADDR_1_4to0 = CoreAPB3_0_APBmslave0_PADDR[4:0];
+assign CoreAPB3_0_APBmslave0_PADDR_1 = { CoreAPB3_0_APBmslave0_PADDR_1_4to0 };
 assign CoreAPB3_0_APBmslave0_PADDR_2_4to0 = CoreAPB3_0_APBmslave0_PADDR[4:0];
 assign CoreAPB3_0_APBmslave0_PADDR_2 = { CoreAPB3_0_APBmslave0_PADDR_2_4to0 };
 
@@ -199,10 +189,10 @@ assign CoreAPB3_0_APBmslave0_PRDATA_0_31to8 = 24'h0;
 assign CoreAPB3_0_APBmslave0_PRDATA_0_7to0 = CoreAPB3_0_APBmslave0_PRDATA[7:0];
 assign CoreAPB3_0_APBmslave0_PRDATA_0 = { CoreAPB3_0_APBmslave0_PRDATA_0_31to8, CoreAPB3_0_APBmslave0_PRDATA_0_7to0 };
 
-assign CoreAPB3_0_APBmslave0_PWDATA_1_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
-assign CoreAPB3_0_APBmslave0_PWDATA_1 = { CoreAPB3_0_APBmslave0_PWDATA_1_7to0 };
 assign CoreAPB3_0_APBmslave0_PWDATA_0_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
 assign CoreAPB3_0_APBmslave0_PWDATA_0 = { CoreAPB3_0_APBmslave0_PWDATA_0_7to0 };
+assign CoreAPB3_0_APBmslave0_PWDATA_1_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
+assign CoreAPB3_0_APBmslave0_PWDATA_1 = { CoreAPB3_0_APBmslave0_PWDATA_1_7to0 };
 assign CoreAPB3_0_APBmslave0_PWDATA_2_7to0 = CoreAPB3_0_APBmslave0_PWDATA[7:0];
 assign CoreAPB3_0_APBmslave0_PWDATA_2 = { CoreAPB3_0_APBmslave0_PWDATA_2_7to0 };
 
@@ -405,13 +395,13 @@ CoreUARTapb_1(
         .PWDATA      ( CoreAPB3_0_APBmslave0_PWDATA_1 ),
         // Outputs
         .TXRDY       (  ),
-        .RXRDY       ( RXRDY_net_0 ),
-        .PARITY_ERR  ( PARITY_ERR_net_0 ),
-        .OVERFLOW    ( OVERFLOW_net_0 ),
+        .RXRDY       ( RXRDY ),
+        .PARITY_ERR  ( PARITY_ERR ),
+        .OVERFLOW    ( OVERFLOW ),
         .TX          ( MIDI_TX_net_0 ),
         .PREADY      ( CoreAPB3_0_APBmslave1_PREADY ),
         .PSLVERR     ( CoreAPB3_0_APBmslave1_PSLVERR ),
-        .FRAMING_ERR ( FRAMING_ERR_net_0 ),
+        .FRAMING_ERR ( FRAMING_ERR ),
         .PRDATA      ( CoreAPB3_0_APBmslave1_PRDATA ) 
         );
 
@@ -449,22 +439,6 @@ CoreUARTapb_2(
         .PRDATA      ( CoreAPB3_0_APBmslave2_PRDATA ) 
         );
 
-//--------INV
-INV INV_0(
-        // Inputs
-        .A ( LPiezo ),
-        // Outputs
-        .Y ( LPiezo_net_0 ) 
-        );
-
-//--------INV
-INV INV_1(
-        // Inputs
-        .A ( CapButton ),
-        // Outputs
-        .Y ( CapButton_net_0 ) 
-        );
-
 //--------wubsuit_base_MSS
 wubsuit_base_MSS wubsuit_base_MSS_0(
         // Inputs
@@ -474,13 +448,13 @@ wubsuit_base_MSS wubsuit_base_MSS_0(
         .MSSPSLVERR  ( wubsuit_base_MSS_0_MSS_MASTER_APB_PSLVERR ),
         .F2M_GPI_0   ( CoreUARTapb_0_RXRDY ),
         .F2M_GPI_8   ( GND_net ),
-        .F2M_GPI_7   ( GND_net ),
-        .F2M_GPI_6   ( GND_net ),
-        .F2M_GPI_5   ( GND_net ),
-        .F2M_GPI_4   ( GND_net ),
-        .F2M_GPI_3   ( LPiezo_net_0 ),
-        .F2M_GPI_2   ( CapButton_net_0 ),
-        .F2M_GPI_1   ( RXRDY_net_0 ),
+        .F2M_GPI_7   ( F2M_GPI_7 ),
+        .F2M_GPI_6   ( CButton1 ),
+        .F2M_GPI_5   ( CButton0 ),
+        .F2M_GPI_4   ( RPiezo ),
+        .F2M_GPI_3   ( LPiezo ),
+        .F2M_GPI_2   ( CapButton ),
+        .F2M_GPI_1   ( RXRDY ),
         .MSSPRDATA   ( wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA ),
         // Outputs
         .UART_0_TXD  ( UART_0_TXD_net_0 ),

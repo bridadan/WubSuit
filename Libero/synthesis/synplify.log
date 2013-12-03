@@ -1,7 +1,7 @@
 
 Starting:    C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\win64\mbin\synbatch.exe
 Install:     C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1
-Date:        Tue Nov 19 13:26:37 2013
+Date:        Mon Dec 02 22:07:47 2013
 Version:     G-2012.09M-SP1 
 
 Arguments:   -product synplify_pro  -licensetype synplifypro_actel -batch -log synplify.log wubsuit_base_syn.tcl
@@ -31,7 +31,7 @@ Copied N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_compiler.srs to 
 
 compiler Completed with warnings
 Return Code: 1
-Run Time:0h:00m:07s
+Run Time:0h:00m:09s
 
 
 Job Compile Process completed on wubsuit_base_syn|synthesis
@@ -40,7 +40,7 @@ Running Premap on wubsuit_base_syn|synthesis
 
 premap Completed with warnings
 Return Code: 1
-Run Time:0h:00m:03s
+Run Time:0h:00m:05s
 
 
 Job Compile completed on wubsuit_base_syn|synthesis
@@ -51,7 +51,7 @@ Running Map & Optimize on wubsuit_base_syn|synthesis
 
 fpga_mapper Completed with warnings
 Return Code: 1
-Run Time:0h:00m:08s
+Run Time:0h:00m:09s
 
 
 Job Map completed on wubsuit_base_syn|synthesis

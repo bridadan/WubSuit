@@ -10,18 +10,18 @@ Printing clock  summary report in "N:\EECS373\WubSuit\Libero\synthesis\wubsuit_b
 @N: MF248 |Running in 64-bit mode.
 @N: MF667 |Clock conversion disabled 
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 95MB peak: 95MB)
+Design Input Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 95MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 95MB peak: 95MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 95MB peak: 95MB)
 
 @W: BN522 |Property syn_clock_priority is not supported for this target technology
 Finished Pre Mapping Phase.@N: BN225 |Writing default property annotation file N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap.
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:00s; Memory used current: 42MB peak: 106MB)
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:00s; Memory used current: 42MB peak: 106MB)
 
-Process took 0h:00m:02s realtime, 0h:00m:01s cputime
-# Tue Nov 19 13:26:47 2013
+Process took 0h:00m:04s realtime, 0h:00m:01s cputime
+# Mon Dec 02 22:08:00 2013
 
 ###########################################################]

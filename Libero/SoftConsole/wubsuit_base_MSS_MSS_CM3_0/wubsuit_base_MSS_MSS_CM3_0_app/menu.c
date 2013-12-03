@@ -10,24 +10,6 @@ Menu menus[MENU_COUNT];
 Settings *settingsPtr;
 SuitState *suitStatePtr;
 
-char* NoteNames[MAX_NOTES] = {
-	"C0", "C#0", "D0", "D#0", "E0", "F0", "F#0", "G0", "G#0", "A0", "A#0", "B0",
-	"C1", "C#1", "D1", "D#1", "E1", "F1", "F#1", "G1", "G#1", "A1", "A#1", "B1",
-	"C2", "C#2", "D2", "D#2", "E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2",
-	"C3", "C#3", "D3", "D#3", "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3",
-	"C4", "C#4", "D4", "D#4", "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4",
-	"C5", "C#5", "D5", "D#5", "E5", "F5", "F#5", "G5", "G#5", "A5", "A#5", "B5",
-	"C6", "C#6", "D6", "D#6", "E6", "F6", "F#6", "G6", "G#6", "A6", "A#6", "B6",
-	"C7", "C#7", "D7", "D#7", "E7", "F7", "F#7", "G7", "G#7", "A7", "A#7", "B7",
-	"C8", "C#8", "D8", "D#8", "E8", "F8", "F#8", "G8", "G#8", "A8", "A#8", "B8",
-	"C9", "C#9", "D9", "D#9", "E9", "F9", "F#9", "G9", "G#9", "A9", "A#9", "B9",
-	"C10", "C#10", "D10", "D#10", "E10", "F10", "F#10", "G10"
-};
-
-char* KeySignatureNames[MAX_KEYSIGNATURES] = {
-	"Chromatic", "C Major", "C Minor"
-};
-
 void Menu_setKeySignature(uint8_t value) {
 	settingsPtr->keySignature = ((KeySignature) (value));
 	printf("Key signature is now %s\n\r", KeySignatureNames[settingsPtr->keySignature]);
@@ -133,8 +115,8 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 
 	menus[11].name = "Calibrate";
 	menus[11].submenusCount = 2;
-	menus[11].submenus[0] = &(menus[11]);
-	menus[11].submenus[1] = &(menus[12]);
+	menus[11].submenus[0] = &(menus[12]);
+	menus[11].submenus[1] = &(menus[13]);
 	menus[11].previousMenu = &(menus[0]);
 
 	menus[12].name = "Hand Height Min";
@@ -142,12 +124,14 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[12].inputType = SENSOR;
 	menus[12].intValue = &(settingsPtr->handHeightMin);
 	menus[12].previousMenu = &(menus[11]);
+	menus[12].valueString = Menu_getIntString;
 
 	menus[13].name = "Hand Height Max";
 	menus[13].submenusCount = 0;
 	menus[13].inputType = SENSOR;
 	menus[13].intValue = &(settingsPtr->handHeightMax);
 	menus[13].previousMenu = &(menus[11]);
+	menus[13].valueString = Menu_getIntString;
 
 	// Suit Lights
 
@@ -254,11 +238,11 @@ void Menu_select() {
 	if (menu->submenusCount == 0) {
 		if (menu->inputType == VALUE) {
 			settingsPtr->keySignature = menu->keySigValue;
+			Menu_setMenu(menu->previousMenu);
 		} else {
 			Menu_waitForInput(menu);
+			currentMenu = menu;
 		}
-
-		Menu_setMenu(menu->previousMenu);
 	} else {
 		Menu_setMenu(menu);
 	}
@@ -268,13 +252,40 @@ char* Menu_getNoteString(Menu* menu) {
 	return NoteNames[*(menu->noteValue)];
 }
 
+char* Menu_getIntString(Menu* menu) {
+	return IntNames[*(menu->intValue)];
+}
+
 void Menu_waitForInput(Menu* menu) {
 	suitStatePtr->waitingForInput = 1;
 	suitStatePtr->inputType = menu->inputType;
 
 	if (menu->inputType == MIDI) {
-		settingsPtr.noteToMapTo = menu->noteValue;
+		settingsPtr->noteToMapTo = menu->noteValue;
 	} else if (menu->inputType == SENSOR) {
-		settingsPtr.valueToMapTo = menu->intValue;
+		settingsPtr->valueToMapTo = menu->intValue;
+	}
+
+	Menu_showInputWaitingScreen(menu->inputType);
+}
+
+uint8_t Menu_isAtRootMenu() {
+	if (currentMenu->previousMenu == 0) {
+		return 1;
+	} else {
+		return 0;
+	}
+}
+
+void Menu_goToParentMenu() {
+	Menu_setMenu(currentMenu->previousMenu);
+}
+
+void Menu_showInputWaitingScreen(InputType type) {
+	LCD_clearScreen();
+	if (type == MIDI) {
+		LCD_drawString("Waiting on MIDI input...", 0, 0);
+	} else {
+		LCD_drawString("Waiting on Sensor input...", 0, 0);
 	}
 }

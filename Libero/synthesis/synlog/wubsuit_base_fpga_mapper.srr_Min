@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Tue Nov 19 13:26:55 2013
+# Timing Report written on Mon Dec 02 22:08:09 2013
 #
 
 
@@ -28,9 +28,9 @@ Worst slack in design: 0.192
                    Requested     Estimated     Requested     Estimated               Clock        Clock          
 Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group          
 -----------------------------------------------------------------------------------------------------------------
-FAB_CLK            100.0 MHz     109.7 MHz     10.000        9.115         0.885     declared     clk_group_0    
+FAB_CLK            100.0 MHz     109.2 MHz     10.000        9.160         0.840     declared     clk_group_0    
 FCLK               100.0 MHz     NA            10.000        NA            NA        declared     clk_group_0    
-System             100.0 MHz     182.1 MHz     10.000        5.493         4.507     system       system_clkgroup
+System             100.0 MHz     180.8 MHz     10.000        5.531         4.469     system       system_clkgroup
 =================================================================================================================
 
 
@@ -72,13 +72,13 @@ Starting Points with Worst Slack
 Instance                          Reference     Type         Pin     Net                                 Time        Slack
                                   Clock                                                                                   
 --------------------------------------------------------------------------------------------------------------------------
+CoreUARTapb_1.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       RXRDY                               0.494       0.822
 CoreUARTapb_0.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       CoreUARTapb_0_RXRDY                 0.494       0.822
-CoreUARTapb_1.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       RXRDY_c                             0.494       1.180
 CoreUARTapb_1.CUARTI1OI[0]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[0]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[1]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[1]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[2]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[2]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[3]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[3]     0.494       2.036
-CoreUARTapb_1.CUARTI1OI[4]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[4]     0.494       2.036
+CoreUARTapb_0.CUARTI1OI[4]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave0_PRDATA[4]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[5]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[5]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[6]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[6]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[7]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[7]     0.494       2.036
@@ -93,7 +93,7 @@ Instance                              Reference     Type        Pin             
                                       Clock                                                                                                        
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 wubsuit_base_MSS_0.MSSINT_GPI_0       FAB_CLK       MSSINT      A                CoreUARTapb_0_RXRDY                             0.000        0.724
-wubsuit_base_MSS_0.MSSINT_GPI_1       FAB_CLK       MSSINT      A                RXRDY_c                                         0.000        0.974
+wubsuit_base_MSS_0.MSSINT_GPI_1       FAB_CLK       MSSINT      A                RXRDY                                           0.000        0.724
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[0]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[0]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[1]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[1]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[2]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[2]     0.000        1.790
@@ -120,17 +120,17 @@ Path information for path number 1:
     = Slack (non-critical) :                 0.724
 
     Number of logic level(s):                0
-    Starting point:                          CoreUARTapb_0.CUARTOOlI.RXRDY / Q
-    Ending point:                            wubsuit_base_MSS_0.MSSINT_GPI_0 / A
+    Starting point:                          CoreUARTapb_1.CUARTOOlI.RXRDY / Q
+    Ending point:                            wubsuit_base_MSS_0.MSSINT_GPI_1 / A
     The start point is clocked by            FAB_CLK [rising] on pin CLK
     The end   point is clocked by            System [rising]
 
 Instance / Net                                   Pin      Pin               Arrival     No. of    
 Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
 --------------------------------------------------------------------------------------------------
-CoreUARTapb_0.CUARTOOlI.RXRDY       DFN1E1C0     Q        Out     0.494     0.494       -         
-CoreUARTapb_0_RXRDY                 Net          -        -       0.230     -           2         
-wubsuit_base_MSS_0.MSSINT_GPI_0     MSSINT       A        In      -         0.724       -         
+CoreUARTapb_1.CUARTOOlI.RXRDY       DFN1E1C0     Q        Out     0.494     0.494       -         
+RXRDY                               Net          -        -       0.230     -           2         
+wubsuit_base_MSS_0.MSSINT_GPI_1     MSSINT       A        In      -         0.724       -         
 ==================================================================================================
 
 

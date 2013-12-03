@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>N:/EECS373/WubSuit/Libero/component/work/wubsuit_base</location>
-    <state>GENERATED ( Tue Nov 19 13:24:41 2013 )</state>
+    <state>GENERATED ( Mon Dec 02 22:03:39 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to N:\EECS373\WubSuit\Libero\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -51,20 +51,20 @@
     <file>N:\EECS373\WubSuit\Libero\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
+    <port-name>MIDI_RX</port-name>
+    <direction>IN</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>MIDI_TX</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>FRAMING_ERR</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>LCD_TX</port-name>
-    <direction>OUT</direction>
+    <port-name>RPiezo</port-name>
+    <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -75,8 +75,8 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>RXRDY</port-name>
-    <direction>OUT</direction>
+    <port-name>CButton0</port-name>
+    <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -93,7 +93,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>CapButton</port-name>
+    <port-name>LPiezo</port-name>
     <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -105,8 +105,8 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>PARITY_ERR</port-name>
-    <direction>OUT</direction>
+    <port-name>CButton1</port-name>
+    <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -117,19 +117,19 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>OVERFLOW</port-name>
-    <direction>OUT</direction>
-    <pin-number>-</pin-number>
-    <io-standard>LVTTL</io-standard>
-  </io>
-  <io>
-    <port-name>MIDI_RX</port-name>
+    <port-name>F2M_GPI_7</port-name>
     <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>LPiezo</port-name>
+    <port-name>LCD_TX</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>CapButton</port-name>
     <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -640,16 +640,6 @@ There is one APB3 Master interface.
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-name>CoreUARTapb_2</core-name>
-  </core>
-  <core type="AdlibModule">
-    <core-type>AdlibModule</core-type>
-    <core-exttype>INV</core-exttype>
-    <core-name>INV_0</core-name>
-  </core>
-  <core type="AdlibModule">
-    <core-type>AdlibModule</core-type>
-    <core-exttype>INV</core-exttype>
-    <core-name>INV_1</core-name>
   </core>
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>

@@ -12,7 +12,7 @@
 #define COREUARTAPB1_BASE_ADDR      0x40050100
 #define COREUARTAPB2_BASE_ADDR      0x40050200
 #define MAX_RX_DATA_SIZE    		512
-#define LIGHT_CHANNELS				6
+#define LIGHT_CHANNELS				7
 #define XBEE_PACKET_LENGTH			6
 #define MIDI_PACKET_LENGTH			3
 
@@ -68,6 +68,7 @@ void Suit_LPiezoPressed();
 void Suit_RPiezoPressed();
 void Suit_newSensorValues();
 void Suit_handleMIDIMessage(uint8_t *message, uint16_t length);
+void Suit_CButton0Pressed();
 
 // Utility
 
@@ -75,5 +76,6 @@ uint8_t Suit_MIDIToLightChannel(uint8_t note);
 void Suit_turnOnLightChannel(uint8_t channel);
 void Suit_turnOffLightChannel(uint8_t channel);
 uint8_t Suit_mapValue(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min, uint8_t out_max);
+void Suit_displayStatus();
 
 #endif /* SUIT_H_ */

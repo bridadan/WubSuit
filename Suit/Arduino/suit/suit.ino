@@ -49,6 +49,7 @@ void setup()
   pinMode(LEDPIN,OUTPUT);
   pinMode(SONAR,INPUT);
   pinMode(TAP_L,OUTPUT);
+  pinMode(TAP_R,OUTPUT);
   
   //turn the default 0xFF LEDs to all off
   setLEDs(0x00);
@@ -70,6 +71,13 @@ void loop()
   if(analogRead(PIEZO_L) < THRESHOLD){
     Serial.println("Left tap");
     pulse(TAP_L);
+    pulse(LEDPIN);
+  }
+  
+  if(analogRead(PIEZO_R) < THRESHOLD){
+    Serial.println("Right tap");
+    pulse(TAP_R);
+    pulse(LEDPIN);
   }
   
   height = map(pulseIn(SONAR,HIGH)/147,SONAR_LOW,SONAR_HIGH,0,254);
@@ -136,6 +144,8 @@ void initAccel(){
 }
 
 void updateAccel(byte &x,byte &y,byte &z){
+  //pulls data from the accelerometer on the I2C bus
+  //and places it into the x, y, and z parameters
   byte data[6];
   Wire.beginTransmission(ACCEL_ADDR);
   Wire.write(ACCEL_X_MSB);
@@ -144,8 +154,11 @@ void updateAccel(byte &x,byte &y,byte &z){
   Wire.requestFrom(ACCEL_ADDR,6); //6 bytes: Xhigh,low Yhigh,low Zhigh,low
   while(Wire.available() < 6){}; //wait until they all appear in the buffer
   
-  for(int i=0; i<6; i++)
+  for(int i=0; i<6; i++){
     data[i] = Wire.read(); //empty the buffer into the data array
+    if(data[i] == 0xFF) //don't invalidate packet structure
+      data[i] = 0xFE;
+  }
    
    #ifdef DEBUG 
      Serial.print("X: 0x");

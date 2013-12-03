@@ -3,9 +3,9 @@
 
 SoftwareSerial Xbee(10, 11); // RX, TX
 
-//#define DEBUG //unset if not debugging
+#define DEBUG //unset if not debugging
 
-#define PRECISION 0x00 //0x00 = 2G, 0x01 = 4A, 0x02 = 8G
+#define PRECISION 0x02 //0x00 = 2G, 0x01 = 4G, 0x02 = 8G
 
 #define LEDOUT_ADDR 0x20
 #define ACCEL_ADDR 0x1D
@@ -37,8 +37,7 @@ byte height = 0x00;
 
 void setup()  
 {
-  Wire.begin(); //i2c master
-  //initMMA8452(); //initialize accelerometer
+  Wire.begin(); //i2c master A5:SCL A4:SDA
   
   // Open local serial port for debugging:
   Serial.begin(115200);
@@ -64,7 +63,7 @@ void loop()
   updateAccel(Ax,Ay,Az);
   
   //write every recieved xbee byte to the leds
-  if (Xbee.available()){
+  while(Xbee.available()){
     setLEDs(Xbee.read());
   }
   
@@ -73,21 +72,26 @@ void loop()
     pulse(TAP_L);
   }
   
-  height = map(pulseIn(SONAR,HIGH)/147,SONAR_LOW,SONAR_HIGH,0,255);
-  flex = map(analogRead(FLEX_L),FLEX_LOW,FLEX_HIGH,0,255);
+  height = map(pulseIn(SONAR,HIGH)/147,SONAR_LOW,SONAR_HIGH,0,254);
+  flex = map((analogRead(FLEX_L)+analogRead(FLEX_R))/2,FLEX_LOW,FLEX_HIGH,0,254);
   sendPacket();
 }
 
 void setLEDs(byte data){
   //Writes a byte to the LED strip via i2c
     Wire.beginTransmission(LEDOUT_ADDR);
-    Wire.write(data);
+    Wire.write(~data);
     Wire.endTransmission();
+    
+    #ifdef DEBUG
+      Serial.print("Wrote LEDs to: ");
+      Serial.println((byte)(~data),BIN);
+    #endif
 }
 
 void sendPacket(){
   //send a packet of data to UART 
-  Xbee.write((byte)0x00);
+  Xbee.write((byte)0xFF);
   Xbee.write(Ax);
   Xbee.write(Ay);
   Xbee.write(Az);
@@ -145,17 +149,17 @@ void updateAccel(byte &x,byte &y,byte &z){
    
    #ifdef DEBUG 
      Serial.print("X: 0x");
-     Serial.print(data[5],HEX);
      Serial.print(data[4],HEX);
+     Serial.print(data[5],HEX);
      Serial.print(" Y: 0x");
-     Serial.print(data[3],HEX);
      Serial.print(data[2],HEX);
+     Serial.print(data[3],HEX);
      Serial.print(" Z: 0x");
-     Serial.print(data[1],HEX);
-     Serial.println(data[0],HEX);
+     Serial.print(data[0],HEX);
+     Serial.println(data[1],HEX);
    #endif
    
-   x = data[5];
-   y = data[3];
-   z = data[1];
+   x = data[4];
+   y = data[2];
+   z = data[0];
 }

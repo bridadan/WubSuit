@@ -29,7 +29,7 @@ typedef enum {
 } State;
 
 typedef enum {
-	ARRAY, MIDI, SENSOR, VALUE
+	MIDI, SENSOR, VALUE
 } InputType;
 
 #endif /* CONSTANTS_H_ */

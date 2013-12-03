@@ -34,13 +34,15 @@ typedef struct _SuitState {
 	uint8_t flexValue;
 	uint8_t handHeight;
 	uint8_t activeLights;
-	uint8_t waitingForMIDI;
+	uint8_t waitingForInput;
+	InputType inputType;
 	uint8_t noteActive;
 	Note activeNote;
 } SuitState;
 
 typedef struct _Settings {
-	// 0 - Head, 1 - Left Arm, 2 - Right Arm, 3 - Left Leg, 4 - Right Leg, 5 - Chest
+	// 0 - Right Arm, 1 - Left Arm, 2 - Right Body, 3 - Left Body
+	// 4 - Right Leg, 5 - Left Leg, 6 - Chest
 	Note suitLightMappings[LIGHT_CHANNELS];
 	uint8_t handHeightMapping;
 	uint8_t handHeightMin, handHeightMax;

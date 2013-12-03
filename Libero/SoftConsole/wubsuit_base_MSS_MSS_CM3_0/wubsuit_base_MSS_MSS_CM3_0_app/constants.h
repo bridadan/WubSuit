@@ -28,4 +28,8 @@ typedef enum {
 	CONFIG, PERFORMANCE
 } State;
 
+typedef enum {
+	ARRAY, MIDI, SENSOR, VALUE
+} InputType;
+
 #endif /* CONSTANTS_H_ */

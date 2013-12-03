@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;wubsuit_base_MSS_MSS_CM3_0_app/menu.c&apos;" deleteContents="false" description="Delete resource &apos;wubsuit_base_MSS_MSS_CM3_0_app/menu.c&apos;" element1="/wubsuit_base_MSS_MSS_CM3_0_app/menu.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1385256085062"/>&#x0A;<refactoring comment="Delete resource &apos;wubsuit_base_MSS_MSS_CM3_0_app/lcd.cpp&apos;" deleteContents="false" description="Delete resource &apos;wubsuit_base_MSS_MSS_CM3_0_app/lcd.cpp&apos;" element1="/wubsuit_base_MSS_MSS_CM3_0_app/lcd.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1385343038207"/>
-</session>

@@ -169,7 +169,7 @@ void Suit_init() {
 	printf("Brian Margosian\n\r");
 	printf("Nick Tountasakis\n\r\n\r");
 
-	suitState.waitingForMIDI = 0;
+	suitState.waitingForInput = 0;
 	suitState.noteActive = 0;
 
 	xbeeState.valid = 0;
@@ -191,6 +191,7 @@ void Suit_init() {
 	settings.suitLightMappings[3] = DS0;
 	settings.suitLightMappings[4] = E0;
 	settings.suitLightMappings[5] = F0;
+	settings.suitLightMappings[6] = FS0;
 
 	suitState.handHeight = 0;
 	settings.handHeightMapping = 0;
@@ -207,7 +208,7 @@ void Suit_init() {
 	settings.outputMIDIChannel = 0;
 
 	settings.accelMin = 0;
-	settings.accelMax = 255;
+	settings.accelMax = 0xFE;
 	settings.pitchBendMin = 0;
 	settings.pitchBendMax = 127;
 
@@ -246,11 +247,11 @@ void Suit_init() {
 	MSS_GPIO_config(MSS_GPIO_3, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
 	MSS_GPIO_enable_irq(MSS_GPIO_3);
 	NVIC_EnableIRQ(GPIO3_IRQn);
-	printf("Before menu init\n\r");
+	printf("%u\n\r", &(settings.suitLightMappings[1]));
+	printf("%u\n\r", settings.suitLightMappings[1]);
 	Menu_init(&settings, &suitState);
-	printf("After menu init\n\r");
 
-	Suit_setMode(PERFORMANCE);
+	Suit_setMode(CONFIG);
 }
 
 /*void Menu_LPiezoOptionCmd() {
@@ -262,11 +263,20 @@ void Suit_init() {
 void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 	uint8_t channel;
 	if (message[0] == 0x90) {
-		channel = Suit_MIDIToLightChannel(message[1]);
-		Suit_turnOnLightChannel(channel);
+		if (suitState.state == PERFORMANCE) {
+			channel = Suit_MIDIToLightChannel(message[1]);
+			Suit_turnOnLightChannel(channel);
+		} else {
+			if (suitState.waitingForInput == 1 && suitState.inputType == MIDI) {
+				suitState.activeNote = (Note)message[1];
+				suitState.waitingForInput = 0;
+			}
+		}
 	} else if (message[0] == 0x80) {
-		channel = Suit_MIDIToLightChannel(message[1]);
-		Suit_turnOffLightChannel(channel);
+		if (suitState.state == PERFORMANCE) {
+			channel = Suit_MIDIToLightChannel(message[1]);
+			Suit_turnOffLightChannel(channel);
+		}
 	}
 }
 
@@ -299,6 +309,10 @@ void Suit_newSensorValues() {
 	if (suitState.state == PERFORMANCE) {
 		uint8_t pitchBendOut = Suit_mapValue(suitState.accelX, settings.accelMin, settings.accelMax, settings.pitchBendMin, settings.pitchBendMax);
 		MIDI_pitchWheelChange(pitchBendOut, settings.outputMIDIChannel);
+	} else {
+		if (suitState.waitingForInput == 1 && suitState.inputType == SENSOR) {
+			suitState.waitingForInput = 0;
+		}
 	}
 }
 

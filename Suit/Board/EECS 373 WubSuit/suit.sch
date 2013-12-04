@@ -14502,7 +14502,7 @@ Source: www.cypressindustries.com</description>
 <parts>
 <part name="$1_39_$" library="SparkFun-DigitalIC" deviceset="ATMEGA328P_PDIP" device=""/>
 <part name="$1_40_$" library="maxstream" deviceset="XBEE" device=""/>
-<part name="R4" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R4" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="MMA1" library="SparkFun-Connectors" deviceset="M06" device="FEMALE_LOCK"/>
 <part name="C4" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="TAC_SWITCH" device="PTH"/>
@@ -14519,35 +14519,35 @@ Source: www.cypressindustries.com</description>
 <part name="C3" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="C2" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="Q1" library="special" deviceset="XTAL/S" device=""/>
-<part name="R3" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R3" library="resistor" deviceset="R-US_" device="0207/10" value="10k"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R5" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R5" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="C5" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R6" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R6" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="C6" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R7" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R7" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="C7" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND8" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R8" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R8" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="C8" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="SUPPLY10" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R9" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R9" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="C9" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="SUPPLY11" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND10" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R10" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R10" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="C10" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="SUPPLY12" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND11" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R12" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R12" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="C11" library="SparkFun-Passives" deviceset="CAP" device="EZ"/>
 <part name="SUPPLY13" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND12" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -14555,8 +14555,8 @@ Source: www.cypressindustries.com</description>
 <part name="SUPPLY14" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND13" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R1" library="resistor" deviceset="R-US_" device="0207/10"/>
-<part name="R2" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R1" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
+<part name="R2" library="resistor" deviceset="R-US_" device="0207/10" value="1k"/>
 <part name="SUPPLY15" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="PIEZO_L" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-2"/>
 <part name="PIEZO_R" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-2"/>
@@ -14579,8 +14579,8 @@ Source: www.cypressindustries.com</description>
 <part name="SUPPLY17" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND17" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R11" library="resistor" deviceset="R-US_" device="0207/10" value="10k"/>
-<part name="R13" library="resistor" deviceset="R-US_" device="0207/10"/>
-<part name="R14" library="resistor" deviceset="R-US_" device="0207/10"/>
+<part name="R13" library="resistor" deviceset="R-US_" device="0207/10" value="10k"/>
+<part name="R14" library="resistor" deviceset="R-US_" device="0207/10" value="10k"/>
 <part name="GND18" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="LED_01" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-2"/>

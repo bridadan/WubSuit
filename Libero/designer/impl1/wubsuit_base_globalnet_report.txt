@@ -5,7 +5,7 @@
 Product: Designer
 Release: v11.0
 Version: 11.0.0.23
-Date: Mon Dec 02 22:13:45 2013
+Date: Sat Dec 07 19:19:04 2013
 Design Name: wubsuit_base  Family: SmartFusion  Die: A2F200M3F  Package: 484 FBGA
 
 
@@ -20,9 +20,9 @@ Global Nets Information:
         |---------------------------------------------------------------|
         |Name                          |Core      |IO        |RAM       |
         |---------------------------------------------------------------|
-        |FAB_CLK                       |      430 |        0 |      192 |
+        |FAB_CLK                       |      462 |        0 |      192 |
         |---------------------------------------------------------------|
-        |wubsuit_base_MSS_0_M2F_RESET_N|      382 |        0 |      192 |
+        |wubsuit_base_MSS_0_M2F_RESET_N|      414 |        0 |      192 |
         |---------------------------------------------------------------|
 
 Nets Sharing Loads:

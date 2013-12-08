@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Mon Dec 02 22:08:09 2013
+# Timing Report written on Sat Dec 07 19:17:56 2013
 #
 
 
@@ -25,13 +25,13 @@ Performance Summary
 
 Worst slack in design: 0.192
 
-                   Requested     Estimated     Requested     Estimated               Clock        Clock          
-Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group          
------------------------------------------------------------------------------------------------------------------
-FAB_CLK            100.0 MHz     109.2 MHz     10.000        9.160         0.840     declared     clk_group_0    
-FCLK               100.0 MHz     NA            10.000        NA            NA        declared     clk_group_0    
-System             100.0 MHz     180.8 MHz     10.000        5.531         4.469     system       system_clkgroup
-=================================================================================================================
+                   Requested     Estimated     Requested     Estimated                Clock        Clock          
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group          
+------------------------------------------------------------------------------------------------------------------
+FAB_CLK            100.0 MHz     76.9 MHz      10.000        12.997        -2.997     declared     clk_group_0    
+FCLK               100.0 MHz     NA            10.000        NA            NA         declared     clk_group_0    
+System             100.0 MHz     182.1 MHz     10.000        5.493         4.507      system       system_clkgroup
+==================================================================================================================
 
 
 
@@ -74,14 +74,14 @@ Instance                          Reference     Type         Pin     Net        
 --------------------------------------------------------------------------------------------------------------------------
 CoreUARTapb_1.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       RXRDY                               0.494       0.822
 CoreUARTapb_0.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       CoreUARTapb_0_RXRDY                 0.494       0.822
+timer_0.fabint                    FAB_CLK       DFN1         Q       FABINT_c                            0.494       0.822
 CoreUARTapb_1.CUARTI1OI[0]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[0]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[1]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[1]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[2]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[2]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[3]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[3]     0.494       2.036
-CoreUARTapb_0.CUARTI1OI[4]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave0_PRDATA[4]     0.494       2.036
+CoreUARTapb_1.CUARTI1OI[4]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[4]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[5]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[5]     0.494       2.036
-CoreUARTapb_1.CUARTI1OI[6]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[6]     0.494       2.036
-CoreUARTapb_1.CUARTI1OI[7]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[7]     0.494       2.036
+CoreUARTapb_0.CUARTI1OI[6]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave0_PRDATA[6]     0.494       2.036
 ==========================================================================================================================
 
 
@@ -94,6 +94,7 @@ Instance                              Reference     Type        Pin             
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 wubsuit_base_MSS_0.MSSINT_GPI_0       FAB_CLK       MSSINT      A                CoreUARTapb_0_RXRDY                             0.000        0.724
 wubsuit_base_MSS_0.MSSINT_GPI_1       FAB_CLK       MSSINT      A                RXRDY                                           0.000        0.724
+wubsuit_base_MSS_0.MSSINT_GPI_9       FAB_CLK       MSSINT      A                FABINT_c                                        0.000        0.724
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[0]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[0]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[1]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[1]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[2]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[2]     0.000        1.790
@@ -101,7 +102,6 @@ wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[3]    
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[4]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[4]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[5]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[5]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[6]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[6]     0.000        1.790
-wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[7]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[7]     0.000        1.790
 ===================================================================================================================================================
 
 
@@ -145,21 +145,21 @@ Detailed Report for Clock: System
 Starting Points with Worst Slack
 ********************************
 
-                                      Starting                                                       Arrival          
-Instance                              Reference     Type        Pin        Net                       Time        Slack
-                                      Clock                                                                           
-----------------------------------------------------------------------------------------------------------------------
-wubsuit_base_MSS_0.MSSINT_GPI_0       System        MSSINT      Y          MSSINT_GPI_0_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_1       System        MSSINT      Y          MSSINT_GPI_1_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_2       System        MSSINT      Y          MSSINT_GPI_2_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_3       System        MSSINT      Y          MSSINT_GPI_3_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_4       System        MSSINT      Y          MSSINT_GPI_4_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_5       System        MSSINT      Y          MSSINT_GPI_5_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_6       System        MSSINT      Y          MSSINT_GPI_6_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_7       System        MSSINT      Y          MSSINT_GPI_7_Y            0.000       0.274
-wubsuit_base_MSS_0.MSSINT_GPI_8       System        MSSINT      Y          MSSINT_GPI_8_Y            0.000       0.274
-wubsuit_base_MSS_0.MSS_ADLIB_INST     System        MSS_APB     EMCCLK     MSS_ADLIB_INST_EMCCLK     0.000       0.274
-======================================================================================================================
+                                    Starting                                            Arrival          
+Instance                            Reference     Type       Pin     Net                Time        Slack
+                                    Clock                                                                
+---------------------------------------------------------------------------------------------------------
+wubsuit_base_MSS_0.MSSINT_GPI_0     System        MSSINT     Y       MSSINT_GPI_0_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_1     System        MSSINT     Y       MSSINT_GPI_1_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_2     System        MSSINT     Y       MSSINT_GPI_2_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_3     System        MSSINT     Y       MSSINT_GPI_3_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_4     System        MSSINT     Y       MSSINT_GPI_4_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_5     System        MSSINT     Y       MSSINT_GPI_5_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_6     System        MSSINT     Y       MSSINT_GPI_6_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_7     System        MSSINT     Y       MSSINT_GPI_7_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_8     System        MSSINT     Y       MSSINT_GPI_8_Y     0.000       0.274
+wubsuit_base_MSS_0.MSSINT_GPI_9     System        MSSINT     Y       MSSINT_GPI_9_Y     0.000       0.274
+=========================================================================================================
 
 
 Ending Points with Worst Slack

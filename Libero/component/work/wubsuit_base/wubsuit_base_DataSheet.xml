@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>N:/EECS373/WubSuit/Libero/component/work/wubsuit_base</location>
-    <state>GENERATED ( Mon Dec 02 22:03:39 2013 )</state>
+    <state>GENERATED ( Sat Dec 07 19:16:41 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to N:\EECS373\WubSuit\Libero\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -45,6 +45,7 @@
     <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
     <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell.v</file>
     <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v</file>
+    <file>N:\EECS373\WubSuit\Libero\hdl\Timer.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
@@ -63,6 +64,12 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
+    <port-name>FABINT</port-name>
+    <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
     <port-name>RPiezo</port-name>
     <direction>IN</direction>
     <pin-number>-</pin-number>
@@ -71,6 +78,12 @@
   <io>
     <port-name>UART_0_TXD</port-name>
     <direction>OUT</direction>
+    <pin-number>-</pin-number>
+    <io-standard>LVTTL</io-standard>
+  </io>
+  <io>
+    <port-name>CButton3</port-name>
+    <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
   </io>
@@ -117,7 +130,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>F2M_GPI_7</port-name>
+    <port-name>CButton2</port-name>
     <direction>IN</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -640,6 +653,12 @@ There is one APB3 Master interface.
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-name>CoreUARTapb_2</core-name>
+  </core>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>timer</core-exttype>
+    <core-location>hdl\Timer.v</core-location>
+    <core-name>timer_0</core-name>
   </core>
   <core type="ComponentModule">
     <core-type>ComponentModule</core-type>

@@ -1,14 +1,14 @@
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  N:\EECS373\WubSuit\Libero\synthesis  -part A2F200M3F  -package FBGA484  -grade -1   -globalthreshold 50 -maxfan 24 -opcond COMWC     -report_path 0   -RWCheckOnRam 0     -summaryfile N:\EECS373\WubSuit\Libero\synthesis\synlog\report\wubsuit_base_premap.xml -top_level_module  wubsuit_base  -oedif  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn  -conchk_prepass  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base_cck_prepass.rpt  -freq 100.000  -tcl  N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell_syn.sdc  N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_compiler.srs  -flow prepass  -gcc_prepass  -osrd  N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd  -qsap  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap  -devicelib  C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v  -ologparam  N:\EECS373\WubSuit\Libero\synthesis\syntmp\wubsuit_base.plg  -osyn  N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd  -prjdir  N:\EECS373\WubSuit\Libero\synthesis\  -prjname  wubsuit_base_syn  -log  N:\EECS373\WubSuit\Libero\synthesis\synlog\wubsuit_base_premap.srr 
 rc:1 success:1
-N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn|o|1386039255|846825
+N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn|o|1386461190|913675
 N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base_cck_prepass.rpt|o|0|0
-N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell_syn.sdc|i|1384826339|204
-N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_compiler.srs|i|1386040073|118083
-N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd|o|1386040080|122110
-N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap|o|1386040080|32933
+N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell_syn.sdc|i|1386271561|204
+N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_compiler.srs|i|1386461869|119451
+N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd|o|1386461871|125154
+N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap|o|1386461871|33462
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v|i|1360942192|72817
-N:\EECS373\WubSuit\Libero\synthesis\syntmp\wubsuit_base.plg|o|1386040077|0
-N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd|o|1386040080|122110
-N:\EECS373\WubSuit\Libero\synthesis\synlog\wubsuit_base_premap.srr|o|1386040080|1660
+N:\EECS373\WubSuit\Libero\synthesis\syntmp\wubsuit_base.plg|o|1386461870|0
+N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd|o|1386461871|125154
+N:\EECS373\WubSuit\Libero\synthesis\synlog\wubsuit_base_premap.srr|o|1386461871|1660
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin64\m_proasic.exe|i|1360942034|13812224
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin\m_proasic.exe|i|1360942022|11409920

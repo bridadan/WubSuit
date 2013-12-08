@@ -8,7 +8,8 @@ suit.d suit.o: ../suit.c \
  ../suit.h ../constants.h ../menu.h ../midi.h \
  N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform/drivers/COREUARTapb/core_uart_apb.h \
  N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform/drivers/COREUARTapb/coreuartapb_regs.h \
- ../lcd.h
+ ../lcd.h ../timer.h \
+ N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform/CMSIS/a2fxxxm3.h
 
 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform/drivers/CoreUARTapb/core_uart_apb.h:
 
@@ -35,3 +36,7 @@ N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MS
 N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform/drivers/COREUARTapb/coreuartapb_regs.h:
 
 ../lcd.h:
+
+../timer.h:
+
+N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform/CMSIS/a2fxxxm3.h:

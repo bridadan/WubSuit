@@ -1,0 +1,2 @@
+@E: CL172 :"N:\EECS373\WubSuit\Libero\hdl\Timer.v":17:4:17:18|Only one always block can assign a given variable timer_interrupt
+

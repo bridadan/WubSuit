@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version G-2012.09M-SP1 
 #--  Project file N:\EECS373\WubSuit\Libero\synthesis\run_options.txt
-#--  Written on Mon Dec 02 22:07:47 2013
+#--  Written on Sat Dec 07 19:17:46 2013
 
 
 #project files
@@ -23,6 +23,7 @@ add_file -verilog "N:/EECS373/WubSuit/Libero/component/work/wubsuit_base/CoreUAR
 add_file -verilog "N:/EECS373/WubSuit/Libero/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/fifo_256x8_smartfusion.v"
 add_file -verilog "N:/EECS373/WubSuit/Libero/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/CoreUART.v"
 add_file -verilog "N:/EECS373/WubSuit/Libero/component/work/wubsuit_base/CoreUARTapb_2/rtl/vlog/core_obfuscated/CoreUARTapb.v"
+add_file -verilog "N:/EECS373/WubSuit/Libero/hdl/Timer.v"
 add_file -verilog "N:/EECS373/WubSuit/Libero/component/work/wubsuit_base_MSS/mss_tshell.v"
 add_file -verilog "N:/EECS373/WubSuit/Libero/component/Actel/SmartFusionMSS/MSS/2.5.106/mss_comps.v"
 add_file -verilog "N:/EECS373/WubSuit/Libero/component/work/wubsuit_base_MSS/MSS_CCC_0/wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v"

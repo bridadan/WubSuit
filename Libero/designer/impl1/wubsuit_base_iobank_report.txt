@@ -5,7 +5,7 @@
 Product: Designer
 Release: v11.0
 Version: 11.0.0.23
-Date: Mon Dec 02 22:13:46 2013
+Date: Sat Dec 07 19:19:05 2013
 Design Name: wubsuit_base  Family: SmartFusion  Die: A2F200M3F  Package: 484 FBGA
 
 
@@ -13,8 +13,8 @@ I/O Function:
 
     Type                          | w/o register  | w/ register  | w/ DDR register
     ------------------------------|---------------|--------------|----------------
-    Input I/O                     | 8             | 0            | 0
-    Output I/O                    | 3             | 0            | 0
+    Input I/O                     | 9             | 0            | 0
+    Output I/O                    | 4             | 0            | 0
     Bidirectional I/O             | 0             | 0            | 0
     Differential Input I/O Pairs  | 0             | 0            | 0
     Differential Output I/O Pairs | 0             | 0            | 0
@@ -25,7 +25,7 @@ I/O Technology:
     --------------------------------|-------|-------|-------|--------|--------------
     I/O Standard(s)                 | Vcci  | Vref  | Input | Output | Bidirectional
     --------------------------------|-------|-------|-------|--------|--------------
-    LVTTL                           | 3.30v | N/A   | 8     | 3      | 0
+    LVTTL                           | 3.30v | N/A   | 9     | 4      | 0
 
 I/O Bank Resource Usage:
 
@@ -38,7 +38,7 @@ I/O Bank Resource Usage:
     Bank2 | MSS   | N/A   | N/A  | N/A   | N/A   | N/A    | N/A  | N/A   | N/A
     Bank3 | ANALOG| N/A   | N/A  | N/A   | N/A   | N/A    | N/A  | N/A   | N/A
     Bank4 | MSS   | N/A   | N/A  | N/A   | N/A   | N/A    | N/A  | N/A   | N/A
-    Bank5 | 3.30v | N/A   | 4    | 26    | 0     | 13     | N/A  | N/A   | N/A
+    Bank5 | 3.30v | N/A   | 6    | 26    | 0     | 13     | N/A  | N/A   | N/A
 
 I/O Voltage Usage:
 
@@ -46,5 +46,5 @@ I/O Voltage Usage:
     -------|-------|------|-------
      Vcci  | Vref  | Used | Total
     -------|-------|------|-------
-     3.30v | N/A   | 11   | 94
+     3.30v | N/A   | 13   | 94
 

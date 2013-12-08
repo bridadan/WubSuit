@@ -1,36 +1,37 @@
-#OPTIONS:"|-top|wubsuit_base|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|N:\\EECS373\\WubSuit\\Libero\\synthesis\\|-I|C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib\\proasic\\smartfusion.v|-encrypt|-pro|-ll|2000|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|work"
+#OPTIONS:"|-top|wubsuit_base|-prodtype|synplify_pro|-nram|-fixsmult|-divnmod|-I|N:\\EECS373\\WubSuit\\Libero\\synthesis\\|-I|C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib|-v2001|-devicelib|C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib\\proasic\\smartfusion.v|-encrypt|-pro|-ll|2000|-ui|-fid2|-ram|-sharing|on|-autosm|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|work|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|COREAPB3_LIB|-lib|work"
 #CUR:"C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\bin64\\c_ver.exe":1361373522
 #CUR:"C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib\\proasic\\smartfusion.v":1360942192
 #CUR:"C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib\\vlog\\umr_capim.v":1360942352
 #CUR:"C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib\\vlog\\scemi_objects.v":1360942352
 #CUR:"C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib\\vlog\\scemi_pipes.svh":1360942352
 #CUR:"C:\\Microsemi\\Libero_v11.0\\Synopsys\\synplify_G201209MSP1\\lib\\vlog\\hypermods.v":1360942352
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\Clock_gen.v":1386039765
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\Tx_async.v":1386039765
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\Rx_async.v":1386039765
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\fifo_256x8_smartfusion.v":1386039765
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\CoreUART.v":1386039765
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\CoreUARTapb.v":1386039765
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\Clock_gen.v":1386039767
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\Tx_async.v":1386039767
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\Rx_async.v":1386039767
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\fifo_256x8_smartfusion.v":1386039767
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\CoreUART.v":1386039767
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\CoreUARTapb.v":1386039767
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\Clock_gen.v":1386039769
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\Tx_async.v":1386039769
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\Rx_async.v":1386039769
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\fifo_256x8_smartfusion.v":1386039770
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\CoreUART.v":1386039770
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\CoreUARTapb.v":1386039770
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base_MSS\\mss_tshell.v":1384826339
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\Actel\\SmartFusionMSS\\MSS\\2.5.106\\mss_comps.v":1359419578
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base_MSS\\MSS_CCC_0\\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v":1384826329
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base_MSS\\wubsuit_base_MSS.v":1384826397
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\Clock_gen.v":1386461782
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\Tx_async.v":1386461782
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\Rx_async.v":1386461782
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\fifo_256x8_smartfusion.v":1386461782
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\CoreUART.v":1386461782
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_0\\rtl\\vlog\\core_obfuscated\\CoreUARTapb.v":1386461782
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\Clock_gen.v":1386461783
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\Tx_async.v":1386461783
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\Rx_async.v":1386461783
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\fifo_256x8_smartfusion.v":1386461783
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\CoreUART.v":1386461783
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_1\\rtl\\vlog\\core_obfuscated\\CoreUARTapb.v":1386461783
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\Clock_gen.v":1386461784
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\Tx_async.v":1386461784
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\Rx_async.v":1386461784
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\fifo_256x8_smartfusion.v":1386461784
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\CoreUART.v":1386461784
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\CoreUARTapb_2\\rtl\\vlog\\core_obfuscated\\CoreUARTapb.v":1386461784
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\hdl\\Timer.v":1386461643
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base_MSS\\mss_tshell.v":1386271561
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\Actel\\SmartFusionMSS\\MSS\\2.5.106\\mss_comps.v":1358978549
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base_MSS\\MSS_CCC_0\\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v":1386271554
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base_MSS\\wubsuit_base_MSS.v":1386271603
 #CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\Actel\\DirectCore\\CoreAPB3\\4.0.100\\rtl\\vlog\\core_obfuscated\\coreapb3_muxptob3.v":1366316246
 #CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\Actel\\DirectCore\\CoreAPB3\\4.0.100\\rtl\\vlog\\core_obfuscated\\coreapb3_iaddr_reg.v":1366316246
 #CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\Actel\\DirectCore\\CoreAPB3\\4.0.100\\rtl\\vlog\\core_obfuscated\\coreapb3.v":1366316246
-#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\wubsuit_base.v":1386039774
+#CUR:"N:\\EECS373\\WubSuit\\Libero\\component\\work\\wubsuit_base\\wubsuit_base.v":1386461784
 #numinternalfiles:5
 #defaultlanguage:verilog
 0			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_0\rtl\vlog\core_obfuscated\Clock_gen.v" verilog
@@ -51,14 +52,15 @@
 15			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\fifo_256x8_smartfusion.v" verilog
 16			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v" verilog
 17			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v" verilog
-18			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell.v" verilog
-19			"N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v" verilog
-20			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v" verilog
-21			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v" verilog
-22			"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v" verilog
-23			"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_iaddr_reg.v" verilog
-24			"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v" verilog
-25			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.v" verilog
+18			"N:\EECS373\WubSuit\Libero\hdl\Timer.v" verilog
+19			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell.v" verilog
+20			"N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v" verilog
+21			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v" verilog
+22			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v" verilog
+23			"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_muxptob3.v" verilog
+24			"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3_iaddr_reg.v" verilog
+25			"N:\EECS373\WubSuit\Libero\component\Actel\DirectCore\CoreAPB3\4.0.100\rtl\vlog\core_obfuscated\coreapb3.v" verilog
+26			"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.v" verilog
 #Dependency Lists(Uses List)
 0 -1
 1 -1
@@ -81,38 +83,40 @@
 18 -1
 19 -1
 20 -1
-21 20
-22 -1
+21 -1
+22 21
 23 -1
-24 22 23
-25 24 5 11 17 21
+24 -1
+25 23 24
+26 25 5 11 17 18 22
 #Dependency Lists(Users Of)
 0 4
 1 4
 2 4
 3 4
 4 5
-5 25
+5 26
 6 10
 7 10
 8 10
 9 10
 10 11
-11 25
+11 26
 12 16
 13 16
 14 16
 15 16
 16 17
-17 25
-18 -1
+17 26
+18 26
 19 -1
-20 21
-21 25
-22 24
-23 24
+20 -1
+21 22
+22 26
+23 25
 24 25
-25 -1
+25 26
+26 -1
 #Design Unit to File Association
 module work wubsuit_base_CoreUARTapb_0_Clock_gen 0
 module work wubsuit_base_CoreUARTapb_0_Tx_async 1
@@ -135,23 +139,24 @@ module work wubsuit_base_CoreUARTapb_2_fifo_256x8_pa3 15
 module work wubsuit_base_CoreUARTapb_2_fifo_256x8 15
 module work wubsuit_base_CoreUARTapb_2_COREUART 16
 module work wubsuit_base_CoreUARTapb_2_CoreUARTapb 17
-module work MSS_APB 18
-module work MSS_XTLOSC 19
-module work MSS_LPXTLOSC 19
-module work INBUF_MSS 19
-module work OUTBUF_MSS 19
-module work TRIBUFF_MSS 19
-module work BIBUF_MSS 19
-module work BIBUF_OPEND_MSS 19
-module work INBUF_MCCC 19
-module work INBUF_LVPECL_MCCC 19
-module work INBUF_LVDS_MCCC 19
-module work MSSINT 19
-module work MSS_CCC 19
-module work MSS_ALL 19
-module work wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC 20
-module work wubsuit_base_MSS 21
-module work wubsuit_base 25
-module COREAPB3_LIB CAPB3l 22
-module COREAPB3_LIB CAPB3O 23
-module COREAPB3_LIB CoreAPB3 24
+module work timer 18
+module work MSS_APB 19
+module work MSS_XTLOSC 20
+module work MSS_LPXTLOSC 20
+module work INBUF_MSS 20
+module work OUTBUF_MSS 20
+module work TRIBUFF_MSS 20
+module work BIBUF_MSS 20
+module work BIBUF_OPEND_MSS 20
+module work INBUF_MCCC 20
+module work INBUF_LVPECL_MCCC 20
+module work INBUF_LVDS_MCCC 20
+module work MSSINT 20
+module work MSS_CCC 20
+module work MSS_ALL 20
+module work wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC 21
+module work wubsuit_base_MSS 22
+module work wubsuit_base 26
+module COREAPB3_LIB CAPB3l 23
+module COREAPB3_LIB CAPB3O 24
+module COREAPB3_LIB CoreAPB3 25

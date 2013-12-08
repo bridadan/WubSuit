@@ -110,7 +110,7 @@ void loop()
   }
   
   height = map(pulseIn(SONAR,HIGH)/147,SONAR_LOW,SONAR_HIGH,0,254);
-  flex = map((analogRead(FLEX_L)+analogRead(FLEX_R))/2,FLEX_LOW,FLEX_HIGH,0,254);
+  flex = map(analogRead(FLEX_L),FLEX_LOW,FLEX_HIGH,0,254);
   sendPacket();
 }
 
@@ -129,6 +129,8 @@ void setLEDs(byte data){
 void sendPacket(){
   //send a packet of data to UART 
   Xbee.write((byte)0xFF);
+  Xbee.write((byte)0xA0);
+  Xbee.write((byte)0xB7);
   Xbee.write(Ax);
   Xbee.write(Ay);
   Xbee.write(Az);

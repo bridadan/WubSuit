@@ -18,8 +18,8 @@
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
@@ -4973,6 +4973,8 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <contactref element="IC1" pad="1"/>
 <contactref element="VIN" pad="2"/>
 <contactref element="X1" pad="4"/>
+<via x="27.4066" y="40.386" extent="1-16" drill="0.6096" shape="square"/>
+<via x="27.4066" y="37.1348" extent="1-16" drill="0.6096" shape="square"/>
 </signal>
 <signal name="N$4">
 <contactref element="JP1" pad="DTR"/>
@@ -5439,6 +5441,55 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="7.2296" y1="66.4464" x2="7.2136" y2="66.4624" width="0.6096" layer="1"/>
 </signal>
 </signals>
+<errors>
+<approved hash="18,29,ac0e827733c8570b"/>
+<approved hash="18,29,d1b9637830497a5f"/>
+<approved hash="18,29,f48f5a5be9f07c19"/>
+<approved hash="18,29,34cbf3845c6a17b4"/>
+<approved hash="18,29,5f713b8b791f01e8"/>
+<approved hash="18,29,60bd99d418f09171"/>
+<approved hash="18,29,04cbfe6200befd8f"/>
+<approved hash="18,29,7ff7854e7c1a893b"/>
+<approved hash="18,29,86b0bad34f937840"/>
+<approved hash="18,29,e176c50133c11cd6"/>
+<approved hash="18,29,bce29fed693d41b2"/>
+<approved hash="18,29,308ef8567855b08d"/>
+<approved hash="18,29,674b7753f753e74b"/>
+<approved hash="18,29,619fb401b4066198"/>
+<approved hash="18,29,5e11908f91745fea"/>
+<approved hash="18,29,780c166fb28f72e8"/>
+<approved hash="18,29,3116ef7b1595f5f2"/>
+<approved hash="18,29,8e23a441aca86cce"/>
+<approved hash="18,29,4f2ff54c07bf27db"/>
+<approved hash="18,29,a439d25afeb29ed5"/>
+<approved hash="18,29,5cc60aa5b0451022"/>
+<approved hash="18,29,3bd0e1b1295b893c"/>
+<approved hash="18,29,8adda0bfa26e6208"/>
+<approved hash="18,29,a170613fc7dfa994"/>
+<approved hash="18,29,2664c6253ec5e08e"/>
+<approved hash="18,29,bf5e7f1075f95fb3"/>
+<approved hash="18,29,f453d41c24ec9ea4"/>
+<approved hash="18,29,4d452d0a03e275a9"/>
+<approved hash="18,29,c3ba63f5db158d5e"/>
+<approved hash="18,29,5aaefae3300bea40"/>
+<approved hash="18,29,b1a071ee713f5b75"/>
+<approved hash="18,29,cfaf0ff2a912c74b"/>
+<approved hash="18,29,48bba8e850088e51"/>
+<approved hash="18,29,d18111dd1b34316c"/>
+<approved hash="18,29,9a8cbad14a21f07b"/>
+<approved hash="18,29,239a43c76d2f1b76"/>
+<approved hash="18,29,ad650d38b5d8e381"/>
+<approved hash="18,29,3471942e5ec6849f"/>
+<approved hash="18,29,df7f1f231ff235aa"/>
+<approved hash="18,29,5f29320896e855cd"/>
+<approved hash="18,29,1633cb1c31f2d2d7"/>
+<approved hash="18,29,a906802688cf4beb"/>
+<approved hash="18,29,680ad12b23d800fe"/>
+<approved hash="18,29,831cf63ddad5b9f0"/>
+<approved hash="18,29,7be32ec294223707"/>
+<approved hash="18,29,1cf5c5d60d3cae19"/>
+<approved hash="18,29,adf884d88609452d"/>
+</errors>
 </board>
 </drawing>
 <compatibility>

@@ -1723,7 +1723,6 @@
 <wire x1="66.3194" y1="-0.1524" x2="66.3194" y2="-0.0762" width="0" layer="20"/>
 <wire x1="66.3194" y1="-0.0762" x2="0.0762" y2="-0.0762" width="0" layer="20"/>
 <text x="8.4328" y="2.0574" size="1.778" layer="25">Brian Margosian</text>
-<text x="29.8958" y="1.778" size="1.778" layer="25">Rev 1</text>
 <text x="1.9812" y="16.4338" size="1.778" layer="25">WubSuit
 EECS 373
 FA 2013</text>

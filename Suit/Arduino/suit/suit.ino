@@ -20,14 +20,14 @@ SoftwareSerial Xbee(10, 11); // RX, TX
 
 #define SONAR 7
 #define LEDPIN 13
-#define TAP_L 3
-#define TAP_R 4
+#define TAP_L 2
+#define TAP_R 3
 
 #define FLEX_LOW 200
 #define FLEX_HIGH 500
 #define SONAR_LOW 0
 #define SONAR_HIGH 72
-#define THRESHOLD 950
+#define THRESHOLD 200
 
 byte Ax = 0x00;
 byte Ay = 0x00;
@@ -60,22 +60,51 @@ void setup()
 
 void loop()
 {
-
+  if(Serial.available()){
+   //process debug data first
+   char input = Serial.read(); //r: flexR, l: flexL, x:accelX, y,z same, w(char) write LED,
+   switch(input){
+    case 'r':
+      Serial.println(analogRead(FLEX_R));
+      break;
+    case 'l':
+      Serial.println(analogRead(FLEX_L));
+      break;
+    case 'x':
+      Serial.println(Ax);
+      break;
+    case 'y':
+      Serial.println(Ay);
+      break;
+    case 'z':
+      Serial.println(Az);
+      break;
+    case 'w':
+      
+      setLEDs(Serial.read());
+      break;
+    default:
+      Serial.println("Not supported");
+      break;
+   } 
+  }
   updateAccel(Ax,Ay,Az);
   
   //write every recieved xbee byte to the leds
   while(Xbee.available()){
     setLEDs(Xbee.read());
   }
-  
-  if(analogRead(PIEZO_L) < THRESHOLD){
-    Serial.println("Left tap");
+  int tap = 0;
+  if((tap=analogRead(PIEZO_L)) > THRESHOLD){
+    Serial.print("Left tap: ");
+    Serial.println(tap);
     pulse(TAP_L);
     pulse(LEDPIN);
   }
   
-  if(analogRead(PIEZO_R) < THRESHOLD){
-    Serial.println("Right tap");
+  if((tap=analogRead(PIEZO_R)) > THRESHOLD){
+    Serial.print("Right tap: ");
+    Serial.println(tap);
     pulse(TAP_R);
     pulse(LEDPIN);
   }
@@ -93,7 +122,7 @@ void setLEDs(byte data){
     
     #ifdef DEBUG
       Serial.print("Wrote LEDs to: ");
-      Serial.println((byte)(~data),BIN);
+      Serial.println((byte)(data),BIN);
     #endif
 }
 
@@ -160,7 +189,7 @@ void updateAccel(byte &x,byte &y,byte &z){
       data[i] = 0xFE;
   }
    
-   #ifdef DEBUG 
+   /*#ifdef DEBUG 
      Serial.print("X: 0x");
      Serial.print(data[4],HEX);
      Serial.print(data[5],HEX);
@@ -170,7 +199,7 @@ void updateAccel(byte &x,byte &y,byte &z){
      Serial.print(" Z: 0x");
      Serial.print(data[0],HEX);
      Serial.println(data[1],HEX);
-   #endif
+   #endif */
    
    x = data[4];
    y = data[2];

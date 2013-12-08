@@ -5026,16 +5026,16 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <contactref element="$1_39_$" pad="9"/>
 <contactref element="Q1" pad="2"/>
 <contactref element="C2" pad="2"/>
-<wire x1="12.8524" y1="27.813" x2="12.8524" y2="28.5496" width="0.254" layer="16"/>
-<wire x1="12.8524" y1="28.5496" x2="16.3576" y2="32.0548" width="0.254" layer="16"/>
-<wire x1="16.3576" y1="32.0548" x2="16.3576" y2="32.9692" width="0.254" layer="16"/>
-<wire x1="16.3576" y1="32.9692" x2="18.7198" y2="35.3314" width="0.254" layer="16"/>
 <wire x1="18.7198" y1="35.3314" x2="18.7198" y2="35.3568" width="0.254" layer="16"/>
 <wire x1="18.7198" y1="35.3568" x2="19.9136" y2="36.5506" width="0.254" layer="16"/>
 <wire x1="19.9136" y1="36.5506" x2="19.9136" y2="39.1414" width="0.254" layer="16"/>
 <wire x1="19.9136" y1="39.1414" x2="21.0312" y2="40.259" width="0.254" layer="16"/>
 <wire x1="21.0312" y1="40.259" x2="23.5458" y2="40.259" width="0.254" layer="16"/>
 <wire x1="23.5458" y1="40.259" x2="23.622" y2="40.1828" width="0.254" layer="16"/>
+<wire x1="12.8524" y1="27.813" x2="12.8524" y2="28.575" width="0.254" layer="16"/>
+<wire x1="12.8524" y1="28.575" x2="16.3068" y2="32.0294" width="0.254" layer="16"/>
+<wire x1="16.3068" y1="32.0294" x2="16.3068" y2="32.9184" width="0.254" layer="16"/>
+<wire x1="16.3068" y1="32.9184" x2="18.7198" y2="35.3314" width="0.254" layer="16"/>
 </signal>
 <signal name="SDA">
 <contactref element="$1_39_$" pad="27"/>
@@ -5442,19 +5442,28 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <errors>
 <approved hash="18,29,ac0e827733c8570b"/>
 <approved hash="18,29,d1b9637830497a5f"/>
-<approved hash="18,29,f48f5a5be9f07c19"/>
 <approved hash="18,29,34cbf3845c6a17b4"/>
+<approved hash="18,29,f48f5a5be9f07c19"/>
 <approved hash="18,29,5f713b8b791f01e8"/>
+<approved hash="18,29,f18a672bd68427ad"/>
+<approved hash="18,29,4852ea5294ce31fb"/>
+<approved hash="18,29,44b3038eb1e4e8a8"/>
 <approved hash="18,29,60bd99d418f09171"/>
 <approved hash="18,29,04cbfe6200befd8f"/>
 <approved hash="18,29,7ff7854e7c1a893b"/>
-<approved hash="18,29,86b0bad34f937840"/>
 <approved hash="18,29,e176c50133c11cd6"/>
+<approved hash="18,29,86b0bad34f937840"/>
 <approved hash="18,29,bce29fed693d41b2"/>
+<approved hash="18,29,3a68859a0597ba65"/>
 <approved hash="18,29,308ef8567855b08d"/>
+<approved hash="18,29,674d2143a145e74b"/>
 <approved hash="18,29,674b7753f753e74b"/>
+<approved hash="18,29,81b8b931572f6fa6"/>
+<approved hash="18,29,43d655c43fdf29cd"/>
 <approved hash="18,29,619fb401b4066198"/>
 <approved hash="18,29,5e11908f91745fea"/>
+<approved hash="18,29,2a4cf92b8acb5bf0"/>
+<approved hash="18,29,1ee6f63d8a7760af"/>
 <approved hash="18,29,780c166fb28f72e8"/>
 <approved hash="18,29,3116ef7b1595f5f2"/>
 <approved hash="18,29,8e23a441aca86cce"/>
@@ -5471,14 +5480,6 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <approved hash="18,29,c3ba63f5db158d5e"/>
 <approved hash="18,29,5aaefae3300bea40"/>
 <approved hash="18,29,b1a071ee713f5b75"/>
-<approved hash="18,29,cfaf0ff2a912c74b"/>
-<approved hash="18,29,48bba8e850088e51"/>
-<approved hash="18,29,d18111dd1b34316c"/>
-<approved hash="18,29,9a8cbad14a21f07b"/>
-<approved hash="18,29,239a43c76d2f1b76"/>
-<approved hash="18,29,ad650d38b5d8e381"/>
-<approved hash="18,29,3471942e5ec6849f"/>
-<approved hash="18,29,df7f1f231ff235aa"/>
 <approved hash="18,29,5f29320896e855cd"/>
 <approved hash="18,29,1633cb1c31f2d2d7"/>
 <approved hash="18,29,a906802688cf4beb"/>
@@ -5487,6 +5488,14 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <approved hash="18,29,7be32ec294223707"/>
 <approved hash="18,29,1cf5c5d60d3cae19"/>
 <approved hash="18,29,adf884d88609452d"/>
+<approved hash="18,29,cfaf0ff2a912c74b"/>
+<approved hash="18,29,48bba8e850088e51"/>
+<approved hash="18,29,d18111dd1b34316c"/>
+<approved hash="18,29,9a8cbad14a21f07b"/>
+<approved hash="18,29,239a43c76d2f1b76"/>
+<approved hash="18,29,ad650d38b5d8e381"/>
+<approved hash="18,29,3471942e5ec6849f"/>
+<approved hash="18,29,df7f1f231ff235aa"/>
 </errors>
 </board>
 </drawing>

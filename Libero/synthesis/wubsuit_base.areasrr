@@ -4,31 +4,31 @@ Report for cell wubsuit_base.verilog
                                cell       count     area    count*area
                         CoreAPB3_Z1         1      39.0       39.0
                                 GND         1       0.0        0.0
-                              INBUF         8       0.0        0.0
-                             OUTBUF         3       0.0        0.0
+                              INBUF         9       0.0        0.0
+                             OUTBUF         4       0.0        0.0
                                 VCC         1       0.0        0.0
-          wubsuit_base_CoreUARTapb_0_CoreUARTapb_18s_1s_1s_53s_1s_1s_0s_0s_2s_1s         1     342.0      342.0
-          wubsuit_base_CoreUARTapb_1_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_0s_0s         1     381.0      381.0
-          wubsuit_base_CoreUARTapb_2_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_0s_0s         1     376.0      376.0
-                   wubsuit_base_MSS         1       2.0        2.0
+                              timer         1     160.0      160.0
+          wubsuit_base_CoreUARTapb_0_CoreUARTapb_18s_1s_1s_53s_1s_1s_0s_0s_2s_1s         1     345.0      345.0
+          wubsuit_base_CoreUARTapb_1_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_0s_0s         1     376.0      376.0
+          wubsuit_base_CoreUARTapb_2_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_0s_0s         1     378.0      378.0
+                   wubsuit_base_MSS         1       0.0        0.0
                             
-                         TOTAL             18               1140.0
+                         TOTAL             21               1298.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_MSS.netlist
      Instance path:  wubsuit_base_MSS_0
                                           Cell usage:
                                cell       count     area    count*area
-                               BUFF         2       1.0        2.0
                              CLKINT         1       0.0        0.0
                                 GND         1       0.0        0.0
                           INBUF_MSS         2       0.0        0.0
-                             MSSINT         9       0.0        0.0
+                             MSSINT        10       0.0        0.0
                             MSS_APB         1       0.0        0.0
                          OUTBUF_MSS         1       0.0        0.0
                                 VCC         1       0.0        0.0
           wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC         1       0.0        0.0
                             
-                         TOTAL             19                  2.0
+                         TOTAL             18                  0.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.netlist
      Instance path:  wubsuit_base_MSS_0.MSS_CCC_0
@@ -41,6 +41,28 @@ Report for cell wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.netlist
                             
                          TOTAL              4                  0.0
 ----------------------------------------------------------------------
+Report for cell timer.netlist
+     Instance path:  timer_0
+                                          Cell usage:
+                               cell       count     area    count*area
+                               AND2        12       1.0       12.0
+                               AND3        47       1.0       47.0
+                              AOI1B        12       1.0       12.0
+                               DFN1         1       1.0        1.0
+                             DFN1E1        32       1.0       32.0
+                                GND         1       0.0        0.0
+                                INV         1       1.0        1.0
+                               NOR2         3       1.0        3.0
+                              NOR2A         2       1.0        2.0
+                              NOR2B         7       1.0        7.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         7       1.0        7.0
+                              NOR3C         3       1.0        3.0
+                                VCC         1       0.0        0.0
+                               XOR2        31       1.0       31.0
+                            
+                         TOTAL            162                160.0
+----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_2_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_0s_0s.netlist
      Instance path:  CoreUARTapb_2
                                           Cell usage:
@@ -49,15 +71,15 @@ Report for cell wubsuit_base_CoreUARTapb_2_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_
                            DFN1E0C0         8       1.0        8.0
                            DFN1E1C0        16       1.0       16.0
                                 GND         1       0.0        0.0
-                              NOR2B        11       1.0       11.0
-                              NOR3B         2       1.0        2.0
-                              NOR3C         8       1.0        8.0
+                              NOR2A         1       1.0        1.0
+                              NOR2B        18       1.0       18.0
+                              NOR3C         2       1.0        2.0
                                 OR3         5       1.0        5.0
                                OR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
-          wubsuit_base_CoreUARTapb_2_COREUART_1s_1s_0s_15s_0s         1     313.0      313.0
+          wubsuit_base_CoreUARTapb_2_COREUART_1s_1s_0s_15s_0s         1     315.0      315.0
                             
-                         TOTAL             66                376.0
+                         TOTAL             66                378.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_2_COREUART_1s_1s_0s_15s_0s.netlist
      Instance path:  CoreUARTapb_2.CUARTOOlI
@@ -79,13 +101,13 @@ Report for cell wubsuit_base_CoreUARTapb_2_COREUART_1s_1s_0s_15s_0s.netlist
                                 OR3         1       1.0        1.0
                                 VCC         1       0.0        0.0
                                XOR2         1       1.0        1.0
-          wubsuit_base_CoreUARTapb_2_Clock_gen_0s         1      75.0       75.0
+          wubsuit_base_CoreUARTapb_2_Clock_gen_0s         1      76.0       76.0
           wubsuit_base_CoreUARTapb_2_Rx_async_1s_0s_1s_2s         1     104.0      104.0
-          wubsuit_base_CoreUARTapb_2_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s         1      64.0       64.0
+          wubsuit_base_CoreUARTapb_2_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s         1      65.0       65.0
           wubsuit_base_CoreUARTapb_2_fifo_256x8         1       9.0        9.0
           wubsuit_base_CoreUARTapb_2_fifo_256x8_1         1      20.0       20.0
                             
-                         TOTAL             48                313.0
+                         TOTAL             48                315.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_2_fifo_256x8_1.netlist
   Original Cell name wubsuit_base_CoreUARTapb_2_fifo_256x8
@@ -169,7 +191,7 @@ Report for cell wubsuit_base_CoreUARTapb_2_Rx_async_1s_0s_1s_2s.netlist
                                 OR2         2       1.0        2.0
                                OR2A         5       1.0        5.0
                                OR2B         2       1.0        2.0
-                               OR3A         1       1.0        1.0
+                               OR3B         1       1.0        1.0
                                 VCC         1       0.0        0.0
                                 XA1         1       1.0        1.0
                                XA1B         1       1.0        1.0
@@ -185,7 +207,6 @@ Report for cell wubsuit_base_CoreUARTapb_2_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s.netl
                                cell       count     area    count*area
                                 AO1         5       1.0        5.0
                                AO1A         1       1.0        1.0
-                               AX1A         1       1.0        1.0
                               AXOI7         1       1.0        1.0
                            DFI1E0P0         1       1.0        1.0
                              DFN1C0        10       1.0       10.0
@@ -196,21 +217,22 @@ Report for cell wubsuit_base_CoreUARTapb_2_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s.netl
                                 GND         1       0.0        0.0
                                 INV         1       1.0        1.0
                                 MX2         8       1.0        8.0
-                               NOR2         4       1.0        4.0
-                              NOR2A         4       1.0        4.0
-                              NOR2B         1       1.0        1.0
-                              NOR3A         2       1.0        2.0
-                              NOR3B         3       1.0        3.0
-                               OA1C         1       1.0        1.0
+                               NOR2         3       1.0        3.0
+                              NOR2A         7       1.0        7.0
+                              NOR2B         2       1.0        2.0
+                              NOR3A         1       1.0        1.0
+                              NOR3B         2       1.0        2.0
+                               OA1C         2       1.0        2.0
                                 OR2         1       1.0        1.0
-                               OR2A         3       1.0        3.0
+                               OR2A         2       1.0        2.0
+                               OR3B         1       1.0        1.0
                                 VCC         1       0.0        0.0
                                 XA1         1       1.0        1.0
                                XA1B         1       1.0        1.0
                                XA1C         2       1.0        2.0
                                XOR2         1       1.0        1.0
                             
-                         TOTAL             66                 64.0
+                         TOTAL             67                 65.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_2_Clock_gen_0s.netlist
      Instance path:  CoreUARTapb_2.CUARTOOlI.CUARTI10
@@ -218,28 +240,28 @@ Report for cell wubsuit_base_CoreUARTapb_2_Clock_gen_0s.netlist
                                cell       count     area    count*area
                                 AO1         1       1.0        1.0
                                AOI1         4       1.0        4.0
-                                AX1         1       1.0        1.0
+                               AX1C         1       1.0        1.0
                                AX1D         4       1.0        4.0
-                              AXOI3         1       1.0        1.0
                              DFN1C0        16       1.0       16.0
                            DFN1E1C0         4       1.0        4.0
                                 GND         1       0.0        0.0
-                               NOR2         6       1.0        6.0
-                              NOR2A         1       1.0        1.0
+                               NOR2         5       1.0        5.0
+                              NOR2A         5       1.0        5.0
                               NOR2B         1       1.0        1.0
-                               NOR3         2       1.0        2.0
-                              NOR3A         4       1.0        4.0
-                              NOR3B         3       1.0        3.0
+                               NOR3         3       1.0        3.0
+                              NOR3A         2       1.0        2.0
+                              NOR3B         2       1.0        2.0
                                OA1C         3       1.0        3.0
                                 OR2        10       1.0       10.0
-                               OR2B         2       1.0        2.0
+                               OR2B         1       1.0        1.0
                                 OR3         3       1.0        3.0
+                               OR3C         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                               XA1C         4       1.0        4.0
+                               XA1C         5       1.0        5.0
                               XNOR2         1       1.0        1.0
                                XOR2         4       1.0        4.0
                             
-                         TOTAL             77                 75.0
+                         TOTAL             78                 76.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_1_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_0s_0s.netlist
      Instance path:  CoreUARTapb_1
@@ -249,17 +271,16 @@ Report for cell wubsuit_base_CoreUARTapb_1_CoreUARTapb_18s_1s_1s_1s_0s_0s_0s_0s_
                            DFN1E0C0         8       1.0        8.0
                            DFN1E1C0        16       1.0       16.0
                                 GND         1       0.0        0.0
-                               NOR2         1       1.0        1.0
                               NOR2A         1       1.0        1.0
-                              NOR2B        10       1.0       10.0
-                              NOR3B         3       1.0        3.0
-                              NOR3C         9       1.0        9.0
+                              NOR2B        18       1.0       18.0
+                              NOR3B         1       1.0        1.0
+                              NOR3C         2       1.0        2.0
                                 OR3         5       1.0        5.0
                                OR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
-          wubsuit_base_CoreUARTapb_1_COREUART_1s_1s_0s_15s_0s         1     316.0      316.0
+          wubsuit_base_CoreUARTapb_1_COREUART_1s_1s_0s_15s_0s         1     313.0      313.0
                             
-                         TOTAL             68                381.0
+                         TOTAL             66                376.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_1_COREUART_1s_1s_0s_15s_0s.netlist
      Instance path:  CoreUARTapb_1.CUARTOOlI
@@ -281,13 +302,13 @@ Report for cell wubsuit_base_CoreUARTapb_1_COREUART_1s_1s_0s_15s_0s.netlist
                                 OR3         1       1.0        1.0
                                 VCC         1       0.0        0.0
                                XOR2         1       1.0        1.0
-          wubsuit_base_CoreUARTapb_1_Clock_gen_0s         1      74.0       74.0
+          wubsuit_base_CoreUARTapb_1_Clock_gen_0s         1      71.0       71.0
           wubsuit_base_CoreUARTapb_1_Rx_async_1s_0s_1s_2s         1     107.0      107.0
           wubsuit_base_CoreUARTapb_1_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s         1      65.0       65.0
           wubsuit_base_CoreUARTapb_1_fifo_256x8         1       9.0        9.0
           wubsuit_base_CoreUARTapb_1_fifo_256x8_1         1      20.0       20.0
                             
-                         TOTAL             48                316.0
+                         TOTAL             48                313.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_1_fifo_256x8_1.netlist
   Original Cell name wubsuit_base_CoreUARTapb_1_fifo_256x8
@@ -344,9 +365,9 @@ Report for cell wubsuit_base_CoreUARTapb_1_Rx_async_1s_0s_1s_2s.netlist
                                           Cell usage:
                                cell       count     area    count*area
                                 AO1         2       1.0        2.0
-                               AO1A         1       1.0        1.0
+                               AO1A         2       1.0        2.0
                                AO1D         1       1.0        1.0
-                               AOI1         5       1.0        5.0
+                               AOI1         2       1.0        2.0
                                AX1A         3       1.0        3.0
                                AXO1         1       1.0        1.0
                              DFN1C0         4       1.0        4.0
@@ -356,25 +377,24 @@ Report for cell wubsuit_base_CoreUARTapb_1_Rx_async_1s_0s_1s_2s.netlist
                                 INV         2       1.0        2.0
                                MAJ3         1       1.0        1.0
                                 MX2         2       1.0        2.0
-                               NOR2         5       1.0        5.0
+                               NOR2         6       1.0        6.0
                               NOR2A        10       1.0       10.0
-                              NOR2B         3       1.0        3.0
-                               NOR3         1       1.0        1.0
+                              NOR2B         5       1.0        5.0
+                               NOR3         2       1.0        2.0
                               NOR3A         3       1.0        3.0
                               NOR3B         2       1.0        2.0
                               NOR3C         1       1.0        1.0
                                 OA1         3       1.0        3.0
-                               OA1A         1       1.0        1.0
-                                OR2         2       1.0        2.0
+                                OR2         1       1.0        1.0
                                OR2A         6       1.0        6.0
                                OR2B         2       1.0        2.0
                                 OR3         1       1.0        1.0
                                OR3B         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                               XA1B         2       1.0        2.0
+                               XA1B         3       1.0        3.0
                                XA1C         3       1.0        3.0
-                              XNOR2         1       1.0        1.0
-                               XOR2         5       1.0        5.0
+                              XNOR3         1       1.0        1.0
+                               XOR2         4       1.0        4.0
                             
                          TOTAL            109                107.0
 ----------------------------------------------------------------------
@@ -416,29 +436,28 @@ Report for cell wubsuit_base_CoreUARTapb_1_Clock_gen_0s.netlist
                                           Cell usage:
                                cell       count     area    count*area
                                 AO1         1       1.0        1.0
-                               AOI1         3       1.0        3.0
-                                AX1         1       1.0        1.0
-                               AX1D         3       1.0        3.0
-                              AXOI3         1       1.0        1.0
-                             DFN1C0        16       1.0       16.0
+                               AOI1         5       1.0        5.0
+                               AX1C         1       1.0        1.0
+                               AX1D         6       1.0        6.0
+                             DFN1C0        15       1.0       15.0
                            DFN1E1C0         4       1.0        4.0
                                 GND         1       0.0        0.0
-                               NOR2         5       1.0        5.0
-                              NOR2A         3       1.0        3.0
-                               NOR3         2       1.0        2.0
-                              NOR3A         4       1.0        4.0
-                              NOR3B         3       1.0        3.0
-                                OA1         1       1.0        1.0
-                               OA1C         2       1.0        2.0
-                                OR2        12       1.0       12.0
-                               OR2B         2       1.0        2.0
-                                OR3         1       1.0        1.0
+                               NOR2         4       1.0        4.0
+                              NOR2A         7       1.0        7.0
+                              NOR2B         1       1.0        1.0
+                               NOR3         3       1.0        3.0
+                              NOR3A         2       1.0        2.0
+                               OA1C         4       1.0        4.0
+                                OR2         3       1.0        3.0
+                               OR2B         1       1.0        1.0
+                                OR3         5       1.0        5.0
+                               OR3C         1       1.0        1.0
                                 VCC         1       0.0        0.0
-                               XA1C         6       1.0        6.0
+                               XA1C         3       1.0        3.0
                               XNOR2         1       1.0        1.0
-                               XOR2         3       1.0        3.0
+                               XOR2         4       1.0        4.0
                             
-                         TOTAL             76                 74.0
+                         TOTAL             73                 71.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_0_CoreUARTapb_18s_1s_1s_53s_1s_1s_0s_0s_2s_1s.netlist
      Instance path:  CoreUARTapb_0
@@ -449,18 +468,18 @@ Report for cell wubsuit_base_CoreUARTapb_0_CoreUARTapb_18s_1s_1s_53s_1s_1s_0s_0s
                            DFN1E1C0        19       1.0       19.0
                                 GND         1       0.0        0.0
                                MX2C         3       1.0        3.0
-                              NOR2A         4       1.0        4.0
-                              NOR2B        11       1.0       11.0
-                              NOR3A         1       1.0        1.0
+                               NOR2         1       1.0        1.0
+                              NOR2A         5       1.0        5.0
+                              NOR2B        18       1.0       18.0
                               NOR3B         2       1.0        2.0
-                              NOR3C         6       1.0        6.0
+                              NOR3C         1       1.0        1.0
                                OA1A         6       1.0        6.0
                                 OR3         4       1.0        4.0
                                OR3A         1       1.0        1.0
                                 VCC         1       0.0        0.0
           wubsuit_base_CoreUARTapb_0_COREUART_1s_1s_0s_15s_1s         1     268.0      268.0
                             
-                         TOTAL             77                342.0
+                         TOTAL             80                345.0
 ----------------------------------------------------------------------
 Report for cell wubsuit_base_CoreUARTapb_0_COREUART_1s_1s_0s_15s_1s.netlist
      Instance path:  CoreUARTapb_0.CUARTOOlI
@@ -580,7 +599,6 @@ Report for cell wubsuit_base_CoreUARTapb_0_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s.netl
                                cell       count     area    count*area
                                 AO1         3       1.0        3.0
                                AO1A         1       1.0        1.0
-                              AOI1B         1       1.0        1.0
                            DFI1E0P0         1       1.0        1.0
                              DFN1C0         9       1.0        9.0
                            DFN1E0C0         8       1.0        8.0
@@ -591,10 +609,12 @@ Report for cell wubsuit_base_CoreUARTapb_0_Tx_async_1s_0s_1s_2s_3s_4s_5s_6s.netl
                                 MX2         2       1.0        2.0
                                MX2C         4       1.0        4.0
                                NOR2         3       1.0        3.0
-                              NOR2A         3       1.0        3.0
+                              NOR2A         2       1.0        2.0
+                              NOR2B         1       1.0        1.0
                                NOR3         1       1.0        1.0
                               NOR3A         2       1.0        2.0
                               NOR3B         1       1.0        1.0
+                               OA1A         1       1.0        1.0
                                OA1C         2       1.0        2.0
                                OR2A         2       1.0        2.0
                                OR3B         1       1.0        1.0

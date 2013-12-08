@@ -5,7 +5,7 @@ Release: v11.0
 Software Version: 11.0.0.23
 PDB file 'N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base_fp\wubsuit_base.pdb' has been
 loaded successfully.
-DESIGN : wubsuit_base;  CHECKSUM : 94FA;  PDB_VERSION : 1.8
+DESIGN : wubsuit_base;  CHECKSUM : 9AD2;  PDB_VERSION : 1.8
 Driver : 3.0.0 build 1
 programmer '58998' : FlashPro3
 Opened 'N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base_fp/wubsuit_base.pro'
@@ -19,7 +19,7 @@ Info: Adding FPGA Array data from file
       N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.fdb.
 PDB file 'N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base_fp\wubsuit_base.pdb' has been
 loaded successfully.
-DESIGN : wubsuit_base;  CHECKSUM : 94FA;  PDB_VERSION : 1.8
+DESIGN : wubsuit_base;  CHECKSUM : 8EF6;  PDB_VERSION : 1.8
 The 'update_programming_file' command succeeded.
 The 'set_programming_action' command succeeded.
 programmer '58998' : Scan Chain...
@@ -30,13 +30,13 @@ programmer '58998' : Executing action PROGRAM
 programmer '58998' : EXPORT FSN[48] = 01098a18b060
 programmer '58998' : Erase ...
 programmer '58998' : Completed erase
-programmer '58998' : EXPORT CHECKSUM: [16] = 94fa
+programmer '58998' : EXPORT CHECKSUM: [16] = 8ef6
 programmer '58998' : Programming FPGA Array
 programmer '58998' : Verifying FPGA Array
 programmer '58998' :         Verifying FPGA Array -- pass
 programmer '58998' : Program System Init and Boot Clients...
 programmer '58998' : Verify System Init and Boot Clients...
-programmer '58998' : Finished: Tue Dec 03 12:10:41 2013 (Elapsed time 00:00:36)
+programmer '58998' : Finished: Sat Dec 07 19:20:40 2013 (Elapsed time 00:00:39)
 programmer '58998' : Executing action PROGRAM PASSED.
 
                         o - o - o - o - o - o

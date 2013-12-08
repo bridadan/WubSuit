@@ -2,7 +2,7 @@
 #define wubsuit_base_HW_PLATFORM_H_
 /*****************************************************************************
 *
-*Created by Actel SmartDesign  Mon Dec 02 22:03:07 2013
+*Created by Actel SmartDesign  Sat Dec 07 19:16:34 2013
 *
 *Memory map specification for peripherals in wubsuit_base
 */

@@ -1,0 +1,19 @@
+
+Starting:    C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\win64\mbin\synplify.exe
+Install:     C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1
+Date:        Sat Dec 07 18:40:33 2013
+Version:     G-2012.09M-SP1 
+
+Arguments:   -product synplify_pro wubsuit_base_syn.prj
+ProductType: synplify_pro
+
+License checkout: synplifypro_actel
+License: synplifypro_actel node-locked 
+Licensed Vendor: actel
+License Option: actel_oem
+
+
+
+exit status=0
+
+License checkin: synplifypro_actel

@@ -6,6 +6,7 @@
 #include "menu.h"
 #include "midi.h"
 #include "lcd.h"
+#include "timer.h"
 
 UART_instance_t XBee_uart, MIDI_uart, LCD_uart;
 
@@ -184,6 +185,20 @@ __attribute__ ((interrupt)) void GPIO5_IRQHandler( void )
     NVIC_ClearPendingIRQ(GPIO5_IRQn);
 }
 
+// CButton1-3 Interrupts go here
+
+// Timer interrupt
+__attribute__ ((interrupt)) void GPIO9_IRQHandler( void )
+{
+	printf("timer\n\r");
+	if (suitState.state == PERFORMANCE) {
+		Suit_updateStatus();
+	}
+
+    MSS_GPIO_clear_irq(MSS_GPIO_9);
+    NVIC_ClearPendingIRQ(GPIO9_IRQn);
+}
+
 void Suit_init() {
 	printf("\n\r\nr\r/\\/\\/\\/ WubSuit \\/\\/\\/\\\n\r");
 	printf("Brian Daniels\n\r");
@@ -228,11 +243,17 @@ void Suit_init() {
 	settings.keySignature = CHROMATIC;
 	settings.suitLightsMIDIChannel = 0;
 	settings.outputMIDIChannel = 0;
+	settings.volumeMIDIControl = 0;
 
 	settings.accelMin = 0;
 	settings.accelMax = 0xFE;
 	settings.pitchBendMin = 0;
 	settings.pitchBendMax = 127;
+
+	settings.flexMin = 0;
+	settings.flexMax = 0xFE;
+	settings.volumeMin = 0;
+	settings.volumeMax = 0x3FFF;
 
 	/* Disable Watchdog Timer*/
 	uint32_t * P_WDG_ENABLE = (uint32_t *)(0x40006010);
@@ -255,9 +276,9 @@ void Suit_init() {
 	LCD_init(&LCD_uart);
 
 	// Setup XBee RX interrupt
-	MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
+	/*MSS_GPIO_config(MSS_GPIO_0, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
 	MSS_GPIO_enable_irq(MSS_GPIO_0);
-	NVIC_EnableIRQ(GPIO0_IRQn);
+	NVIC_EnableIRQ(GPIO0_IRQn);*/
 
 	// Setup MIDI RX interrupt
 	MSS_GPIO_config(MSS_GPIO_1, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
@@ -284,9 +305,26 @@ void Suit_init() {
 	MSS_GPIO_enable_irq(MSS_GPIO_5);
 	NVIC_EnableIRQ(GPIO5_IRQn);
 
+	/* Control Buttons 1-3 go here
+	 * CButton1 - MSS_GPIO_6
+	 * CButton2 - MSS_GPIO_7
+	 * CButton3 - MSS_GPIO_8
+	 */
+
+	MSS_GPIO_config(MSS_GPIO_9, MSS_GPIO_INPUT_MODE | MSS_GPIO_IRQ_EDGE_POSITIVE);
+	MSS_GPIO_enable_irq(MSS_GPIO_9);
+	NVIC_EnableIRQ(GPIO9_IRQn);
+
+	// Timer interrupt
+	MYTIMER_init();
+	MYTIMER_setOverflowVal(50000000);
+	MYTIMER_enable_overflowInt();
+	MYTIMER_enable_capture();
+	MYTIMER_enable();
+
 	Menu_init(&settings, &suitState);
 
-	Suit_setMode(CONFIG);
+	Suit_setMode(PERFORMANCE);
 }
 
 /*void Menu_LPiezoOptionCmd() {
@@ -302,7 +340,6 @@ void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 			channel = Suit_MIDIToLightChannel(message[1]);
 			if (channel < LIGHT_CHANNELS) {
 				Suit_turnOnLightChannel(channel);
-				Suit_updateStatus();
 			}
 		} else {
 			if (suitState.waitingForInput == 1 && suitState.inputType == MIDI) {
@@ -316,7 +353,6 @@ void Suit_handleMIDIMessage(uint8_t *message, uint16_t length) {
 			channel = Suit_MIDIToLightChannel(message[1]);
 			if (channel < LIGHT_CHANNELS) {
 				Suit_turnOffLightChannel(channel);
-				Suit_updateStatus();
 			}
 		}
 	}
@@ -344,14 +380,30 @@ uint8_t Suit_MIDIToLightChannel(uint8_t note) {
 }
 
 void Suit_newSensorValues() {
-	printf("Accel: (%u, %u, %u)\n\r", suitState.accelX, suitState.accelY, suitState.accelZ);
-	printf("Flex: %u\n\r", suitState.flexValue);
-	printf("Hand Height: %u\n\r", suitState.handHeight);
+	//printf("Accel: (%u, %u, %u)\n\r", suitState.accelX, suitState.accelY, suitState.accelZ);
+	//printf("Flex: %u\n\r", suitState.flexValue);
+	//printf("Hand Height: %u\n\r", suitState.handHeight);
 
 	if (suitState.state == PERFORMANCE) {
-		uint8_t pitchBendOut = Suit_mapValue(suitState.accelX, settings.accelMin, settings.accelMax, settings.pitchBendMin, settings.pitchBendMax);
+		uint8_t limitedAccel = suitState.accelX;
+		uint8_t limitedFlex = suitState.flexValue;
+
+		if (limitedAccel < settings.accelMin) {
+			limitedAccel = settings.accelMin;
+		} else if (limitedAccel > settings.accelMax) {
+			limitedAccel = settings.accelMax;
+		}
+
+		if (limitedFlex < settings.flexMin) {
+			limitedFlex = settings.flexMin;
+		} else if (limitedFlex > settings.flexMax) {
+			limitedFlex = settings.flexMax;
+		}
+
+		uint8_t pitchBendOut = Suit_mapValue(limitedAccel, settings.accelMin, settings.accelMax, settings.pitchBendMin, settings.pitchBendMax);
+		uint8_t volumeOut = Suit_mapValue(limitedFlex, settings.flexMin, settings.flexMax, settings.volumeMin, settings.volumeMax);
 		MIDI_pitchWheelChange(pitchBendOut, settings.outputMIDIChannel);
-		Suit_updateStatus();
+		MIDI_controlChange(settings.volumeMIDIControl, volumeOut, settings.outputMIDIChannel);
 	}
 }
 
@@ -364,7 +416,6 @@ void Suit_capButtonPressed() {
 		suitState.activeNote = noteOut;
 		suitState.noteActive = 1;
 		MIDI_noteOn(noteOut, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
-		Suit_updateStatus();
 	} else {
 		if (suitState.waitingForInput == 1) {
 			if (suitState.inputType == SENSOR) {
@@ -383,7 +434,6 @@ void Suit_capButtonReleased() {
 		if (suitState.noteActive == 1) {
 			suitState.noteActive = 0;
 			MIDI_noteOff(suitState.activeNote, MIDI_DEFAULT_VELOCITY, settings.outputMIDIChannel);
-			Suit_updateStatus();
 		}
 	}
 }
@@ -454,17 +504,18 @@ void Suit_displayStatus() {
 	LCD_drawString("Hand Height:", 0, LCD_LINE_HEIGHT * 4);
 	LCD_drawString(IntNames[suitState.handHeight], LCD_VALUE_X, LCD_LINE_HEIGHT * 4);
 	LCD_drawString("Active Note:", 0, LCD_LINE_HEIGHT * 5);
+	printf("%u\n\r", MYTIMER_getCounterVal());
 	if (suitState.noteActive == 1) {
 		LCD_drawString(NoteNames[suitState.activeNote], LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
 	} else {
-		LCD_drawString("None", LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
+		LCD_drawString("   ", LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
 	}
 	LCD_drawString("Active Lights:", 0, LCD_LINE_HEIGHT * 6);
 	LCD_drawString(IntNames[suitState.activeLights], LCD_VALUE_X, LCD_LINE_HEIGHT * 6);
 }
 
 void Suit_updateStatus() {
-	char* clearString = "     ";
+	char* clearString = "   ";
 	LCD_drawString(clearString, LCD_VALUE_X, 0);
 	LCD_drawString(IntNames[suitState.accelX], LCD_VALUE_X, 0);
 	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT);
@@ -479,7 +530,7 @@ void Suit_updateStatus() {
 	if (suitState.noteActive == 1) {
 		LCD_drawString(NoteNames[suitState.activeNote], LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
 	} else {
-		LCD_drawString("None", LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
+		LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT * 5);
 	}
 	LCD_drawString(clearString, LCD_VALUE_X, LCD_LINE_HEIGHT * 6);
 	LCD_drawString(IntNames[suitState.activeLights], LCD_VALUE_X, LCD_LINE_HEIGHT * 6);

@@ -3,15 +3,15 @@
 #### START OF CLOCK OPTIMIZATION REPORT #####[
 
 Clock optimization not enabled
-1 non-gated/non-generated clock tree(s) driving 442 clock pin(s) of sequential element(s)
+1 non-gated/non-generated clock tree(s) driving 474 clock pin(s) of sequential element(s)
 0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
 0 instances converted, 0 sequential instances remain driven by gated/generated clocks
 
-================================== Non-Gated/Non-Generated Clocks ===================================
-Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance           
------------------------------------------------------------------------------------------------------
-@K:CKID0001       wubsuit_base_MSS_0     hierarchy              442        CoreUARTapb_2.CUARTI0OI[7]
-=====================================================================================================
+============================= Non-Gated/Non-Generated Clocks =============================
+Clock Tree ID     Driving Element        Drive Element Type     Fanout     Sample Instance
+------------------------------------------------------------------------------------------
+@K:CKID0001       wubsuit_base_MSS_0     hierarchy              474        timer_0.fabint 
+==========================================================================================
 ===== Gated/Generated Clocks =====
 ************** None **************
 ----------------------------------

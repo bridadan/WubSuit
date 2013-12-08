@@ -8,10 +8,10 @@ The file contains the area information from mapper to be displayed as part of th
 <data>N:\EECS373\WubSuit\Libero\synthesis\synlog\report\wubsuit_base_fpga_mapper_resourceusage.rpt</data>
 </report_link>
 <parameter tooltip="Total Core Cells used" name="Core Cells">
-<data>1140</data>
+<data>1298</data>
 </parameter>
 <parameter tooltip="Total IO Cells used" name="IO Cells">
-<data>14</data>
+<data>16</data>
 </parameter>
 <parameter tooltip="Total Block RAMs used" name="Block RAMs">
 <data>6</data>

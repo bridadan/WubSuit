@@ -33,16 +33,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Mon Dec 02 22:12:52 2013
+Timing-driven Placer Started: Sat Dec 07 19:18:18 2013
 
-Placer Finished: Mon Dec 02 22:13:10 2013
-Total Placer CPU Time:     00:00:18
+Placer Finished: Sat Dec 07 19:18:42 2013
+Total Placer CPU Time:     00:00:24
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: wubsuit_base                    Started: Mon Dec 02 22:13:21 2013
+Design: wubsuit_base                    Started: Sat Dec 07 19:18:48 2013
 
  
 Iterative improvement...
@@ -50,17 +50,17 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: wubsuit_base                    
-Finished: Mon Dec 02 22:13:39 2013
-Total CPU Time:     00:00:18            Total Elapsed Time: 00:00:18
-Total Memory Usage: 166.4 Mbytes
+Finished: Sat Dec 07 19:19:00 2013
+Total CPU Time:     00:00:12            Total Elapsed Time: 00:00:12
+Total Memory Usage: 168.0 Mbytes
                         o - o - o - o - o - o
 
 Loading the Timing data for the design.
 Finished loading the Timing data.
-TIMER: Max delay timing requirements have been met.
+TIMER: Max delay timing requirements have NOT been met.
 TIMER: Min delay timing requirements have been met.
 
-The Layout command succeeded ( 00:01:00 )
+The Layout command succeeded ( 00:00:49 )
 Wrote status report to file: wubsuit_base_place_and_route_report.txt
 
 The Report command succeeded ( 00:00:00 )
@@ -75,6 +75,6 @@ Wrote iobank report to file: wubsuit_base_iobank_report.txt
 The Report command succeeded ( 00:00:00 )
 Design saved to file N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb.
 
-The Execute Script command succeeded ( 00:01:09 )
+The Execute Script command succeeded ( 00:00:55 )
 Design closed.
 

@@ -3,7 +3,7 @@ Timing Violation Report Max Delay Analysis
 SmartTime Version v11.0
 Microsemi Corporation - Actel Designer Software Release v11.0 (Version 11.0.0.23)
 Copyright (c) 1989-2013
-Date: Mon Dec 02 22:13:59 2013
+Date: Sat Dec 07 19:19:14 2013
 
 
 Design: wubsuit_base
@@ -21,5 +21,803 @@ Using Enhanced Min Delay Analysis
 Scenario for Timing Analysis: Primary
 
 
-No Path
+Path 1
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  10.201
+  Slack (ns):                  -0.629
+  Arrival (ns):                15.371
+  Required (ns):               14.742
+
+Path 2
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  10.201
+  Slack (ns):                  -0.629
+  Arrival (ns):                15.371
+  Required (ns):               14.742
+
+Path 3
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  10.167
+  Slack (ns):                  -0.601
+  Arrival (ns):                15.337
+  Required (ns):               14.736
+
+Path 4
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  10.169
+  Slack (ns):                  -0.597
+  Arrival (ns):                15.339
+  Required (ns):               14.742
+
+Path 5
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  10.080
+  Slack (ns):                  -0.507
+  Arrival (ns):                15.250
+  Required (ns):               14.743
+
+Path 6
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  10.081
+  Slack (ns):                  -0.492
+  Arrival (ns):                15.234
+  Required (ns):               14.742
+
+Path 7
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  10.063
+  Slack (ns):                  -0.472
+  Arrival (ns):                15.214
+  Required (ns):               14.742
+
+Path 8
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  10.061
+  Slack (ns):                  -0.460
+  Arrival (ns):                15.202
+  Required (ns):               14.742
+
+Path 9
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  10.043
+  Slack (ns):                  -0.453
+  Arrival (ns):                15.196
+  Required (ns):               14.743
+
+Path 10
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  10.025
+  Slack (ns):                  -0.433
+  Arrival (ns):                15.176
+  Required (ns):               14.743
+
+Path 11
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  10.023
+  Slack (ns):                  -0.421
+  Arrival (ns):                15.164
+  Required (ns):               14.743
+
+Path 12
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.984
+  Slack (ns):                  -0.401
+  Arrival (ns):                15.137
+  Required (ns):               14.736
+
+Path 13
+  From:                        timer_0/nextCounter[3]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.936
+  Slack (ns):                  -0.390
+  Arrival (ns):                15.106
+  Required (ns):               14.716
+
+Path 14
+  From:                        timer_0/nextCounter[3]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.936
+  Slack (ns):                  -0.390
+  Arrival (ns):                15.106
+  Required (ns):               14.716
+
+Path 15
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[21]:D
+  Delay (ns):                  9.964
+  Slack (ns):                  -0.384
+  Arrival (ns):                15.134
+  Required (ns):               14.750
+
+Path 16
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[22]:D
+  Delay (ns):                  9.964
+  Slack (ns):                  -0.384
+  Arrival (ns):                15.134
+  Required (ns):               14.750
+
+Path 17
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.966
+  Slack (ns):                  -0.381
+  Arrival (ns):                15.117
+  Required (ns):               14.736
+
+Path 18
+  From:                        timer_0/nextCounter[1]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.916
+  Slack (ns):                  -0.370
+  Arrival (ns):                15.086
+  Required (ns):               14.716
+
+Path 19
+  From:                        timer_0/nextCounter[1]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.916
+  Slack (ns):                  -0.370
+  Arrival (ns):                15.086
+  Required (ns):               14.716
+
+Path 20
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.964
+  Slack (ns):                  -0.369
+  Arrival (ns):                15.105
+  Required (ns):               14.736
+
+Path 21
+  From:                        timer_0/nextCounter[3]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.935
+  Slack (ns):                  -0.363
+  Arrival (ns):                15.105
+  Required (ns):               14.742
+
+Path 22
+  From:                        timer_0/nextCounter[20]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.913
+  Slack (ns):                  -0.348
+  Arrival (ns):                15.064
+  Required (ns):               14.716
+
+Path 23
+  From:                        timer_0/nextCounter[20]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.913
+  Slack (ns):                  -0.348
+  Arrival (ns):                15.064
+  Required (ns):               14.716
+
+Path 24
+  From:                        timer_0/nextCounter[3]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.912
+  Slack (ns):                  -0.346
+  Arrival (ns):                15.082
+  Required (ns):               14.736
+
+Path 25
+  From:                        timer_0/nextCounter[1]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.915
+  Slack (ns):                  -0.343
+  Arrival (ns):                15.085
+  Required (ns):               14.742
+
+Path 26
+  From:                        timer_0/nextCounter[0]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.911
+  Slack (ns):                  -0.336
+  Arrival (ns):                15.052
+  Required (ns):               14.716
+
+Path 27
+  From:                        timer_0/nextCounter[0]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.911
+  Slack (ns):                  -0.336
+  Arrival (ns):                15.052
+  Required (ns):               14.716
+
+Path 28
+  From:                        timer_0/nextCounter[20]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.912
+  Slack (ns):                  -0.321
+  Arrival (ns):                15.063
+  Required (ns):               14.742
+
+Path 29
+  From:                        timer_0/nextCounter[11]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.891
+  Slack (ns):                  -0.319
+  Arrival (ns):                15.061
+  Required (ns):               14.742
+
+Path 30
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.908
+  Slack (ns):                  -0.319
+  Arrival (ns):                15.061
+  Required (ns):               14.742
+
+Path 31
+  From:                        timer_0/nextCounter[8]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.890
+  Slack (ns):                  -0.318
+  Arrival (ns):                15.060
+  Required (ns):               14.742
+
+Path 32
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[14]:D
+  Delay (ns):                  9.875
+  Slack (ns):                  -0.317
+  Arrival (ns):                15.045
+  Required (ns):               14.728
+
+Path 33
+  From:                        timer_0/nextCounter[8]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.858
+  Slack (ns):                  -0.312
+  Arrival (ns):                15.028
+  Required (ns):               14.716
+
+Path 34
+  From:                        timer_0/nextCounter[0]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.910
+  Slack (ns):                  -0.309
+  Arrival (ns):                15.051
+  Required (ns):               14.742
+
+Path 35
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[17]:D
+  Delay (ns):                  9.880
+  Slack (ns):                  -0.308
+  Arrival (ns):                15.050
+  Required (ns):               14.742
+
+Path 36
+  From:                        timer_0/nextCounter[20]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.890
+  Slack (ns):                  -0.305
+  Arrival (ns):                15.041
+  Required (ns):               14.736
+
+Path 37
+  From:                        timer_0/nextCounter[13]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.889
+  Slack (ns):                  -0.299
+  Arrival (ns):                15.041
+  Required (ns):               14.742
+
+Path 38
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.890
+  Slack (ns):                  -0.299
+  Arrival (ns):                15.041
+  Required (ns):               14.742
+
+Path 39
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.888
+  Slack (ns):                  -0.287
+  Arrival (ns):                15.029
+  Required (ns):               14.742
+
+Path 40
+  From:                        timer_0/nextCounter[8]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.857
+  Slack (ns):                  -0.285
+  Arrival (ns):                15.027
+  Required (ns):               14.742
+
+Path 41
+  From:                        timer_0/nextCounter[11]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.853
+  Slack (ns):                  -0.280
+  Arrival (ns):                15.023
+  Required (ns):               14.743
+
+Path 42
+  From:                        timer_0/nextCounter[8]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.852
+  Slack (ns):                  -0.279
+  Arrival (ns):                15.022
+  Required (ns):               14.743
+
+Path 43
+  From:                        timer_0/nextCounter[1]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.835
+  Slack (ns):                  -0.269
+  Arrival (ns):                15.005
+  Required (ns):               14.736
+
+Path 44
+  From:                        timer_0/nextCounter[2]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.812
+  Slack (ns):                  -0.266
+  Arrival (ns):                14.982
+  Required (ns):               14.716
+
+Path 45
+  From:                        timer_0/nextCounter[2]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.812
+  Slack (ns):                  -0.266
+  Arrival (ns):                14.982
+  Required (ns):               14.716
+
+Path 46
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/nextCounter[14]:D
+  Delay (ns):                  9.838
+  Slack (ns):                  -0.263
+  Arrival (ns):                14.991
+  Required (ns):               14.728
+
+Path 47
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.852
+  Slack (ns):                  -0.263
+  Arrival (ns):                15.005
+  Required (ns):               14.742
+
+Path 48
+  From:                        timer_0/nextCounter[13]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.851
+  Slack (ns):                  -0.260
+  Arrival (ns):                15.003
+  Required (ns):               14.743
+
+Path 49
+  From:                        timer_0/nextCounter[0]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.855
+  Slack (ns):                  -0.260
+  Arrival (ns):                14.996
+  Required (ns):               14.736
+
+Path 50
+  From:                        timer_0/nextCounter[15]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.851
+  Slack (ns):                  -0.260
+  Arrival (ns):                15.002
+  Required (ns):               14.742
+
+Path 51
+  From:                        timer_0/nextCounter[14]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.862
+  Slack (ns):                  -0.257
+  Arrival (ns):                14.999
+  Required (ns):               14.742
+
+Path 52
+  From:                        timer_0/nextCounter[4]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.826
+  Slack (ns):                  -0.254
+  Arrival (ns):                14.996
+  Required (ns):               14.742
+
+Path 53
+  From:                        timer_0/nextCounter[4]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.826
+  Slack (ns):                  -0.254
+  Arrival (ns):                14.996
+  Required (ns):               14.742
+
+Path 54
+  From:                        timer_0/nextCounter[3]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.825
+  Slack (ns):                  -0.252
+  Arrival (ns):                14.995
+  Required (ns):               14.743
+
+Path 55
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/nextCounter[17]:D
+  Delay (ns):                  9.833
+  Slack (ns):                  -0.244
+  Arrival (ns):                14.986
+  Required (ns):               14.742
+
+Path 56
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/nextCounter[14]:D
+  Delay (ns):                  9.820
+  Slack (ns):                  -0.243
+  Arrival (ns):                14.971
+  Required (ns):               14.728
+
+Path 57
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.834
+  Slack (ns):                  -0.243
+  Arrival (ns):                14.985
+  Required (ns):               14.742
+
+Path 58
+  From:                        timer_0/nextCounter[2]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.811
+  Slack (ns):                  -0.239
+  Arrival (ns):                14.981
+  Required (ns):               14.742
+
+Path 59
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/nextCounter[14]:D
+  Delay (ns):                  9.818
+  Slack (ns):                  -0.231
+  Arrival (ns):                14.959
+  Required (ns):               14.728
+
+Path 60
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.832
+  Slack (ns):                  -0.231
+  Arrival (ns):                14.973
+  Required (ns):               14.742
+
+Path 61
+  From:                        timer_0/nextCounter[11]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.794
+  Slack (ns):                  -0.228
+  Arrival (ns):                14.964
+  Required (ns):               14.736
+
+Path 62
+  From:                        timer_0/nextCounter[8]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.793
+  Slack (ns):                  -0.227
+  Arrival (ns):                14.963
+  Required (ns):               14.736
+
+Path 63
+  From:                        timer_0/nextCounter[4]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.792
+  Slack (ns):                  -0.226
+  Arrival (ns):                14.962
+  Required (ns):               14.736
+
+Path 64
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/nextCounter[17]:D
+  Delay (ns):                  9.815
+  Slack (ns):                  -0.224
+  Arrival (ns):                14.966
+  Required (ns):               14.742
+
+Path 65
+  From:                        timer_0/nextCounter[15]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.813
+  Slack (ns):                  -0.221
+  Arrival (ns):                14.964
+  Required (ns):               14.743
+
+Path 66
+  From:                        timer_0/nextCounter[14]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.824
+  Slack (ns):                  -0.218
+  Arrival (ns):                14.961
+  Required (ns):               14.743
+
+Path 67
+  From:                        timer_0/nextCounter[7]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.814
+  Slack (ns):                  -0.217
+  Arrival (ns):                14.959
+  Required (ns):               14.742
+
+Path 68
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/nextCounter[17]:D
+  Delay (ns):                  9.813
+  Slack (ns):                  -0.212
+  Arrival (ns):                14.954
+  Required (ns):               14.742
+
+Path 69
+  From:                        timer_0/nextCounter[7]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.782
+  Slack (ns):                  -0.211
+  Arrival (ns):                14.927
+  Required (ns):               14.716
+
+Path 70
+  From:                        timer_0/nextCounter[13]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.792
+  Slack (ns):                  -0.208
+  Arrival (ns):                14.944
+  Required (ns):               14.736
+
+Path 71
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[12]:D
+  Delay (ns):                  9.765
+  Slack (ns):                  -0.207
+  Arrival (ns):                14.935
+  Required (ns):               14.728
+
+Path 72
+  From:                        timer_0/nextCounter[9]:CLK
+  To:                          timer_0/nextCounter[15]:D
+  Delay (ns):                  9.767
+  Slack (ns):                  -0.195
+  Arrival (ns):                14.937
+  Required (ns):               14.742
+
+Path 73
+  From:                        timer_0/nextCounter[4]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.766
+  Slack (ns):                  -0.194
+  Arrival (ns):                14.936
+  Required (ns):               14.742
+
+Path 74
+  From:                        timer_0/nextCounter[2]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.756
+  Slack (ns):                  -0.190
+  Arrival (ns):                14.926
+  Required (ns):               14.736
+
+Path 75
+  From:                        timer_0/nextCounter[7]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.781
+  Slack (ns):                  -0.184
+  Arrival (ns):                14.926
+  Required (ns):               14.742
+
+Path 76
+  From:                        timer_0/nextCounter[7]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.776
+  Slack (ns):                  -0.178
+  Arrival (ns):                14.921
+  Required (ns):               14.743
+
+Path 77
+  From:                        timer_0/nextCounter[15]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.754
+  Slack (ns):                  -0.169
+  Arrival (ns):                14.905
+  Required (ns):               14.736
+
+Path 78
+  From:                        timer_0/nextCounter[14]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.765
+  Slack (ns):                  -0.166
+  Arrival (ns):                14.902
+  Required (ns):               14.736
+
+Path 79
+  From:                        timer_0/nextCounter[5]:CLK
+  To:                          timer_0/nextCounter[25]:D
+  Delay (ns):                  9.741
+  Slack (ns):                  -0.161
+  Arrival (ns):                14.911
+  Required (ns):               14.750
+
+Path 80
+  From:                        timer_0/nextCounter[9]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.729
+  Slack (ns):                  -0.156
+  Arrival (ns):                14.899
+  Required (ns):               14.743
+
+Path 81
+  From:                        timer_0/nextCounter[16]:CLK
+  To:                          timer_0/nextCounter[12]:D
+  Delay (ns):                  9.728
+  Slack (ns):                  -0.153
+  Arrival (ns):                14.881
+  Required (ns):               14.728
+
+Path 82
+  From:                        timer_0/nextCounter[11]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.718
+  Slack (ns):                  -0.146
+  Arrival (ns):                14.888
+  Required (ns):               14.742
+
+Path 83
+  From:                        timer_0/nextCounter[13]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.734
+  Slack (ns):                  -0.144
+  Arrival (ns):                14.886
+  Required (ns):               14.742
+
+Path 84
+  From:                        timer_0/nextCounter[17]:CLK
+  To:                          timer_0/nextCounter[12]:D
+  Delay (ns):                  9.710
+  Slack (ns):                  -0.133
+  Arrival (ns):                14.861
+  Required (ns):               14.728
+
+Path 85
+  From:                        timer_0/nextCounter[4]:CLK
+  To:                          timer_0/nextCounter[13]:D
+  Delay (ns):                  9.705
+  Slack (ns):                  -0.132
+  Arrival (ns):                14.875
+  Required (ns):               14.743
+
+Path 86
+  From:                        timer_0/nextCounter[3]:CLK
+  To:                          timer_0/nextCounter[21]:D
+  Delay (ns):                  9.709
+  Slack (ns):                  -0.129
+  Arrival (ns):                14.879
+  Required (ns):               14.750
+
+Path 87
+  From:                        timer_0/nextCounter[3]:CLK
+  To:                          timer_0/nextCounter[22]:D
+  Delay (ns):                  9.709
+  Slack (ns):                  -0.129
+  Arrival (ns):                14.879
+  Required (ns):               14.750
+
+Path 88
+  From:                        timer_0/nextCounter[7]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.717
+  Slack (ns):                  -0.126
+  Arrival (ns):                14.862
+  Required (ns):               14.736
+
+Path 89
+  From:                        timer_0/nextCounter[10]:CLK
+  To:                          timer_0/nextCounter[12]:D
+  Delay (ns):                  9.708
+  Slack (ns):                  -0.121
+  Arrival (ns):                14.849
+  Required (ns):               14.728
+
+Path 90
+  From:                        timer_0/nextCounter[14]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.709
+  Slack (ns):                  -0.104
+  Arrival (ns):                14.846
+  Required (ns):               14.742
+
+Path 91
+  From:                        timer_0/nextCounter[9]:CLK
+  To:                          timer_0/nextCounter[7]:D
+  Delay (ns):                  9.670
+  Slack (ns):                  -0.104
+  Arrival (ns):                14.840
+  Required (ns):               14.736
+
+Path 92
+  From:                        timer_0/nextCounter[13]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.656
+  Slack (ns):                  -0.092
+  Arrival (ns):                14.808
+  Required (ns):               14.716
+
+Path 93
+  From:                        timer_0/nextCounter[11]:CLK
+  To:                          timer_0/nextCounter[14]:D
+  Delay (ns):                  9.648
+  Slack (ns):                  -0.090
+  Arrival (ns):                14.818
+  Required (ns):               14.728
+
+Path 94
+  From:                        timer_0/nextCounter[11]:CLK
+  To:                          timer_0/nextCounter[20]:D
+  Delay (ns):                  9.662
+  Slack (ns):                  -0.090
+  Arrival (ns):                14.832
+  Required (ns):               14.742
+
+Path 95
+  From:                        timer_0/nextCounter[8]:CLK
+  To:                          timer_0/nextCounter[14]:D
+  Delay (ns):                  9.647
+  Slack (ns):                  -0.089
+  Arrival (ns):                14.817
+  Required (ns):               14.728
+
+Path 96
+  From:                        timer_0/nextCounter[20]:CLK
+  To:                          timer_0/nextCounter[21]:D
+  Delay (ns):                  9.687
+  Slack (ns):                  -0.088
+  Arrival (ns):                14.838
+  Required (ns):               14.750
+
+Path 97
+  From:                        timer_0/nextCounter[20]:CLK
+  To:                          timer_0/nextCounter[22]:D
+  Delay (ns):                  9.687
+  Slack (ns):                  -0.088
+  Arrival (ns):                14.838
+  Required (ns):               14.750
+
+Path 98
+  From:                        timer_0/nextCounter[1]:CLK
+  To:                          timer_0/nextCounter[21]:D
+  Delay (ns):                  9.642
+  Slack (ns):                  -0.088
+  Arrival (ns):                14.812
+  Required (ns):               14.724
+
+Path 99
+  From:                        timer_0/nextCounter[1]:CLK
+  To:                          timer_0/nextCounter[22]:D
+  Delay (ns):                  9.642
+  Slack (ns):                  -0.088
+  Arrival (ns):                14.812
+  Required (ns):               14.724
+
+Path 100
+  From:                        timer_0/nextCounter[15]:CLK
+  To:                          timer_0/fabint:D
+  Delay (ns):                  9.678
+  Slack (ns):                  -0.087
+  Arrival (ns):                14.829
+  Required (ns):               14.742
 

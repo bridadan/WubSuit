@@ -51,10 +51,12 @@ typedef struct _Settings {
 	Note* noteToMapTo;
 	uint8_t* valueToMapTo;
 	KeySignature keySignature;
-	uint8_t suitLightsMIDIChannel;
+	uint8_t suitLightsMIDIChannel, volumeMIDIControl;
 	uint8_t outputMIDIChannel;
 	uint8_t accelMin, accelMax;
 	uint8_t pitchBendMin, pitchBendMax;
+	uint8_t flexMin, flexMax;
+	uint16_t volumeMin, volumeMax;
 } Settings;
 
 void Suit_init();
@@ -77,5 +79,6 @@ void Suit_turnOnLightChannel(uint8_t channel);
 void Suit_turnOffLightChannel(uint8_t channel);
 uint8_t Suit_mapValue(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min, uint8_t out_max);
 void Suit_displayStatus();
+void Suit_updateStatus();
 
 #endif /* SUIT_H_ */

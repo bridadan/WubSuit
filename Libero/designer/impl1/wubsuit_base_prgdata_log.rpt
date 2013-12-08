@@ -6,13 +6,13 @@ Info: The design N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base.adb was l
       software version 11.0.0.23.
 Opened an existing Libero design N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base.adb.
 
-The Export-map command succeeded ( 00:00:16 )
-CHECKSUM: 94FA
+The Export-map command succeeded ( 00:00:12 )
+CHECKSUM: 8EF6
 Wrote to the file: N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.fdb
 
-The Export command succeeded ( 00:00:23 )
+The Export command succeeded ( 00:00:15 )
 Design saved to file N:/EECS373/WubSuit/Libero/designer/impl1/wubsuit_base.adb.
 
-The Execute Script command succeeded ( 00:00:31 )
+The Execute Script command succeeded ( 00:00:19 )
 Design closed.
 

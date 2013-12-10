@@ -14695,7 +14695,7 @@ Source: www.cypressindustries.com</description>
 <instance part="SUPPLY20" gate="1" x="208.28" y="-20.32"/>
 <instance part="GND19" gate="1" x="220.98" y="-38.1"/>
 <instance part="VIN" gate="G$1" x="246.38" y="-25.4" rot="R180"/>
-<instance part="X1" gate="G$1" x="271.78" y="-25.4"/>
+<instance part="X1" gate="G$1" x="276.86" y="-25.4"/>
 </instances>
 <busses>
 </busses>
@@ -15065,7 +15065,7 @@ Source: www.cypressindustries.com</description>
 <wire x1="238.76" y1="-35.56" x2="220.98" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="220.98" y="-35.56"/>
 <pinref part="X1" gate="G$1" pin="4"/>
-<wire x1="266.7" y1="-27.94" x2="264.16" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="-27.94" x2="264.16" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="264.16" y1="-27.94" x2="264.16" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="264.16" y1="-35.56" x2="238.76" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="238.76" y="-35.56"/>
@@ -15523,11 +15523,12 @@ Source: www.cypressindustries.com</description>
 <pinref part="IC1" gate="A1" pin="VI"/>
 <wire x1="238.76" y1="-25.4" x2="236.22" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="-25.4" x2="231.14" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="-20.32" x2="264.16" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="-20.32" x2="264.16" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="264.16" y1="-20.32" x2="264.16" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="264.16" y1="-15.24" x2="236.22" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="236.22" y1="-15.24" x2="236.22" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="236.22" y="-25.4"/>
+<pinref part="X1" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>

@@ -1715,9 +1715,8 @@ Brian Margosian</text>
 <hole x="4.5466" y="3.1496" drill="2.8"/>
 <hole x="4.2418" y="79.8576" drill="2.8"/>
 <text x="8.6868" y="65.6336" size="1.778" layer="25">+</text>
-<text x="17.2974" y="59.563" size="1.778" layer="25">+</text>
-<text x="17.6784" y="55.4482" size="1.778" layer="25">-</text>
-<text x="14.5288" y="55.0418" size="1.778" layer="25">I</text>
+<text x="13.1318" y="66.8528" size="1.778" layer="25">+</text>
+<text x="18.669" y="68.4784" size="1.778" layer="25">-</text>
 <hole x="62.9666" y="70.6374" drill="2.8"/>
 <hole x="63.1698" y="18.7198" drill="2.8"/>
 <wire x1="0" y1="0" x2="0" y2="85.9028" width="0" layer="20"/>

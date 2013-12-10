@@ -14232,7 +14232,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="IC1" gate="A1" x="220.98" y="-27.94" rot="R180"/>
 <instance part="SUPPLY20" gate="1" x="208.28" y="-20.32"/>
 <instance part="GND19" gate="1" x="220.98" y="-38.1"/>
-<instance part="VIN" gate="G$1" x="251.46" y="-27.94"/>
+<instance part="VIN" gate="G$1" x="246.38" y="-25.4" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -14598,11 +14598,8 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="220.98" y1="-35.56" x2="220.98" y2="-33.02" width="0.1524" layer="91"/>
 <pinref part="VIN" gate="G$1" pin="2"/>
-<wire x1="259.08" y1="-25.4" x2="266.7" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="-25.4" x2="266.7" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="-38.1" x2="228.6" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="-38.1" x2="228.6" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="-35.56" x2="220.98" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="-27.94" x2="238.76" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="-35.56" x2="220.98" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="220.98" y="-35.56"/>
 </segment>
 </net>
@@ -15052,14 +15049,11 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="198.12" y1="12.7" x2="185.42" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="N$10" class="0">
 <segment>
 <pinref part="VIN" gate="G$1" pin="1"/>
-<wire x1="259.08" y1="-27.94" x2="264.16" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="-27.94" x2="264.16" y2="-35.56" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A1" pin="VI"/>
-<wire x1="264.16" y1="-35.56" x2="231.14" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="-35.56" x2="231.14" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="238.76" y1="-25.4" x2="231.14" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

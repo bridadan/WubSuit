@@ -2,14 +2,14 @@
 
 #include <SoftwareSerial.h>
 #include <Wire.h> //I2C
-#include <avr/wdt.h>
 
 SoftwareSerial Xbee(10, 11); // RX, TX
 SimpleTimer timer;
+SimpleTimer resetTime;
 
 #define DEBUG //unset if not debugging
 
-#define PRECISION 0x01 //0x00 = 2G, 0x01 = 4G, 0x02 = 8G
+#define PRECISION 0x02 //0x00 = 2G, 0x01 = 4G, 0x02 = 8G
 
 #define LEDOUT_ADDR 0x20
 #define ACCEL_ADDR 0x1D
@@ -44,7 +44,8 @@ boolean accel = true;
 void setup()  
 {
   Wire.begin(); //i2c master A5:SCL A4:SDA
-  timer.setInterval(30,sendPacket);
+  timer.setInterval(50,sendPacket);
+  resetTime.setInterval(5000,softReset);
   
   // Open local serial port for debugging:
   Serial.begin(115200);
@@ -62,7 +63,7 @@ void setup()
   setLEDs(0x00);
   
   //enable the arduino watchdog for 5 seconds.
-  wdt_enable (WDTO_4S);
+  //wdt_enable (WDTO_4S);
   
   //init accel
   initAccel();
@@ -71,6 +72,7 @@ void setup()
 void loop()
 {
   timer.run();
+  resetTime.run();
   printDebug();
   updateAccel(Ax,Ay,Az);
   
@@ -112,8 +114,11 @@ void setLEDs(byte data){
 }
 
 void sendPacket(){
-  wdt_reset(); //pat the dog to avoid restarting
   //send a packet of data to UART 
+  if(Xbee.overflow()){
+   Serial.println("Xbee overflow");
+   return; 
+  }
   noInterrupts();
   Xbee.write((byte)0xFF);
   Xbee.write((byte)0xA0);
@@ -231,5 +236,9 @@ void printDebug(){
       break;
    } 
   }
-  
+}
+
+void softReset() // Restarts program from beginning but does not reset the peripherals and registers
+{
+  asm volatile ("  jmp 0");  
 }

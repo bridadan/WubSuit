@@ -12,7 +12,7 @@
     <project-description>
     </project-description>
     <location>N:/EECS373/WubSuit/Libero/component/work/wubsuit_base</location>
-    <state>GENERATED ( Sat Dec 07 19:16:41 2013 )</state>
+    <state>GENERATED ( Tue Dec 10 02:32:40 2013 )</state>
     <swide-toolchain>SoftConsole workspace generated to N:\EECS373\WubSuit\Libero\SoftConsole</swide-toolchain>
   </project-settings>
   <site-map>
@@ -45,11 +45,12 @@
     <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v</file>
     <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell.v</file>
     <file>N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\wubsuit_base_MSS.v</file>
+    <file>N:\EECS373\WubSuit\Libero\hdl\fastTimer.v</file>
     <file>N:\EECS373\WubSuit\Libero\hdl\Timer.v</file>
   </fileset>
   <fileset>
     <name>Flash Memory File(s)</name>
-    <file>N:\EECS373\WubSuit\Libero\component\work\./MSS_ENVM_0/MSS_ENVM_0.efc</file>
+    <file>N:\EECS373\WubSuit\Libero\component\work\N:/EECS373/WubSuit/Libero/component/work/wubsuit_base_MSS/MSS_ENVM_0/MSS_ENVM_0.efc</file>
   </fileset>
   <io>
     <port-name>MIDI_RX</port-name>
@@ -64,7 +65,7 @@
     <io-standard>LVTTL</io-standard>
   </io>
   <io>
-    <port-name>FABINT</port-name>
+    <port-name>RXRDY</port-name>
     <direction>OUT</direction>
     <pin-number>-</pin-number>
     <io-standard>LVTTL</io-standard>
@@ -653,6 +654,12 @@ There is one APB3 Master interface.
       <param-tag>spirit:hwParameter</param-tag>
     </core-param>
     <core-name>CoreUARTapb_2</core-name>
+  </core>
+  <core type="HdlModule">
+    <core-type>HdlModule</core-type>
+    <core-exttype>fastTimer</core-exttype>
+    <core-location>hdl\fastTimer.v</core-location>
+    <core-name>fastTimer_0</core-name>
   </core>
   <core type="HdlModule">
     <core-type>HdlModule</core-type>

@@ -4,8 +4,16 @@ Release: v11.0
 
 Info: The design wubsuit_base.adb was last modified by software version 11.0.0.23.
 Opened an existing Libero design wubsuit_base.adb.
+WARNING: DEFUSR table not loaded - file: C:\Users\bridadan\AppData\Roaming\Actel/designer.def
 
-The Execute Script command succeeded ( 00:00:31 )
+The Execute Script command succeeded ( 00:00:30 )
+This program can detect if an updated version of the software is available by
+checking the Actel web-site.
+
+Would you like to have this check automatically done when you startup the program?
+
+(To change this setting later, go to the File menu and select Preferences.
+From the Updates tab, you can change your selection.) [NO]
 Design saved to file N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb.
 Design closed.
 

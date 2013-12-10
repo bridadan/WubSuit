@@ -36,21 +36,23 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	// Main Menus
 
 	menus[1].name = "Note Output";
-	menus[1].submenusCount = 3;
-	menus[1].submenus[0] = &(menus[3]); // Key Signature
-	menus[1].submenus[1] = &(menus[9]); // Min Note
-	menus[1].submenus[2] = &(menus[10]); // Max Note
+	menus[1].submenusCount = 2;
+	menus[1].submenus[0] = &(menus[9]); // Min Note
+	menus[1].submenus[1] = &(menus[10]); // Max Note
 	menus[1].previousMenu = &(menus[0]);
 
 	menus[2].name = "MIDI Mappings";
-	menus[2].submenusCount = 2;
+	menus[2].submenusCount = 5;
 	menus[2].submenus[0] = &(menus[7]); // Left Foot
 	menus[2].submenus[1] = &(menus[8]); // Right Foot
+	menus[2].submenus[2] = &(menus[25]); // CButton1
+	menus[2].submenus[3] = &(menus[26]); // CButton2
+	menus[2].submenus[4] = &(menus[27]); // CButton2
 	menus[2].previousMenu = &(menus[0]);
 
 	// Note Output
 
-	menus[3].name = "Key Signature";
+	/*menus[3].name = "Key Signature";
 	menus[3].submenusCount = 3;
 	menus[3].submenus[0] = &(menus[22]); // Chromatic
 	menus[3].submenus[1] = &(menus[23]); // C Major
@@ -73,7 +75,7 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[24].submenusCount = 0;
 	menus[24].inputType = VALUE;
 	menus[22].keySigValue = CMINOR;
-	menus[24].previousMenu = &(menus[1]);
+	menus[24].previousMenu = &(menus[1]);*/
 
 	menus[9].name = "Min Note";
 	menus[9].submenusCount = 0;
@@ -104,6 +106,27 @@ void Menu_init(Settings *setS, SuitState *suitS) {
 	menus[8].noteValue = &(settingsPtr->RPiezoMapping);
 	menus[8].previousMenu = &(menus[2]);
 	menus[8].valueString = Menu_getNoteString;
+
+	menus[25].name = "Control Button 1";
+	menus[25].submenusCount = 0;
+	menus[25].inputType = MIDI;
+	menus[25].noteValue = &(settingsPtr->CButton1Mapping);
+	menus[25].previousMenu = &(menus[2]);
+	menus[25].valueString = Menu_getNoteString;
+
+	menus[26].name = "Control Button 2";
+	menus[26].submenusCount = 0;
+	menus[26].inputType = MIDI;
+	menus[26].noteValue = &(settingsPtr->CButton2Mapping);
+	menus[26].previousMenu = &(menus[2]);
+	menus[26].valueString = Menu_getNoteString;
+
+	menus[27].name = "Control Button 3";
+	menus[27].submenusCount = 0;
+	menus[27].inputType = MIDI;
+	menus[27].noteValue = &(settingsPtr->CButton3Mapping);
+	menus[27].previousMenu = &(menus[2]);
+	menus[27].valueString = Menu_getNoteString;
 
 	// Calibrate
 

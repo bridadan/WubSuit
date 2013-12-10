@@ -1,13 +1,13 @@
 ***************************************************************************
                                Status Report
-                          Sat Dec 07 19:19:04 2013 ***************************************************************************
+                          Tue Dec 10 02:41:00 2013 ***************************************************************************
 
 Product: Designer
 Release: v11.0
 Version: 11.0.0.23
 File Name: N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb
 Design Name: wubsuit_base  Design State: layout
-Last Saved: Sat Dec 07 19:18:10 2013
+Last Saved: Tue Dec 10 02:39:50 2013
 
 ***** Device Data **************************************************
 
@@ -22,7 +22,7 @@ Voltage Range:   COM
 
 ***** Import Variables *********************************************
 
-Source File(s) Imported on Sat Dec 07 19:18:02 2013:
+Source File(s) Imported on Tue Dec 10 02:39:38 2013:
         N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn
         N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.pdc
 
@@ -615,12 +615,12 @@ Netlist Optimization Report
 
 Optimized macros:
   - Dangling net drivers:   0
-  - Buffers:                10
+  - Buffers:                11
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        21
+  - Logic combining:        27
 
-    Total macros optimized  31
+    Total macros optimized  38
 
 There were 0 error(s) and 387 warning(s) in this design.
 =====================================================================
@@ -642,7 +642,7 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   1277  Total:   4608   (27.71%)
+    Fabric                     Used:   1428  Total:   4608   (30.99%)
     Fabric IO (W/ clocks)      Used:     13  Total:     94   (13.83%)
     Fabric Differential IO     Used:      0  Total:     47   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     32   (0.00%)
@@ -671,8 +671,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 815          | 815
-    SEQ     | 462          | 462
+    COMB    | 932          | 932
+    SEQ     | 496          | 496
 
 I/O Function:
 
@@ -704,33 +704,33 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    475     CLK_NET       Net   : FAB_CLK
+    509     CLK_NET       Net   : FAB_CLK
                           Driver: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    420     SET/RESET_NET Net   : wubsuit_base_MSS_0_M2F_RESET_N
+    454     SET/RESET_NET Net   : wubsuit_base_MSS_0_M2F_RESET_N
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC
                           Source: NETLIST
 
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    24      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTIl
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0
     23      INT_NET       Net   : CoreUARTapb_2.N_89
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
-    22      INT_NET       Net   : CoreUARTapb_0.N_146
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
+    22      INT_NET       Net   : CoreUARTapb_2.N_90
+                          Driver: CoreUARTapb_1/CUARTO1OI_5_0_a2_1[0]
     18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
     18      INT_NET       Net   : CoreUARTapb_1/PARITY_ERR
                           Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
     18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
                           Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
-    14      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
+    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    14      INT_NET       Net   : CoreUARTapb_0.N_147
+    14      INT_NET       Net   : CoreUARTapb_2.N_92
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
     14      INT_NET       Net   : CoreUARTapb_2.N_87_0
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0_0[0]
@@ -738,23 +738,23 @@ High fanout nets in the post compile netlist:
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    24      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTIl
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0
     23      INT_NET       Net   : CoreUARTapb_2.N_89
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
-    22      INT_NET       Net   : CoreUARTapb_0.N_146
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
+    22      INT_NET       Net   : CoreUARTapb_2.N_90
+                          Driver: CoreUARTapb_1/CUARTO1OI_5_0_a2_1[0]
     18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
     18      INT_NET       Net   : CoreUARTapb_1/PARITY_ERR
                           Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
     18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
                           Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
-    14      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
+    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    14      INT_NET       Net   : CoreUARTapb_0.N_147
+    14      INT_NET       Net   : CoreUARTapb_2.N_92
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
     14      INT_NET       Net   : CoreUARTapb_2.N_87_0
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0_0[0]
@@ -783,16 +783,16 @@ Global net placement completed successfully.
 
                         o - o - o - o - o - o
 
-Timing-driven Placer Started: Sat Dec 07 19:18:18 2013
+Timing-driven Placer Started: Tue Dec 10 02:40:09 2013
 
-Placer Finished: Sat Dec 07 19:18:42 2013
-Total Placer CPU Time:     00:00:24
+Placer Finished: Tue Dec 10 02:40:30 2013
+Total Placer CPU Time:     00:00:21
 
                         o - o - o - o - o - o
 
 
 Timing-driven Router 
-Design: wubsuit_base                    Started: Sat Dec 07 19:18:48 2013
+Design: wubsuit_base                    Started: Tue Dec 10 02:40:40 2013
 
  
 Iterative improvement...
@@ -800,9 +800,9 @@ Iterative improvement...
 Timing-driven Router completed successfully.
 
 Design: wubsuit_base                    
-Finished: Sat Dec 07 19:19:00 2013
-Total CPU Time:     00:00:12            Total Elapsed Time: 00:00:12
-Total Memory Usage: 168.0 Mbytes
+Finished: Tue Dec 10 02:40:54 2013
+Total CPU Time:     00:00:14            Total Elapsed Time: 00:00:14
+Total Memory Usage: 169.5 Mbytes
                         o - o - o - o - o - o
 
 

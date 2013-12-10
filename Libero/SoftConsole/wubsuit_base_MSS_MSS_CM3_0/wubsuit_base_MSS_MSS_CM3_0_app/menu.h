@@ -4,7 +4,7 @@
 #include <inttypes.h>
 #include "suit.h"
 
-#define MENU_COUNT 25
+#define MENU_COUNT 28
 #define MAX_SUBMENUS 10
 #define MAX_NAME 20
 

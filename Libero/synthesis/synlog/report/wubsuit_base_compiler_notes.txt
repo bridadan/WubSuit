@@ -52,6 +52,7 @@
 @N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":14:0:14:37|Synthesizing module wubsuit_base_CoreUARTapb_2_CoreUARTapb
 @N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":700:0:700:8|Removing redundant assignment
 @N: CG179 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":776:0:776:8|Removing redundant assignment
+@N: CG364 :"N:\EECS373\WubSuit\Libero\hdl\fastTimer.v":2:7:2:15|Synthesizing module fastTimer
 @N: CG364 :"N:\EECS373\WubSuit\Libero\hdl\Timer.v":2:7:2:11|Synthesizing module timer
 @N: CG364 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell.v":1:7:1:13|Synthesizing module MSS_APB
 @N: CG364 :"N:\EECS373\WubSuit\Libero\component\Actel\SmartFusionMSS\MSS\2.5.106\mss_comps.v":151:7:151:13|Synthesizing module MSS_CCC

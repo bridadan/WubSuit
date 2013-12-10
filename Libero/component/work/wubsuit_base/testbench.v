@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Sat Dec 07 19:16:24 2013
+// Created by Actel SmartDesign Tue Dec 10 02:32:14 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -61,7 +61,7 @@ wubsuit_base wubsuit_base_0 (
     .XBee_TX( ),
     .LCD_TX( ),
     .MIDI_TX( ),
-    .FABINT( )
+    .RXRDY( )
 
     // Inouts
 

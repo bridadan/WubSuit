@@ -40,7 +40,7 @@ all: wubsuit_base_MSS_MSS_CM3_0_app secondary-outputs
 wubsuit_base_MSS_MSS_CM3_0_app: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU C Linker'
-	arm-none-eabi-gcc -mthumb -mcpu=cortex-m3 -L"N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug" -T../../wubsuit_base_MSS_MSS_CM3_0_hw_platform/CMSIS/startup_gcc/debug-in-actel-smartfusion-esram.ld -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections -o"wubsuit_base_MSS_MSS_CM3_0_app" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mthumb -mcpu=cortex-m3 -L"N:\EECS373\WubSuit\Libero\SoftConsole\wubsuit_base_MSS_MSS_CM3_0\wubsuit_base_MSS_MSS_CM3_0_hw_platform\Debug" -T../../wubsuit_base_MSS_MSS_CM3_0_hw_platform/CMSIS/startup_gcc/debug-in-actel-smartfusion-envm.ld -Wl,-Map=$(EXECUTABLE).map -Xlinker -gc-sections -o"wubsuit_base_MSS_MSS_CM3_0_app" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

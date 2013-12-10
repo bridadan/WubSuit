@@ -13,8 +13,10 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="new" key="selection"/>
+		<item value="Hand Height" key="selection"/>
 		<list key="findhistory">
+			<item value="hand height"/>
+			<item value="timer"/>
 			<item value="new"/>
 			<item value="print"/>
 			<item value="displayStatus"/>

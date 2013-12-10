@@ -1,7 +1,7 @@
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Sat Dec 07 19:17:56 2013
+# Timing Report written on Tue Dec 10 02:39:24 2013
 #
 
 
@@ -44,7 +44,7 @@ Starting  Ending   |  constraint  slack  |  constraint  slack  |  constraint  sl
 ---------------------------------------------------------------------------------------------------------
 System    System   |  0.000       0.192  |  No paths    -      |  No paths    -      |  No paths    -    
 System    FAB_CLK  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
-FAB_CLK   System   |  0.000       0.724  |  No paths    -      |  No paths    -      |  No paths    -    
+FAB_CLK   System   |  0.000       0.685  |  No paths    -      |  No paths    -      |  No paths    -    
 FAB_CLK   FAB_CLK  |  0.000       False  |  No paths    -      |  No paths    -      |  No paths    -    
 =========================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
@@ -72,16 +72,16 @@ Starting Points with Worst Slack
 Instance                          Reference     Type         Pin     Net                                 Time        Slack
                                   Clock                                                                                   
 --------------------------------------------------------------------------------------------------------------------------
-CoreUARTapb_1.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       RXRDY                               0.494       0.822
-CoreUARTapb_0.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       CoreUARTapb_0_RXRDY                 0.494       0.822
-timer_0.fabint                    FAB_CLK       DFN1         Q       FABINT_c                            0.494       0.822
+timer_0.fabint                    FAB_CLK       DFN1         Q       FABINT                              0.494       0.767
+fastTimer_0.fabint                FAB_CLK       DFN1         Q       fastTimer_0_fabint                  0.494       0.767
+CoreUARTapb_1.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       RXRDY_net_0                         0.494       0.822
+CoreUARTapb_0.CUARTOOlI.RXRDY     FAB_CLK       DFN1E1C0     Q       RXRDY_c                             0.494       1.180
 CoreUARTapb_1.CUARTI1OI[0]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[0]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[1]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[1]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[2]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[2]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[3]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[3]     0.494       2.036
 CoreUARTapb_1.CUARTI1OI[4]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[4]     0.494       2.036
-CoreUARTapb_1.CUARTI1OI[5]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave1_PRDATA[5]     0.494       2.036
-CoreUARTapb_0.CUARTI1OI[6]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave0_PRDATA[6]     0.494       2.036
+CoreUARTapb_0.CUARTI1OI[5]        FAB_CLK       DFN1E0C0     Q       CoreAPB3_0_APBmslave0_PRDATA[5]     0.494       2.036
 ==========================================================================================================================
 
 
@@ -92,16 +92,16 @@ Ending Points with Worst Slack
 Instance                              Reference     Type        Pin              Net                                             Time         Slack
                                       Clock                                                                                                        
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-wubsuit_base_MSS_0.MSSINT_GPI_0       FAB_CLK       MSSINT      A                CoreUARTapb_0_RXRDY                             0.000        0.724
-wubsuit_base_MSS_0.MSSINT_GPI_1       FAB_CLK       MSSINT      A                RXRDY                                           0.000        0.724
-wubsuit_base_MSS_0.MSSINT_GPI_9       FAB_CLK       MSSINT      A                FABINT_c                                        0.000        0.724
+wubsuit_base_MSS_0.MSSINT_GPI_9       FAB_CLK       MSSINT      A                FABINT                                          0.000        0.685
+wubsuit_base_MSS_0.MSSINT_GPI_10      FAB_CLK       MSSINT      A                fastTimer_0_fabint                              0.000        0.685
+wubsuit_base_MSS_0.MSSINT_GPI_1       FAB_CLK       MSSINT      A                RXRDY_net_0                                     0.000        0.724
+wubsuit_base_MSS_0.MSSINT_GPI_0       FAB_CLK       MSSINT      A                RXRDY_c                                         0.000        0.974
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[0]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[0]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[1]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[1]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[2]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[2]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[3]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[3]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[4]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[4]     0.000        1.790
 wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[5]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[5]     0.000        1.790
-wubsuit_base_MSS_0.MSS_ADLIB_INST     FAB_CLK       MSS_APB     MSSPRDATA[6]     wubsuit_base_MSS_0_MSS_MASTER_APB_PRDATA[6]     0.000        1.790
 ===================================================================================================================================================
 
 
@@ -111,27 +111,27 @@ Worst Path Information
 
 
 Path information for path number 1: 
-    Propagation time:                        0.724
+    Propagation time:                        0.685
     + Clock delay at starting point:         0.000 (ideal)
     - Requested Period:                      0.000
     - Hold time:                             0.000
     - Clock delay at ending point:           0.000 (ideal)
 0.000
-    = Slack (non-critical) :                 0.724
+    = Slack (non-critical) :                 0.685
 
     Number of logic level(s):                0
-    Starting point:                          CoreUARTapb_1.CUARTOOlI.RXRDY / Q
-    Ending point:                            wubsuit_base_MSS_0.MSSINT_GPI_1 / A
+    Starting point:                          timer_0.fabint / Q
+    Ending point:                            wubsuit_base_MSS_0.MSSINT_GPI_9 / A
     The start point is clocked by            FAB_CLK [rising] on pin CLK
     The end   point is clocked by            System [rising]
 
-Instance / Net                                   Pin      Pin               Arrival     No. of    
-Name                                Type         Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------------------
-CoreUARTapb_1.CUARTOOlI.RXRDY       DFN1E1C0     Q        Out     0.494     0.494       -         
-RXRDY                               Net          -        -       0.230     -           2         
-wubsuit_base_MSS_0.MSSINT_GPI_1     MSSINT       A        In      -         0.724       -         
-==================================================================================================
+Instance / Net                                 Pin      Pin               Arrival     No. of    
+Name                                Type       Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------------------
+timer_0.fabint                      DFN1       Q        Out     0.494     0.494       -         
+FABINT                              Net        -        -       0.192     -           1         
+wubsuit_base_MSS_0.MSSINT_GPI_9     MSSINT     A        In      -         0.685       -         
+================================================================================================
 
 
 

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Actel SmartDesign Sat Dec 07 19:16:22 2013
+// Created by Actel SmartDesign Tue Dec 10 02:32:05 2013
 // Parameters for CoreUARTapb
 //--------------------------------------------------------------------
 

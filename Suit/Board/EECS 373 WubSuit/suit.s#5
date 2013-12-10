@@ -14132,7 +14132,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <part name="IC1" library="linear" deviceset="79*" device="Z" technology="L05"/>
 <part name="SUPPLY20" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND19" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="PIEZO_L1" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-2"/>
 <part name="VIN" library="SparkFun-Connectors" deviceset="M02" device="JST-PTH-2"/>
 </parts>
 <sheets>
@@ -14233,7 +14232,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <instance part="IC1" gate="A1" x="220.98" y="-27.94" rot="R180"/>
 <instance part="SUPPLY20" gate="1" x="208.28" y="-20.32"/>
 <instance part="GND19" gate="1" x="220.98" y="-38.1"/>
-<instance part="PIEZO_L1" gate="G$1" x="177.8" y="58.42"/>
 <instance part="VIN" gate="G$1" x="251.46" y="-27.94"/>
 </instances>
 <busses>
@@ -14565,8 +14563,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <pinref part="PIEZO_R" gate="G$1" pin="2"/>
 <wire x1="185.42" y1="45.72" x2="215.9" y2="45.72" width="0.1524" layer="91"/>
 <junction x="215.9" y="45.72"/>
-<pinref part="PIEZO_L1" gate="G$1" pin="2"/>
-<junction x="185.42" y="60.96"/>
 </segment>
 <segment>
 <pinref part="R20" gate="G$1" pin="2"/>
@@ -14906,8 +14902,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="185.42" y1="58.42" x2="200.66" y2="58.42" width="0.1524" layer="91"/>
 <label x="190.5" y="58.42" size="1.778" layer="95"/>
 <pinref part="R15" gate="G$1" pin="2"/>
-<pinref part="PIEZO_L1" gate="G$1" pin="1"/>
-<junction x="185.42" y="58.42"/>
 </segment>
 </net>
 <net name="PIEZO_R" class="0">

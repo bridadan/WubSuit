@@ -1,11 +1,15 @@
+#include <SimpleTimer.h>
+
 #include <SoftwareSerial.h>
 #include <Wire.h> //I2C
+#include <avr/wdt.h>
 
 SoftwareSerial Xbee(10, 11); // RX, TX
+SimpleTimer timer;
 
 #define DEBUG //unset if not debugging
 
-#define PRECISION 0x02 //0x00 = 2G, 0x01 = 4G, 0x02 = 8G
+#define PRECISION 0x01 //0x00 = 2G, 0x01 = 4G, 0x02 = 8G
 
 #define LEDOUT_ADDR 0x20
 #define ACCEL_ADDR 0x1D
@@ -27,7 +31,7 @@ SoftwareSerial Xbee(10, 11); // RX, TX
 #define FLEX_HIGH 500
 #define SONAR_LOW 0
 #define SONAR_HIGH 72
-#define THRESHOLD 200
+#define THRESHOLD 50
 
 byte Ax = 0x00;
 byte Ay = 0x00;
@@ -35,9 +39,12 @@ byte Az = 0x00;
 byte flex = 0x00;
 byte height = 0x00;
 
+boolean accel = true;
+
 void setup()  
 {
   Wire.begin(); //i2c master A5:SCL A4:SDA
+  timer.setInterval(30,sendPacket);
   
   // Open local serial port for debugging:
   Serial.begin(115200);
@@ -54,40 +61,17 @@ void setup()
   //turn the default 0xFF LEDs to all off
   setLEDs(0x00);
   
+  //enable the arduino watchdog for 5 seconds.
+  wdt_enable (WDTO_4S);
+  
   //init accel
   initAccel();
 }
 
 void loop()
 {
-  if(Serial.available()){
-   //process debug data first
-   char input = Serial.read(); //r: flexR, l: flexL, x:accelX, y,z same, w(char) write LED,
-   switch(input){
-    case 'r':
-      Serial.println(analogRead(FLEX_R));
-      break;
-    case 'l':
-      Serial.println(analogRead(FLEX_L));
-      break;
-    case 'x':
-      Serial.println(Ax);
-      break;
-    case 'y':
-      Serial.println(Ay);
-      break;
-    case 'z':
-      Serial.println(Az);
-      break;
-    case 'w':
-      
-      setLEDs(Serial.read());
-      break;
-    default:
-      Serial.println("Not supported");
-      break;
-   } 
-  }
+  timer.run();
+  printDebug();
   updateAccel(Ax,Ay,Az);
   
   //write every recieved xbee byte to the leds
@@ -108,16 +92,17 @@ void loop()
     pulse(TAP_R);
     pulse(LEDPIN);
   }
-  
-  height = map(pulseIn(SONAR,HIGH)/147,SONAR_LOW,SONAR_HIGH,0,254);
-  flex = map((analogRead(FLEX_L)+analogRead(FLEX_R))/2,FLEX_LOW,FLEX_HIGH,0,254);
-  sendPacket();
+  byte lastheight = height;
+  height = map(pulseIn(SONAR,HIGH,10000)/147,SONAR_LOW,SONAR_HIGH,0,254);
+  if(height == 0)
+    height = lastheight; //pulseIn broke, so keep valid data.
+  flex = map(analogRead(FLEX_L),FLEX_LOW,FLEX_HIGH,0,254);
 }
 
 void setLEDs(byte data){
   //Writes a byte to the LED strip via i2c
     Wire.beginTransmission(LEDOUT_ADDR);
-    Wire.write(~data);
+    Wire.write(data); //active high
     Wire.endTransmission();
     
     #ifdef DEBUG
@@ -127,13 +112,18 @@ void setLEDs(byte data){
 }
 
 void sendPacket(){
+  wdt_reset(); //pat the dog to avoid restarting
   //send a packet of data to UART 
+  noInterrupts();
   Xbee.write((byte)0xFF);
+  Xbee.write((byte)0xA0);
+  Xbee.write((byte)0xB7);
   Xbee.write(Ax);
   Xbee.write(Ay);
   Xbee.write(Az);
   Xbee.write(flex);
   Xbee.write(height);
+  interrupts();
 }
 
 void pulse(int pin){
@@ -145,6 +135,21 @@ void pulse(int pin){
 }
 
 void initAccel(){
+  //make sure the accelerometer is actually there
+  byte whoamI = 0x00;
+  Wire.beginTransmission(ACCEL_ADDR);
+  Wire.write(0x0D);
+  Wire.endTransmission(false); //waits for data
+  Wire.requestFrom(ACCEL_ADDR,1);
+  for(int i=0;(i<1000) && !Wire.available();i++); //hang out
+  whoamI = Wire.read();
+  
+  if(whoamI != 0x2A){
+    accel = false;
+    Serial.println("Accelerometer not available.");
+    return;
+  }
+  
   //first we get the status of the ctrl reg
   Wire.beginTransmission(ACCEL_ADDR);
   Wire.write(ACCEL_CTRL);
@@ -173,6 +178,7 @@ void initAccel(){
 }
 
 void updateAccel(byte &x,byte &y,byte &z){
+  if(!accel) return; //accel not available
   //pulls data from the accelerometer on the I2C bus
   //and places it into the x, y, and z parameters
   byte data[6];
@@ -185,23 +191,45 @@ void updateAccel(byte &x,byte &y,byte &z){
   
   for(int i=0; i<6; i++){
     data[i] = Wire.read(); //empty the buffer into the data array
-    if(data[i] == 0xFF) //don't invalidate packet structure
+    if(data[i] == 0xFF) //don't invalizate packet structure
       data[i] = 0xFE;
   }
-   
-   /*#ifdef DEBUG 
-     Serial.print("X: 0x");
-     Serial.print(data[4],HEX);
-     Serial.print(data[5],HEX);
-     Serial.print(" Y: 0x");
-     Serial.print(data[2],HEX);
-     Serial.print(data[3],HEX);
-     Serial.print(" Z: 0x");
-     Serial.print(data[0],HEX);
-     Serial.println(data[1],HEX);
-   #endif */
-   
-   x = data[4];
+  
+   //x = map((data[0]<<8 | data[1])/2,0,0xFFFF,0,0xFE);
+   //y = map((data[2]<<8 | data[3])/2,0,0xFFFF,0,0xFE);
+   //z = map((data[4]<<8 | data[5])/2,0,0xFFFF,0,0xFE);
+   x = data[0];
    y = data[2];
-   z = data[0];
+   z = data[4];
+}
+
+void printDebug(){
+  if(Serial.available()){
+   //process debug data first
+   char input = Serial.read(); //r: flexR, l: flexL, x:accelX, y,z same, w(char) write LED,
+   switch(input){
+    case 'r':
+      Serial.println(analogRead(FLEX_R));
+      break;
+    case 'l':
+      Serial.println(analogRead(FLEX_L));
+      break;
+    case 'x':
+      Serial.println(Ax);
+      break;
+    case 'y':
+      Serial.println(Ay);
+      break;
+    case 'z':
+      Serial.println(Az);
+      break;
+    case 'w':
+      setLEDs((int)Serial.read());
+      break;
+    default:
+      Serial.println("Not supported");
+      break;
+   } 
+  }
+  
 }

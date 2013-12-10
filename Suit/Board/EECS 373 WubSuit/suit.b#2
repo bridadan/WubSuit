@@ -1726,6 +1726,8 @@
 <text x="1.9812" y="16.4338" size="1.778" layer="25">WubSuit
 EECS 373
 FA 2013</text>
+<dimension x1="0.0762" y1="-0.0762" x2="66.3194" y2="-0.1524" x3="33.18578125" y3="-10.5635625" layer="25"/>
+<dimension x1="66.3194" y1="-0.0762" x2="66.3194" y2="85.979" x3="82.9056" y3="42.9514" layer="25"/>
 </plain>
 <libraries>
 <library name="SparkFun-DigitalIC">
@@ -4714,7 +4716,7 @@ This Sunstone Circuits 4 Layer .DRU has been set to cover our minimum requiremen
 <attribute name="VALUE" x="21.717" y="68.4022" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="R16" library="resistor" package="0207/10" value="1M" x="8.382" y="75.7428" smashed="yes">
-<attribute name="NAME" x="6.9342" y="75.057" size="1.27" layer="25" ratio="10"/>
+<attribute name="NAME" x="6.8326" y="75.184" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="6.1214" y="75.1078" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="BTN_1" library="SparkFun-Connectors" package="JST-2-PTH" value="M02JST-PTH-2" x="61.722" y="79.5528" smashed="yes">

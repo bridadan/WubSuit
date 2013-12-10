@@ -1,16 +1,16 @@
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin64\m_proasic.exe  -prodtype synplify_pro -encrypt  -pro  -rundir  N:\EECS373\WubSuit\Libero\synthesis  -part A2F200M3F  -package FBGA484  -grade -1   -globalthreshold 50 -maxfan 24 -opcond COMWC     -report_path 0   -RWCheckOnRam 0     -summaryfile N:\EECS373\WubSuit\Libero\synthesis\synlog\report\wubsuit_base_fpga_mapper.xml -top_level_module  wubsuit_base  -flow mapping  -mp 1 -prjfile  N:\EECS373\WubSuit\Libero\synthesis\scratchproject.prs  -implementation synthesis -licensetype  synplifypro_actel  -oedif  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn  -freq 100.000  -tcl  N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell_syn.sdc  N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd  -sap  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap  -otap  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.tap  -omap  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.map  -devicelib  C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v  -sap  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap  -ologparam  N:\EECS373\WubSuit\Libero\synthesis\syntmp\wubsuit_base.plg  -osyn  N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.srm  -prjdir  N:\EECS373\WubSuit\Libero\synthesis\  -prjname  wubsuit_base_syn  -log  N:\EECS373\WubSuit\Libero\synthesis\synlog\wubsuit_base_fpga_mapper.srr 
 rc:1 success:1
-N:\EECS373\WubSuit\Libero\synthesis\scratchproject.prs|o|1386461180|4877
-N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn|o|1386461876|913197
-N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell_syn.sdc|i|1386271561|204
-N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd|i|1386461871|125154
-N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap|o|1386461871|33462
+N:\EECS373\WubSuit\Libero\synthesis\scratchproject.prs|o|1386627925|4940
+N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn|o|1386661163|980864
+N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\mss_tshell_syn.sdc|i|1386627036|204
+N:\EECS373\WubSuit\Libero\synthesis\synwork\wubsuit_base_premap.srd|i|1386661153|125781
+N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap|o|1386661153|33999
 N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.tap|o|0|0
-N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.map|o|1386461876|28
+N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.map|o|1386661164|28
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\lib\proasic\smartfusion.v|i|1360942192|72817
-N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap|o|1386461871|33462
-N:\EECS373\WubSuit\Libero\synthesis\syntmp\wubsuit_base.plg|o|1386461876|2315
-N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.srm|o|1386461875|248900
-N:\EECS373\WubSuit\Libero\synthesis\synlog\wubsuit_base_fpga_mapper.srr|o|1386461876|55616
+N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.sap|o|1386661153|33999
+N:\EECS373\WubSuit\Libero\synthesis\syntmp\wubsuit_base.plg|o|1386661164|2340
+N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.srm|o|1386661162|258701
+N:\EECS373\WubSuit\Libero\synthesis\synlog\wubsuit_base_fpga_mapper.srr|o|1386661164|56057
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin64\m_proasic.exe|i|1360942034|13812224
 C:\Microsemi\Libero_v11.0\Synopsys\synplify_G201209MSP1\bin\m_proasic.exe|i|1360942022|11409920

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Dec 05 14:26:43 2013
+// Created by SmartDesign Mon Dec 09 17:11:11 2013
 // Version: v11.0 11.0.0.23
 //////////////////////////////////////////////////////////////////////
 
@@ -10,6 +10,7 @@ module wubsuit_base_MSS(
     // Inputs
     F2M_GPI_0,
     F2M_GPI_1,
+    F2M_GPI_10,
     F2M_GPI_2,
     F2M_GPI_3,
     F2M_GPI_4,
@@ -39,6 +40,7 @@ module wubsuit_base_MSS(
 //--------------------------------------------------------------------
 input         F2M_GPI_0;
 input         F2M_GPI_1;
+input         F2M_GPI_10;
 input         F2M_GPI_2;
 input         F2M_GPI_3;
 input         F2M_GPI_4;
@@ -76,6 +78,7 @@ wire          F2M_GPI_6;
 wire          F2M_GPI_7;
 wire          F2M_GPI_8;
 wire          F2M_GPI_9;
+wire          F2M_GPI_10;
 wire          MSS_ADLIB_INST_EMCCLK;
 wire          MSS_ADLIB_INST_FCLK;
 wire          MSS_ADLIB_INST_MACCLK;
@@ -96,6 +99,7 @@ wire          MSSINT_GPI_6_Y;
 wire          MSSINT_GPI_7_Y;
 wire          MSSINT_GPI_8_Y;
 wire          MSSINT_GPI_9_Y;
+wire          MSSINT_GPI_10_Y;
 wire          net_71;
 wire   [19:0] net_72_PADDR;
 wire          net_72_PENABLE;
@@ -160,7 +164,7 @@ assign UART_0_TXD                       = UART_0_TXD_net_1;
 //--------------------------------------------------------------------
 // Concatenation assignments
 //--------------------------------------------------------------------
-assign GPI_net_0 = { 22'h000000 , MSSINT_GPI_9_Y , MSSINT_GPI_8_Y , MSSINT_GPI_7_Y , MSSINT_GPI_6_Y , MSSINT_GPI_5_Y , MSSINT_GPI_4_Y , MSSINT_GPI_3_Y , MSSINT_GPI_2_Y , MSSINT_GPI_1_Y , MSSINT_GPI_0_Y };
+assign GPI_net_0 = { 21'h000000 , MSSINT_GPI_10_Y , MSSINT_GPI_9_Y , MSSINT_GPI_8_Y , MSSINT_GPI_7_Y , MSSINT_GPI_6_Y , MSSINT_GPI_5_Y , MSSINT_GPI_4_Y , MSSINT_GPI_3_Y , MSSINT_GPI_2_Y , MSSINT_GPI_1_Y , MSSINT_GPI_0_Y };
 //--------------------------------------------------------------------
 // Component instances
 //--------------------------------------------------------------------
@@ -535,6 +539,14 @@ MSSINT MSSINT_GPI_9(
         .A ( F2M_GPI_9 ),
         // Outputs
         .Y ( MSSINT_GPI_9_Y ) 
+        );
+
+//--------MSSINT
+MSSINT MSSINT_GPI_10(
+        // Inputs
+        .A ( F2M_GPI_10 ),
+        // Outputs
+        .Y ( MSSINT_GPI_10_Y ) 
         );
 
 

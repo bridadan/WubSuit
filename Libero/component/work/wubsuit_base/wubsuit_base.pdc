@@ -3,7 +3,7 @@
 
 # Version: v11.0 11.0.0.23
 # Family: SmartFusion , Die: A2F200M3F , Package: 484 FBGA
-# Date generated: Sat Dec 07 19:16:19 2013 
+# Date generated: Tue Dec 10 02:31:59 2013 
 
 
 # 
@@ -40,29 +40,6 @@ define_group -name UART_0
 # The I/Os in this section are unplaced or placed but are not locked
 # the other listed attributes have been applied
 # 
-
-set_io MSS_RESET_N        \
-    -iostd LVTTL          \
-    -RES_PULL None        \
-    -SCHMITT_TRIGGER Off  \
-    -DIRECTION INPUT
-
-
-set_io UART_0_RXD         \
-    -iostd LVTTL          \
-    -RES_PULL None        \
-    -SCHMITT_TRIGGER Off  \
-    -DIRECTION INPUT
-
-
-set_io UART_0_TXD      \
-    -iostd LVTTL       \
-    -OUT_LOAD 35       \
-    -RES_PULL None     \
-    -SKEW Off          \
-    -SLEW High         \
-    -DIRECTION OUTPUT
-
 
 
 #

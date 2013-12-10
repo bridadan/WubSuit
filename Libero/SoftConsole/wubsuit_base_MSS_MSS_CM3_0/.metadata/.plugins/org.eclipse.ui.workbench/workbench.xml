@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="976" y="-8">
+<window height="768" maximized="true" width="1024" x="620" y="-12">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
-<itemSize x="206"/>
+<itemSize x="213"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
@@ -15,17 +15,18 @@
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.internal.ide.dialogs.WelcomeEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1386036224958" focus="true" label="Workspace - C/C++">
+<page aggregateWorkingSetId="Aggregate for window 1386036224958" focus="true" label="Workspace - Debug">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -39,25 +40,26 @@
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="menu.c" partName="menu.c" path="N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_app/menu.c" title="menu.c" tooltip="wubsuit_base_MSS_MSS_CM3_0_app/menu.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wubsuit_base_MSS_MSS_CM3_0_app/menu.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5898" selectionTopPixel="2805"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1132" selectionTopPixel="676"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="menu.h" partName="menu.h" path="N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_app/menu.h" title="menu.h" tooltip="wubsuit_base_MSS_MSS_CM3_0_app/menu.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wubsuit_base_MSS_MSS_CM3_0_app/menu.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="126" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="suit.c" partName="suit.c" path="N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_app/suit.c" title="suit.c" tooltip="wubsuit_base_MSS_MSS_CM3_0_app/suit.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="suit.c" partName="suit.c" path="N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_app/suit.c" title="suit.c" tooltip="wubsuit_base_MSS_MSS_CM3_0_app/suit.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wubsuit_base_MSS_MSS_CM3_0_app/suit.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5406" selectionTopPixel="3230"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1741" selectionTopPixel="921"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="suit.h" partName="suit.h" path="N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_app/suit.h" title="suit.h" tooltip="wubsuit_base_MSS_MSS_CM3_0_app/suit.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wubsuit_base_MSS_MSS_CM3_0_app/suit.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="809" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="975" selectionTopPixel="414"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="lcd.c" partName="lcd.c" path="N:/EECS373/WubSuit/Libero/SoftConsole/wubsuit_base_MSS_MSS_CM3_0/wubsuit_base_MSS_MSS_CM3_0_app/lcd.c" title="lcd.c" tooltip="wubsuit_base_MSS_MSS_CM3_0_app/lcd.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wubsuit_base_MSS_MSS_CM3_0_app/lcd.c"/>
@@ -77,6 +79,12 @@
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.debug.ui.ModuleView" partName="Modules">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.MemoryView" partName="Memory">
+<viewState/>
+</view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
@@ -97,11 +105,16 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" CommonNavigator.LINKING_ENABLED.delayed="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.debug.ui.RegisterView" partName="Registers">
+<viewState/>
+</view>
+<view id="org.eclipse.cdt.debug.ui.DisassemblyView" partName="Disassembly">
+<viewState/>
+</view>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Targets"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -115,7 +128,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.debug.ui.DebugView" activePerspective="org.eclipse.debug.ui.DebugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -169,6 +182,7 @@
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.cdt.debug.ui.DisassemblyView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <fastViewBars/>
@@ -190,22 +204,25 @@
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.25405973" ratioLeft="485" ratioRight="1424" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.7496136" ratioLeft="485" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.cdt.debug.ui.DisassemblyView" label="Disassembly"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -259,10 +276,14 @@
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.cdt.debug.ui.executablesView"/>
+<view id="org.eclipse.debug.ui.MemoryView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.debug.ui.RegisterView"/>
+<view id="org.eclipse.debug.ui.ModuleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.cdt.debug.ui.DisassemblyView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -280,6 +301,7 @@
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.749763" ratioLeft="791" ratioRight="264" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
@@ -288,9 +310,38 @@
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
-<page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.MemoryView" label="Memory"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.44879898" ratioLeft="355" ratioRight="436" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.535855" ratioLeft="680" ratioRight="589" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.cdt.debug.ui.DisassemblyView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.cdt.debug.ui.DisassemblyView" label="Disassembly"/>
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5002619" ratioLeft="955" ratioRight="954" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="Modules"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -299,200 +350,12 @@
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.44879898" ratioLeft="355" ratioRight="436" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.eclipse.cdt.debug.ui.DisassemblyView" label="LabelNotFound"/>
-<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5002619" ratioLeft="955" ratioRight="954" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
-<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
-<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
-<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
-<page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
-</folder>
-</info>
 </mainWindow>
 </layout>
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/suit.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/menu.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/suit.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/midi.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/suit.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wubsuit_base_MSS_MSS_CM3_0_app/lcd.c"/>
-</editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="menu.c" index="2">
-<position info="not_deleted" x="5898" y="0"/>
-</item>
-<item historyLabel="suit.c" index="1">
-<position info="not_deleted" x="1432" y="0"/>
-</item>
-<item historyLabel="suit.h" index="3">
-<position info="not_deleted" x="1480" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="94" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="363" y="0"/>
-</item>
-<item historyLabel="midi.c" index="5">
-<position info="not_deleted" x="781" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="758" y="0"/>
-</item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="363" y="0"/>
-</item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5258" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5192" y="0"/>
-</item>
-<item historyLabel="main.c" index="8">
-<position info="not_deleted" x="79" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5278" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5276" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5278" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5301" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5341" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15325" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15354" y="0"/>
-</item>
-<item historyLabel="lcd.c" index="9">
-<position info="not_deleted" x="485" y="0"/>
-</item>
-<item historyLabel="lcd.c" index="9">
-<position info="not_deleted" x="529" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15401" y="0"/>
-</item>
-<item historyLabel="lcd.c" index="9">
-<position info="not_deleted" x="485" y="0"/>
-</item>
-<item historyLabel="lcd.c" index="9">
-<position info="not_deleted" x="529" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15463" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5371" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5278" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5301" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5341" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15325" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15354" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15401" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15463" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15524" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15600" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15665" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15745" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15810" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15893" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15958" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="16042" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="16107" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="16239" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="16309" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="15605" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="16374" y="0"/>
-</item>
-<item historyLabel="suit.c" index="6">
-<position info="not_deleted" x="16460" y="0"/>
-</item>
-<item active="true" historyLabel="suit.c" index="6">
-<position info="not_deleted" x="5371" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -511,6 +374,9 @@
 <mruList>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="wubsuit_base_MSS_MSS_CM3_0_app/main.c">
 <persistable path="/wubsuit_base_MSS_MSS_CM3_0_app/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="debug-in-actel-smartfusion-envm.ld" tooltip="wubsuit_base_MSS_MSS_CM3_0_hw_platform/CMSIS/startup_gcc/debug-in-actel-smartfusion-envm.ld">
+<persistable path="/wubsuit_base_MSS_MSS_CM3_0_hw_platform/CMSIS/startup_gcc/debug-in-actel-smartfusion-envm.ld"/>
 </file>
 </mruList>
 </workbench>

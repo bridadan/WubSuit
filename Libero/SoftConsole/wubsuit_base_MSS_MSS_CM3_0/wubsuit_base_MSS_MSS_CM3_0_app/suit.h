@@ -13,12 +13,13 @@
 #define COREUARTAPB2_BASE_ADDR      0x40050200
 #define MAX_RX_DATA_SIZE    		512
 #define LIGHT_CHANNELS				7
-#define XBEE_PACKET_LENGTH			6
+#define XBEE_PACKET_LENGTH			8
+#define XBEE_PACKET_AVERAGE			5
 #define MIDI_PACKET_LENGTH			3
 
 typedef struct _XBeeState {
 	uint8_t valid;
-	uint8_t data[XBEE_PACKET_LENGTH];
+	uint8_t data[XBEE_PACKET_AVERAGE][XBEE_PACKET_LENGTH];
 	int packetPointer;
 } XBeeState;
 
@@ -34,10 +35,12 @@ typedef struct _SuitState {
 	uint8_t flexValue;
 	uint8_t handHeight;
 	uint8_t activeLights;
+	uint8_t lightsHaveChanged;
 	uint8_t waitingForInput;
 	InputType inputType;
 	uint8_t noteActive;
 	Note activeNote;
+	uint8_t okToWriteLcd;
 } SuitState;
 
 typedef struct _Settings {
@@ -48,15 +51,16 @@ typedef struct _Settings {
 	uint8_t handHeightMin, handHeightMax;
 	Note LPiezoMapping, RPiezoMapping;
 	Note minNote, maxNote;
+	Note CButton1Mapping, CButton2Mapping, CButton3Mapping;
 	Note* noteToMapTo;
 	uint8_t* valueToMapTo;
 	KeySignature keySignature;
-	uint8_t suitLightsMIDIChannel, volumeMIDIControl;
+	uint8_t suitLightsMIDIChannel, volumeMIDIControl, accelYMIDIControl;
 	uint8_t outputMIDIChannel;
 	uint8_t accelMin, accelMax;
 	uint8_t pitchBendMin, pitchBendMax;
 	uint8_t flexMin, flexMax;
-	uint16_t volumeMin, volumeMax;
+	uint16_t controlMin, controlMax;
 } Settings;
 
 void Suit_init();
@@ -71,6 +75,9 @@ void Suit_RPiezoPressed();
 void Suit_newSensorValues();
 void Suit_handleMIDIMessage(uint8_t *message, uint16_t length);
 void Suit_CButton0Pressed();
+void Suit_CButton1Pressed();
+void Suit_CButton2Pressed();
+void Suit_CButton3Pressed();
 
 // Utility
 
@@ -80,5 +87,7 @@ void Suit_turnOffLightChannel(uint8_t channel);
 uint8_t Suit_mapValue(uint8_t x, uint8_t in_min, uint8_t in_max, uint8_t out_min, uint8_t out_max);
 void Suit_displayStatus();
 void Suit_updateStatus();
+void Suit_shiftXBeePackets();
+uint8_t Suit_getAveragedValue(uint8_t index);
 
 #endif /* SUIT_H_ */

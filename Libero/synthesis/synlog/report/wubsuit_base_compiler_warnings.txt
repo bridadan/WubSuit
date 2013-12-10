@@ -18,6 +18,7 @@
 @W: CG133 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v":320:0:320:7|No assignment to CUARTOI0
 @W: CL169 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUART.v":1062:0:1062:5|Pruning register CUARTlI0 
 @W: CG133 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\CoreUARTapb_2\rtl\vlog\core_obfuscated\CoreUARTapb.v":270:0:270:8|No assignment to CUARTl0OI
+@W: CL169 :"N:\EECS373\WubSuit\Libero\hdl\fastTimer.v":14:0:14:5|Pruning register counter[31:0] 
 @W: CL169 :"N:\EECS373\WubSuit\Libero\hdl\Timer.v":14:0:14:5|Pruning register counter[31:0] 
 @W: CL157 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v":62:7:62:18|*Output RCOSC_CLKOUT has undriven bits -- simulation mismatch possible.
 @W: CL157 :"N:\EECS373\WubSuit\Libero\component\work\wubsuit_base_MSS\MSS_CCC_0\wubsuit_base_MSS_tmp_MSS_CCC_0_MSS_CCC.v":63:7:63:20|*Output MAINXIN_CLKOUT has undriven bits -- simulation mismatch possible.

@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by Actel SmartDesign Thu Dec 05 14:26:43 2013
+// Created by Actel SmartDesign Mon Dec 09 17:11:12 2013
 // Testbench Template
 // This is a basic testbench that instantiates your design with basic 
 // clock and reset pins connected.  If your design has special
@@ -56,6 +56,7 @@ wubsuit_base_MSS wubsuit_base_MSS_0 (
     .F2M_GPI_2({1{1'b0}}),
     .F2M_GPI_1({1{1'b0}}),
     .F2M_GPI_9({1{1'b0}}),
+    .F2M_GPI_10({1{1'b0}}),
     .MSSPRDATA({32{1'b0}}),
     .UART_0_RXD({1{1'b0}}),
     .MSS_RESET_N(NSYSRESET),

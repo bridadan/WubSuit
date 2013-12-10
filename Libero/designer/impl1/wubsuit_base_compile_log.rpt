@@ -17,7 +17,7 @@ Imported the files:
    N:\EECS373\WubSuit\Libero\synthesis\wubsuit_base.edn
    N:\EECS373\WubSuit\Libero\component\work\wubsuit_base\wubsuit_base.pdc
 
-The Import command succeeded ( 00:00:04 )
+The Import command succeeded ( 00:00:05 )
 =====================================================================
 Parameters used to run compile:
 ===============================
@@ -590,12 +590,12 @@ Netlist Optimization Report
 
 Optimized macros:
   - Dangling net drivers:   0
-  - Buffers:                10
+  - Buffers:                11
   - Inverters:              0
   - Tieoff:                 0
-  - Logic combining:        21
+  - Logic combining:        27
 
-    Total macros optimized  31
+    Total macros optimized  38
 
 There were 0 error(s) and 387 warning(s) in this design.
 =====================================================================
@@ -617,7 +617,7 @@ Compile report:
 ===============
 
     Microcontroller Subsystem  Used:      1  Total:      1   (100.00%)
-    Fabric                     Used:   1277  Total:   4608   (27.71%)
+    Fabric                     Used:   1428  Total:   4608   (30.99%)
     Fabric IO (W/ clocks)      Used:     13  Total:     94   (13.83%)
     Fabric Differential IO     Used:      0  Total:     47   (0.00%)
     Dedicated Analog IO        Used:      0  Total:     32   (0.00%)
@@ -646,8 +646,8 @@ Core Information:
 
     Type    | Instances    | Core tiles
     --------|--------------|-----------
-    COMB    | 815          | 815
-    SEQ     | 462          | 462
+    COMB    | 932          | 932
+    SEQ     | 496          | 496
 
 I/O Function:
 
@@ -679,33 +679,33 @@ Net information report:
 The following nets have been assigned to a chip global resource:
     Fanout  Type          Name
     --------------------------
-    475     CLK_NET       Net   : FAB_CLK
+    509     CLK_NET       Net   : FAB_CLK
                           Driver: wubsuit_base_MSS_0/MSS_CCC_0/I_MSSCCC
                           Source: ESSENTIAL
-    420     SET/RESET_NET Net   : wubsuit_base_MSS_0_M2F_RESET_N
+    454     SET/RESET_NET Net   : wubsuit_base_MSS_0_M2F_RESET_N
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST_RNI70E4/U_CLKSRC
                           Source: NETLIST
 
 High fanout nets in the post compile netlist:
     Fanout  Type          Name
     --------------------------
-    24      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTIl
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0
     23      INT_NET       Net   : CoreUARTapb_2.N_89
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
-    22      INT_NET       Net   : CoreUARTapb_0.N_146
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
+    22      INT_NET       Net   : CoreUARTapb_2.N_90
+                          Driver: CoreUARTapb_1/CUARTO1OI_5_0_a2_1[0]
     18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
     18      INT_NET       Net   : CoreUARTapb_1/PARITY_ERR
                           Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
     18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
                           Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
-    14      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
+    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    14      INT_NET       Net   : CoreUARTapb_0.N_147
+    14      INT_NET       Net   : CoreUARTapb_2.N_92
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
     14      INT_NET       Net   : CoreUARTapb_2.N_87_0
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0_0[0]
@@ -713,33 +713,33 @@ High fanout nets in the post compile netlist:
 Nets that are candidates for clock assignment and the resulting fanout:
     Fanout  Type          Name
     --------------------------
-    24      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTIl
-                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTI10/genblk1.genblk2.CUARTI0
     23      INT_NET       Net   : CoreUARTapb_2.N_89
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[3]
-    22      INT_NET       Net   : CoreUARTapb_0.N_146
-                          Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2[3]
+    22      INT_NET       Net   : CoreUARTapb_2.N_90
+                          Driver: CoreUARTapb_1/CUARTO1OI_5_0_a2_1[0]
     18      INT_NET       Net   : CoreUARTapb_2/CUARTl01
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTl01
     18      INT_NET       Net   : CoreUARTapb_2/CUARTOOlI/CUARTO00
                           Driver: CoreUARTapb_2/CUARTOOlI/CUARTIl1/CUARTOl0_RNIPC0R[0]
     18      INT_NET       Net   : CoreUARTapb_1/PARITY_ERR
                           Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTl01
+    18      INT_NET       Net   : CoreUARTapb_1/CUARTOOlI/CUARTO00
+                          Driver: CoreUARTapb_1/CUARTOOlI/CUARTIl1/CUARTOl0_RNINESV[0]
     18      INT_NET       Net   : CoreUARTapb_0/CUARTOOlI/CUARTIl
                           Driver: CoreUARTapb_0/CUARTOOlI/CUARTI10/genblk1.CUARTI0
-    14      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
+    15      INT_NET       Net   : CoreAPB3_0_APBmslave0_PADDR[3]
                           Driver: wubsuit_base_MSS_0/MSS_ADLIB_INST
-    14      INT_NET       Net   : CoreUARTapb_0.N_147
+    14      INT_NET       Net   : CoreUARTapb_2.N_92
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0[0]
     14      INT_NET       Net   : CoreUARTapb_2.N_87_0
                           Driver: CoreUARTapb_0/CUARTO1OI_5_0_a2_0_0[0]
 
-The Compile command succeeded ( 00:00:02 )
+The Compile command succeeded ( 00:00:03 )
 Wrote status report to file: wubsuit_base_compile_report.txt
 
-The Report command succeeded ( 00:00:00 )
+The Report command succeeded ( 00:00:01 )
 Design saved to file N:\EECS373\WubSuit\Libero\designer\impl1\wubsuit_base.adb.
 
-The Execute Script command succeeded ( 00:00:09 )
+The Execute Script command succeeded ( 00:00:17 )
 Design closed.
 
